@@ -1,0 +1,3 @@
+pc_fundation_homepage:
+    path:     /
+    defaults: { _controller: PCFundationBundle:Default:index }

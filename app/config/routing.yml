@@ -1,0 +1,7 @@
+pc_fundation:
+    resource: "@PCFundationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
