@@ -22,72 +22,35 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_23d9b6dfc7294af7c6f49a357794b43a22d3ff7dd40bfbc7fe484dd035db1242 = $this->env->getExtension("native_profiler");
-        $__internal_23d9b6dfc7294af7c6f49a357794b43a22d3ff7dd40bfbc7fe484dd035db1242->enter($__internal_23d9b6dfc7294af7c6f49a357794b43a22d3ff7dd40bfbc7fe484dd035db1242_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
+        $__internal_09171c4294d0b3972c4ae2b52c1836a6b489b78d277d68e36d4526a248c52305 = $this->env->getExtension("native_profiler");
+        $__internal_09171c4294d0b3972c4ae2b52c1836a6b489b78d277d68e36d4526a248c52305->enter($__internal_09171c4294d0b3972c4ae2b52c1836a6b489b78d277d68e36d4526a248c52305_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_23d9b6dfc7294af7c6f49a357794b43a22d3ff7dd40bfbc7fe484dd035db1242->leave($__internal_23d9b6dfc7294af7c6f49a357794b43a22d3ff7dd40bfbc7fe484dd035db1242_prof);
+        $__internal_09171c4294d0b3972c4ae2b52c1836a6b489b78d277d68e36d4526a248c52305->leave($__internal_09171c4294d0b3972c4ae2b52c1836a6b489b78d277d68e36d4526a248c52305_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_522f2ade5f57e60a48d03ccd9f46c71cfce0d86c6b7be846ccc2ff6bed42edff = $this->env->getExtension("native_profiler");
-        $__internal_522f2ade5f57e60a48d03ccd9f46c71cfce0d86c6b7be846ccc2ff6bed42edff->enter($__internal_522f2ade5f57e60a48d03ccd9f46c71cfce0d86c6b7be846ccc2ff6bed42edff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_10b0629fc1d520f76f54d9e7d46cf16bed48e6e3022bc9db879cd57ddedb21a4 = $this->env->getExtension("native_profiler");
+        $__internal_10b0629fc1d520f76f54d9e7d46cf16bed48e6e3022bc9db879cd57ddedb21a4->enter($__internal_10b0629fc1d520f76f54d9e7d46cf16bed48e6e3022bc9db879cd57ddedb21a4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_522f2ade5f57e60a48d03ccd9f46c71cfce0d86c6b7be846ccc2ff6bed42edff->leave($__internal_522f2ade5f57e60a48d03ccd9f46c71cfce0d86c6b7be846ccc2ff6bed42edff_prof);
+        $__internal_10b0629fc1d520f76f54d9e7d46cf16bed48e6e3022bc9db879cd57ddedb21a4->leave($__internal_10b0629fc1d520f76f54d9e7d46cf16bed48e6e3022bc9db879cd57ddedb21a4_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_6f47f8801fb4d1ac01a344549cbf1eebe071869269570500d454560c014e40f2 = $this->env->getExtension("native_profiler");
-        $__internal_6f47f8801fb4d1ac01a344549cbf1eebe071869269570500d454560c014e40f2->enter($__internal_6f47f8801fb4d1ac01a344549cbf1eebe071869269570500d454560c014e40f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8e47ed80f9ebd89bda37595cacb4abd306675d5c882f87084027ba9d2c2525c7 = $this->env->getExtension("native_profiler");
+        $__internal_8e47ed80f9ebd89bda37595cacb4abd306675d5c882f87084027ba9d2c2525c7->enter($__internal_8e47ed80f9ebd89bda37595cacb4abd306675d5c882f87084027ba9d2c2525c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-
-<header>
-    <div class=\"row margin\">
-      <div class=\"col-md-1 \"></div>
-
-      <div class=\"col-md-10\">
-        
-      
-      <nav class=\"navbar navbar-default\"> 
-  <div class=\"container-fluid\"> 
-    <div class=\"navbar-header\"> 
-      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-5\" aria-expanded=\"false\"> 
-        <span class=\"sr-only\">Toggle navigation</span> 
-        <span class=\"icon-bar\"></span> 
-        <span class=\"icon-bar\"></span> 
-        <span class=\"icon-bar\"></span> 
-      </button> 
-      <a><img class=\"dimen\" src=\"";
-        // line 24
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/nombre.png"), "html", null, true);
-        echo "\"></a> 
-    </div> 
-    <div class=\"navbar-collapse collapse\" id=\"bs-example-navbar-collapse-5\" aria-expanded=\"false\" style=\"height: 1px;\"> 
-       <ul class=\"nav navbar-nav\">
-              <li ><a class=\"links\" href=\"";
-        // line 28
-        echo $this->env->getExtension('routing')->getPath("pc_fundation_index");
-        echo "\" >Inicio <span class=\"sr-only\"></span></a></li>
-              <li><a class=\"links\" href=\"##\" >Eventos</a></li>
-              <li><a class=\"links\" href=\"##\" >Donaciones</a></li>
-              <li><a class=\"links\" href=\"##\" >Adoptar</a></li>
-           </ul>
-    </div> </div> </nav>
-      </div>
-      <div class=\"mn colx-md-1\"></div>
-    </div>
-  </header>
 <div class=\"liner\"></div>
   <p>
 
@@ -122,7 +85,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
      <div class=\"col-md-10\">
         <div class=\"col-lg-4\">
           <img class=\"img-circle\" src=\"";
-        // line 71
+        // line 40
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/ENC.png"), "html", null, true);
         echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
           <h4> encuesta de adopción</h4>
@@ -131,7 +94,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
        </div>
         <div class=\"col-lg-4\">
           <img class=\"img-circle\" src=\"";
-        // line 77
+        // line 46
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/CAS.png"), "html", null, true);
         echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
           <h4>Visita domiciliaria</h4>
@@ -139,7 +102,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
          </div>
         <div class=\"col-lg-4\">
           <img class=\"img-circle\" src=\"";
-        // line 82
+        // line 51
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/REL.png"), "html", null, true);
         echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
           <h4>Seguimineto de adaptación</h4>
@@ -165,7 +128,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
         <div role=\"tabpanel\" class=\"conmargin tab-pane fade in active\" id=\"home\">
           <div class=\"col-md-6\">
             <div class=\"col-md-6\"><img class=\"img-thumbnail\" src=\"";
-        // line 105
+        // line 74
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/p1.jpg"), "html", null, true);
         echo "\" alt=\"\"></div>
             <div class=\"col-md-6\">
@@ -190,7 +153,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
           
           <div class=\"col-md-6\">
             <div class=\"col-md-6\"><img class=\"img-thumbnail\" src=\"";
-        // line 127
+        // line 96
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/p1.jpg"), "html", null, true);
         echo "\" alt=\"\"></div>
             <div class=\"col-md-6\">
@@ -232,7 +195,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
 ";
         
-        $__internal_6f47f8801fb4d1ac01a344549cbf1eebe071869269570500d454560c014e40f2->leave($__internal_6f47f8801fb4d1ac01a344549cbf1eebe071869269570500d454560c014e40f2_prof);
+        $__internal_8e47ed80f9ebd89bda37595cacb4abd306675d5c882f87084027ba9d2c2525c7->leave($__internal_8e47ed80f9ebd89bda37595cacb4abd306675d5c882f87084027ba9d2c2525c7_prof);
 
     }
 
@@ -248,7 +211,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
     public function getDebugInfo()
     {
-        return array (  194 => 127,  169 => 105,  143 => 82,  135 => 77,  126 => 71,  80 => 28,  73 => 24,  52 => 6,  46 => 5,  35 => 2,  11 => 1,);
+        return array (  157 => 96,  132 => 74,  106 => 51,  98 => 46,  89 => 40,  52 => 6,  46 => 5,  35 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
@@ -257,37 +220,6 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 /* */
 /* {% block body %}*/
 /* {{ parent() }}*/
-/* */
-/* <header>*/
-/*     <div class="row margin">*/
-/*       <div class="col-md-1 "></div>*/
-/* */
-/*       <div class="col-md-10">*/
-/*         */
-/*       */
-/*       <nav class="navbar navbar-default"> */
-/*   <div class="container-fluid"> */
-/*     <div class="navbar-header"> */
-/*       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5" aria-expanded="false"> */
-/*         <span class="sr-only">Toggle navigation</span> */
-/*         <span class="icon-bar"></span> */
-/*         <span class="icon-bar"></span> */
-/*         <span class="icon-bar"></span> */
-/*       </button> */
-/*       <a><img class="dimen" src="{{ asset('public/img/nombre.png') }}"></a> */
-/*     </div> */
-/*     <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-5" aria-expanded="false" style="height: 1px;"> */
-/*        <ul class="nav navbar-nav">*/
-/*               <li ><a class="links" href="{{ path('pc_fundation_index')}}" >Inicio <span class="sr-only"></span></a></li>*/
-/*               <li><a class="links" href="##" >Eventos</a></li>*/
-/*               <li><a class="links" href="##" >Donaciones</a></li>*/
-/*               <li><a class="links" href="##" >Adoptar</a></li>*/
-/*            </ul>*/
-/*     </div> </div> </nav>*/
-/*       </div>*/
-/*       <div class="mn colx-md-1"></div>*/
-/*     </div>*/
-/*   </header>*/
 /* <div class="liner"></div>*/
 /*   <p>*/
 /* */

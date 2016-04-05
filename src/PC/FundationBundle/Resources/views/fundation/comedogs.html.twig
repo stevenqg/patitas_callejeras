@@ -2,7 +2,6 @@
 {% block scroll_nav %}
 {% endblock %}
 {% block body %}
-{{ parent() }}
 
 	<div class="row">
 		<div class="col-md-1"></div>
@@ -133,6 +132,9 @@
 {% block javascripts %}
 {{ parent() }}
 	<script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARyp3ONt4Ax4J7JBBC8bFggOp4zntwd-s&callback=initMap">
+      src="{{ asset('https://maps.googleapis.com/maps/api/js?key=AIzaSyARyp3ONt4Ax4J7JBBC8bFggOp4zntwd-s&callback=initMap') }}">
     </script>
+    <script src="{{ asset('public/js/jsgoogle.js') }}"  ></script>
+{% endblock %}
+{% block footer %}
 {% endblock %}

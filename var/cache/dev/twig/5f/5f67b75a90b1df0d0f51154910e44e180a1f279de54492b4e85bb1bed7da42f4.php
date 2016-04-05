@@ -15,8 +15,8 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6c2c1f38e76b3ca136014f989324fe7a7a830b0e6e055f6dbc3c9b50a33cdc20 = $this->env->getExtension("native_profiler");
-        $__internal_6c2c1f38e76b3ca136014f989324fe7a7a830b0e6e055f6dbc3c9b50a33cdc20->enter($__internal_6c2c1f38e76b3ca136014f989324fe7a7a830b0e6e055f6dbc3c9b50a33cdc20_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
+        $__internal_0099962f679a0a28acf72ecc5cebc4086bb44d86ae2cc2edf641b0f140f305b2 = $this->env->getExtension("native_profiler");
+        $__internal_0099962f679a0a28acf72ecc5cebc4086bb44d86ae2cc2edf641b0f140f305b2->enter($__internal_0099962f679a0a28acf72ecc5cebc4086bb44d86ae2cc2edf641b0f140f305b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
 
         // line 1
         echo "<header>
@@ -33,7 +33,10 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
                 <span class=\"icon-bar\"></span> 
                 <span class=\"icon-bar\"></span> 
               </button> 
-              <a><img class=\"dimen\"src=\"public/img/nombre.png\"></a> 
+              <a><img class=\"dimen\"src=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/nombre.png"), "html", null, true);
+        echo "\"></a> 
             </div> 
             <div class=\"navbar-collapse collapse\" id=\"bs-example-navbar-collapse-5\" aria-expanded=\"false\" style=\"height: 1px;\"> 
                <ul class=\"nav navbar-nav\">
@@ -56,7 +59,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 \t\t</div>
 </header>";
         
-        $__internal_6c2c1f38e76b3ca136014f989324fe7a7a830b0e6e055f6dbc3c9b50a33cdc20->leave($__internal_6c2c1f38e76b3ca136014f989324fe7a7a830b0e6e055f6dbc3c9b50a33cdc20_prof);
+        $__internal_0099962f679a0a28acf72ecc5cebc4086bb44d86ae2cc2edf641b0f140f305b2->leave($__internal_0099962f679a0a28acf72ecc5cebc4086bb44d86ae2cc2edf641b0f140f305b2_prof);
 
     }
 
@@ -72,7 +75,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 
     public function getDebugInfo()
     {
-        return array (  48 => 22,  42 => 19,  22 => 1,);
+        return array (  51 => 22,  45 => 19,  38 => 15,  22 => 1,);
     }
 }
 /* <header>*/
@@ -89,7 +92,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 /*                 <span class="icon-bar"></span> */
 /*                 <span class="icon-bar"></span> */
 /*               </button> */
-/*               <a><img class="dimen"src="public/img/nombre.png"></a> */
+/*               <a><img class="dimen"src="{{ asset('public/img/nombre.png') }}"></a> */
 /*             </div> */
 /*             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-5" aria-expanded="false" style="height: 1px;"> */
 /*                <ul class="nav navbar-nav">*/

@@ -15,8 +15,8 @@ class __TwigTemplate_d2d193a960002541817facd2de55bee84dc21e11bc36175e48db5324284
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_378a6512ae9aea957cbba1056368faec993dd7699a9afe6e96f5b2bbc11caed6 = $this->env->getExtension("native_profiler");
-        $__internal_378a6512ae9aea957cbba1056368faec993dd7699a9afe6e96f5b2bbc11caed6->enter($__internal_378a6512ae9aea957cbba1056368faec993dd7699a9afe6e96f5b2bbc11caed6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
+        $__internal_e0bf7e47a472af372a84bf517473823921f0c3ee5b4b93bd505378da4c258cca = $this->env->getExtension("native_profiler");
+        $__internal_e0bf7e47a472af372a84bf517473823921f0c3ee5b4b93bd505378da4c258cca->enter($__internal_e0bf7e47a472af372a84bf517473823921f0c3ee5b4b93bd505378da4c258cca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "footer.html.twig"));
 
         // line 1
         echo "<footer class=\"row margin\">
@@ -29,15 +29,21 @@ class __TwigTemplate_d2d193a960002541817facd2de55bee84dc21e11bc36175e48db5324284
 \t\t\t\t<div class=\"col-md-2\">
 \t\t\t\t  <p>Síguenos</p>
 \t\t\t\t</div>
-    \t\t<a href=\"https://www.facebook.com/fundacion.callejeras?ref=ts&fref=ts\" \"facebook\"><img  class=\"iconreeds\" src=\"public/img/iconfb.png\" alt=\"\"></a>
-    \t\t<a href=\"mailto:joe@example.com?subject=feedback\" \"email me\"><img  class=\"iconreeds\" src=\"public/img/icontw.png\" alt=\"\"></a>\t
+    \t\t<a href=\"https://www.facebook.com/fundacion.callejeras?ref=ts&fref=ts\" \"facebook\"><img  class=\"iconreeds\" src=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/iconfb.png"), "html", null, true);
+        echo "\" alt=\"\"></a>
+    \t\t<a href=\"mailto:joe@example.com?subject=feedback\" \"email me\"><img  class=\"iconreeds\" src=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/icontw.png"), "html", null, true);
+        echo "\" alt=\"\"></a>\t
 \t\t\t</div>
 \t\t\t<div class=\"col-md-1\"><p class=\"pull-right\"><a href=\"#\"><font><font>Volver arriba</font></font></a></p></div>
 \t\t\t<div class=\"col-md-1\"></div>
 \t\t\t
 </footer>";
         
-        $__internal_378a6512ae9aea957cbba1056368faec993dd7699a9afe6e96f5b2bbc11caed6->leave($__internal_378a6512ae9aea957cbba1056368faec993dd7699a9afe6e96f5b2bbc11caed6_prof);
+        $__internal_e0bf7e47a472af372a84bf517473823921f0c3ee5b4b93bd505378da4c258cca->leave($__internal_e0bf7e47a472af372a84bf517473823921f0c3ee5b4b93bd505378da4c258cca_prof);
 
     }
 
@@ -46,9 +52,14 @@ class __TwigTemplate_d2d193a960002541817facd2de55bee84dc21e11bc36175e48db5324284
         return "footer.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  22 => 1,);
+        return array (  38 => 12,  34 => 11,  22 => 1,);
     }
 }
 /* <footer class="row margin">*/
@@ -61,8 +72,8 @@ class __TwigTemplate_d2d193a960002541817facd2de55bee84dc21e11bc36175e48db5324284
 /* 				<div class="col-md-2">*/
 /* 				  <p>Síguenos</p>*/
 /* 				</div>*/
-/*     		<a href="https://www.facebook.com/fundacion.callejeras?ref=ts&fref=ts" "facebook"><img  class="iconreeds" src="public/img/iconfb.png" alt=""></a>*/
-/*     		<a href="mailto:joe@example.com?subject=feedback" "email me"><img  class="iconreeds" src="public/img/icontw.png" alt=""></a>	*/
+/*     		<a href="https://www.facebook.com/fundacion.callejeras?ref=ts&fref=ts" "facebook"><img  class="iconreeds" src="{{ asset('public/img/iconfb.png') }}" alt=""></a>*/
+/*     		<a href="mailto:joe@example.com?subject=feedback" "email me"><img  class="iconreeds" src="{{ asset('public/img/icontw.png') }}" alt=""></a>	*/
 /* 			</div>*/
 /* 			<div class="col-md-1"><p class="pull-right"><a href="#"><font><font>Volver arriba</font></font></a></p></div>*/
 /* 			<div class="col-md-1"></div>*/

@@ -1,0 +1,33 @@
+{% extends "layout.html.twig" %}
+{% block scroll_nav %}
+{% endblock %}
+{% block body %}
+<body class="backfont">
+	<div class="wor">
+		<div class="col-sm-1 col-md-4"></div>
+		<div class="col-sm-10 col-md-4">
+			<div class="sectionstile contengroup">
+				<h2><b>INICIAR SESIÓN</b></h2><br>
+				<div class="input-group">
+					<span class="botpd input-group-addon" id="basic-addon1"><img src="{{ asset('public/img/adm.png') }}" alt=""></span>
+					<input id="username" type="text" class="form-control" placeholder="Usuario" >
+				</div>
+				 <div  class="logaler alert-danger" id="username-error"></div>
+				<br>
+				<div class="input-group">
+					<span class="botpd input-group-addon" id="basic-addon1"><img src="{{ asset('public/img/ps.png') }}" alt=""></span>
+					<input type="password" id="password" class="form-control" placeholder="Contaraseña">
+				</div>
+				<div  class="logaler alert-danger" id="password-error"></div>
+				<br>
+				<button class="butonstile btn btn-lg btn-primary btn-block" onclick="" id="controlcamp" type="submit">Registrarse</button>
+			</div> 	
+		</div>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+	<script src="{{ asset('http://code.jquery.com/jquery.js') }}"></script>
+	<script src="{{ asset('public/js/functJquery.js') }}" ></script>
+{% endblock %}
