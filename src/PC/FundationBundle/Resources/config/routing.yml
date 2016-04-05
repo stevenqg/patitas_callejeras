@@ -1,3 +1,19 @@
 pc_fundation_homepage:
     path:     /
     defaults: { _controller: PCFundationBundle:Default:index }
+
+pc_fundation_comedogs:
+    path:     /index/comedogs
+    defaults: { _controller: PCFundationBundle:Default:comedogs }
+    
+pc_fundation_tapitas:
+    path:     /index/tapitas
+    defaults: { _controller: PCFundationBundle:Default:tapitas }
+    
+pc_fundation_adoptar:
+    path:     /index/adoptar
+    defaults: { _controller: PCFundationBundle:Default:adoptar }
+
+pc_fundation_index:
+    path:     /index
+    defaults: { _controller: PCFundationBundle:Default:index }

@@ -1,0 +1,165 @@
+{% extends "layout.html.twig" %}
+{% block scroll_nav %}
+{% endblock %}
+
+{% block body %}
+{{ parent() }}
+
+<header>
+    <div class="row margin">
+      <div class="col-md-1 "></div>
+
+      <div class="col-md-10">
+        
+      
+      <nav class="navbar navbar-default"> 
+  <div class="container-fluid"> 
+    <div class="navbar-header"> 
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5" aria-expanded="false"> 
+        <span class="sr-only">Toggle navigation</span> 
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span> 
+      </button> 
+      <a><img class="dimen" src="{{ asset('public/img/nombre.png') }}"></a> 
+    </div> 
+    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-5" aria-expanded="false" style="height: 1px;"> 
+       <ul class="nav navbar-nav">
+              <li ><a class="links" href="{{ path('pc_fundation_index')}}" >Inicio <span class="sr-only"></span></a></li>
+              <li><a class="links" href="##" >Eventos</a></li>
+              <li><a class="links" href="##" >Donaciones</a></li>
+              <li><a class="links" href="##" >Adoptar</a></li>
+           </ul>
+    </div> </div> </nav>
+      </div>
+      <div class="mn colx-md-1"></div>
+    </div>
+  </header>
+<div class="liner"></div>
+  <p>
+
+<section>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="jumbotron">
+        <h1>Proceso de adopción </h1>
+        <p class="h1estle">La fundación patitas callejeras en función de asegurar la integridad de los animales y el compromiso de las personas que quieren adoptar, establece una serie de actividades para definir si se cumplen con las condiciones estipuladas por la institución. </p>
+        <p class="h1estle">Debe tener en cuenta los tres puntos que se muestran a continuación.</p>
+        <div class="h1estle ">
+          <!-- Large modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Requisitos de adopción</button>
+
+          <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>    
+
+  </div>
+  <div class="col-md-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+     <div class="col-md-10">
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{ asset('public/img/ENC.png') }}" alt="Generic placeholder image" width="140" height="140">
+          <h4> encuesta de adopción</h4>
+          <p>En el cuestionario trataremos los temas más importantes sobre la adopción y tendremos una visión general de la persona o familia que quiere adoptar el anima.</p>
+          
+       </div>
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{ asset('public/img/CAS.png') }}" alt="Generic placeholder image" width="140" height="140">
+          <h4>Visita domiciliaria</h4>
+          <p>Después de analizar las respuestas del cuestionario, se procederá a programar una visita domiciliaria donde se analizará el ambiente y el espacio en el que vivirá la mascota.</p>
+         </div>
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{ asset('public/img/REL.png') }}" alt="Generic placeholder image" width="140" height="140">
+          <h4>Seguimineto de adaptación</h4>
+          <p>cDonec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+
+        <!-- Nav tabs -->
+        <ul class="contmasc nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">PERRITOS</a></li>
+          <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">GATICOS</a></li>
+         
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+        <div role="tabpanel" class="conmargin tab-pane fade in active" id="home">
+          <div class="col-md-6">
+            <div class="col-md-6"><img class="img-thumbnail" src="{{ asset('public/img/p1.jpg') }}" alt=""></div>
+            <div class="col-md-6">
+              <table class="bordtab table">
+                <tr class="estiletab">
+                  <td><label><b>Nombre:</b></label></td>
+                  <td> ............... </td>
+                </tr>
+                <tr>
+                  <td><label><b>Sexo:</b></label></td>
+                  <td> ..............</td>
+                </tr>
+
+                <tr>
+                  <td><label><b>Edad:</b></label></td>
+                  <td> ..............</td>
+                </tr>
+                
+              </table>
+            </div>           
+          </div> 
+          
+          <div class="col-md-6">
+            <div class="col-md-6"><img class="img-thumbnail" src="{{ asset('public/img/p1.jpg') }}" alt=""></div>
+            <div class="col-md-6">
+              <table class="bordtab table">
+                <tr class="estiletab">
+                  <td><label><b>Nombre:</b></label></td>
+                  <td> ............... </td>
+                </tr>
+                <tr>
+                  <td><label><b>Sexo:</b></label></td>
+                  <td> ..............</td>
+                </tr>
+
+                <tr>
+                  <td><label><b>Edad:</b></label></td>
+                  <td> ..............</td>
+                </tr>
+                
+              </table>
+            </div>           
+          </div>
+
+               
+
+        </div>
+
+
+        <div role="tabpanel" class="conmargin tab-pane fade" id="profile">.2sdsds..</div>
+       
+      </div>
+
+    
+  </div>
+  
+</div>
+<div class="col-md-1"> </div>
+
+</section>
+
+{% endblock %}

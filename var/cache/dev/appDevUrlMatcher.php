@@ -100,6 +100,38 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // pc_fundation_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'pc_fundation_homepage');
+            }
+
+            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::indexAction',  '_route' => 'pc_fundation_homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/index')) {
+            // pc_fundation_comedogs
+            if ($pathinfo === '/index/comedogs') {
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::comedogsAction',  '_route' => 'pc_fundation_comedogs',);
+            }
+
+            // pc_fundation_tapitas
+            if ($pathinfo === '/index/tapitas') {
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::tapitasAction',  '_route' => 'pc_fundation_tapitas',);
+            }
+
+            // pc_fundation_adoptar
+            if ($pathinfo === '/index/adoptar') {
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::adoptarAction',  '_route' => 'pc_fundation_adoptar',);
+            }
+
+            // pc_fundation_index
+            if ($pathinfo === '/index') {
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::indexAction',  '_route' => 'pc_fundation_index',);
+            }
+
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

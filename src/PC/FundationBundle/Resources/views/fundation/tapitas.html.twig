@@ -1,0 +1,30 @@
+{% extends "layout.html.twig" %}
+{% block scroll_nav %}
+{% endblock %}
+{% block body %}
+{{ parent() }}
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<img class="posrigth" src="{{ asset('public/img/logo.png') }}"  alt="logo">
+			<img class="postlef" src="{{ asset('public/img/tp2.png') }}" alt="">
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	<div class="liner"></div>
+	
+		<div class="row">
+		<div class="col-md-1"></div>
+		
+		<div class="col-md-10">
+			  <div class="contenmap" id="mymap"></div>
+     	</div>
+		<div class="col-md-1"></div>
+	</div>
+{% endblock %}
+{% block javascripts %}
+{{ parent() }}
+	<script async defer
+      src="{{ url('https://maps.googleapis.com/maps/api/js?key=AIzaSyARyp3ONt4Ax4J7JBBC8bFggOp4zntwd-s&callback=initMap') }}">
+    </script>
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% block title %}Fundacion patitas callejeras{% endblock %}</title>
+		{% block stylesheets %}
+		<link rel="stylesheet"  href="{{ asset('public/css/bootstrap.min.css') }}" >
+		<link rel="stylesheet"  href="{{ asset('public/css/estile.css') }}" >
+		{% endblock %}
+		
+		{% block scroll_nav %}
+		<link rel="stylesheet" type="text/css" href="{{ asset('public/engine0/style.css') }}" />
+		<script type="text/javascript" src="{{ asset('public/engine0/jquery.js') }}"></script>
+		{% endblock %}
+	</head>
+	<body>
+	    {% block body %}
+	        {{ include("nav.html.twig") }}
+	    {% endblock %}
+	    
+	    {% block javascripts %}
+	    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="{{ asset('public/js/bootstrap.js') }}" ></script>
+			<script src="{{ asset('public/js/bootstrap.min.js') }}" ></script>
+			<script src="{{ asset('public/js/jquery-1-12-2.min.js') }}"  ></script>
+	    {% endblock %}
+	    
+		{% block footer %}
+		    {{ include("footer.html.twig") }}
+		{% endblock %}
+			
+	</body>
+</html>
