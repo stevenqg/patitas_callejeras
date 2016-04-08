@@ -25,4 +25,9 @@ class DefaultController extends Controller
     {
         return $this->render('PCFundationBundle:fundation:adopcion.html.twig');
     }
+    
+    public function nosotrosAction()
+    {
+        return $this->render('PCFundationBundle:fundation:nosotros.html.twig');
+    }
 }

@@ -132,6 +132,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // pc_fundation_nosotros
+        if ($pathinfo === '/nosotros') {
+            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::nosotrosAction',  '_route' => 'pc_fundation_nosotros',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

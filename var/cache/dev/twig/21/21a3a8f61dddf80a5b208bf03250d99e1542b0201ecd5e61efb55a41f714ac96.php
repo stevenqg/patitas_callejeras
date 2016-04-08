@@ -23,38 +23,36 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6c53a904c7f7c70b6489e80437d74cf33831d4635bf51d4c5205d208761fa7d1 = $this->env->getExtension("native_profiler");
-        $__internal_6c53a904c7f7c70b6489e80437d74cf33831d4635bf51d4c5205d208761fa7d1->enter($__internal_6c53a904c7f7c70b6489e80437d74cf33831d4635bf51d4c5205d208761fa7d1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
+        $__internal_bfd803a0151c16f539a6ac1b5e458920344131449679d0c877fc82a6fe1b8809 = $this->env->getExtension("native_profiler");
+        $__internal_bfd803a0151c16f539a6ac1b5e458920344131449679d0c877fc82a6fe1b8809->enter($__internal_bfd803a0151c16f539a6ac1b5e458920344131449679d0c877fc82a6fe1b8809_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_6c53a904c7f7c70b6489e80437d74cf33831d4635bf51d4c5205d208761fa7d1->leave($__internal_6c53a904c7f7c70b6489e80437d74cf33831d4635bf51d4c5205d208761fa7d1_prof);
+        $__internal_bfd803a0151c16f539a6ac1b5e458920344131449679d0c877fc82a6fe1b8809->leave($__internal_bfd803a0151c16f539a6ac1b5e458920344131449679d0c877fc82a6fe1b8809_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_8e7eb2c4a5150c4f693cbc8f6b2d8fd099414c1671b81039cec8dd5b3ebbf73b = $this->env->getExtension("native_profiler");
-        $__internal_8e7eb2c4a5150c4f693cbc8f6b2d8fd099414c1671b81039cec8dd5b3ebbf73b->enter($__internal_8e7eb2c4a5150c4f693cbc8f6b2d8fd099414c1671b81039cec8dd5b3ebbf73b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_639d7c151191d8977ecaabbc802e1e643a09b1a02279bdc0153a491080637979 = $this->env->getExtension("native_profiler");
+        $__internal_639d7c151191d8977ecaabbc802e1e643a09b1a02279bdc0153a491080637979->enter($__internal_639d7c151191d8977ecaabbc802e1e643a09b1a02279bdc0153a491080637979_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_8e7eb2c4a5150c4f693cbc8f6b2d8fd099414c1671b81039cec8dd5b3ebbf73b->leave($__internal_8e7eb2c4a5150c4f693cbc8f6b2d8fd099414c1671b81039cec8dd5b3ebbf73b_prof);
+        $__internal_639d7c151191d8977ecaabbc802e1e643a09b1a02279bdc0153a491080637979->leave($__internal_639d7c151191d8977ecaabbc802e1e643a09b1a02279bdc0153a491080637979_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b353822aafe2319b3c9fee4cf6179378de405c2fd1b16ae37e056988d1f6d423 = $this->env->getExtension("native_profiler");
-        $__internal_b353822aafe2319b3c9fee4cf6179378de405c2fd1b16ae37e056988d1f6d423->enter($__internal_b353822aafe2319b3c9fee4cf6179378de405c2fd1b16ae37e056988d1f6d423_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_2d453faf812d757af6a018e9df7b849d8c03689c33ee2fc263d6479ee7da5777 = $this->env->getExtension("native_profiler");
+        $__internal_2d453faf812d757af6a018e9df7b849d8c03689c33ee2fc263d6479ee7da5777->enter($__internal_2d453faf812d757af6a018e9df7b849d8c03689c33ee2fc263d6479ee7da5777_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         $this->displayParentBlock("body", $context, $blocks);
         echo "
 <div class=\"liner\"></div>
-  <p>
-
 <section>
 
 <div class=\"row\">
@@ -103,7 +101,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
      <div class=\"col-md-10\">
         <div class=\"col-lg-4\">
           <img class=\"img-circle\" src=\"";
-        // line 57
+        // line 55
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/ENC.png"), "html", null, true);
         echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
           <h4> encuesta de adopción</h4>
@@ -112,7 +110,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
        </div>
         <div class=\"col-lg-4\">
           <img class=\"img-circle\" src=\"";
-        // line 63
+        // line 61
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/CAS.png"), "html", null, true);
         echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
           <h4>Visita domiciliaria</h4>
@@ -120,7 +118,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
          </div>
         <div class=\"col-lg-4\">
           <img class=\"img-circle\" src=\"";
-        // line 68
+        // line 66
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/REL.png"), "html", null, true);
         echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
           <h4>Seguimineto de adaptación</h4>
@@ -153,7 +151,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                   <img src=\"";
-        // line 98
+        // line 96
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -178,7 +176,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                   <img src=\"";
-        // line 120
+        // line 118
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -203,7 +201,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                    <img src=\"";
-        // line 142
+        // line 140
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -233,7 +231,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                    <img src=\"";
-        // line 169
+        // line 167
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -258,7 +256,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                    <img src=\"";
-        // line 191
+        // line 189
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -283,7 +281,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                    <img src=\"";
-        // line 213
+        // line 211
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -319,7 +317,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                    <img src=\"";
-        // line 246
+        // line 244
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -344,7 +342,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                    <img src=\"";
-        // line 268
+        // line 266
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -369,7 +367,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                   <img src=\"";
-        // line 290
+        // line 288
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -398,7 +396,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                   <img src=\"";
-        // line 316
+        // line 314
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -423,7 +421,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                    <img src=\"";
-        // line 338
+        // line 336
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -448,7 +446,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                    <img src=\"";
-        // line 360
+        // line 358
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -483,27 +481,27 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 </section>
 ";
         
-        $__internal_b353822aafe2319b3c9fee4cf6179378de405c2fd1b16ae37e056988d1f6d423->leave($__internal_b353822aafe2319b3c9fee4cf6179378de405c2fd1b16ae37e056988d1f6d423_prof);
+        $__internal_2d453faf812d757af6a018e9df7b849d8c03689c33ee2fc263d6479ee7da5777->leave($__internal_2d453faf812d757af6a018e9df7b849d8c03689c33ee2fc263d6479ee7da5777_prof);
 
     }
 
-    // line 392
+    // line 390
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_a5926754cab980e6295e273bd7497a7e5f8883816d957377e8bded9ceaa3f7ff = $this->env->getExtension("native_profiler");
-        $__internal_a5926754cab980e6295e273bd7497a7e5f8883816d957377e8bded9ceaa3f7ff->enter($__internal_a5926754cab980e6295e273bd7497a7e5f8883816d957377e8bded9ceaa3f7ff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_1e69f92d8b596d5fcc0d8468bff2b71f0c4e92b23eb36e5abe52496097e2ac33 = $this->env->getExtension("native_profiler");
+        $__internal_1e69f92d8b596d5fcc0d8468bff2b71f0c4e92b23eb36e5abe52496097e2ac33->enter($__internal_1e69f92d8b596d5fcc0d8468bff2b71f0c4e92b23eb36e5abe52496097e2ac33_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 393
+        // line 391
         echo " ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
  <script src=\"";
-        // line 394
+        // line 392
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("https://code.jquery.com/jquery-latest.js"), "html", null, true);
         echo "\"></script>
  ";
         
-        $__internal_a5926754cab980e6295e273bd7497a7e5f8883816d957377e8bded9ceaa3f7ff->leave($__internal_a5926754cab980e6295e273bd7497a7e5f8883816d957377e8bded9ceaa3f7ff_prof);
+        $__internal_1e69f92d8b596d5fcc0d8468bff2b71f0c4e92b23eb36e5abe52496097e2ac33->leave($__internal_1e69f92d8b596d5fcc0d8468bff2b71f0c4e92b23eb36e5abe52496097e2ac33_prof);
 
     }
 
@@ -519,7 +517,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
     public function getDebugInfo()
     {
-        return array (  502 => 394,  497 => 393,  491 => 392,  452 => 360,  427 => 338,  402 => 316,  373 => 290,  348 => 268,  323 => 246,  287 => 213,  262 => 191,  237 => 169,  207 => 142,  182 => 120,  157 => 98,  124 => 68,  116 => 63,  107 => 57,  53 => 6,  47 => 5,  36 => 2,  11 => 1,);
+        return array (  500 => 392,  495 => 391,  489 => 390,  450 => 358,  425 => 336,  400 => 314,  371 => 288,  346 => 266,  321 => 244,  285 => 211,  260 => 189,  235 => 167,  205 => 140,  180 => 118,  155 => 96,  122 => 66,  114 => 61,  105 => 55,  53 => 6,  47 => 5,  36 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
@@ -529,8 +527,6 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 /* {% block body %}*/
 /* {{ parent() }}*/
 /* <div class="liner"></div>*/
-/*   <p>*/
-/* */
 /* <section>*/
 /* */
 /* <div class="row">*/

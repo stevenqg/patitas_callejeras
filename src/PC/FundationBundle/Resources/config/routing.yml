@@ -17,3 +17,7 @@ pc_fundation_adoptar:
 pc_fundation_index:
     path:     /index
     defaults: { _controller: PCFundationBundle:Default:index }
+    
+pc_fundation_nosotros:
+    path:     /nosotros
+    defaults: { _controller: PCFundationBundle:Default:nosotros }
