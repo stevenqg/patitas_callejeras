@@ -166,7 +166,7 @@ padding: 15px;
  .logaler{border-radius: 5px;display: none; padding: 5px;}
 
 .nsfundation{ display: block;}
-.imgessc{ width: 60%;}.paricon{width: 80%;}.dimenpanel{height: 460px; }
+.imgessc{ width: 60%;}.paricon{width: 80%;}
  .bagraundfd{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+42,eaeaea+55,eaeaea+100 */
 background: rgb(255,255,255); /* Old browsers */
 background: -moz-linear-gradient(-45deg,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 42%, rgba(234,234,234,1) 55%, rgba(234,234,234,1) 100%); /* FF3.6-15 */
@@ -178,11 +178,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
  }
  .textjusti{text-align: justify;}
  .paddinnot{padding:0px;}
- .mapfund{
-      height: 400px;
+ .mapfund
+ {
+    height: 400px;
     padding: 71px;
     border-radius: 15px;
     line-height: 1.42857143;
     background-color: #fff;
     border: 1px solid #ddd;
+    box-shadow: 5px 5px 15px  #373C3E;
  }

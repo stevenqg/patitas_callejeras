@@ -23,31 +23,31 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bfd803a0151c16f539a6ac1b5e458920344131449679d0c877fc82a6fe1b8809 = $this->env->getExtension("native_profiler");
-        $__internal_bfd803a0151c16f539a6ac1b5e458920344131449679d0c877fc82a6fe1b8809->enter($__internal_bfd803a0151c16f539a6ac1b5e458920344131449679d0c877fc82a6fe1b8809_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
+        $__internal_6ef2a002e0df1b068bc823618968740ee64d654b5cebc12907167586873d93c9 = $this->env->getExtension("native_profiler");
+        $__internal_6ef2a002e0df1b068bc823618968740ee64d654b5cebc12907167586873d93c9->enter($__internal_6ef2a002e0df1b068bc823618968740ee64d654b5cebc12907167586873d93c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_bfd803a0151c16f539a6ac1b5e458920344131449679d0c877fc82a6fe1b8809->leave($__internal_bfd803a0151c16f539a6ac1b5e458920344131449679d0c877fc82a6fe1b8809_prof);
+        $__internal_6ef2a002e0df1b068bc823618968740ee64d654b5cebc12907167586873d93c9->leave($__internal_6ef2a002e0df1b068bc823618968740ee64d654b5cebc12907167586873d93c9_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_639d7c151191d8977ecaabbc802e1e643a09b1a02279bdc0153a491080637979 = $this->env->getExtension("native_profiler");
-        $__internal_639d7c151191d8977ecaabbc802e1e643a09b1a02279bdc0153a491080637979->enter($__internal_639d7c151191d8977ecaabbc802e1e643a09b1a02279bdc0153a491080637979_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_70db39a7e828cdb8969c0aafbd78de4bbed32989ada3197ad3e125063b537f1c = $this->env->getExtension("native_profiler");
+        $__internal_70db39a7e828cdb8969c0aafbd78de4bbed32989ada3197ad3e125063b537f1c->enter($__internal_70db39a7e828cdb8969c0aafbd78de4bbed32989ada3197ad3e125063b537f1c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_639d7c151191d8977ecaabbc802e1e643a09b1a02279bdc0153a491080637979->leave($__internal_639d7c151191d8977ecaabbc802e1e643a09b1a02279bdc0153a491080637979_prof);
+        $__internal_70db39a7e828cdb8969c0aafbd78de4bbed32989ada3197ad3e125063b537f1c->leave($__internal_70db39a7e828cdb8969c0aafbd78de4bbed32989ada3197ad3e125063b537f1c_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_2d453faf812d757af6a018e9df7b849d8c03689c33ee2fc263d6479ee7da5777 = $this->env->getExtension("native_profiler");
-        $__internal_2d453faf812d757af6a018e9df7b849d8c03689c33ee2fc263d6479ee7da5777->enter($__internal_2d453faf812d757af6a018e9df7b849d8c03689c33ee2fc263d6479ee7da5777_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_7eb56aa495f6dedd1d665f8df070034c5ee42a55dc3b5457dfcd7bc4a3d235c0 = $this->env->getExtension("native_profiler");
+        $__internal_7eb56aa495f6dedd1d665f8df070034c5ee42a55dc3b5457dfcd7bc4a3d235c0->enter($__internal_7eb56aa495f6dedd1d665f8df070034c5ee42a55dc3b5457dfcd7bc4a3d235c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         $this->displayParentBlock("body", $context, $blocks);
@@ -66,7 +66,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
   <div class=\"continer\">
 \t
-\t<button class=\"btn btn-warning\" data-toggle=\"modal\" data-target=\"#miVentana\">requisitos</button>
+\t<button class=\"btn btn-warning\" data-toggle=\"modal\" data-target=\"#miVentana\">Ver requisitos</button>
 
 \t<div class=\"modal fade\" id=\"miVentana\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
 \t\t<div class=\"modal-dialog\">
@@ -77,7 +77,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 \t\t\t\t</div>
 \t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t
-\t\t\t\t\t<dl class=\"dl-horizontal\">
+\t\t\t\t\t<dl class=\"textjusti dl-horizontal\">
 \t\t\t\t\t\t<dt>mayor de edad</dt>
 \t\t\t\t\t\t<dd>la persona que realise la solicitud de adopcion debe ser mayor de edad o bajo acto de un adulto responsable</dd>
 \t\t\t\t\t\t<br>
@@ -147,7 +147,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
      
           <div class=\"col-md-4\">
             <div class=\"conteneter\">
-              <a  class=\"links2\" href=\"##\"> 
+              <a  class=\"links2\"  data-toggle=\"modal\" data-target=\"#ventanaadoptar\" href=\"\"> 
               <div class=\"banername back1\">
                       
                   <img src=\"";
@@ -167,16 +167,47 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <span>......</span></li>
             </ul>
           </div></a>
-            </div>
-          </div>
+          
+          \t<div class=\"modal fade\" id=\"ventanaadoptar\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+          \t\t<div class=\"modal-dialog\">
+\t\t        \t<div class=\"modal-content\">
+\t\t      \t\t<div class=\"alert alert-info modal-header\">
+\t\t    \t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" area-hidden=\"true\"></button>
+\t\t\t    \t<h4 class=\"pull-left\"><b>Adoptar</b></h4>
+\t\t\t    \t</div>
+\t\t\t    \t<div class=\"modal-body\">
+\t\t\t\t\t
+\t\t\t  \t\t<dl class=\"textjusti dl-horizontal\">
+\t\t\t\t  \t\t<dt><img src=\"";
+        // line 121
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
+        echo "\" class=\"imgadop img-thumbnail img-responsive\" alt=\"\"></dt>
+\t\t\t\t        <dd>
+\t\t\t\t          <table class=\"table\">
+                   <tr><td><b>Nombre:</b></td><td>............</td></tr>
+                   <tr><td><b>Edad:</b></td><td>............</td></tr>
+                   <tr><td><b>sexo:</b></td><td>............</td></tr>
+                   <tr><td rowspan=2 colspan=2>Descripciom: </tr>
+                  </table>
+\t\t\t\t        </dd>
+\t\t\t\t      \t</dl>
+\t\t\t\t      </div>
+\t\t\t\t  <div class=\"modal-footer\">
+\t\t\t\t <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Adoptar mascota</button>
+\t\t\t  \t</div>
+\t\t  \t</div>
+\t  \t</div>
+  \t</div>
+  </div>
+      </div>
 
-        <div class=\"col-md-4\">
+    <div class=\"col-md-4\">
             <div class=\"conteneter\">
-              <a  class=\"links2\" href=\"##\"> 
+              <a  class=\"links2\"  data-toggle=\"modal\" data-target=\"#ventanaadoptar\" href=\"\"> 
               <div class=\"banername back1\">
                       
                   <img src=\"";
-        // line 118
+        // line 146
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -192,46 +223,48 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <span>......</span></li>
             </ul>
           </div></a>
-            </div>
-          </div>
-
-        <div class=\"col-md-4\">
-            <div class=\"conteneter\">
-              <a  class=\"links2\" href=\"##\"> 
-              <div class=\"banername back1\">
-                      
-                   <img src=\"";
-        // line 140
+          
+          \t<div class=\"modal fade\" id=\"ventanaadoptar\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+          \t\t<div class=\"modal-dialog\">
+\t\t        \t<div class=\"modal-content\">
+\t\t      \t\t<div class=\"alert alert-info modal-header\">
+\t\t    \t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" area-hidden=\"true\"></button>
+\t\t\t    \t<h4 class=\"pull-left\"><b>Adoptar</b></h4>
+\t\t\t    \t</div>
+\t\t\t    \t<div class=\"modal-body\">
+\t\t\t\t\t
+\t\t\t  \t\t<dl class=\"textjusti dl-horizontal\">
+\t\t\t\t  \t\t<dt><img src=\"";
+        // line 171
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
-        echo "\" class=\"imgadop img-circle\" alt=\"\">
-                              
-                  <h3 class=\"namemasct\"><b>NOMBRE</b></h3>
-                
-            </div>
-            <div class=\"estileinfo\">
-            <ul>
-              <li><label>Edad:</label>
-              <span>......</span></li>
-
-              <li><label>Sexo:</label>
-              <span>......</span></li>
-            </ul>
-          </div></a>
-            </div>
-          </div>
-
-         
+        echo "\" class=\"imgadop img-thumbnail img-responsive\" alt=\"\"></dt>
+\t\t\t\t        <dd>
+\t\t\t\t          <table class=\"table\">
+                   <tr><td><b>Nombre:</b></td><td>............</td></tr>
+                   <tr><td><b>Edad:</b></td><td>............</td></tr>
+                   <tr><td><b>sexo:</b></td><td>............</td></tr>
+                   <tr><td rowspan=2 colspan=2>Descripciom: </tr>
+                  </table>
+\t\t\t\t        </dd>
+\t\t\t\t      \t</dl>
+\t\t\t\t      </div>
+\t\t\t\t  <div class=\"modal-footer\">
+\t\t\t\t <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Adoptar mascota</button>
+\t\t\t  \t</div>
+\t\t  \t</div>
+\t  \t</div>
+  \t</div>
   </div>
+      </div>
+      
 
-   <div class=\"row\">
-     
-          <div class=\"col-md-4\">
+    <div class=\"col-md-4\">
             <div class=\"conteneter\">
-              <a  class=\"links2\" href=\"##\"> 
+              <a  class=\"links2\"  data-toggle=\"modal\" data-target=\"#ventanaadoptar\" href=\"\"> 
               <div class=\"banername back1\">
                       
-                   <img src=\"";
-        // line 167
+                  <img src=\"";
+        // line 197
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -247,58 +280,39 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <span>......</span></li>
             </ul>
           </div></a>
-            </div>
-          </div>
-
-        <div class=\"col-md-4\">
-            <div class=\"conteneter\">
-              <a  class=\"links2\" href=\"##\"> 
-              <div class=\"banername back1\">
-                      
-                   <img src=\"";
-        // line 189
+          
+          \t<div class=\"modal fade\" id=\"ventanaadoptar\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+          \t\t<div class=\"modal-dialog\">
+\t\t        \t<div class=\"modal-content\">
+\t\t      \t\t<div class=\"alert alert-info modal-header\">
+\t\t    \t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" area-hidden=\"true\"></button>
+\t\t\t    \t<h4 class=\"pull-left\"><b>Adoptar</b></h4>
+\t\t\t    \t</div>
+\t\t\t    \t<div class=\"modal-body\">
+\t\t\t\t\t
+\t\t\t  \t\t<dl class=\"textjusti dl-horizontal\">
+\t\t\t\t  \t\t<dt><img src=\"";
+        // line 222
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
-        echo "\" class=\"imgadop img-circle\" alt=\"\">
-                              
-                  <h3 class=\"namemasct\"><b>NOMBRE</b></h3>
-                
-            </div>
-            <div class=\"estileinfo\">
-            <ul>
-              <li><label>Edad:</label>
-              <span>......</span></li>
-
-              <li><label>Sexo:</label>
-              <span>......</span></li>
-            </ul>
-          </div></a>
-            </div>
-          </div>
-
-        <div class=\"col-md-4\">
-            <div class=\"conteneter\">
-              <a  class=\"links2\" href=\"##\"> 
-              <div class=\"banername back1\">
-                      
-                   <img src=\"";
-        // line 211
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
-        echo "\" class=\"imgadop img-circle\" alt=\"\">
-                              
-                  <h3 class=\"namemasct\"><b>NOMBRE</b></h3>
-                
-            </div>
-            <div class=\"estileinfo\">
-            <ul>
-              <li><label>Edad:</label>
-              <span>......</span></li>
-
-              <li><label>Sexo:</label>
-              <span>......</span></li>
-            </ul>
-          </div></a>
-            </div>
-          </div>
+        echo "\" class=\"imgadop img-thumbnail img-responsive\" alt=\"\"></dt>
+\t\t\t\t        <dd>
+\t\t\t\t          <table class=\"table\">
+                   <tr><td><b>Nombre:</b></td><td>............</td></tr>
+                   <tr><td><b>Edad:</b></td><td>............</td></tr>
+                   <tr><td><b>sexo:</b></td><td>............</td></tr>
+                   <tr><td rowspan=2 colspan=2>Descripciom: </tr>
+                  </table>
+\t\t\t\t        </dd>
+\t\t\t\t      \t</dl>
+\t\t\t\t      </div>
+\t\t\t\t  <div class=\"modal-footer\">
+\t\t\t\t <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Adoptar mascota</button>
+\t\t\t  \t</div>
+\t\t  \t</div>
+\t  \t</div>
+  \t</div>
+  </div>
+      </div>
 
          
   </div>
@@ -317,7 +331,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                    <img src=\"";
-        // line 244
+        // line 258
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -342,7 +356,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                    <img src=\"";
-        // line 266
+        // line 280
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -367,7 +381,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
               <div class=\"banername back1\">
                       
                   <img src=\"";
-        // line 288
+        // line 302
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
         echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
@@ -388,85 +402,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
          
   </div>
-  <div class=\"row\">
-     
-          <div class=\"col-md-4\">
-            <div class=\"conteneter\">
-              <a  class=\"links2\" href=\"##\"> 
-              <div class=\"banername back1\">
-                      
-                  <img src=\"";
-        // line 314
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
-        echo "\" class=\"imgadop img-circle\" alt=\"\">
-                              
-                  <h3 class=\"namemasct\"><b>NOMBRE</b></h3>
-                
-            </div>
-            <div class=\"estileinfo\">
-            <ul>
-              <li><label>Edad:</label>
-              <span>......</span></li>
-
-              <li><label>Sexo:</label>
-              <span>......</span></li>
-            </ul>
-          </div></a>
-            </div>
-          </div>
-
-        <div class=\"col-md-4\">
-            <div class=\"conteneter\">
-              <a  class=\"links2\" href=\"##\"> 
-              <div class=\"banername back1\">
-                      
-                   <img src=\"";
-        // line 336
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
-        echo "\" class=\"imgadop img-circle\" alt=\"\">
-                              
-                  <h3 class=\"namemasct\"><b>NOMBRE</b></h3>
-                
-            </div>
-            <div class=\"estileinfo\">
-            <ul>
-              <li><label>Edad:</label>
-              <span>......</span></li>
-
-              <li><label>Sexo:</label>
-              <span>......</span></li>
-            </ul>
-          </div></a>
-            </div>
-          </div>
-
-        <div class=\"col-md-4\">
-            <div class=\"conteneter\">
-              <a  class=\"links2\" href=\"##\"> 
-              <div class=\"banername back1\">
-                      
-                   <img src=\"";
-        // line 358
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
-        echo "\" class=\"imgadop img-circle\" alt=\"\">
-                              
-                  <h3 class=\"namemasct\"><b>NOMBRE</b></h3>
-                
-            </div>
-            <div class=\"estileinfo\">
-            <ul>
-              <li><label>Edad:</label>
-              <span>......</span></li>
-
-              <li><label>Sexo:</label>
-              <span>......</span></li>
-            </ul>
-          </div></a>
-            </div>
-          </div>
-
-         
-  </div> 
+ 
 
         </div>
        
@@ -481,27 +417,27 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 </section>
 ";
         
-        $__internal_2d453faf812d757af6a018e9df7b849d8c03689c33ee2fc263d6479ee7da5777->leave($__internal_2d453faf812d757af6a018e9df7b849d8c03689c33ee2fc263d6479ee7da5777_prof);
+        $__internal_7eb56aa495f6dedd1d665f8df070034c5ee42a55dc3b5457dfcd7bc4a3d235c0->leave($__internal_7eb56aa495f6dedd1d665f8df070034c5ee42a55dc3b5457dfcd7bc4a3d235c0_prof);
 
     }
 
-    // line 390
+    // line 335
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_1e69f92d8b596d5fcc0d8468bff2b71f0c4e92b23eb36e5abe52496097e2ac33 = $this->env->getExtension("native_profiler");
-        $__internal_1e69f92d8b596d5fcc0d8468bff2b71f0c4e92b23eb36e5abe52496097e2ac33->enter($__internal_1e69f92d8b596d5fcc0d8468bff2b71f0c4e92b23eb36e5abe52496097e2ac33_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_9839031b82eaba2f5898518ae4aec2ee48c85aa8caf4c9489c4c73e049914114 = $this->env->getExtension("native_profiler");
+        $__internal_9839031b82eaba2f5898518ae4aec2ee48c85aa8caf4c9489c4c73e049914114->enter($__internal_9839031b82eaba2f5898518ae4aec2ee48c85aa8caf4c9489c4c73e049914114_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 391
+        // line 336
         echo " ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
  <script src=\"";
-        // line 392
+        // line 337
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("https://code.jquery.com/jquery-latest.js"), "html", null, true);
         echo "\"></script>
  ";
         
-        $__internal_1e69f92d8b596d5fcc0d8468bff2b71f0c4e92b23eb36e5abe52496097e2ac33->leave($__internal_1e69f92d8b596d5fcc0d8468bff2b71f0c4e92b23eb36e5abe52496097e2ac33_prof);
+        $__internal_9839031b82eaba2f5898518ae4aec2ee48c85aa8caf4c9489c4c73e049914114->leave($__internal_9839031b82eaba2f5898518ae4aec2ee48c85aa8caf4c9489c4c73e049914114_prof);
 
     }
 
@@ -517,7 +453,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
     public function getDebugInfo()
     {
-        return array (  500 => 392,  495 => 391,  489 => 390,  450 => 358,  425 => 336,  400 => 314,  371 => 288,  346 => 266,  321 => 244,  285 => 211,  260 => 189,  235 => 167,  205 => 140,  180 => 118,  155 => 96,  122 => 66,  114 => 61,  105 => 55,  53 => 6,  47 => 5,  36 => 2,  11 => 1,);
+        return array (  436 => 337,  431 => 336,  425 => 335,  385 => 302,  360 => 280,  335 => 258,  296 => 222,  268 => 197,  239 => 171,  211 => 146,  183 => 121,  155 => 96,  122 => 66,  114 => 61,  105 => 55,  53 => 6,  47 => 5,  36 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
@@ -540,7 +476,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 /* */
 /*   <div class="continer">*/
 /* 	*/
-/* 	<button class="btn btn-warning" data-toggle="modal" data-target="#miVentana">requisitos</button>*/
+/* 	<button class="btn btn-warning" data-toggle="modal" data-target="#miVentana">Ver requisitos</button>*/
 /* */
 /* 	<div class="modal fade" id="miVentana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">*/
 /* 		<div class="modal-dialog">*/
@@ -551,7 +487,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 /* 				</div>*/
 /* 				<div class="modal-body">*/
 /* 					*/
-/* 					<dl class="dl-horizontal">*/
+/* 					<dl class="textjusti dl-horizontal">*/
 /* 						<dt>mayor de edad</dt>*/
 /* 						<dd>la persona que realise la solicitud de adopcion debe ser mayor de edad o bajo acto de un adulto responsable</dd>*/
 /* 						<br>*/
@@ -612,7 +548,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 /*      */
 /*           <div class="col-md-4">*/
 /*             <div class="conteneter">*/
-/*               <a  class="links2" href="##"> */
+/*               <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptar" href=""> */
 /*               <div class="banername back1">*/
 /*                       */
 /*                   <img src="{{asset('public/img/pnot.png')}}" class="imgadop img-circle" alt="">*/
@@ -629,64 +565,43 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 /*               <span>......</span></li>*/
 /*             </ul>*/
 /*           </div></a>*/
-/*             </div>*/
-/*           </div>*/
-/* */
-/*         <div class="col-md-4">*/
-/*             <div class="conteneter">*/
-/*               <a  class="links2" href="##"> */
-/*               <div class="banername back1">*/
-/*                       */
-/*                   <img src="{{asset('public/img/pnot.png')}}" class="imgadop img-circle" alt="">*/
-/*                               */
-/*                   <h3 class="namemasct"><b>NOMBRE</b></h3>*/
-/*                 */
-/*             </div>*/
-/*             <div class="estileinfo">*/
-/*             <ul>*/
-/*               <li><label>Edad:</label>*/
-/*               <span>......</span></li>*/
-/* */
-/*               <li><label>Sexo:</label>*/
-/*               <span>......</span></li>*/
-/*             </ul>*/
-/*           </div></a>*/
-/*             </div>*/
-/*           </div>*/
-/* */
-/*         <div class="col-md-4">*/
-/*             <div class="conteneter">*/
-/*               <a  class="links2" href="##"> */
-/*               <div class="banername back1">*/
-/*                       */
-/*                    <img src="{{asset('public/img/pnot.png')}}" class="imgadop img-circle" alt="">*/
-/*                               */
-/*                   <h3 class="namemasct"><b>NOMBRE</b></h3>*/
-/*                 */
-/*             </div>*/
-/*             <div class="estileinfo">*/
-/*             <ul>*/
-/*               <li><label>Edad:</label>*/
-/*               <span>......</span></li>*/
-/* */
-/*               <li><label>Sexo:</label>*/
-/*               <span>......</span></li>*/
-/*             </ul>*/
-/*           </div></a>*/
-/*             </div>*/
-/*           </div>*/
-/* */
-/*          */
+/*           */
+/*           	<div class="modal fade" id="ventanaadoptar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">*/
+/*           		<div class="modal-dialog">*/
+/* 		        	<div class="modal-content">*/
+/* 		      		<div class="alert alert-info modal-header">*/
+/* 		    		<button type="button" class="close" data-dismiss="modal" area-hidden="true"></button>*/
+/* 			    	<h4 class="pull-left"><b>Adoptar</b></h4>*/
+/* 			    	</div>*/
+/* 			    	<div class="modal-body">*/
+/* 					*/
+/* 			  		<dl class="textjusti dl-horizontal">*/
+/* 				  		<dt><img src="{{asset('public/img/pnot.png')}}" class="imgadop img-thumbnail img-responsive" alt=""></dt>*/
+/* 				        <dd>*/
+/* 				          <table class="table">*/
+/*                    <tr><td><b>Nombre:</b></td><td>............</td></tr>*/
+/*                    <tr><td><b>Edad:</b></td><td>............</td></tr>*/
+/*                    <tr><td><b>sexo:</b></td><td>............</td></tr>*/
+/*                    <tr><td rowspan=2 colspan=2>Descripciom: </tr>*/
+/*                   </table>*/
+/* 				        </dd>*/
+/* 				      	</dl>*/
+/* 				      </div>*/
+/* 				  <div class="modal-footer">*/
+/* 				 <button type="button" class="btn btn-primary" data-dismiss="modal">Adoptar mascota</button>*/
+/* 			  	</div>*/
+/* 		  	</div>*/
+/* 	  	</div>*/
+/*   	</div>*/
 /*   </div>*/
+/*       </div>*/
 /* */
-/*    <div class="row">*/
-/*      */
-/*           <div class="col-md-4">*/
+/*     <div class="col-md-4">*/
 /*             <div class="conteneter">*/
-/*               <a  class="links2" href="##"> */
+/*               <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptar" href=""> */
 /*               <div class="banername back1">*/
 /*                       */
-/*                    <img src="{{asset('public/img/pnot.png')}}" class="imgadop img-circle" alt="">*/
+/*                   <img src="{{asset('public/img/pnot.png')}}" class="imgadop img-circle" alt="">*/
 /*                               */
 /*                   <h3 class="namemasct"><b>NOMBRE</b></h3>*/
 /*                 */
@@ -700,15 +615,44 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 /*               <span>......</span></li>*/
 /*             </ul>*/
 /*           </div></a>*/
-/*             </div>*/
-/*           </div>*/
+/*           */
+/*           	<div class="modal fade" id="ventanaadoptar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">*/
+/*           		<div class="modal-dialog">*/
+/* 		        	<div class="modal-content">*/
+/* 		      		<div class="alert alert-info modal-header">*/
+/* 		    		<button type="button" class="close" data-dismiss="modal" area-hidden="true"></button>*/
+/* 			    	<h4 class="pull-left"><b>Adoptar</b></h4>*/
+/* 			    	</div>*/
+/* 			    	<div class="modal-body">*/
+/* 					*/
+/* 			  		<dl class="textjusti dl-horizontal">*/
+/* 				  		<dt><img src="{{asset('public/img/pnot.png')}}" class="imgadop img-thumbnail img-responsive" alt=""></dt>*/
+/* 				        <dd>*/
+/* 				          <table class="table">*/
+/*                    <tr><td><b>Nombre:</b></td><td>............</td></tr>*/
+/*                    <tr><td><b>Edad:</b></td><td>............</td></tr>*/
+/*                    <tr><td><b>sexo:</b></td><td>............</td></tr>*/
+/*                    <tr><td rowspan=2 colspan=2>Descripciom: </tr>*/
+/*                   </table>*/
+/* 				        </dd>*/
+/* 				      	</dl>*/
+/* 				      </div>*/
+/* 				  <div class="modal-footer">*/
+/* 				 <button type="button" class="btn btn-primary" data-dismiss="modal">Adoptar mascota</button>*/
+/* 			  	</div>*/
+/* 		  	</div>*/
+/* 	  	</div>*/
+/*   	</div>*/
+/*   </div>*/
+/*       </div>*/
+/*       */
 /* */
-/*         <div class="col-md-4">*/
+/*     <div class="col-md-4">*/
 /*             <div class="conteneter">*/
-/*               <a  class="links2" href="##"> */
+/*               <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptar" href=""> */
 /*               <div class="banername back1">*/
 /*                       */
-/*                    <img src="{{asset('public/img/pnot.png')}}" class="imgadop img-circle" alt="">*/
+/*                   <img src="{{asset('public/img/pnot.png')}}" class="imgadop img-circle" alt="">*/
 /*                               */
 /*                   <h3 class="namemasct"><b>NOMBRE</b></h3>*/
 /*                 */
@@ -722,30 +666,36 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 /*               <span>......</span></li>*/
 /*             </ul>*/
 /*           </div></a>*/
-/*             </div>*/
-/*           </div>*/
-/* */
-/*         <div class="col-md-4">*/
-/*             <div class="conteneter">*/
-/*               <a  class="links2" href="##"> */
-/*               <div class="banername back1">*/
-/*                       */
-/*                    <img src="{{asset('public/img/pnot.png')}}" class="imgadop img-circle" alt="">*/
-/*                               */
-/*                   <h3 class="namemasct"><b>NOMBRE</b></h3>*/
-/*                 */
-/*             </div>*/
-/*             <div class="estileinfo">*/
-/*             <ul>*/
-/*               <li><label>Edad:</label>*/
-/*               <span>......</span></li>*/
-/* */
-/*               <li><label>Sexo:</label>*/
-/*               <span>......</span></li>*/
-/*             </ul>*/
-/*           </div></a>*/
-/*             </div>*/
-/*           </div>*/
+/*           */
+/*           	<div class="modal fade" id="ventanaadoptar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">*/
+/*           		<div class="modal-dialog">*/
+/* 		        	<div class="modal-content">*/
+/* 		      		<div class="alert alert-info modal-header">*/
+/* 		    		<button type="button" class="close" data-dismiss="modal" area-hidden="true"></button>*/
+/* 			    	<h4 class="pull-left"><b>Adoptar</b></h4>*/
+/* 			    	</div>*/
+/* 			    	<div class="modal-body">*/
+/* 					*/
+/* 			  		<dl class="textjusti dl-horizontal">*/
+/* 				  		<dt><img src="{{asset('public/img/pnot.png')}}" class="imgadop img-thumbnail img-responsive" alt=""></dt>*/
+/* 				        <dd>*/
+/* 				          <table class="table">*/
+/*                    <tr><td><b>Nombre:</b></td><td>............</td></tr>*/
+/*                    <tr><td><b>Edad:</b></td><td>............</td></tr>*/
+/*                    <tr><td><b>sexo:</b></td><td>............</td></tr>*/
+/*                    <tr><td rowspan=2 colspan=2>Descripciom: </tr>*/
+/*                   </table>*/
+/* 				        </dd>*/
+/* 				      	</dl>*/
+/* 				      </div>*/
+/* 				  <div class="modal-footer">*/
+/* 				 <button type="button" class="btn btn-primary" data-dismiss="modal">Adoptar mascota</button>*/
+/* 			  	</div>*/
+/* 		  	</div>*/
+/* 	  	</div>*/
+/*   	</div>*/
+/*   </div>*/
+/*       </div>*/
 /* */
 /*          */
 /*   </div>*/
@@ -826,76 +776,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 /* */
 /*          */
 /*   </div>*/
-/*   <div class="row">*/
-/*      */
-/*           <div class="col-md-4">*/
-/*             <div class="conteneter">*/
-/*               <a  class="links2" href="##"> */
-/*               <div class="banername back1">*/
-/*                       */
-/*                   <img src="{{asset('public/img/gnot.png')}}" class="imgadop img-circle" alt="">*/
-/*                               */
-/*                   <h3 class="namemasct"><b>NOMBRE</b></h3>*/
-/*                 */
-/*             </div>*/
-/*             <div class="estileinfo">*/
-/*             <ul>*/
-/*               <li><label>Edad:</label>*/
-/*               <span>......</span></li>*/
-/* */
-/*               <li><label>Sexo:</label>*/
-/*               <span>......</span></li>*/
-/*             </ul>*/
-/*           </div></a>*/
-/*             </div>*/
-/*           </div>*/
-/* */
-/*         <div class="col-md-4">*/
-/*             <div class="conteneter">*/
-/*               <a  class="links2" href="##"> */
-/*               <div class="banername back1">*/
-/*                       */
-/*                    <img src="{{asset('public/img/gnot.png')}}" class="imgadop img-circle" alt="">*/
-/*                               */
-/*                   <h3 class="namemasct"><b>NOMBRE</b></h3>*/
-/*                 */
-/*             </div>*/
-/*             <div class="estileinfo">*/
-/*             <ul>*/
-/*               <li><label>Edad:</label>*/
-/*               <span>......</span></li>*/
-/* */
-/*               <li><label>Sexo:</label>*/
-/*               <span>......</span></li>*/
-/*             </ul>*/
-/*           </div></a>*/
-/*             </div>*/
-/*           </div>*/
-/* */
-/*         <div class="col-md-4">*/
-/*             <div class="conteneter">*/
-/*               <a  class="links2" href="##"> */
-/*               <div class="banername back1">*/
-/*                       */
-/*                    <img src="{{asset('public/img/gnot.png')}}" class="imgadop img-circle" alt="">*/
-/*                               */
-/*                   <h3 class="namemasct"><b>NOMBRE</b></h3>*/
-/*                 */
-/*             </div>*/
-/*             <div class="estileinfo">*/
-/*             <ul>*/
-/*               <li><label>Edad:</label>*/
-/*               <span>......</span></li>*/
-/* */
-/*               <li><label>Sexo:</label>*/
-/*               <span>......</span></li>*/
-/*             </ul>*/
-/*           </div></a>*/
-/*             </div>*/
-/*           </div>*/
-/* */
-/*          */
-/*   </div> */
+/*  */
 /* */
 /*         </div>*/
 /*        */
