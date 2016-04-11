@@ -23,31 +23,31 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6ef2a002e0df1b068bc823618968740ee64d654b5cebc12907167586873d93c9 = $this->env->getExtension("native_profiler");
-        $__internal_6ef2a002e0df1b068bc823618968740ee64d654b5cebc12907167586873d93c9->enter($__internal_6ef2a002e0df1b068bc823618968740ee64d654b5cebc12907167586873d93c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
+        $__internal_62a1b06e430eed73b8df748bf27b2631af03850dd401f3c1007dd0b8fb078b88 = $this->env->getExtension("native_profiler");
+        $__internal_62a1b06e430eed73b8df748bf27b2631af03850dd401f3c1007dd0b8fb078b88->enter($__internal_62a1b06e430eed73b8df748bf27b2631af03850dd401f3c1007dd0b8fb078b88_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_6ef2a002e0df1b068bc823618968740ee64d654b5cebc12907167586873d93c9->leave($__internal_6ef2a002e0df1b068bc823618968740ee64d654b5cebc12907167586873d93c9_prof);
+        $__internal_62a1b06e430eed73b8df748bf27b2631af03850dd401f3c1007dd0b8fb078b88->leave($__internal_62a1b06e430eed73b8df748bf27b2631af03850dd401f3c1007dd0b8fb078b88_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_70db39a7e828cdb8969c0aafbd78de4bbed32989ada3197ad3e125063b537f1c = $this->env->getExtension("native_profiler");
-        $__internal_70db39a7e828cdb8969c0aafbd78de4bbed32989ada3197ad3e125063b537f1c->enter($__internal_70db39a7e828cdb8969c0aafbd78de4bbed32989ada3197ad3e125063b537f1c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_d9021adc8aee5952d3c11327e865e85e9ad8c0c1a5e6b3adcf846d523d684761 = $this->env->getExtension("native_profiler");
+        $__internal_d9021adc8aee5952d3c11327e865e85e9ad8c0c1a5e6b3adcf846d523d684761->enter($__internal_d9021adc8aee5952d3c11327e865e85e9ad8c0c1a5e6b3adcf846d523d684761_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_70db39a7e828cdb8969c0aafbd78de4bbed32989ada3197ad3e125063b537f1c->leave($__internal_70db39a7e828cdb8969c0aafbd78de4bbed32989ada3197ad3e125063b537f1c_prof);
+        $__internal_d9021adc8aee5952d3c11327e865e85e9ad8c0c1a5e6b3adcf846d523d684761->leave($__internal_d9021adc8aee5952d3c11327e865e85e9ad8c0c1a5e6b3adcf846d523d684761_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_7eb56aa495f6dedd1d665f8df070034c5ee42a55dc3b5457dfcd7bc4a3d235c0 = $this->env->getExtension("native_profiler");
-        $__internal_7eb56aa495f6dedd1d665f8df070034c5ee42a55dc3b5457dfcd7bc4a3d235c0->enter($__internal_7eb56aa495f6dedd1d665f8df070034c5ee42a55dc3b5457dfcd7bc4a3d235c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_31d578cdf131009d542fd7737f3f84a65e2bd352a2bca198301397e6808041d9 = $this->env->getExtension("native_profiler");
+        $__internal_31d578cdf131009d542fd7737f3f84a65e2bd352a2bca198301397e6808041d9->enter($__internal_31d578cdf131009d542fd7737f3f84a65e2bd352a2bca198301397e6808041d9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         $this->displayParentBlock("body", $context, $blocks);
@@ -193,7 +193,10 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 \t\t\t\t      \t</dl>
 \t\t\t\t      </div>
 \t\t\t\t  <div class=\"modal-footer\">
-\t\t\t\t <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Adoptar mascota</button>
+\t\t\t\t <p><a class=\"btn btn-info\" href=\"";
+        // line 133
+        echo $this->env->getExtension('routing')->getPath("pc_fundation_encuesta");
+        echo "\" target=\"_blank\" role=\"button\" onclick=\"window.open(this.href, this.target, 'width=760,height=700'); return false;\">Adoptar mascota</a></p>
 \t\t\t  \t</div>
 \t\t  \t</div>
 \t  \t</div>
@@ -249,7 +252,10 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 \t\t\t\t      \t</dl>
 \t\t\t\t      </div>
 \t\t\t\t  <div class=\"modal-footer\">
-\t\t\t\t <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Adoptar mascota</button>
+\t\t\t\t <button type=\"button\" class=\"btn btn-info\" href=\"";
+        // line 183
+        echo $this->env->getExtension('routing')->getPath("pc_fundation_encuesta");
+        echo "\" target=\"_blank\" role=\"button\" onclick=\"window.open(this.href, this.target, 'width=760,height=700'); return false;\" data-dismiss=\"modal\">Adoptar mascota</button>
 \t\t\t  \t</div>
 \t\t  \t</div>
 \t  \t</div>
@@ -417,15 +423,15 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 </section>
 ";
         
-        $__internal_7eb56aa495f6dedd1d665f8df070034c5ee42a55dc3b5457dfcd7bc4a3d235c0->leave($__internal_7eb56aa495f6dedd1d665f8df070034c5ee42a55dc3b5457dfcd7bc4a3d235c0_prof);
+        $__internal_31d578cdf131009d542fd7737f3f84a65e2bd352a2bca198301397e6808041d9->leave($__internal_31d578cdf131009d542fd7737f3f84a65e2bd352a2bca198301397e6808041d9_prof);
 
     }
 
     // line 335
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_9839031b82eaba2f5898518ae4aec2ee48c85aa8caf4c9489c4c73e049914114 = $this->env->getExtension("native_profiler");
-        $__internal_9839031b82eaba2f5898518ae4aec2ee48c85aa8caf4c9489c4c73e049914114->enter($__internal_9839031b82eaba2f5898518ae4aec2ee48c85aa8caf4c9489c4c73e049914114_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_05818d4d4d8ba622aa0f1816c71082b55b0826b76559412174495bf9a4c35a84 = $this->env->getExtension("native_profiler");
+        $__internal_05818d4d4d8ba622aa0f1816c71082b55b0826b76559412174495bf9a4c35a84->enter($__internal_05818d4d4d8ba622aa0f1816c71082b55b0826b76559412174495bf9a4c35a84_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 336
         echo " ";
@@ -437,7 +443,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
         echo "\"></script>
  ";
         
-        $__internal_9839031b82eaba2f5898518ae4aec2ee48c85aa8caf4c9489c4c73e049914114->leave($__internal_9839031b82eaba2f5898518ae4aec2ee48c85aa8caf4c9489c4c73e049914114_prof);
+        $__internal_05818d4d4d8ba622aa0f1816c71082b55b0826b76559412174495bf9a4c35a84->leave($__internal_05818d4d4d8ba622aa0f1816c71082b55b0826b76559412174495bf9a4c35a84_prof);
 
     }
 
@@ -453,7 +459,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
     public function getDebugInfo()
     {
-        return array (  436 => 337,  431 => 336,  425 => 335,  385 => 302,  360 => 280,  335 => 258,  296 => 222,  268 => 197,  239 => 171,  211 => 146,  183 => 121,  155 => 96,  122 => 66,  114 => 61,  105 => 55,  53 => 6,  47 => 5,  36 => 2,  11 => 1,);
+        return array (  442 => 337,  437 => 336,  431 => 335,  391 => 302,  366 => 280,  341 => 258,  302 => 222,  274 => 197,  257 => 183,  242 => 171,  214 => 146,  198 => 133,  183 => 121,  155 => 96,  122 => 66,  114 => 61,  105 => 55,  53 => 6,  47 => 5,  36 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
@@ -588,7 +594,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 /* 				      	</dl>*/
 /* 				      </div>*/
 /* 				  <div class="modal-footer">*/
-/* 				 <button type="button" class="btn btn-primary" data-dismiss="modal">Adoptar mascota</button>*/
+/* 				 <p><a class="btn btn-info" href="{{ path('pc_fundation_encuesta')}}" target="_blank" role="button" onclick="window.open(this.href, this.target, 'width=760,height=700'); return false;">Adoptar mascota</a></p>*/
 /* 			  	</div>*/
 /* 		  	</div>*/
 /* 	  	</div>*/
@@ -638,7 +644,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 /* 				      	</dl>*/
 /* 				      </div>*/
 /* 				  <div class="modal-footer">*/
-/* 				 <button type="button" class="btn btn-primary" data-dismiss="modal">Adoptar mascota</button>*/
+/* 				 <button type="button" class="btn btn-info" href="{{ path('pc_fundation_encuesta')}}" target="_blank" role="button" onclick="window.open(this.href, this.target, 'width=760,height=700'); return false;" data-dismiss="modal">Adoptar mascota</button>*/
 /* 			  	</div>*/
 /* 		  	</div>*/
 /* 	  	</div>*/

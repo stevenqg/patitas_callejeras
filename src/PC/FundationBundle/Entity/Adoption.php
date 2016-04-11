@@ -24,7 +24,7 @@ class Adoption
     /**
      * @var string
      *
-     * @ORM\Column(name="status", type="string", columnDefinition="ENUN('APPROVED','DISAPPROVED','PENDING')", length=255)
+     * @ORM\Column(name="status", type="string", columnDefinition="ENUM('APPROVED', 'DISAPPROVED', 'PENDING')", length=50)
      */
     private $status;
 

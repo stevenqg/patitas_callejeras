@@ -21,3 +21,7 @@ pc_fundation_index:
 pc_fundation_nosotros:
     path:     /nosotros
     defaults: { _controller: PCFundationBundle:Default:nosotros }
+    
+pc_fundation_encuesta:
+    path:     /encuesta
+    defaults: { _controller: PCFundationBundle:Default:encuesta }

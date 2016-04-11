@@ -34,6 +34,13 @@ class Meeting
      * @ORM\Column(name="address", type="string", length=255)
      */
     private $address;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="meeting_type", type="string", columnDefinition="ENUM('CENSUS', 'STERILIZATION')", length=50)
+     */
+    private $meetingType;
 
 
     /**
@@ -92,6 +99,30 @@ class Meeting
     public function getAddress()
     {
         return $this->address;
+    }
+    
+    /**
+     * Set meetingType
+     *
+     * @param string $meetingType
+     *
+     * @return Pet
+     */
+    public function setMeetingType($meetingType)
+    {
+        $this->meetingType = $meetingType;
+
+        return $this;
+    }
+
+    /**
+     * Get meetingType
+     *
+     * @return string
+     */
+    public function getMeetingType()
+    {
+        return $this->meetingType;
     }
 }
 

@@ -24,7 +24,7 @@ class Donative
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="string", columnDefinition="ENUN('MONETARY','FOOD','OTHERS')", length=255)
+     * @ORM\Column(name="type", type="string", columnDefinition="ENUM('MONETARY', 'FOOD', 'OTHERS')", length=50)
      */
     private $type;
 
