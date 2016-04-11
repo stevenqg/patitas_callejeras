@@ -24,7 +24,7 @@ class Catalog
     /**
      * @var string
      *
-     * @ORM\Column(name="status", type="string", length=255)
+     * @ORM\Column(name="status", type="string", columnDefinition="ENUN('ADOPTED','PENDING')", length=255)
      */
     private $status;
 

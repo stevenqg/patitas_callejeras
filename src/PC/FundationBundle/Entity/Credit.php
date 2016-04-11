@@ -52,7 +52,7 @@ class Credit
     /**
      * @var string
      *
-     * @ORM\Column(name="status", type="string", length=255)
+     * @ORM\Column(name="status", type="string", columnDefinition="ENUN('APPROVED','DISAPPROVED','PENDING')", length=255)
      */
     private $status;
 

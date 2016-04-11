@@ -38,7 +38,7 @@ class Pet
     /**
      * @var string
      *
-     * @ORM\Column(name="species", type="string",  columnDefinition="ENUN('CANINE','FELINE')", length=255)
+     * @ORM\Column(name="species", type="string", columnDefinition="ENUN('CANINE','FELINE')", length=255)
      */
     private $species;
 
@@ -59,7 +59,7 @@ class Pet
     /**
      * @var string
      *
-     * @ORM\Column(name="gender", type="string", length=255)
+     * @ORM\Column(name="gender", type="string", columnDefinition="ENUN('MALE','FEMALE')", length=255)
      */
     private $gender;
 
