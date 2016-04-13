@@ -63,4 +63,3 @@ class Catalog
         return $this->status;
     }
 }
-

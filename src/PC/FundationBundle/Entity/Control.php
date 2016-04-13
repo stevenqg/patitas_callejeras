@@ -94,4 +94,3 @@ class Control
         return $this->comment;
     }
 }
-

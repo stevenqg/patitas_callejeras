@@ -7,11 +7,19 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Donative
  *
- * @ORM\Table(name="donative")
+ * @ORM\Table(name="donatives")
  * @ORM\Entity(repositoryClass="PC\FundationBundle\Repository\DonativeRepository")
  */
 class Donative
 {
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Administrator", inversedBy="donatives")
+     * @ORM\JoinColumn(name="administrator_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    protected $administrator; 
+    
+    
     /**
      * @var int
      *
@@ -186,5 +194,28 @@ class Donative
     {
         return $this->receivedAt;
     }
-}
 
+    /**
+     * Set administrator
+     *
+     * @param \PC\FundationBundle\Entity\Administrator $administrator
+     *
+     * @return Donative
+     */
+    public function setAdministrator(\PC\FundationBundle\Entity\Administrator $administrator = null)
+    {
+        $this->administrator = $administrator;
+
+        return $this;
+    }
+
+    /**
+     * Get administrator
+     *
+     * @return \PC\FundationBundle\Entity\Administrator
+     */
+    public function getAdministrator()
+    {
+        return $this->administrator;
+    }
+}

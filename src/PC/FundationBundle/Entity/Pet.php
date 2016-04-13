@@ -311,4 +311,3 @@ class Pet
         return $this->birthdate;
     }
 }
-

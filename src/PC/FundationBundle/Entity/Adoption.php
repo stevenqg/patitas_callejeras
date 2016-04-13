@@ -63,4 +63,3 @@ class Adoption
         return $this->status;
     }
 }
-

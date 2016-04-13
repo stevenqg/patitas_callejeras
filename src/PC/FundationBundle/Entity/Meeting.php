@@ -125,4 +125,3 @@ class Meeting
         return $this->meetingType;
     }
 }
-

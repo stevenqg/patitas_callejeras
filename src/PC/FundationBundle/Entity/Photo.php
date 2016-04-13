@@ -63,4 +63,3 @@ class Photo
         return $this->route;
     }
 }
-

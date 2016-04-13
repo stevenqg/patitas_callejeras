@@ -94,4 +94,3 @@ class Census
         return $this->isStrayDog;
     }
 }
-

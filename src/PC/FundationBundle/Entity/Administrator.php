@@ -3,6 +3,7 @@
 namespace PC\FundationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Administrator
@@ -12,6 +13,14 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Administrator
 {
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Donative", mappedBy="administrator")
+     */ 
+    protected $donatives;
+    
+    
+    
     /**
      * @var int
      *
@@ -56,6 +65,10 @@ class Administrator
      */
     private $password;
 
+    public function __construct()
+    {
+        $this->donatives = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -186,5 +199,38 @@ class Administrator
     {
         return $this->password;
     }
-}
 
+    /**
+     * Add donative
+     *
+     * @param \PC\FundationBundle\Entity\Donative $donative
+     *
+     * @return Administrator
+     */
+    public function addDonative(\PC\FundationBundle\Entity\Donative $donative)
+    {
+        $this->donatives[] = $donative;
+
+        return $this;
+    }
+
+    /**
+     * Remove donative
+     *
+     * @param \PC\FundationBundle\Entity\Donative $donative
+     */
+    public function removeDonative(\PC\FundationBundle\Entity\Donative $donative)
+    {
+        $this->donatives->removeElement($donative);
+    }
+
+    /**
+     * Get donatives
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDonatives()
+    {
+        return $this->donatives;
+    }
+}
