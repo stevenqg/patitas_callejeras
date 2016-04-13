@@ -15,8 +15,8 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2d7d0f3714691e25292f34a2251da2c9cc9336a4a8ad2da053a3e34f02227642 = $this->env->getExtension("native_profiler");
-        $__internal_2d7d0f3714691e25292f34a2251da2c9cc9336a4a8ad2da053a3e34f02227642->enter($__internal_2d7d0f3714691e25292f34a2251da2c9cc9336a4a8ad2da053a3e34f02227642_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
+        $__internal_aedd7bc2867077dd949c001c496fa699796f352418e7ec3e8a34f0203efed18d = $this->env->getExtension("native_profiler");
+        $__internal_aedd7bc2867077dd949c001c496fa699796f352418e7ec3e8a34f0203efed18d->enter($__internal_aedd7bc2867077dd949c001c496fa699796f352418e7ec3e8a34f0203efed18d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
 
         // line 1
         echo "<header>
@@ -53,6 +53,10 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
         // line 22
         echo $this->env->getExtension('routing')->getPath("pc_fundation_nosotros");
         echo "\" >Nosotros</a></li>
+                      <li><a class=\"links\" href=\"";
+        // line 23
+        echo $this->env->getExtension('routing')->getPath("pc_administrator_index");
+        echo "\" >listar admins</a></li>
                 </ul>
             </div> 
         </div> 
@@ -62,7 +66,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 \t\t</div>
 </header>";
         
-        $__internal_2d7d0f3714691e25292f34a2251da2c9cc9336a4a8ad2da053a3e34f02227642->leave($__internal_2d7d0f3714691e25292f34a2251da2c9cc9336a4a8ad2da053a3e34f02227642_prof);
+        $__internal_aedd7bc2867077dd949c001c496fa699796f352418e7ec3e8a34f0203efed18d->leave($__internal_aedd7bc2867077dd949c001c496fa699796f352418e7ec3e8a34f0203efed18d_prof);
 
     }
 
@@ -78,7 +82,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 
     public function getDebugInfo()
     {
-        return array (  54 => 22,  49 => 20,  45 => 19,  38 => 15,  22 => 1,);
+        return array (  58 => 23,  54 => 22,  49 => 20,  45 => 19,  38 => 15,  22 => 1,);
     }
 }
 /* <header>*/
@@ -103,6 +107,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 /*                       <li><a class="links" href="{{ path('pc_fundation_adoptar')}}" >Adoptar</a></li>*/
 /*                       <li><a class="links" href="" >Donaciones</a></li>*/
 /*                       <li><a class="links" href="{{ path('pc_fundation_nosotros')}}" >Nosotros</a></li>*/
+/*                       <li><a class="links" href="{{ path('pc_administrator_index')}}" >listar admins</a></li>*/
 /*                 </ul>*/
 /*             </div> */
 /*         </div> */

@@ -142,6 +142,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'PC\\FundationBundle\\Controller\\MainController::encuestaAction',  '_route' => 'pc_fundation_encuesta',);
         }
 
+        // pc_administrator_index
+        if ($pathinfo === '/admin/index') {
+            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::indexAction',  '_route' => 'pc_administrator_index',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

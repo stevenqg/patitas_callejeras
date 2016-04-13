@@ -1,0 +1,18 @@
+{% extends "layout.html.twig" %}
+{% block body %}
+{{ parent() }}
+
+<table>
+{% for admin in admins %}
+	<tr>
+		<td>{{admin.id}}</td>
+		<td>{{admin.name}}</td>
+		<td>{{admin.lastName}}</td>
+		<td>{{admin.age}}</td>
+		<td>{{admin.email}}</td>
+		<td>{{admin.password}}</td>
+	</tr>
+{% endfor %}
+</table>
+{% endblock %}
+		

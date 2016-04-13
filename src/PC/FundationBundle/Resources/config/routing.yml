@@ -25,3 +25,8 @@ pc_fundation_nosotros:
 pc_fundation_encuesta:
     path:     /encuesta
     defaults: { _controller: PCFundationBundle:Main:encuesta }
+    
+pc_administrator_index:
+    path:     /admin/index
+    defaults: { _controller: PCFundationBundle:Admin:index }
+
