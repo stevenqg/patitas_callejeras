@@ -13,6 +13,24 @@ use Doctrine\ORM\Mapping as ORM;
 class Census
 {
     /**
+     * @ORM\OneToOne(targetEntity="User")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
+    
+    /**
+     * @ORM\OneToOne(targetEntity="Pet")
+     * @ORM\JoinColumn(name="pet_id", referencedColumnName="id")
+     */
+    private $pet;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Meeting", inversedBy="censuses")
+     * @ORM\JoinColumn(name="meeting_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    protected $meeting; 
+    
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -92,5 +110,77 @@ class Census
     public function getIsStrayDog()
     {
         return $this->isStrayDog;
+    }
+
+    /**
+     * Set meeting
+     *
+     * @param \PC\FundationBundle\Entity\Meeting $meeting
+     *
+     * @return Census
+     */
+    public function setMeeting(\PC\FundationBundle\Entity\Meeting $meeting = null)
+    {
+        $this->meeting = $meeting;
+
+        return $this;
+    }
+
+    /**
+     * Get meeting
+     *
+     * @return \PC\FundationBundle\Entity\Meeting
+     */
+    public function getMeeting()
+    {
+        return $this->meeting;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \PC\FundationBundle\Entity\User $user
+     *
+     * @return Census
+     */
+    public function setUser(\PC\FundationBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \PC\FundationBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set pet
+     *
+     * @param \PC\FundationBundle\Entity\Pet $pet
+     *
+     * @return Census
+     */
+    public function setPet(\PC\FundationBundle\Entity\Pet $pet = null)
+    {
+        $this->pet = $pet;
+
+        return $this;
+    }
+
+    /**
+     * Get pet
+     *
+     * @return \PC\FundationBundle\Entity\Pet
+     */
+    public function getPet()
+    {
+        return $this->pet;
     }
 }

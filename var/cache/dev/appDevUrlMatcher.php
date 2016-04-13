@@ -106,40 +106,40 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', 'pc_fundation_homepage');
             }
 
-            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::indexAction',  '_route' => 'pc_fundation_homepage',);
+            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\MainController::indexAction',  '_route' => 'pc_fundation_homepage',);
         }
 
         if (0 === strpos($pathinfo, '/index')) {
             // pc_fundation_comedogs
             if ($pathinfo === '/index/comedogs') {
-                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::comedogsAction',  '_route' => 'pc_fundation_comedogs',);
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\MainController::comedogsAction',  '_route' => 'pc_fundation_comedogs',);
             }
 
             // pc_fundation_tapitas
             if ($pathinfo === '/index/tapitas') {
-                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::tapitasAction',  '_route' => 'pc_fundation_tapitas',);
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\MainController::tapitasAction',  '_route' => 'pc_fundation_tapitas',);
             }
 
             // pc_fundation_adoptar
             if ($pathinfo === '/index/adoptar') {
-                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::adoptarAction',  '_route' => 'pc_fundation_adoptar',);
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\MainController::adoptarAction',  '_route' => 'pc_fundation_adoptar',);
             }
 
             // pc_fundation_index
             if ($pathinfo === '/index') {
-                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::indexAction',  '_route' => 'pc_fundation_index',);
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\MainController::indexAction',  '_route' => 'pc_fundation_index',);
             }
 
         }
 
         // pc_fundation_nosotros
         if ($pathinfo === '/nosotros') {
-            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::nosotrosAction',  '_route' => 'pc_fundation_nosotros',);
+            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\MainController::nosotrosAction',  '_route' => 'pc_fundation_nosotros',);
         }
 
         // pc_fundation_encuesta
         if ($pathinfo === '/encuesta') {
-            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\DefaultController::encuestaAction',  '_route' => 'pc_fundation_encuesta',);
+            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\MainController::encuestaAction',  '_route' => 'pc_fundation_encuesta',);
         }
 
         // homepage

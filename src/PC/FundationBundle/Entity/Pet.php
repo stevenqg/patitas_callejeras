@@ -3,7 +3,7 @@
 namespace PC\FundationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Doctrine\Common\Collections\ArrayCollection;
 /**
  * Pet
  *
@@ -12,6 +12,17 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Pet
 {
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Photo", mappedBy="pet")
+     */ 
+    protected $photos;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Credit", mappedBy="pet")
+     */ 
+    protected $credits;
+    
     /**
      * @var int
      *
@@ -84,6 +95,11 @@ class Pet
      */
     private $birthdate;
 
+    public function __construct()
+    {
+        $this->photos = new ArrayCollection();
+        $this->credits = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -309,5 +325,73 @@ class Pet
     public function getBirthdate()
     {
         return $this->birthdate;
+    }
+
+    /**
+     * Add photo
+     *
+     * @param \PC\FundationBundle\Entity\Photo $photo
+     *
+     * @return Pet
+     */
+    public function addPhoto(\PC\FundationBundle\Entity\Photo $photo)
+    {
+        $this->photos[] = $photo;
+
+        return $this;
+    }
+
+    /**
+     * Remove photo
+     *
+     * @param \PC\FundationBundle\Entity\Photo $photo
+     */
+    public function removePhoto(\PC\FundationBundle\Entity\Photo $photo)
+    {
+        $this->photos->removeElement($photo);
+    }
+
+    /**
+     * Get photos
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPhotos()
+    {
+        return $this->photos;
+    }
+
+    /**
+     * Add credit
+     *
+     * @param \PC\FundationBundle\Entity\Credit $credit
+     *
+     * @return Pet
+     */
+    public function addCredit(\PC\FundationBundle\Entity\Credit $credit)
+    {
+        $this->credits[] = $credit;
+
+        return $this;
+    }
+
+    /**
+     * Remove credit
+     *
+     * @param \PC\FundationBundle\Entity\Credit $credit
+     */
+    public function removeCredit(\PC\FundationBundle\Entity\Credit $credit)
+    {
+        $this->credits->removeElement($credit);
+    }
+
+    /**
+     * Get credits
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCredits()
+    {
+        return $this->credits;
     }
 }

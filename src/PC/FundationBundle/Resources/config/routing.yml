@@ -1,27 +1,27 @@
 pc_fundation_homepage:
     path:     /
-    defaults: { _controller: PCFundationBundle:Default:index }
+    defaults: { _controller: PCFundationBundle:Main:index }
 
 pc_fundation_comedogs:
     path:     /index/comedogs
-    defaults: { _controller: PCFundationBundle:Default:comedogs }
+    defaults: { _controller: PCFundationBundle:Main:comedogs }
     
 pc_fundation_tapitas:
     path:     /index/tapitas
-    defaults: { _controller: PCFundationBundle:Default:tapitas }
+    defaults: { _controller: PCFundationBundle:Main:tapitas }
     
 pc_fundation_adoptar:
     path:     /index/adoptar
-    defaults: { _controller: PCFundationBundle:Default:adoptar }
+    defaults: { _controller: PCFundationBundle:Main:adoptar }
 
 pc_fundation_index:
     path:     /index
-    defaults: { _controller: PCFundationBundle:Default:index }
+    defaults: { _controller: PCFundationBundle:Main:index }
     
 pc_fundation_nosotros:
     path:     /nosotros
-    defaults: { _controller: PCFundationBundle:Default:nosotros }
+    defaults: { _controller: PCFundationBundle:Main:nosotros }
     
 pc_fundation_encuesta:
     path:     /encuesta
-    defaults: { _controller: PCFundationBundle:Default:encuesta }
+    defaults: { _controller: PCFundationBundle:Main:encuesta }

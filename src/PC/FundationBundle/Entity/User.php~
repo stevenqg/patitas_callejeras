@@ -3,6 +3,7 @@
 namespace PC\FundationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * User
@@ -12,6 +13,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class User
 {
+    /**
+     * @ORM\OneToMany(targetEntity="Credit", mappedBy="user")
+     */ 
+    protected $credits;
+    
     /**
      * @var int
      *
@@ -70,6 +76,12 @@ class User
      * @ORM\Column(name="email", type="string", length=255)
      */
     private $email;
+    
+    
+    public function __construct()
+    {
+        $this->credits = new ArrayCollection();
+    }
     
     /**
      * Get id
@@ -249,5 +261,62 @@ class User
         return $this->email;
     }
 
-}
 
+    /**
+     * Set phoneNumber
+     *
+     * @param string $phoneNumber
+     *
+     * @return User
+     */
+    public function setPhoneNumber($phoneNumber)
+    {
+        $this->phone_number = $phoneNumber;
+
+        return $this;
+    }
+
+    /**
+     * Get phoneNumber
+     *
+     * @return string
+     */
+    public function getPhoneNumber()
+    {
+        return $this->phone_number;
+    }
+
+    /**
+     * Add credit
+     *
+     * @param \PC\FundationBundle\Entity\Credit $credit
+     *
+     * @return User
+     */
+    public function addCredit(\PC\FundationBundle\Entity\Credit $credit)
+    {
+        $this->credits[] = $credit;
+
+        return $this;
+    }
+
+    /**
+     * Remove credit
+     *
+     * @param \PC\FundationBundle\Entity\Credit $credit
+     */
+    public function removeCredit(\PC\FundationBundle\Entity\Credit $credit)
+    {
+        $this->credits->removeElement($credit);
+    }
+
+    /**
+     * Get credits
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCredits()
+    {
+        return $this->credits;
+    }
+}

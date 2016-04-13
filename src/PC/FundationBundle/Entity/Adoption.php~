@@ -12,6 +12,19 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Adoption
 {
+    
+    /**
+     * @ORM\OneToOne(targetEntity="User")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
+    
+    /**
+     * @ORM\OneToOne(targetEntity="Pet")
+     * @ORM\JoinColumn(name="pet_id", referencedColumnName="id")
+     */
+    private $pet;
+    
     /**
      * @var int
      *
@@ -62,5 +75,52 @@ class Adoption
     {
         return $this->status;
     }
-}
 
+    /**
+     * Set user
+     *
+     * @param \PC\FundationBundle\Entity\User $user
+     *
+     * @return Adoption
+     */
+    public function setUser(\PC\FundationBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \PC\FundationBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set pet
+     *
+     * @param \PC\FundationBundle\Entity\Pet $pet
+     *
+     * @return Adoption
+     */
+    public function setPet(\PC\FundationBundle\Entity\Pet $pet = null)
+    {
+        $this->pet = $pet;
+
+        return $this;
+    }
+
+    /**
+     * Get pet
+     *
+     * @return \PC\FundationBundle\Entity\Pet
+     */
+    public function getPet()
+    {
+        return $this->pet;
+    }
+}

@@ -19,6 +19,11 @@ class Administrator
      */ 
     protected $donatives;
     
+     /**
+     * @ORM\OneToMany(targetEntity="Meeting", mappedBy="administrator")
+     */ 
+    protected $meetings;
+    
     
     
     /**
@@ -68,6 +73,7 @@ class Administrator
     public function __construct()
     {
         $this->donatives = new ArrayCollection();
+        $this->meetings = new ArrayCollection();
     }
 
     /**
@@ -232,5 +238,39 @@ class Administrator
     public function getDonatives()
     {
         return $this->donatives;
+    }
+
+    /**
+     * Add meeting
+     *
+     * @param \PC\FundationBundle\Entity\Meeting $meeting
+     *
+     * @return Administrator
+     */
+    public function addMeeting(\PC\FundationBundle\Entity\Meeting $meeting)
+    {
+        $this->meetings[] = $meeting;
+
+        return $this;
+    }
+
+    /**
+     * Remove meeting
+     *
+     * @param \PC\FundationBundle\Entity\Meeting $meeting
+     */
+    public function removeMeeting(\PC\FundationBundle\Entity\Meeting $meeting)
+    {
+        $this->meetings->removeElement($meeting);
+    }
+
+    /**
+     * Get meetings
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getMeetings()
+    {
+        return $this->meetings;
     }
 }

@@ -3,6 +3,7 @@
 namespace PC\FundationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Sterilization
@@ -12,6 +13,29 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Sterilization
 {
+    /**
+     * @ORM\OneToOne(targetEntity="User")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
+    
+    /**
+     * @ORM\OneToOne(targetEntity="Pet")
+     * @ORM\JoinColumn(name="pet_id", referencedColumnName="id")
+     */
+    private $pet;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Control", mappedBy="sterilization")
+     */ 
+    protected $controls;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Meeting", inversedBy="sterilizations")
+     * @ORM\JoinColumn(name="meeting_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    protected $meeting; 
+    
     /**
      * @var int
      *
@@ -35,6 +59,10 @@ class Sterilization
      */
     private $controlAt;
 
+    public function __construct()
+    {
+        $this->controls = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -93,5 +121,62 @@ class Sterilization
     {
         return $this->controlAt;
     }
-}
 
+    /**
+     * Set meeting
+     *
+     * @param \PC\FundationBundle\Entity\Meeting $meeting
+     *
+     * @return Sterilization
+     */
+    public function setMeeting(\PC\FundationBundle\Entity\Meeting $meeting = null)
+    {
+        $this->meeting = $meeting;
+
+        return $this;
+    }
+
+    /**
+     * Get meeting
+     *
+     * @return \PC\FundationBundle\Entity\Meeting
+     */
+    public function getMeeting()
+    {
+        return $this->meeting;
+    }
+
+    /**
+     * Add control
+     *
+     * @param \PC\FundationBundle\Entity\Control $control
+     *
+     * @return Sterilization
+     */
+    public function addControl(\PC\FundationBundle\Entity\Control $control)
+    {
+        $this->controls[] = $control;
+
+        return $this;
+    }
+
+    /**
+     * Remove control
+     *
+     * @param \PC\FundationBundle\Entity\Control $control
+     */
+    public function removeControl(\PC\FundationBundle\Entity\Control $control)
+    {
+        $this->controls->removeElement($control);
+    }
+
+    /**
+     * Get controls
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getControls()
+    {
+        return $this->controls;
+    }
+}

@@ -194,5 +194,28 @@ class Donative
     {
         return $this->receivedAt;
     }
-}
 
+    /**
+     * Set administrator
+     *
+     * @param \PC\FundationBundle\Entity\Administrator $administrator
+     *
+     * @return Donative
+     */
+    public function setAdministrator(\PC\FundationBundle\Entity\Administrator $administrator = null)
+    {
+        $this->administrator = $administrator;
+
+        return $this;
+    }
+
+    /**
+     * Get administrator
+     *
+     * @return \PC\FundationBundle\Entity\Administrator
+     */
+    public function getAdministrator()
+    {
+        return $this->administrator;
+    }
+}

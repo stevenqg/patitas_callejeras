@@ -13,6 +13,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Catalog
 {
     /**
+     * @ORM\OneToOne(targetEntity="Pet")
+     * @ORM\JoinColumn(name="pet_id", referencedColumnName="id")
+     */
+    private $pet;
+    
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -61,5 +67,29 @@ class Catalog
     public function getStatus()
     {
         return $this->status;
+    }
+
+    /**
+     * Set pet
+     *
+     * @param \PC\FundationBundle\Entity\Pet $pet
+     *
+     * @return Catalog
+     */
+    public function setPet(\PC\FundationBundle\Entity\Pet $pet = null)
+    {
+        $this->pet = $pet;
+
+        return $this;
+    }
+
+    /**
+     * Get pet
+     *
+     * @return \PC\FundationBundle\Entity\Pet
+     */
+    public function getPet()
+    {
+        return $this->pet;
     }
 }

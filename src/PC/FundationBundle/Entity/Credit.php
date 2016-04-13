@@ -12,6 +12,19 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Credit
 {
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Pet", inversedBy="credits")
+     * @ORM\JoinColumn(name="pet_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    protected $pet;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="credits")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    protected $user;
+    
     /**
      * @var int
      *
@@ -185,5 +198,53 @@ class Credit
     public function getStatus()
     {
         return $this->status;
+    }
+
+    /**
+     * Set pet
+     *
+     * @param \PC\FundationBundle\Entity\Pet $pet
+     *
+     * @return Credit
+     */
+    public function setPet(\PC\FundationBundle\Entity\Pet $pet = null)
+    {
+        $this->pet = $pet;
+
+        return $this;
+    }
+
+    /**
+     * Get pet
+     *
+     * @return \PC\FundationBundle\Entity\Pet
+     */
+    public function getPet()
+    {
+        return $this->pet;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \PC\FundationBundle\Entity\User $user
+     *
+     * @return Credit
+     */
+    public function setUser(\PC\FundationBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \PC\FundationBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

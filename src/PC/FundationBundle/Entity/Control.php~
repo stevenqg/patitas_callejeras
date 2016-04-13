@@ -13,6 +13,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Control
 {
     /**
+     * @ORM\ManyToOne(targetEntity="Sterilization", inversedBy="controls")
+     * @ORM\JoinColumn(name="sterilization_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    protected $sterilization; 
+    
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -93,5 +99,28 @@ class Control
     {
         return $this->comment;
     }
-}
 
+    /**
+     * Set sterilization
+     *
+     * @param \PC\FundationBundle\Entity\Sterilization $sterilization
+     *
+     * @return Control
+     */
+    public function setSterilization(\PC\FundationBundle\Entity\Sterilization $sterilization = null)
+    {
+        $this->sterilization = $sterilization;
+
+        return $this;
+    }
+
+    /**
+     * Get sterilization
+     *
+     * @return \PC\FundationBundle\Entity\Sterilization
+     */
+    public function getSterilization()
+    {
+        return $this->sterilization;
+    }
+}

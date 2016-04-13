@@ -3,6 +3,7 @@
 namespace PC\FundationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Meeting
@@ -12,6 +13,22 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Meeting
 {
+    /**
+     * @ORM\OneToMany(targetEntity="Census", mappedBy="meeting")
+     */ 
+    protected $censuses;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Sterilization", mappedBy="meeting")
+     */ 
+    protected $sterilizations;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Administrator", inversedBy="meetings")
+     * @ORM\JoinColumn(name="administrator_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    protected $administrator; 
+    
     /**
      * @var int
      *
@@ -42,7 +59,12 @@ class Meeting
      */
     private $meetingType;
 
-
+    public function __construct()
+    {
+        $this->censuses = new ArrayCollection();
+        $this->sterilizations = new ArrayCollection();
+    }
+    
     /**
      * Get id
      *
@@ -124,5 +146,96 @@ class Meeting
     {
         return $this->meetingType;
     }
-}
 
+    /**
+     * Set administrator
+     *
+     * @param \PC\FundationBundle\Entity\Administrator $administrator
+     *
+     * @return Meeting
+     */
+    public function setAdministrator(\PC\FundationBundle\Entity\Administrator $administrator = null)
+    {
+        $this->administrator = $administrator;
+
+        return $this;
+    }
+
+    /**
+     * Get administrator
+     *
+     * @return \PC\FundationBundle\Entity\Administrator
+     */
+    public function getAdministrator()
+    {
+        return $this->administrator;
+    }
+
+    /**
+     * Add census
+     *
+     * @param \PC\FundationBundle\Entity\Census $census
+     *
+     * @return Meeting
+     */
+    public function addCensus(\PC\FundationBundle\Entity\Census $census)
+    {
+        $this->censuses[] = $census;
+
+        return $this;
+    }
+
+    /**
+     * Remove census
+     *
+     * @param \PC\FundationBundle\Entity\Census $census
+     */
+    public function removeCensus(\PC\FundationBundle\Entity\Census $census)
+    {
+        $this->censuses->removeElement($census);
+    }
+
+    /**
+     * Get censuses
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCensuses()
+    {
+        return $this->censuses;
+    }
+
+    /**
+     * Add sterilization
+     *
+     * @param \PC\FundationBundle\Entity\Sterlization $sterilization
+     *
+     * @return Meeting
+     */
+    public function addSterilization(\PC\FundationBundle\Entity\Sterlization $sterilization)
+    {
+        $this->sterilizations[] = $sterilization;
+
+        return $this;
+    }
+
+    /**
+     * Remove sterilization
+     *
+     * @param \PC\FundationBundle\Entity\Sterlization $sterilization
+     */
+    public function removeSterilization(\PC\FundationBundle\Entity\Sterlization $sterilization)
+    {
+        $this->sterilizations->removeElement($sterilization);
+    }
+
+    /**
+     * Get sterilizations
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSterilizations()
+    {
+        return $this->sterilizations;
+    }
+}
