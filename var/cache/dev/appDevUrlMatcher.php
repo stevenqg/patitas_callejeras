@@ -142,8 +142,31 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'PC\\FundationBundle\\Controller\\MainController::encuestaAction',  '_route' => 'pc_fundation_encuesta',);
         }
 
+        if (0 === strpos($pathinfo, '/user')) {
+            // pc_user_encuesta
+            if ($pathinfo === '/user/add') {
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\UserController::addAction',  '_route' => 'pc_user_encuesta',);
+            }
+
+            // pc_user_create
+            if ($pathinfo === '/user/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_pc_user_create;
+                }
+
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\UserController::createAction',  '_route' => 'pc_user_create',);
+            }
+            not_pc_user_create:
+
+        }
+
         // pc_administrator_index
-        if ($pathinfo === '/admin/index') {
+        if (rtrim($pathinfo, '/') === '/admin') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'pc_administrator_index');
+            }
+
             return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::indexAction',  '_route' => 'pc_administrator_index',);
         }
 

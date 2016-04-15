@@ -21,20 +21,20 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4f2aba15d080a50de812fbe674e5d397d0c8cdd6aee8ed9be8af40281497c81f = $this->env->getExtension("native_profiler");
-        $__internal_4f2aba15d080a50de812fbe674e5d397d0c8cdd6aee8ed9be8af40281497c81f->enter($__internal_4f2aba15d080a50de812fbe674e5d397d0c8cdd6aee8ed9be8af40281497c81f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:index.html.twig"));
+        $__internal_28e35a5f2b31172cd8e63068c78d58976999c185874cbbf956b6247797710782 = $this->env->getExtension("native_profiler");
+        $__internal_28e35a5f2b31172cd8e63068c78d58976999c185874cbbf956b6247797710782->enter($__internal_28e35a5f2b31172cd8e63068c78d58976999c185874cbbf956b6247797710782_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4f2aba15d080a50de812fbe674e5d397d0c8cdd6aee8ed9be8af40281497c81f->leave($__internal_4f2aba15d080a50de812fbe674e5d397d0c8cdd6aee8ed9be8af40281497c81f_prof);
+        $__internal_28e35a5f2b31172cd8e63068c78d58976999c185874cbbf956b6247797710782->leave($__internal_28e35a5f2b31172cd8e63068c78d58976999c185874cbbf956b6247797710782_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e2152296ed541c1034b8bead025f89569a32023b01ff8c17a8fd6d79615d740b = $this->env->getExtension("native_profiler");
-        $__internal_e2152296ed541c1034b8bead025f89569a32023b01ff8c17a8fd6d79615d740b->enter($__internal_e2152296ed541c1034b8bead025f89569a32023b01ff8c17a8fd6d79615d740b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_176f2198c53e716830af6d9c9ea17bdd65dcc175f08119999eaa55e498dc0461 = $this->env->getExtension("native_profiler");
+        $__internal_176f2198c53e716830af6d9c9ea17bdd65dcc175f08119999eaa55e498dc0461->enter($__internal_176f2198c53e716830af6d9c9ea17bdd65dcc175f08119999eaa55e498dc0461_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         $this->displayParentBlock("body", $context, $blocks);
@@ -110,7 +110,7 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
           <p><a class=\"btn btn-default\" href=\"";
         // line 45
         echo $this->env->getExtension('routing')->getPath("pc_fundation_tapitas");
-        echo "\" target=\"_blank\" role=\"button\" onclick=\"window.open(this.href, this.target, 'width=700,height=700'); return false;\">View details »</a></p>
+        echo "\" target=\"_blank\" role=\"button\" id=\"ventemerg\">View details »</a></p>
         </div></div>
 
         <div class=\"col-lg-4\">
@@ -125,7 +125,7 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
           <p><a class=\"btn btn-default\" href=\"";
         // line 54
         echo $this->env->getExtension('routing')->getPath("pc_fundation_comedogs");
-        echo "\" target=\"_blank\" role=\"button\" onclick=\"window.open(this.href, this.target, 'width=1160,height=700'); return false;\">View details »</a></p>
+        echo "\" target=\"_blank\" role=\"button\" id=\"ventemerg2\" >View details »</a></p>
         </div></div>
 
         <div class=\"col-lg-4\">
@@ -188,7 +188,7 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 
 ";
         
-        $__internal_e2152296ed541c1034b8bead025f89569a32023b01ff8c17a8fd6d79615d740b->leave($__internal_e2152296ed541c1034b8bead025f89569a32023b01ff8c17a8fd6d79615d740b_prof);
+        $__internal_176f2198c53e716830af6d9c9ea17bdd65dcc175f08119999eaa55e498dc0461->leave($__internal_176f2198c53e716830af6d9c9ea17bdd65dcc175f08119999eaa55e498dc0461_prof);
 
     }
 
@@ -251,7 +251,7 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 /*           <img class="img-circle" src="{{ asset('public/img/tapitas.png') }}" alt="Generic placeholder image" width="140" height="140">*/
 /*           <h2>Recolección de tapitas</h2>*/
 /*           <p>cDonec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>*/
-/*           <p><a class="btn btn-default" href="{{ path('pc_fundation_tapitas')}}" target="_blank" role="button" onclick="window.open(this.href, this.target, 'width=700,height=700'); return false;">View details »</a></p>*/
+/*           <p><a class="btn btn-default" href="{{ path('pc_fundation_tapitas')}}" target="_blank" role="button" id="ventemerg">View details »</a></p>*/
 /*         </div></div>*/
 /* */
 /*         <div class="col-lg-4">*/
@@ -260,7 +260,7 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 /*           <h2>Heading</h2>*/
 /*           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>*/
 /* */
-/*           <p><a class="btn btn-default" href="{{ path('pc_fundation_comedogs')}}" target="_blank" role="button" onclick="window.open(this.href, this.target, 'width=1160,height=700'); return false;">View details »</a></p>*/
+/*           <p><a class="btn btn-default" href="{{ path('pc_fundation_comedogs')}}" target="_blank" role="button" id="ventemerg2" >View details »</a></p>*/
 /*         </div></div>*/
 /* */
 /*         <div class="col-lg-4">*/

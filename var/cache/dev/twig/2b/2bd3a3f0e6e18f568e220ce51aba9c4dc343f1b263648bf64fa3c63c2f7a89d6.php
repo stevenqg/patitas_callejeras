@@ -21,20 +21,20 @@ class __TwigTemplate_17878ad6aee3e3a3a7f789e94948a877338cf59380ff7e35c071c9fc2dc
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_98e0dbc02304e4f4871b8406043a6bfe0ec7d6df5a79f8ead6bb5485d300d118 = $this->env->getExtension("native_profiler");
-        $__internal_98e0dbc02304e4f4871b8406043a6bfe0ec7d6df5a79f8ead6bb5485d300d118->enter($__internal_98e0dbc02304e4f4871b8406043a6bfe0ec7d6df5a79f8ead6bb5485d300d118_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:indexAdmin.html.twig"));
+        $__internal_92f221506d5c0928505dde17ef0794de672dfaf0d0fd8a8cd474747ccca3a3d5 = $this->env->getExtension("native_profiler");
+        $__internal_92f221506d5c0928505dde17ef0794de672dfaf0d0fd8a8cd474747ccca3a3d5->enter($__internal_92f221506d5c0928505dde17ef0794de672dfaf0d0fd8a8cd474747ccca3a3d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:indexAdmin.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_98e0dbc02304e4f4871b8406043a6bfe0ec7d6df5a79f8ead6bb5485d300d118->leave($__internal_98e0dbc02304e4f4871b8406043a6bfe0ec7d6df5a79f8ead6bb5485d300d118_prof);
+        $__internal_92f221506d5c0928505dde17ef0794de672dfaf0d0fd8a8cd474747ccca3a3d5->leave($__internal_92f221506d5c0928505dde17ef0794de672dfaf0d0fd8a8cd474747ccca3a3d5_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e3243a7bf57ddd24fe01e8831b44d80ff0e623f04d817e7ed7754bcb62fd7374 = $this->env->getExtension("native_profiler");
-        $__internal_e3243a7bf57ddd24fe01e8831b44d80ff0e623f04d817e7ed7754bcb62fd7374->enter($__internal_e3243a7bf57ddd24fe01e8831b44d80ff0e623f04d817e7ed7754bcb62fd7374_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_42ab8adb15d4994870800e11766f598c8eca79b18aa3f4079594c9ace433447a = $this->env->getExtension("native_profiler");
+        $__internal_42ab8adb15d4994870800e11766f598c8eca79b18aa3f4079594c9ace433447a->enter($__internal_42ab8adb15d4994870800e11766f598c8eca79b18aa3f4079594c9ace433447a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         $this->displayParentBlock("body", $context, $blocks);
@@ -47,30 +47,29 @@ class __TwigTemplate_17878ad6aee3e3a3a7f789e94948a877338cf59380ff7e35c071c9fc2dc
         $context['_seq'] = twig_ensure_traversable((isset($context["admins"]) ? $context["admins"] : $this->getContext($context, "admins")));
         foreach ($context['_seq'] as $context["_key"] => $context["admin"]) {
             // line 7
-            echo "
-\t<tr>
+            echo "\t<tr>
 \t\t<td>";
-            // line 9
+            // line 8
             echo twig_escape_filter($this->env, $this->getAttribute($context["admin"], "id", array()), "html", null, true);
             echo "</td>
 \t\t<td>";
-            // line 10
+            // line 9
             echo twig_escape_filter($this->env, $this->getAttribute($context["admin"], "name", array()), "html", null, true);
             echo "</td>
 \t\t<td>";
-            // line 11
+            // line 10
             echo twig_escape_filter($this->env, $this->getAttribute($context["admin"], "lastName", array()), "html", null, true);
             echo "</td>
 \t\t<td>";
-            // line 12
+            // line 11
             echo twig_escape_filter($this->env, $this->getAttribute($context["admin"], "age", array()), "html", null, true);
             echo "</td>
 \t\t<td>";
-            // line 13
+            // line 12
             echo twig_escape_filter($this->env, $this->getAttribute($context["admin"], "email", array()), "html", null, true);
             echo "</td>
 \t\t<td>";
-            // line 14
+            // line 13
             echo twig_escape_filter($this->env, $this->getAttribute($context["admin"], "password", array()), "html", null, true);
             echo "</td>
 \t</tr>
@@ -79,11 +78,11 @@ class __TwigTemplate_17878ad6aee3e3a3a7f789e94948a877338cf59380ff7e35c071c9fc2dc
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['admin'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
+        // line 16
         echo "</table>
 ";
         
-        $__internal_e3243a7bf57ddd24fe01e8831b44d80ff0e623f04d817e7ed7754bcb62fd7374->leave($__internal_e3243a7bf57ddd24fe01e8831b44d80ff0e623f04d817e7ed7754bcb62fd7374_prof);
+        $__internal_42ab8adb15d4994870800e11766f598c8eca79b18aa3f4079594c9ace433447a->leave($__internal_42ab8adb15d4994870800e11766f598c8eca79b18aa3f4079594c9ace433447a_prof);
 
     }
 
@@ -99,7 +98,7 @@ class __TwigTemplate_17878ad6aee3e3a3a7f789e94948a877338cf59380ff7e35c071c9fc2dc
 
     public function getDebugInfo()
     {
-        return array (  83 => 17,  74 => 14,  70 => 13,  66 => 12,  62 => 11,  58 => 10,  54 => 9,  50 => 7,  46 => 6,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  82 => 16,  73 => 13,  69 => 12,  65 => 11,  61 => 10,  57 => 9,  53 => 8,  50 => 7,  46 => 6,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
@@ -108,7 +107,6 @@ class __TwigTemplate_17878ad6aee3e3a3a7f789e94948a877338cf59380ff7e35c071c9fc2dc
 /* */
 /* <table>*/
 /* {% for admin in admins %}*/
-/* */
 /* 	<tr>*/
 /* 		<td>{{admin.id}}</td>*/
 /* 		<td>{{admin.name}}</td>*/

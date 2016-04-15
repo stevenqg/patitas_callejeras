@@ -21,12 +21,21 @@ pc_fundation_index:
 pc_fundation_nosotros:
     path:     /nosotros
     defaults: { _controller: PCFundationBundle:Main:nosotros }
-    
+  
 pc_fundation_encuesta:
     path:     /encuesta
     defaults: { _controller: PCFundationBundle:Main:encuesta }
     
+pc_user_encuesta:
+    path:     /user/add
+    defaults: { _controller: PCFundationBundle:User:add }
+
+pc_user_create:
+    path:     /user/create
+    defaults: { _controller: PCFundationBundle:User:create }
+    methods:  POST
+    
 pc_administrator_index:
-    path:     /admin/index
+    path:     /admin/
     defaults: { _controller: PCFundationBundle:Admin:index }
 

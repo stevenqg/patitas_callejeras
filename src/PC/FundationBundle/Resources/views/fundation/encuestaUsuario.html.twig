@@ -1,0 +1,114 @@
+{% extends "layout.html.twig" %}
+{% block scroll_nav %}
+{% endblock %}
+{% block body %}
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<img class="posrigth img-responsive" src="{{ asset('public/img/logo.png') }}" alt="logo">
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	<div class="liner"></div>
+	<div class="row">
+		<div class="col-xs-1 col-md-1"></div>
+		<div class=" col-xs-10 col-md-10">
+			
+			<br>
+			{{ form_start(form, {'attr' : {'role' : 'form'} }) }}
+			<div class="form-group">
+				<h4 class="textjusti"><b>Datos personales del adoptante</b></h4>
+				<div class="textjusti sectionstile">
+					<div class=" alert alert-info" role="alert">Los datos personales que se solicita en este formulario tienen como finalidad ser utilizados para proveer los servicios y productos requeridos, que mediante la Ley 1581 de 2012 se expidió el Régimen General de Protección de Datos Personales para su seguridad.</div><br>
+					
+					<div class="row">
+						<div class="col-xs-2 col-md-1">
+							<label for="Nombres del adoptante">Nombres:</label>
+						</div>
+						<div class="col-xs-10 col-md-5">
+							{{form_widget(form.name, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombres del adoptante' } })}}
+						</div>
+					</div>
+					<div class="row">
+						<br>
+						<div class="col-xs-2 col-md-1">
+							<label for="Apellidos del adoptante">Apellido:</label>
+						</div>
+						<div class="col-xs-10 col-md-5">
+							{{form_widget(form.lastName, {'attr' : {'class' : 'form-control', 'placeholder' : 'apellidos del adoptante' } })}}
+						</div>
+					
+					</div>
+
+					<div class="row">
+						<br>
+						<div class="col-xs-2 col-md-1">
+							<label for="Nombre del adoptante">Edad: </label>
+						</div>
+						<div class="col-xs-10 col-md-5">
+							{{form_widget(form.age, {'attr' : {'class' : 'form-control', 'id' : 'age_user', 'placeholder' : 'edad' } })}}
+							<div  class="logaler alert-danger" id="age-error"></div>
+						</div>
+					</div>
+					<div class="row">
+						<br>
+						<div class="col-xs-2 col-md-1">
+							<label for="Edad del adoptante">Cedula</label>
+						</div>
+						<div class="col-xs-10 col-md-5">
+							{{form_widget(form.identificationNumber, {'attr' : {'class' : 'form-control', 'placeholder' : 'numero de cedula' } })}}
+						</div>
+					
+					</div>
+
+					<div class="row">
+						<br>
+						<div class="col-xs-2 col-md-1">
+							<label  for="Nombre del adoptante">Direccion: </label>
+						</div>
+						<div class="col-xs-10 col-md-5">
+							{{form_widget(form.address, {'attr' : {'class' : 'form-control', 'placeholder' : 'direccion' } })}}
+						</div>
+					</div>	
+					
+					<div class="row">
+						<br>
+						<div class="col-xs-2 col-md-1">
+							<label  for="Edad del adoptante">Telefono:</label>
+						</div>
+						<div class="col-xs-10 col-md-5">
+							{{form_widget(form.phone_number, {'attr' : {'class' : 'form-control', 'placeholder' : 'numero telefonico' } })}}
+						</div>
+					</div>
+					
+					<div class="row">
+						<br>
+						<div class="col-xs-2 col-md-1">
+							<label  for="Nombre del adoptante">Email: </label>
+						</div>
+						<div class="col-xs-10 col-md-5">
+							{{form_widget(form.email, {'attr' : {'class' : 'form-control', 'id' : 'email_user', 'placeholder' : 'correo electronico' } })}}
+							<div  class="logaler alert-danger" id="email-error"></div><br>
+						</div>
+					</div>
+
+				</div>
+				{{ form_widget(form.save, {'label' : 'continuar proceso', 'attr' : {'class' : 'btn btn-success'} }) }}
+			</div>
+			{{ form_end(form) }}
+		</div>
+		<div class="col-xs-1 col-md-1"></div>
+	</div>
+
+{% endblock %}
+
+{% block scripts %}
+	<!-- Librería jQuery requerida por los plugins de JavaScript -->
+	<script src="{{ asset('public/js/jquery-2.1.1.min.js') }}" ></script>
+	<!-- toda las funciones personalizadas-->
+	<script src="{{ asset('public/js/functJquery.js') }}"></script>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+

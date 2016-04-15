@@ -31,8 +31,9 @@ class MainController extends Controller
         return $this->render('PCFundationBundle:fundation:nosotros.html.twig');
     }
     
-     public function encuestaAction()
+        public function encuestaAction()
     {
         return $this->render('PCFundationBundle:fundation:encuesta.html.twig');
     }
+    
 }
