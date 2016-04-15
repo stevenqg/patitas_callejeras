@@ -1,0 +1,47 @@
+<?php
+
+namespace PC\FundationBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Census_collaborator
+ *
+ * @ORM\Table(name="census_collaborator")
+ * @ORM\Entity(repositoryClass="PC\FundationBundle\Repository\Census_collaboratorRepository")
+ */
+class Census_collaborator
+{
+    /**
+     * @ORM\OneToOne(targetEntity="Collaborator")
+     * @ORM\JoinColumn(name="collaborator_id", referencedColumnName="id")
+     */
+    private $collaborator;
+    
+    /**
+     * @ORM\OneToOne(targetEntity="Census")
+     * @ORM\JoinColumn(name="census_id", referencedColumnName="id")
+     */
+    private $census;
+    
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}
+

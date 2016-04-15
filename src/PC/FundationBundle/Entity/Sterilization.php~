@@ -179,4 +179,52 @@ class Sterilization
     {
         return $this->controls;
     }
+
+    /**
+     * Set user
+     *
+     * @param \PC\FundationBundle\Entity\User $user
+     *
+     * @return Sterilization
+     */
+    public function setUser(\PC\FundationBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \PC\FundationBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set pet
+     *
+     * @param \PC\FundationBundle\Entity\Pet $pet
+     *
+     * @return Sterilization
+     */
+    public function setPet(\PC\FundationBundle\Entity\Pet $pet = null)
+    {
+        $this->pet = $pet;
+
+        return $this;
+    }
+
+    /**
+     * Get pet
+     *
+     * @return \PC\FundationBundle\Entity\Pet
+     */
+    public function getPet()
+    {
+        return $this->pet;
+    }
 }

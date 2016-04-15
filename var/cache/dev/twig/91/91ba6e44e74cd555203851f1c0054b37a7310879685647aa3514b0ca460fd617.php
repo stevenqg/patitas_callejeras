@@ -24,43 +24,34 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0e47228893bf45b82539f46269311c4d46576214436c81a481b881936e9d161f = $this->env->getExtension("native_profiler");
-        $__internal_0e47228893bf45b82539f46269311c4d46576214436c81a481b881936e9d161f->enter($__internal_0e47228893bf45b82539f46269311c4d46576214436c81a481b881936e9d161f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:encuestaUsuario.html.twig"));
+        $__internal_6dcb5af8f37ad2e93e8447fb8ca3e139540d083a8037103b1a8e50d5e9127ccd = $this->env->getExtension("native_profiler");
+        $__internal_6dcb5af8f37ad2e93e8447fb8ca3e139540d083a8037103b1a8e50d5e9127ccd->enter($__internal_6dcb5af8f37ad2e93e8447fb8ca3e139540d083a8037103b1a8e50d5e9127ccd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:encuestaUsuario.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0e47228893bf45b82539f46269311c4d46576214436c81a481b881936e9d161f->leave($__internal_0e47228893bf45b82539f46269311c4d46576214436c81a481b881936e9d161f_prof);
+        $__internal_6dcb5af8f37ad2e93e8447fb8ca3e139540d083a8037103b1a8e50d5e9127ccd->leave($__internal_6dcb5af8f37ad2e93e8447fb8ca3e139540d083a8037103b1a8e50d5e9127ccd_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_6c419dc8775cf4cb97daf028b6181a937baa53a2414c0e812c7cac9079b9d366 = $this->env->getExtension("native_profiler");
-        $__internal_6c419dc8775cf4cb97daf028b6181a937baa53a2414c0e812c7cac9079b9d366->enter($__internal_6c419dc8775cf4cb97daf028b6181a937baa53a2414c0e812c7cac9079b9d366_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_4c4e83689f719a5d204cb0a0ad04bc3af2a3d4792d5b50059faab8f3fcf21d3a = $this->env->getExtension("native_profiler");
+        $__internal_4c4e83689f719a5d204cb0a0ad04bc3af2a3d4792d5b50059faab8f3fcf21d3a->enter($__internal_4c4e83689f719a5d204cb0a0ad04bc3af2a3d4792d5b50059faab8f3fcf21d3a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_6c419dc8775cf4cb97daf028b6181a937baa53a2414c0e812c7cac9079b9d366->leave($__internal_6c419dc8775cf4cb97daf028b6181a937baa53a2414c0e812c7cac9079b9d366_prof);
+        $__internal_4c4e83689f719a5d204cb0a0ad04bc3af2a3d4792d5b50059faab8f3fcf21d3a->leave($__internal_4c4e83689f719a5d204cb0a0ad04bc3af2a3d4792d5b50059faab8f3fcf21d3a_prof);
 
     }
 
     // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_0a891860793354a5fd62d57ff8f9cbb3f80caa3758c9bb0388da51f6e6843397 = $this->env->getExtension("native_profiler");
-        $__internal_0a891860793354a5fd62d57ff8f9cbb3f80caa3758c9bb0388da51f6e6843397->enter($__internal_0a891860793354a5fd62d57ff8f9cbb3f80caa3758c9bb0388da51f6e6843397_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_3215427cb28ca3c474582bd959194abed86e7c732200199c655cff5d54031cc4 = $this->env->getExtension("native_profiler");
+        $__internal_3215427cb28ca3c474582bd959194abed86e7c732200199c655cff5d54031cc4->enter($__internal_3215427cb28ca3c474582bd959194abed86e7c732200199c655cff5d54031cc4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
-        echo "\t<div class=\"row\">
-\t\t<div class=\"col-md-1\"></div>
-\t\t<div class=\"col-md-10\">
-\t\t\t<img class=\"posrigth img-responsive\" src=\"";
-        // line 8
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/logo.png"), "html", null, true);
-        echo "\" alt=\"logo\">
-\t\t</div>
-\t\t<div class=\"col-md-1\"></div>
-\t</div>
+        echo "\t
 \t<div class=\"liner\"></div>
 \t<div class=\"row\">
 \t\t<div class=\"col-xs-1 col-md-1\"></div>
@@ -68,11 +59,11 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 \t\t\t
 \t\t\t<br>
 \t\t\t";
-        // line 18
+        // line 12
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("role" => "form")));
         echo " 
 \t\t\t<div class=\"form-group\">
-\t\t\t\t<h4 class=\"textjusti\"><b>Datos personales del adoptante</b></h4>
+\t\t\t\t<h4 class=\"colortexth4 textjusti\"><b>INFORMACIÓN DEL ADOPTANTE</b></h4>
 \t\t\t\t<div class=\"textjusti sectionstile\">
 \t\t\t\t\t<div class=\" alert alert-info\" role=\"alert\">Los datos personales que se solicita en este formulario tienen como finalidad ser utilizados para proveer los servicios y productos requeridos, que mediante la Ley 1581 de 2012 se expidió el Régimen General de Protección de Datos Personales para su seguridad.</div><br>
 \t\t\t\t\t
@@ -82,19 +73,17 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-10 col-md-5\">
 \t\t\t\t\t\t\t";
-        // line 29
+        // line 23
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "name", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "nombres del adoptante")));
         echo "
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"row\">
-\t\t\t\t\t\t<br>
+\t\t\t\t\t\t<br></div>
+\t\t\t\t\t\t
 \t\t\t\t\t\t<div class=\"col-xs-2 col-md-1\">
 \t\t\t\t\t\t\t<label for=\"Apellidos del adoptante\">Apellido:</label>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-10 col-md-5\">
 \t\t\t\t\t\t\t";
-        // line 38
+        // line 30
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lastName", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "apellidos del adoptante")));
         echo "
 \t\t\t\t\t\t</div>
@@ -108,20 +97,18 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-10 col-md-5\">
 \t\t\t\t\t\t\t";
-        // line 49
+        // line 41
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "age", array()), 'widget', array("attr" => array("class" => "form-control", "id" => "age_user", "placeholder" => "edad")));
         echo "
 \t\t\t\t\t\t\t<div  class=\"logaler alert-danger\" id=\"age-error\"></div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"row\">
-\t\t\t\t\t\t<br>
+\t\t\t\t\t\t<br></div>
+\t\t\t\t
 \t\t\t\t\t\t<div class=\"col-xs-2 col-md-1\">
 \t\t\t\t\t\t\t<label for=\"Edad del adoptante\">Cedula</label>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-10 col-md-5\">
 \t\t\t\t\t\t\t";
-        // line 59
+        // line 49
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "identificationNumber", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "numero de cedula")));
         echo "
 \t\t\t\t\t\t</div>
@@ -135,20 +122,18 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-10 col-md-5\">
 \t\t\t\t\t\t\t";
-        // line 70
+        // line 60
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "address", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "direccion")));
         echo "
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>\t
+\t\t\t\t\t\t<br></div>
 \t\t\t\t\t
-\t\t\t\t\t<div class=\"row\">
-\t\t\t\t\t\t<br>
+\t\t\t\t\t\t
 \t\t\t\t\t\t<div class=\"col-xs-2 col-md-1\">
 \t\t\t\t\t\t\t<label  for=\"Edad del adoptante\">Telefono:</label>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-10 col-md-5\">
 \t\t\t\t\t\t\t";
-        // line 80
+        // line 68
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phone_number", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "numero telefonico")));
         echo "
 \t\t\t\t\t\t</div>
@@ -161,7 +146,7 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-10 col-md-5\">
 \t\t\t\t\t\t\t";
-        // line 90
+        // line 78
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'widget', array("attr" => array("class" => "form-control", "id" => "email_user", "placeholder" => "correo electronico")));
         echo "
 \t\t\t\t\t\t\t<div  class=\"logaler alert-danger\" id=\"email-error\"></div><br>
@@ -170,12 +155,12 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 
 \t\t\t\t</div>
 \t\t\t\t";
-        // line 96
+        // line 84
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("label" => "continuar proceso", "attr" => array("class" => "btn btn-success")));
         echo "
 \t\t\t</div>
 \t\t\t";
-        // line 98
+        // line 86
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 \t\t</div>
@@ -184,41 +169,41 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 
 ";
         
-        $__internal_0a891860793354a5fd62d57ff8f9cbb3f80caa3758c9bb0388da51f6e6843397->leave($__internal_0a891860793354a5fd62d57ff8f9cbb3f80caa3758c9bb0388da51f6e6843397_prof);
+        $__internal_3215427cb28ca3c474582bd959194abed86e7c732200199c655cff5d54031cc4->leave($__internal_3215427cb28ca3c474582bd959194abed86e7c732200199c655cff5d54031cc4_prof);
 
     }
 
-    // line 105
+    // line 93
     public function block_scripts($context, array $blocks = array())
     {
-        $__internal_b8eb79dcad8c026d2437879a4912022acc42565a8e65d033bf306ec3da37045c = $this->env->getExtension("native_profiler");
-        $__internal_b8eb79dcad8c026d2437879a4912022acc42565a8e65d033bf306ec3da37045c->enter($__internal_b8eb79dcad8c026d2437879a4912022acc42565a8e65d033bf306ec3da37045c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scripts"));
+        $__internal_ad8aadd48255584ba962cf185e02e4e85665f9acdee7695523f9ee3b35550261 = $this->env->getExtension("native_profiler");
+        $__internal_ad8aadd48255584ba962cf185e02e4e85665f9acdee7695523f9ee3b35550261->enter($__internal_ad8aadd48255584ba962cf185e02e4e85665f9acdee7695523f9ee3b35550261_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scripts"));
 
-        // line 106
+        // line 94
         echo "\t<!-- Librería jQuery requerida por los plugins de JavaScript -->
 \t<script src=\"";
-        // line 107
+        // line 95
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/js/jquery-2.1.1.min.js"), "html", null, true);
         echo "\" ></script>
 \t<!-- toda las funciones personalizadas-->
 \t<script src=\"";
-        // line 109
+        // line 97
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/js/functJquery.js"), "html", null, true);
         echo "\"></script>
 ";
         
-        $__internal_b8eb79dcad8c026d2437879a4912022acc42565a8e65d033bf306ec3da37045c->leave($__internal_b8eb79dcad8c026d2437879a4912022acc42565a8e65d033bf306ec3da37045c_prof);
+        $__internal_ad8aadd48255584ba962cf185e02e4e85665f9acdee7695523f9ee3b35550261->leave($__internal_ad8aadd48255584ba962cf185e02e4e85665f9acdee7695523f9ee3b35550261_prof);
 
     }
 
-    // line 112
+    // line 100
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_a7ed927048824a4206a53bb5d1bc3ed408c0eac0820ef562f883caffe7fba851 = $this->env->getExtension("native_profiler");
-        $__internal_a7ed927048824a4206a53bb5d1bc3ed408c0eac0820ef562f883caffe7fba851->enter($__internal_a7ed927048824a4206a53bb5d1bc3ed408c0eac0820ef562f883caffe7fba851_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_09381e97f812b7beebc0b44dfb3368a465c1d0a3aadb9db99524673d4e9c02bf = $this->env->getExtension("native_profiler");
+        $__internal_09381e97f812b7beebc0b44dfb3368a465c1d0a3aadb9db99524673d4e9c02bf->enter($__internal_09381e97f812b7beebc0b44dfb3368a465c1d0a3aadb9db99524673d4e9c02bf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
         
-        $__internal_a7ed927048824a4206a53bb5d1bc3ed408c0eac0820ef562f883caffe7fba851->leave($__internal_a7ed927048824a4206a53bb5d1bc3ed408c0eac0820ef562f883caffe7fba851_prof);
+        $__internal_09381e97f812b7beebc0b44dfb3368a465c1d0a3aadb9db99524673d4e9c02bf->leave($__internal_09381e97f812b7beebc0b44dfb3368a465c1d0a3aadb9db99524673d4e9c02bf_prof);
 
     }
 
@@ -234,20 +219,14 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 
     public function getDebugInfo()
     {
-        return array (  215 => 112,  206 => 109,  201 => 107,  198 => 106,  192 => 105,  179 => 98,  174 => 96,  165 => 90,  152 => 80,  139 => 70,  125 => 59,  112 => 49,  98 => 38,  86 => 29,  72 => 18,  59 => 8,  54 => 5,  48 => 4,  37 => 2,  11 => 1,);
+        return array (  200 => 100,  191 => 97,  186 => 95,  183 => 94,  177 => 93,  164 => 86,  159 => 84,  150 => 78,  137 => 68,  126 => 60,  112 => 49,  101 => 41,  87 => 30,  77 => 23,  63 => 12,  54 => 5,  48 => 4,  37 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
 /* {% block scroll_nav %}*/
 /* {% endblock %}*/
 /* {% block body %}*/
-/* 	<div class="row">*/
-/* 		<div class="col-md-1"></div>*/
-/* 		<div class="col-md-10">*/
-/* 			<img class="posrigth img-responsive" src="{{ asset('public/img/logo.png') }}" alt="logo">*/
-/* 		</div>*/
-/* 		<div class="col-md-1"></div>*/
-/* 	</div>*/
+/* 	*/
 /* 	<div class="liner"></div>*/
 /* 	<div class="row">*/
 /* 		<div class="col-xs-1 col-md-1"></div>*/
@@ -256,7 +235,7 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 /* 			<br>*/
 /* 			{{ form_start(form, {'attr' : {'role' : 'form'} }) }} */
 /* 			<div class="form-group">*/
-/* 				<h4 class="textjusti"><b>Datos personales del adoptante</b></h4>*/
+/* 				<h4 class="colortexth4 textjusti"><b>INFORMACIÓN DEL ADOPTANTE</b></h4>*/
 /* 				<div class="textjusti sectionstile">*/
 /* 					<div class=" alert alert-info" role="alert">Los datos personales que se solicita en este formulario tienen como finalidad ser utilizados para proveer los servicios y productos requeridos, que mediante la Ley 1581 de 2012 se expidió el Régimen General de Protección de Datos Personales para su seguridad.</div><br>*/
 /* 					*/
@@ -266,10 +245,8 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 /* 						</div>*/
 /* 						<div class="col-xs-10 col-md-5">*/
 /* 							{{form_widget(form.name, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombres del adoptante' } })}}*/
-/* 						</div>*/
-/* 					</div>*/
-/* 					<div class="row">*/
-/* 						<br>*/
+/* 						<br></div>*/
+/* 						*/
 /* 						<div class="col-xs-2 col-md-1">*/
 /* 							<label for="Apellidos del adoptante">Apellido:</label>*/
 /* 						</div>*/
@@ -287,10 +264,8 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 /* 						<div class="col-xs-10 col-md-5">*/
 /* 							{{form_widget(form.age, {'attr' : {'class' : 'form-control', 'id' : 'age_user', 'placeholder' : 'edad' } })}}*/
 /* 							<div  class="logaler alert-danger" id="age-error"></div>*/
-/* 						</div>*/
-/* 					</div>*/
-/* 					<div class="row">*/
-/* 						<br>*/
+/* 						<br></div>*/
+/* 				*/
 /* 						<div class="col-xs-2 col-md-1">*/
 /* 							<label for="Edad del adoptante">Cedula</label>*/
 /* 						</div>*/
@@ -307,11 +282,9 @@ class __TwigTemplate_da59cb201b2ab6ce87f164d49f92a73c30b9c4abfd641e486120a8e7dec
 /* 						</div>*/
 /* 						<div class="col-xs-10 col-md-5">*/
 /* 							{{form_widget(form.address, {'attr' : {'class' : 'form-control', 'placeholder' : 'direccion' } })}}*/
-/* 						</div>*/
-/* 					</div>	*/
+/* 						<br></div>*/
 /* 					*/
-/* 					<div class="row">*/
-/* 						<br>*/
+/* 						*/
 /* 						<div class="col-xs-2 col-md-1">*/
 /* 							<label  for="Edad del adoptante">Telefono:</label>*/
 /* 						</div>*/

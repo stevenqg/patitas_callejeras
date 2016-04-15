@@ -15,8 +15,8 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_aedd7bc2867077dd949c001c496fa699796f352418e7ec3e8a34f0203efed18d = $this->env->getExtension("native_profiler");
-        $__internal_aedd7bc2867077dd949c001c496fa699796f352418e7ec3e8a34f0203efed18d->enter($__internal_aedd7bc2867077dd949c001c496fa699796f352418e7ec3e8a34f0203efed18d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
+        $__internal_16617af32de74d030cdb6fd671a2b05275b1209a5e940e251631dde2a4145090 = $this->env->getExtension("native_profiler");
+        $__internal_16617af32de74d030cdb6fd671a2b05275b1209a5e940e251631dde2a4145090->enter($__internal_16617af32de74d030cdb6fd671a2b05275b1209a5e940e251631dde2a4145090_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
 
         // line 1
         echo "<header>
@@ -56,7 +56,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
                       <li><a class=\"links\" href=\"";
         // line 23
         echo $this->env->getExtension('routing')->getPath("pc_administrator_index");
-        echo "\" >listar admins</a></li>
+        echo "\" >menú administrador</a></li>
                 </ul>
             </div> 
         </div> 
@@ -66,7 +66,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 \t\t</div>
 </header>";
         
-        $__internal_aedd7bc2867077dd949c001c496fa699796f352418e7ec3e8a34f0203efed18d->leave($__internal_aedd7bc2867077dd949c001c496fa699796f352418e7ec3e8a34f0203efed18d_prof);
+        $__internal_16617af32de74d030cdb6fd671a2b05275b1209a5e940e251631dde2a4145090->leave($__internal_16617af32de74d030cdb6fd671a2b05275b1209a5e940e251631dde2a4145090_prof);
 
     }
 
@@ -107,7 +107,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 /*                       <li><a class="links" href="{{ path('pc_fundation_adoptar')}}" >Adoptar</a></li>*/
 /*                       <li><a class="links" href="" >Donaciones</a></li>*/
 /*                       <li><a class="links" href="{{ path('pc_fundation_nosotros')}}" >Nosotros</a></li>*/
-/*                       <li><a class="links" href="{{ path('pc_administrator_index')}}" >listar admins</a></li>*/
+/*                       <li><a class="links" href="{{ path('pc_administrator_index')}}" >menú administrador</a></li>*/
 /*                 </ul>*/
 /*             </div> */
 /*         </div> */

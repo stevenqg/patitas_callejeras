@@ -22,7 +22,7 @@ class AdminController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $admins = $em->getRepository('PCFundationBundle:Administrator')->findAll();
-        return $this->render('PCFundationBundle:fundation:indexAdmin.html.twig', array('admins'=>$admins));
+        return $this->render('PCFundationBundle:Admin:admin.html.twig', array('admins'=>$admins));
     }
     
     /*
@@ -32,7 +32,7 @@ class AdminController extends Controller
     {
         $admin = new Administrator();
         $form = $this->createAdminForm($admin);
-        return $this->render('PCFundationBundle:fundation:registroAdmin.html.twig', array('form'=>$form->createView()));
+        return $this->render('PCFundationBundle:Admin:NewAdmin.html.twig', array('form'=>$form->createView()));
     }
     
     /*
@@ -59,13 +59,23 @@ class AdminController extends Controller
             $em->persist($admin);
             $em->flush();
             
-            return $this->redirectToRoute('pc_admin_index');
+            return $this->redirectToRoute('pc_administrator_index');
         }
-        return $this->render('PCFundationBundle:fundation:registroAdmin.html.twig', array('form'=>$form->createView()));
+        return $this->render('PCFundationBundle:Admin:NewAdmin.html.twig', array('form'=>$form->createView()));
     }
     
     /*
+    muestra el formulario para editar el adminsitrador ---aún en construcción---
+    */
+    public function editAction()
+    {
+       return $this->render('PCFundationBundle:Admin:admin.html.twig');
+    }
     
+    
+    
+    /*
+    muestra el formulario para ingreso de una mascota
     */
     public function addpetAction()
     {
@@ -75,7 +85,7 @@ class AdminController extends Controller
     }
     
     /*
-    
+    crea el formularo para ingresar los datos de la mascota
     */
     private function createPetForm(Pet $entity)
     {
@@ -84,7 +94,7 @@ class AdminController extends Controller
     }
     
     /*
-    
+    registra la mascota en la base de datos
     */
     public function createpetAction(request $request)
     {

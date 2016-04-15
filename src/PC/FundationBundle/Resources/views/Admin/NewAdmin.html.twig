@@ -1,0 +1,88 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{%block title%}Nuevo Administrador{% endblock %}
+{% block capa %}
+<container class="backfont">
+	<header id="header" class="backvent">
+		<a><img class="img-responsive dimen" src="{{ asset('public/img/nombre.png') }}" ></a>
+	</header>
+	<br>
+
+	<div class="container">
+	<div class="row">
+		<div class="col-xs-1 col-md-1"></div>	
+		<div class="col-xs-10 col-md-10">
+			<div class="pestile" >
+			<h4 class="margnone">Nuevo Administrador<span class="btn-lg glyphicon glyphicon-user" aria-hidden="true"></span></h4>
+			</div>
+			<div class="conteform">
+				<br>
+				{{ form_start(form, {'attr' : {'role' : 'form'} }) }}
+				<div class="form-group">
+					<div class="row">
+						<div class="textjusti col-xs-3 col-md-2">
+							<label class="marginlabel textjusti" for="Nombres del adoptante">Nombres: </label>
+						</div>
+						<div class="col-xs-9 col-md-4">
+							{{form_widget(form.name, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombre(s) del administrador' } })}}
+							<div  class="logaler alert-danger" id="username-error"></div><br>
+						</div>
+						<div class="textjusti col-xs-3 col-md-2">
+							<label class="marginlabel textjusti"  for="Apellidos del adoptante">Apellido:</label>
+						</div>
+						<div class="col-xs-9 col-md-4">
+							{{form_widget(form.lastName, {'attr' : {'class' : 'form-control', 'placeholder' : 'apelidos del administrador' } })}}
+							<div  class="logaler alert-danger" id="last_name-error"></div>
+						</div>
+					</div>
+
+					<div class="row">
+					<br>
+						<div class="col-xs-3 col-md-2 textjusti">
+							<label class="marginlabel"  for="Nombre del adoptante">Edad:</label>
+						</div>
+						<div class="col-xs-9 col-md-4">
+							{{form_widget(form.age, {'attr' : {'class' : 'form-control', 'placeholder' : 'apelidos del administrador' } })}}
+							<div  class="logaler alert-danger" id="age-error"></div><br>
+						</div>
+						<div class="textjusti col-xs-3 col-md-2">
+							<label class="marginlabel"  for="Edad del adoptante">Email:</label>
+						</div>
+						<div class="col-xs-9 col-md-4">
+							{{form_widget(form.email, {'attr' : {'class' : 'form-control', 'placeholder' : 'ejemplo@dominio.com' } })}}
+							<div  class="logaler alert-danger" id="id-error"></div>
+						</div>
+					</div>
+
+					<div class="row">
+					<br>
+						<div class="col-xs-3 col-md-2 textjusti">
+							<label class="marginlabel"  for="Nombre del adoptante">Contraseña: </label>
+						</div>
+						<div class="col-xs-9 col-md-4">
+							{{form_widget(form.password, {'attr' : {'class' : 'form-control', 'placeholder' : 'más de 8 caracteres' } })}}
+							<div  class="logaler alert-danger" id="age-error"></div>
+						</div>
+					</div>
+					<!-- 
+					<div class="textjusti col-xs-3 col-md-2">
+							<label class="marginlabel" for="Edad del adoptante">Confirmar contraseña:</label>
+						</div>
+						<div class="col-xs-9 col-md-4">
+							<div  class="logaler alert-danger" id="id-error"></div>
+							<br>
+						</div>
+					<hr>
+					-->
+					{{ form_widget(form.save, {'label' : 'registrar', 'attr' : {'class' : 'btn btn-success'} }) }}
+				</div>
+				{{ form_end(form) }}
+				<button class="btn btn-primary">Guardar datos <span class="glyphicon glyphicon-save" aria-hidden="true"></span> </button>
+			</div>	
+		</div>	
+		<div class="col-xs-1 col-md-1"></div>	
+	</div>
+	</div>
+</container>
+{% endblock %}
+
+
