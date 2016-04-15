@@ -161,13 +161,61 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // pc_administrator_index
-        if (rtrim($pathinfo, '/') === '/admin') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'pc_administrator_index');
+        if (0 === strpos($pathinfo, '/admin')) {
+            // pc_administrator_index
+            if (rtrim($pathinfo, '/') === '/admin') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'pc_administrator_index');
+                }
+
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::indexAction',  '_route' => 'pc_administrator_index',);
             }
 
-            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::indexAction',  '_route' => 'pc_administrator_index',);
+            if (0 === strpos($pathinfo, '/admin/pet')) {
+                // pc_administrator_pet_add
+                if ($pathinfo === '/admin/pet/add') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::addpetAction',  '_route' => 'pc_administrator_pet_add',);
+                }
+
+                // pc_administrator_pet_create
+                if ($pathinfo === '/admin/pet/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_pc_administrator_pet_create;
+                    }
+
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::createpetAction',  '_route' => 'pc_administrator_pet_create',);
+                }
+                not_pc_administrator_pet_create:
+
+            }
+
+            // pc_administrator_add
+            if ($pathinfo === '/admin/add') {
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::addAction',  '_route' => 'pc_administrator_add',);
+            }
+
+            // pc_administrator_create
+            if ($pathinfo === '/admin/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_pc_administrator_create;
+                }
+
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::createAction',  '_route' => 'pc_administrator_create',);
+            }
+            not_pc_administrator_create:
+
+            // pc_administrator_edit
+            if (0 === strpos($pathinfo, '/admin/edit') && preg_match('#^/admin/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_administrator_edit')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::editAction',));
+            }
+
+            // pc_administrator_update
+            if (0 === strpos($pathinfo, '/admin/update') && preg_match('#^/admin/update/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_administrator_update')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::updateAction',));
+            }
+
         }
 
         // homepage

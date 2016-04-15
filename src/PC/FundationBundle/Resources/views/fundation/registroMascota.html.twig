@@ -13,76 +13,88 @@
 	<div class="row">
 		<div class="col-xs-1 col-md-1"></div>
 		<div class=" col-xs-10 col-md-10">
-			
 			<br>
 			{{ form_start(form, {'attr' : {'role' : 'form'} }) }}
 			<div class="form-group">
-				<h4 class="textjusti"><b>Datos personales del adopt</b></h4>
+				<h4 class="textjusti"><b>Datos de la mascota</b></h4>
 				<div class="textjusti sectionstile">
-					<div class=" alert alert-info" role="alert">Los datos personales que se solicita en este formulario tienen como finalidad ser utilizados para proveer los servicios y productos requeridos, que mediante la Ley 1581 de 2012 se expidió el Régimen General de Protección de Datos Personales para su seguridad.</div><br>
-					
 					<div class="row">
 						<div class="col-xs-2 col-md-1">
-							<label for="Nombres del adoptante">Nombres:</label>
+							<label>Nombre:</label>
 						</div>
 						<div class="col-xs-10 col-md-5">
-							{{form_widget(form.name, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombres del adoptante' } })}}
+							{{form_widget(form.name, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombre de la mascota' } })}}
 						</div>
 					</div>
 					<div class="row">
 						<br>
 						<div class="col-xs-2 col-md-1">
-							<label for="Apellidos del adoptante">Apellido:</label>
+							<label>Edad:</label>
 						</div>
 						<div class="col-xs-10 col-md-5">
-							{{form_widget(form.lastName, {'attr' : {'class' : 'form-control', 'placeholder' : 'apellidos del adoptante' } })}}
+							{{form_widget(form.age, {'attr' : {'class' : 'form-control', 'placeholder' : 'edad de la mascota' } })}}
 						</div>
 					</div>
 					<div class="row">
 						<br>
 						<div class="col-xs-2 col-md-1">
-							<label for="Nombre del adoptante">Edad: </label>
+							<label>Especie: </label>
 						</div>
 						<div class="col-xs-10 col-md-5">
-							{{form_widget(form.age, {'attr' : {'class' : 'form-control', 'id' : 'age_user', 'placeholder' : 'edad' } })}}
-							<div  class="logaler alert-danger" id="age-error"></div>
+							{{form_widget(form.species, {'attr' : {'class' : 'form-control', 'placeholder' : '¿canino o felino?' } })}}
 						</div>
 					</div>
 					<div class="row">
 						<br>
 						<div class="col-xs-2 col-md-1">
-							<label for="Edad del adoptante">Cedula</label>
+							<label>Raza:</label>
 						</div>
 						<div class="col-xs-10 col-md-5">
-							{{form_widget(form.identificationNumber, {'attr' : {'class' : 'form-control', 'placeholder' : 'numero de cedula' } })}}
+							{{form_widget(form.race, {'attr' : {'class' : 'form-control', 'placeholder' : 'a que raza pertenece?' } })}}
 						</div>
 					</div>
 					<div class="row">
 						<br>
 						<div class="col-xs-2 col-md-1">
-							<label  for="Nombre del adoptante">Direccion: </label>
+							<label>Color: </label>
 						</div>
 						<div class="col-xs-10 col-md-5">
-							{{form_widget(form.address, {'attr' : {'class' : 'form-control', 'placeholder' : 'direccion' } })}}
+							{{form_widget(form.colour, {'attr' : {'class' : 'form-control', 'placeholder' : 'color de la mascota' } })}}
 						</div>
 					</div>	
 					<div class="row">
 						<br>
 						<div class="col-xs-2 col-md-1">
-							<label  for="Edad del adoptante">Telefono:</label>
+							<label>Género:</label>
 						</div>
 						<div class="col-xs-10 col-md-5">
-							{{form_widget(form.phone_number, {'attr' : {'class' : 'form-control', 'placeholder' : 'numero telefonico' } })}}
+							{{form_widget(form.gender, {'attr' : {'class' : 'form-control', 'placeholder' : '¿macho o hembra?' } })}}
 						</div>
 					</div>
 					<div class="row">
 						<br>
 						<div class="col-xs-2 col-md-1">
-							<label  for="Nombre del adoptante">Email: </label>
+							<label>¿está vacunad@? </label>
+						</div>
+						<div class="col-xs-4 col-md-5">
+							{{form_widget(form.isVacunated, {'attr' : {'class' : 'form-control'} })}}
+						</div>
+				
+						<br>
+						<div class="col-xs-2 col-md-1">
+							<label>¿está esterilizad@? </label>
+						</div>
+						<div class="col-xs-4 col-md-5">
+							{{form_widget(form.isSterilized, {'attr' : {'class' : 'form-control'} })}}
+						</div>
+					</div>
+					<div class="row">
+						<br>
+						<div class="col-xs-2 col-md-1">
+							<label>fecha de nacimiento </label>
 						</div>
 						<div class="col-xs-10 col-md-5">
-							{{form_widget(form.email, {'attr' : {'class' : 'form-control', 'id' : 'email_user', 'placeholder' : 'correo electronico' } })}}
-							<div  class="logaler alert-danger" id="email-error"></div><br>
+							{{form_widget(form.birthdate, {'attr' : {'class' : 'form-control', 'placeholder' : 'fecha de nacimiento de la mascota' } })}}
 						</div>
 					</div>
 				</div>

@@ -1,3 +1,7 @@
+#--------------------------------------------------------------
+#--- rutas de navegación     ----------------------------------
+#--------------------------------------------------------------
+
 pc_fundation_homepage:
     path:     /
     defaults: { _controller: PCFundationBundle:Main:index }
@@ -5,7 +9,7 @@ pc_fundation_homepage:
 pc_fundation_comedogs:
     path:     /index/comedogs
     defaults: { _controller: PCFundationBundle:Main:comedogs }
-    
+ 
 pc_fundation_tapitas:
     path:     /index/tapitas
     defaults: { _controller: PCFundationBundle:Main:tapitas }
@@ -21,7 +25,11 @@ pc_fundation_index:
 pc_fundation_nosotros:
     path:     /nosotros
     defaults: { _controller: PCFundationBundle:Main:nosotros }
-  
+
+#--------------------------------------------------------------
+#--- rutas del usuario ----------------------------------------
+#--------------------------------------------------------------
+
 pc_fundation_encuesta:
     path:     /encuesta
     defaults: { _controller: PCFundationBundle:Main:encuesta }
@@ -35,7 +43,36 @@ pc_user_create:
     defaults: { _controller: PCFundationBundle:User:create }
     methods:  POST
     
+#--------------------------------------------------------------
+#--- rutas del administrador ----------------------------------
+#--------------------------------------------------------------
+
 pc_administrator_index:
     path:     /admin/
     defaults: { _controller: PCFundationBundle:Admin:index }
 
+pc_administrator_pet_add:
+    path:     /admin/pet/add
+    defaults: { _controller: PCFundationBundle:Admin:addpet }
+
+pc_administrator_pet_create:
+    path:     /admin/pet/create
+    defaults: { _controller: PCFundationBundle:Admin:createpet }
+    methods:  POST
+    
+pc_administrator_add:
+    path:     /admin/add
+    defaults: { _controller: PCFundationBundle:Admin:add }
+
+pc_administrator_create:
+    path:     /admin/create
+    defaults: { _controller: PCFundationBundle:Admin:create }
+    methods:  POST
+    
+pc_administrator_edit:
+    path:     /admin/edit/{id}
+    defaults: { _controller: PCFundationBundle:Admin:edit }
+    
+pc_administrator_update:
+    path:     /admin/update/{id}
+    defaults: { _controller: PCFundationBundle:Admin:update }    
