@@ -15,8 +15,8 @@ class __TwigTemplate_4a96e012b8f9d279fcf57bdd5b21c66e4f12bbd9247da194fa3fe084cc7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_660bfbc15d9bc5ae6212573cfda1dbbae01973503bcc7942bcc0dd22f26f13f8 = $this->env->getExtension("native_profiler");
-        $__internal_660bfbc15d9bc5ae6212573cfda1dbbae01973503bcc7942bcc0dd22f26f13f8->enter($__internal_660bfbc15d9bc5ae6212573cfda1dbbae01973503bcc7942bcc0dd22f26f13f8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@PCFundation/Admin/censo.html"));
+        $__internal_94aec650ab8d4705ecf28ec9e3b1ed985066f254d9cae2ed156424afa0de8d0c = $this->env->getExtension("native_profiler");
+        $__internal_94aec650ab8d4705ecf28ec9e3b1ed985066f254d9cae2ed156424afa0de8d0c->enter($__internal_94aec650ab8d4705ecf28ec9e3b1ed985066f254d9cae2ed156424afa0de8d0c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@PCFundation/Admin/censo.html"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -31,7 +31,10 @@ class __TwigTemplate_4a96e012b8f9d279fcf57bdd5b21c66e4f12bbd9247da194fa3fe084cc7
  <link rel=\"stylesheet\" type=\"text/css\" href=\"css/estile.css\">
 </head>
 <body>
-\t     <h1 class=\"bagtitle textjusti colortexth4 page-header\">CENSO</h1>
+\t    
+      <div class=\"container\">
+        <h1 class=\"coloralert\">Datos censo</h1>
+      <div class=\"sectionstile\">
               <div class=\"row\">
               <div class=\"textjusti col-xs-8 col-md-4 col-lg-5\">
                 <table class=\"table table-striped\">
@@ -47,7 +50,7 @@ class __TwigTemplate_4a96e012b8f9d279fcf57bdd5b21c66e4f12bbd9247da194fa3fe084cc7
                 </thead>
                 </table> <!-- table de nombre zona. -->
                 <br>
-                 <a href=\"agragardatos.html\" id=\"ventemerg2\" class=\"btn btn-default\">Agregar datos »</a>
+                 <a href=\"agragardatos.html\" id=\"ventemerg2\" class=\"btn btn-info\">Agregar datos »</a>
               </div>
               <div class=\"col-md-1 col-lg-1\"></div>
               <div class=\"col-xs-4 col-md-5 col-lg-5\">
@@ -86,25 +89,13 @@ class __TwigTemplate_4a96e012b8f9d279fcf57bdd5b21c66e4f12bbd9247da194fa3fe084cc7
                   <th class=\"tdd\">Color</th>
                   <th class=\"tdmd\">edad</th>
                   <th class=\"tdxs\">¿cirugia?</th>
-                  <th class=\"tdxs\">#</th>
+                  <th class=\"tdxs\">Edit</th>
                   <th class=\"tdd\">Nombre</th>
                   <th class=\"tdd\">Telefono</th>
-                  <th class=\"tdxs\">edit</th>
+                  <th class=\"tdxs\">Mas</th>
                 </tr>
               </thead>
               <tbody class=\"tdb\">
-                <tr>
-                  <td>1</td>
-                  <td>perro</td>
-                  <td class=\"tdd\">crio</td>
-                  <td>negro</td>
-                  <td>0,6</td>
-                  <td>no</td>
-                  <td>1</td>
-                  <td>juan</td>
-                  <td>3122345678</td>
-                  <td><a href=\" \">&nbsp;<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></a></td>
-                </tr>
                 <tr>
                   <td>1</td>
                   <td>gato</td>
@@ -112,10 +103,10 @@ class __TwigTemplate_4a96e012b8f9d279fcf57bdd5b21c66e4f12bbd9247da194fa3fe084cc7
                   <td>negro</td>
                   <td>1</td>
                   <td>no</td>
-                  <td>1</td>
+                  <td><a href=\"editdatos.html\" id=\"ventemerg3\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Editar información\">&nbsp;<span class=\"glyphicon glyphicon-minus-sign\" aria-hidden=\"true\"></a></td>
                   <td>juan</td>
                   <td>3122345678</td>
-                  <td><a href=\" \" data-toggle=\"modal\" data-target=\".bs-example-modal-sm\">&nbsp;<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></a>
+                  <td><a href=\"\" data-toggle=\"modal\" data-target=\".bs-example-modal-sm\">&nbsp;<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></a>
 
                     <div class=\"modal fade bs-example-modal-sm\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\">
               <div class=\"modal-dialog modal-sm\">
@@ -164,13 +155,15 @@ class __TwigTemplate_4a96e012b8f9d279fcf57bdd5b21c66e4f12bbd9247da194fa3fe084cc7
                 </tr>
               </tbody>
             </table>
+          </div> <!-- div close section estile-->
+        </div>
 \t  <script src=\"https://code.jquery.com/jquery-latest.js\" type=\"text/javascript\"></script>
       <script src=\"js/bootstrap.min.js\"type=\"text/javascript\"></script>
       <script src=\"js/functJquery.js\"></script>
 </body>
 </html>";
         
-        $__internal_660bfbc15d9bc5ae6212573cfda1dbbae01973503bcc7942bcc0dd22f26f13f8->leave($__internal_660bfbc15d9bc5ae6212573cfda1dbbae01973503bcc7942bcc0dd22f26f13f8_prof);
+        $__internal_94aec650ab8d4705ecf28ec9e3b1ed985066f254d9cae2ed156424afa0de8d0c->leave($__internal_94aec650ab8d4705ecf28ec9e3b1ed985066f254d9cae2ed156424afa0de8d0c_prof);
 
     }
 
@@ -196,7 +189,10 @@ class __TwigTemplate_4a96e012b8f9d279fcf57bdd5b21c66e4f12bbd9247da194fa3fe084cc7
 /*  <link rel="stylesheet" type="text/css" href="css/estile.css">*/
 /* </head>*/
 /* <body>*/
-/* 	     <h1 class="bagtitle textjusti colortexth4 page-header">CENSO</h1>*/
+/* 	    */
+/*       <div class="container">*/
+/*         <h1 class="coloralert">Datos censo</h1>*/
+/*       <div class="sectionstile">*/
 /*               <div class="row">*/
 /*               <div class="textjusti col-xs-8 col-md-4 col-lg-5">*/
 /*                 <table class="table table-striped">*/
@@ -212,7 +208,7 @@ class __TwigTemplate_4a96e012b8f9d279fcf57bdd5b21c66e4f12bbd9247da194fa3fe084cc7
 /*                 </thead>*/
 /*                 </table> <!-- table de nombre zona. -->*/
 /*                 <br>*/
-/*                  <a href="agragardatos.html" id="ventemerg2" class="btn btn-default">Agregar datos »</a>*/
+/*                  <a href="agragardatos.html" id="ventemerg2" class="btn btn-info">Agregar datos »</a>*/
 /*               </div>*/
 /*               <div class="col-md-1 col-lg-1"></div>*/
 /*               <div class="col-xs-4 col-md-5 col-lg-5">*/
@@ -251,25 +247,13 @@ class __TwigTemplate_4a96e012b8f9d279fcf57bdd5b21c66e4f12bbd9247da194fa3fe084cc7
 /*                   <th class="tdd">Color</th>*/
 /*                   <th class="tdmd">edad</th>*/
 /*                   <th class="tdxs">¿cirugia?</th>*/
-/*                   <th class="tdxs">#</th>*/
+/*                   <th class="tdxs">Edit</th>*/
 /*                   <th class="tdd">Nombre</th>*/
 /*                   <th class="tdd">Telefono</th>*/
-/*                   <th class="tdxs">edit</th>*/
+/*                   <th class="tdxs">Mas</th>*/
 /*                 </tr>*/
 /*               </thead>*/
 /*               <tbody class="tdb">*/
-/*                 <tr>*/
-/*                   <td>1</td>*/
-/*                   <td>perro</td>*/
-/*                   <td class="tdd">crio</td>*/
-/*                   <td>negro</td>*/
-/*                   <td>0,6</td>*/
-/*                   <td>no</td>*/
-/*                   <td>1</td>*/
-/*                   <td>juan</td>*/
-/*                   <td>3122345678</td>*/
-/*                   <td><a href=" ">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>*/
-/*                 </tr>*/
 /*                 <tr>*/
 /*                   <td>1</td>*/
 /*                   <td>gato</td>*/
@@ -277,10 +261,10 @@ class __TwigTemplate_4a96e012b8f9d279fcf57bdd5b21c66e4f12bbd9247da194fa3fe084cc7
 /*                   <td>negro</td>*/
 /*                   <td>1</td>*/
 /*                   <td>no</td>*/
-/*                   <td>1</td>*/
+/*                   <td><a href="editdatos.html" id="ventemerg3" data-toggle="tooltip" data-placement="right" title="Editar información">&nbsp;<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></a></td>*/
 /*                   <td>juan</td>*/
 /*                   <td>3122345678</td>*/
-/*                   <td><a href=" " data-toggle="modal" data-target=".bs-example-modal-sm">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a>*/
+/*                   <td><a href="" data-toggle="modal" data-target=".bs-example-modal-sm">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a>*/
 /* */
 /*                     <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">*/
 /*               <div class="modal-dialog modal-sm">*/
@@ -329,6 +313,8 @@ class __TwigTemplate_4a96e012b8f9d279fcf57bdd5b21c66e4f12bbd9247da194fa3fe084cc7
 /*                 </tr>*/
 /*               </tbody>*/
 /*             </table>*/
+/*           </div> <!-- div close section estile-->*/
+/*         </div>*/
 /* 	  <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>*/
 /*       <script src="js/bootstrap.min.js"type="text/javascript"></script>*/
 /*       <script src="js/functJquery.js"></script>*/

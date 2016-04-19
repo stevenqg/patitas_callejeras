@@ -15,8 +15,8 @@ class __TwigTemplate_7f66c4f3e79917d52ea4252cffca640ab03cab923ee2775d96738c8742f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_733dbcf3f61178b20c9fcf9ebb2bdef8caca2f96c95e4a376ccbbe074c2a4dd4 = $this->env->getExtension("native_profiler");
-        $__internal_733dbcf3f61178b20c9fcf9ebb2bdef8caca2f96c95e4a376ccbbe074c2a4dd4->enter($__internal_733dbcf3f61178b20c9fcf9ebb2bdef8caca2f96c95e4a376ccbbe074c2a4dd4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@PCFundation/Admin/agragardatos.html"));
+        $__internal_9641ce752f1ceaa8602b5638ba8742e991704648f9b441c10ae29134ba7e27b7 = $this->env->getExtension("native_profiler");
+        $__internal_9641ce752f1ceaa8602b5638ba8742e991704648f9b441c10ae29134ba7e27b7->enter($__internal_9641ce752f1ceaa8602b5638ba8742e991704648f9b441c10ae29134ba7e27b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@PCFundation/Admin/agragardatos.html"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -30,11 +30,8 @@ class __TwigTemplate_7f66c4f3e79917d52ea4252cffca640ab03cab923ee2775d96738c8742f
  \t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/estile.css\">
 </head>
 <body class=\"backfont\">
-\t<header id=\"header\" class=\"backvent\">
-\t\t<a><img class=\"img-responsive dimen\"src=\"img/nombre.png\"></a>
-\t</header>
+\t<div class=\"liner\"></div>
 \t<br>
-
 \t<div class=\"container\">
 \t<div class=\"row\">
 \t\t<div class=\"col-xs-1 col-md-1\"></div>\t
@@ -113,7 +110,7 @@ class __TwigTemplate_7f66c4f3e79917d52ea4252cffca640ab03cab923ee2775d96738c8742f
 \t\t\t\t\t\t  </div>
 \t\t\t\t\t\t</div>
 
-\t\t\t\t<button class=\"btn btn-default\">Finalizar</button>
+\t\t\t\t<button class=\"btn btn-default\" onclick=\"window.close();\">Finalizar</button>
 \t\t\t</div>\t
 \t\t</div>\t
 \t\t<div class=\"col-xs-1 col-md-1\"></div>\t
@@ -125,7 +122,7 @@ class __TwigTemplate_7f66c4f3e79917d52ea4252cffca640ab03cab923ee2775d96738c8742f
 </body>
 </html>";
         
-        $__internal_733dbcf3f61178b20c9fcf9ebb2bdef8caca2f96c95e4a376ccbbe074c2a4dd4->leave($__internal_733dbcf3f61178b20c9fcf9ebb2bdef8caca2f96c95e4a376ccbbe074c2a4dd4_prof);
+        $__internal_9641ce752f1ceaa8602b5638ba8742e991704648f9b441c10ae29134ba7e27b7->leave($__internal_9641ce752f1ceaa8602b5638ba8742e991704648f9b441c10ae29134ba7e27b7_prof);
 
     }
 
@@ -150,11 +147,8 @@ class __TwigTemplate_7f66c4f3e79917d52ea4252cffca640ab03cab923ee2775d96738c8742f
 /*  	<link rel="stylesheet" type="text/css" href="css/estile.css">*/
 /* </head>*/
 /* <body class="backfont">*/
-/* 	<header id="header" class="backvent">*/
-/* 		<a><img class="img-responsive dimen"src="img/nombre.png"></a>*/
-/* 	</header>*/
+/* 	<div class="liner"></div>*/
 /* 	<br>*/
-/* */
 /* 	<div class="container">*/
 /* 	<div class="row">*/
 /* 		<div class="col-xs-1 col-md-1"></div>	*/
@@ -233,7 +227,7 @@ class __TwigTemplate_7f66c4f3e79917d52ea4252cffca640ab03cab923ee2775d96738c8742f
 /* 						  </div>*/
 /* 						</div>*/
 /* */
-/* 				<button class="btn btn-default">Finalizar</button>*/
+/* 				<button class="btn btn-default" onclick="window.close();">Finalizar</button>*/
 /* 			</div>	*/
 /* 		</div>	*/
 /* 		<div class="col-xs-1 col-md-1"></div>	*/

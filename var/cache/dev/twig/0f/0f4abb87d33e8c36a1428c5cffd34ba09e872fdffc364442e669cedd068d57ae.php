@@ -11,7 +11,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
         $this->parent = $this->loadTemplate("PCFundationBundle:Admin:admin.html.twig", "PCFundationBundle:Admin:NewAdmin.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
-            'capa' => array($this, 'block_capa'),
+            'body' => array($this, 'block_body'),
         );
     }
 
@@ -22,38 +22,39 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4a850b365713926f55ba52f8df544776012ffe8d5471c6831f4ebb6187d7d09d = $this->env->getExtension("native_profiler");
-        $__internal_4a850b365713926f55ba52f8df544776012ffe8d5471c6831f4ebb6187d7d09d->enter($__internal_4a850b365713926f55ba52f8df544776012ffe8d5471c6831f4ebb6187d7d09d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:NewAdmin.html.twig"));
+        $__internal_9b9f91f9900bdfe04e22bfe07ade6f7ba826f8f94035a5a3643281bc7396099f = $this->env->getExtension("native_profiler");
+        $__internal_9b9f91f9900bdfe04e22bfe07ade6f7ba826f8f94035a5a3643281bc7396099f->enter($__internal_9b9f91f9900bdfe04e22bfe07ade6f7ba826f8f94035a5a3643281bc7396099f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:NewAdmin.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4a850b365713926f55ba52f8df544776012ffe8d5471c6831f4ebb6187d7d09d->leave($__internal_4a850b365713926f55ba52f8df544776012ffe8d5471c6831f4ebb6187d7d09d_prof);
+        $__internal_9b9f91f9900bdfe04e22bfe07ade6f7ba826f8f94035a5a3643281bc7396099f->leave($__internal_9b9f91f9900bdfe04e22bfe07ade6f7ba826f8f94035a5a3643281bc7396099f_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_617c104faadd09b7c7bbd91a4fa6f8eb32cc0707cbdc98a19bc182c99fec54c5 = $this->env->getExtension("native_profiler");
-        $__internal_617c104faadd09b7c7bbd91a4fa6f8eb32cc0707cbdc98a19bc182c99fec54c5->enter($__internal_617c104faadd09b7c7bbd91a4fa6f8eb32cc0707cbdc98a19bc182c99fec54c5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_135e3863b47f4cdeab3e5411b0aa01e36a01aed8db9febe674192c5c682a7b12 = $this->env->getExtension("native_profiler");
+        $__internal_135e3863b47f4cdeab3e5411b0aa01e36a01aed8db9febe674192c5c682a7b12->enter($__internal_135e3863b47f4cdeab3e5411b0aa01e36a01aed8db9febe674192c5c682a7b12_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Nuevo Administrador";
         
-        $__internal_617c104faadd09b7c7bbd91a4fa6f8eb32cc0707cbdc98a19bc182c99fec54c5->leave($__internal_617c104faadd09b7c7bbd91a4fa6f8eb32cc0707cbdc98a19bc182c99fec54c5_prof);
+        $__internal_135e3863b47f4cdeab3e5411b0aa01e36a01aed8db9febe674192c5c682a7b12->leave($__internal_135e3863b47f4cdeab3e5411b0aa01e36a01aed8db9febe674192c5c682a7b12_prof);
 
     }
 
     // line 3
-    public function block_capa($context, array $blocks = array())
+    public function block_body($context, array $blocks = array())
     {
-        $__internal_e342361d925ee774df0d640a223b47c35be796893c86c5c114c70703c1f130d2 = $this->env->getExtension("native_profiler");
-        $__internal_e342361d925ee774df0d640a223b47c35be796893c86c5c114c70703c1f130d2->enter($__internal_e342361d925ee774df0d640a223b47c35be796893c86c5c114c70703c1f130d2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_dde77b818ca0cd4e163e8eb977f9b35ae7145e7490edcba0f303ef9dd8a503ab = $this->env->getExtension("native_profiler");
+        $__internal_dde77b818ca0cd4e163e8eb977f9b35ae7145e7490edcba0f303ef9dd8a503ab->enter($__internal_dde77b818ca0cd4e163e8eb977f9b35ae7145e7490edcba0f303ef9dd8a503ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "<container class=\"backfont\">
+        echo "
+<container class=\"backfont\">
 \t<header id=\"header\" class=\"backvent\">
 \t\t<a><img class=\"img-responsive dimen\" src=\"";
-        // line 6
+        // line 7
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/nombre.png"), "html", null, true);
         echo "\" ></a>
 \t</header>
@@ -69,7 +70,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 \t\t\t<div class=\"conteform\">
 \t\t\t\t<br>
 \t\t\t\t";
-        // line 19
+        // line 20
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("role" => "form")));
         echo "
 \t\t\t\t<div class=\"form-group\">
@@ -79,7 +80,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 26
+        // line 27
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "name", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "nombre(s) del administrador")));
         echo "
 \t\t\t\t\t\t\t<div  class=\"logaler alert-danger\" id=\"username-error\"></div><br>
@@ -89,8 +90,8 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 33
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lastName", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "apelidos del administrador")));
+        // line 34
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lastName", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "apellidos del administrador")));
         echo "
 \t\t\t\t\t\t\t<div  class=\"logaler alert-danger\" id=\"last_name-error\"></div>
 \t\t\t\t\t\t</div>
@@ -103,7 +104,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 44
+        // line 45
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "age", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "apelidos del administrador")));
         echo "
 \t\t\t\t\t\t\t<div  class=\"logaler alert-danger\" id=\"age-error\"></div><br>
@@ -113,7 +114,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 51
+        // line 52
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "ejemplo@dominio.com")));
         echo "
 \t\t\t\t\t\t\t<div  class=\"logaler alert-danger\" id=\"id-error\"></div>
@@ -127,7 +128,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 62
+        // line 63
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "password", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "más de 8 caracteres")));
         echo "
 \t\t\t\t\t\t\t<div  class=\"logaler alert-danger\" id=\"age-error\"></div>
@@ -144,15 +145,15 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 \t\t\t\t\t<hr>
 \t\t\t\t\t-->
 \t\t\t\t\t";
-        // line 76
+        // line 77
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("label" => "registrar", "attr" => array("class" => "btn btn-success")));
         echo "
 \t\t\t\t</div>
 \t\t\t\t";
-        // line 78
+        // line 79
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
-\t\t\t\t<button class=\"btn btn-primary\">Guardar datos <span class=\"glyphicon glyphicon-save\" aria-hidden=\"true\"></span> </button>
+\t\t\t\t<button class=\"btn btn-danger\" onclick=\"window.close();\">regresar al menú principal <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span> </button>
 \t\t\t</div>\t
 \t\t</div>\t
 \t\t<div class=\"col-xs-1 col-md-1\"></div>\t
@@ -161,7 +162,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 </container>
 ";
         
-        $__internal_e342361d925ee774df0d640a223b47c35be796893c86c5c114c70703c1f130d2->leave($__internal_e342361d925ee774df0d640a223b47c35be796893c86c5c114c70703c1f130d2_prof);
+        $__internal_dde77b818ca0cd4e163e8eb977f9b35ae7145e7490edcba0f303ef9dd8a503ab->leave($__internal_dde77b818ca0cd4e163e8eb977f9b35ae7145e7490edcba0f303ef9dd8a503ab_prof);
 
     }
 
@@ -177,12 +178,13 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 
     public function getDebugInfo()
     {
-        return array (  153 => 78,  148 => 76,  131 => 62,  117 => 51,  107 => 44,  93 => 33,  83 => 26,  73 => 19,  57 => 6,  53 => 4,  47 => 3,  35 => 2,  11 => 1,);
+        return array (  154 => 79,  149 => 77,  132 => 63,  118 => 52,  108 => 45,  94 => 34,  84 => 27,  74 => 20,  58 => 7,  53 => 4,  47 => 3,  35 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
 /* {%block title%}Nuevo Administrador{% endblock %}*/
-/* {% block capa %}*/
+/* {% block body %}*/
+/* */
 /* <container class="backfont">*/
 /* 	<header id="header" class="backvent">*/
 /* 		<a><img class="img-responsive dimen" src="{{ asset('public/img/nombre.png') }}" ></a>*/
@@ -212,7 +214,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 /* 							<label class="marginlabel textjusti"  for="Apellidos del adoptante">Apellido:</label>*/
 /* 						</div>*/
 /* 						<div class="col-xs-9 col-md-4">*/
-/* 							{{form_widget(form.lastName, {'attr' : {'class' : 'form-control', 'placeholder' : 'apelidos del administrador' } })}}*/
+/* 							{{form_widget(form.lastName, {'attr' : {'class' : 'form-control', 'placeholder' : 'apellidos del administrador' } })}}*/
 /* 							<div  class="logaler alert-danger" id="last_name-error"></div>*/
 /* 						</div>*/
 /* 					</div>*/
@@ -258,7 +260,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 /* 					{{ form_widget(form.save, {'label' : 'registrar', 'attr' : {'class' : 'btn btn-success'} }) }}*/
 /* 				</div>*/
 /* 				{{ form_end(form) }}*/
-/* 				<button class="btn btn-primary">Guardar datos <span class="glyphicon glyphicon-save" aria-hidden="true"></span> </button>*/
+/* 				<button class="btn btn-danger" onclick="window.close();">regresar al menú principal <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </button>*/
 /* 			</div>	*/
 /* 		</div>	*/
 /* 		<div class="col-xs-1 col-md-1"></div>	*/
@@ -266,6 +268,5 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 /* 	</div>*/
 /* </container>*/
 /* {% endblock %}*/
-/* */
 /* */
 /* */

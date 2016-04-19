@@ -12,6 +12,9 @@ use PC\FundationBundle\Entity\Administrator;
 use PC\FundationBundle\Form\AdministratorType;
 use PC\FundationBundle\Entity\Pet;
 use PC\FundationBundle\Form\PetType;
+use PC\FundationBundle\Entity\Meeting;
+use PC\FundationBundle\Form\MeetingType;
+
 
 class AdminController extends Controller
 {
@@ -59,7 +62,7 @@ class AdminController extends Controller
             $em->persist($admin);
             $em->flush();
             
-            return $this->redirectToRoute('pc_administrator_index');
+            return $this->redirectToRoute('pc_administrator_add');
         }
         return $this->render('PCFundationBundle:Admin:NewAdmin.html.twig', array('form'=>$form->createView()));
     }
@@ -112,6 +115,76 @@ class AdminController extends Controller
         }
         
         return $this->render('PCFundationBundle:fundation:registromascota.html.twig', array('form'=>$form->createview())); 
+    }
+    
+    /*
+    permite ver, agregar y gestionar las jornadas de censo en el area de trabajo - bloque capa
+    */
+    public function jornadacensoaddAction()
+    {
+        $meeting = new Meeting();
+        $form = $this->createMeetingForm($meeting);
+        return $this->render('PCFundationBundle:Admin:nuevocenso.html.twig', array('form'=>$form->createView()));
+    }
+    
+    /*
+    crea el formularo para ingresar los datos de la jornada de censo
+    */
+    private function createMeetingForm(Meeting $entity)
+    {
+        $form = $this->createForm(MeetingType::class, $entity, array( 'action' => $this->generateUrl('pc_admin_jornada_censo_create'), 'method'=>'POST'));
+        return $form;
+    }
+    
+    /*
+    registra la jornada de censo en la base de datos
+    */
+    public function jornadacensocreateAction(request $request)
+    {
+        $meeting = new Meeting();
+        $form = $this->createMeetingForm($meeting);
+        $form->handlerequest($request);
+        if($form->isvalid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($meeting);
+            $em->flush();
+            
+            return $this->redirectToRoute('pc_admin_jornada_censo');
+        }
+        return $this->render('PCFundationBundle:fundation:nuevocenso.html.twig', array('form'=>$form->createview())); 
+    }
+    
+    /*
+    permite ver y gestionar las jornadas de censo en el area de trabajo - bloque capa
+    */
+    public function jornadacensoAction()
+    {
+        return $this->render('PCFundationBundle:Admin:jornadascenso.html.twig');
+    }
+    
+    /*
+    permite ver mas información del censo
+    */
+    public function jornadacensomasAction()
+    {
+        return $this->render('PCFundationBundle:Admin:censo.html.twig');
+    }
+    
+    /*
+    permite ver mas información del censo
+    */
+    public function jornadacensoeditAction()
+    {
+        return $this->render('PCFundationBundle:Admin:editdatos.html.twig');
+    }
+    
+    /*
+    
+    */
+    public function jornadacensodatosAction()
+    {
+        return $this->render('PCFundationBundle:Admin:agregardatos.html.twig');
     }
     
 }

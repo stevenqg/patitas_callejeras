@@ -1,6 +1,7 @@
 {% extends "PCFundationBundle:Admin:admin.html.twig"%}
 {%block title%}Nuevo Administrador{% endblock %}
-{% block capa %}
+{% block body %}
+
 <container class="backfont">
 	<header id="header" class="backvent">
 		<a><img class="img-responsive dimen" src="{{ asset('public/img/nombre.png') }}" ></a>
@@ -30,7 +31,7 @@
 							<label class="marginlabel textjusti"  for="Apellidos del adoptante">Apellido:</label>
 						</div>
 						<div class="col-xs-9 col-md-4">
-							{{form_widget(form.lastName, {'attr' : {'class' : 'form-control', 'placeholder' : 'apelidos del administrador' } })}}
+							{{form_widget(form.lastName, {'attr' : {'class' : 'form-control', 'placeholder' : 'apellidos del administrador' } })}}
 							<div  class="logaler alert-danger" id="last_name-error"></div>
 						</div>
 					</div>
@@ -76,7 +77,7 @@
 					{{ form_widget(form.save, {'label' : 'registrar', 'attr' : {'class' : 'btn btn-success'} }) }}
 				</div>
 				{{ form_end(form) }}
-				<button class="btn btn-primary">Guardar datos <span class="glyphicon glyphicon-save" aria-hidden="true"></span> </button>
+				<button class="btn btn-danger" onclick="window.close();">regresar al menú principal <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </button>
 			</div>	
 		</div>	
 		<div class="col-xs-1 col-md-1"></div>	
@@ -84,5 +85,4 @@
 	</div>
 </container>
 {% endblock %}
-
 

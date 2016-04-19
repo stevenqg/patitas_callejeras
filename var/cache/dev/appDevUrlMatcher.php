@@ -216,6 +216,48 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_administrator_update')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::updateAction',));
             }
 
+            if (0 === strpos($pathinfo, '/admin/jornadacenso')) {
+                // pc_admin_jornada_censo
+                if ($pathinfo === '/admin/jornadacenso/view') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::jornadacensoAction',  '_route' => 'pc_admin_jornada_censo',);
+                }
+
+                // pc_admin_jornada_censo_mas
+                if ($pathinfo === '/admin/jornadacenso/mas') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::jornadacensomasAction',  '_route' => 'pc_admin_jornada_censo_mas',);
+                }
+
+                // pc_admin_jornada_censo_edit
+                if ($pathinfo === '/admin/jornadacenso/edit') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::jornadacensoeditAction',  '_route' => 'pc_admin_jornada_censo_edit',);
+                }
+
+                if (0 === strpos($pathinfo, '/admin/jornadacenso/a')) {
+                    // pc_admin_jornada_censo_agregar
+                    if ($pathinfo === '/admin/jornadacenso/agregar') {
+                        return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::jornadacensodatosAction',  '_route' => 'pc_admin_jornada_censo_agregar',);
+                    }
+
+                    // pc_admin_jornada_censo_add
+                    if ($pathinfo === '/admin/jornadacenso/add') {
+                        return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::jornadacensoaddAction',  '_route' => 'pc_admin_jornada_censo_add',);
+                    }
+
+                }
+
+                // pc_admin_jornada_censo_create
+                if ($pathinfo === '/admin/jornadacenso/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_pc_admin_jornada_censo_create;
+                    }
+
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::jornadacensocreateAction',  '_route' => 'pc_admin_jornada_censo_create',);
+                }
+                not_pc_admin_jornada_censo_create:
+
+            }
+
         }
 
         // homepage

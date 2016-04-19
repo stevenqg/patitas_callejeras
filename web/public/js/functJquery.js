@@ -5,6 +5,7 @@ $ (document).ready(function() {
 	 var vent = $('#ventemerg').click(nuevaventana);
 	 var vent1 = $('#ventemerg1').click(nuevaventana1);
 	 var vent2 = $('#ventemerg2').click(nuevaventana2);
+	 var vent3 = $('#ventemerg3').click(nuevaventana2);
 	 var jcenso =$('#boton').click(jornadacenso);
 	
 });
@@ -25,7 +26,7 @@ function validatelogin () {
 	}else{
 		$('#password-error').html('');
 	}
-}
+};
 function validateuser () {
 	var name = $('#username');
 	var lastn = $('#last_name');
@@ -86,19 +87,19 @@ function validateuser () {
 	}else{
 		$('#email-error').html('');
 	}
-}
+};
 function nuevaventana () {
 
 	window.open(this.href, this.target,'width=760,height=700'); return false;
-}
+};
 function nuevaventana1 () {
 
 	window.open(this.href, this.target,'width=860,height=700'); return false;
-}
+};
 function nuevaventana2 () {
 
 	window.open(this.href, this.target,'width=820,height=700'); return false;
-}
+};
 function jornadacenso () {
 	 
 	 $("#capa").load("jornadascenso.html",{valor1:'primer valor', valor2:'segundo valor'}, function(response, status, xhr) {
@@ -108,3 +109,11 @@ function jornadacenso () {
               }
             });
 }
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});
+$(function (){
+	$("#fecha1").datepicker({
+			showButtonPanel: true,
+			});
+});

@@ -75,4 +75,29 @@ pc_administrator_edit:
     
 pc_administrator_update:
     path:     /admin/update/{id}
-    defaults: { _controller: PCFundationBundle:Admin:update }    
+    defaults: { _controller: PCFundationBundle:Admin:update }   
+    
+pc_admin_jornada_censo:
+    path:     /admin/jornadacenso/view
+    defaults: { _controller: PCFundationBundle:Admin:jornadacenso } 
+
+pc_admin_jornada_censo_mas:
+    path:     /admin/jornadacenso/mas
+    defaults: { _controller: PCFundationBundle:Admin:jornadacensomas }
+
+pc_admin_jornada_censo_edit:
+    path:     /admin/jornadacenso/edit
+    defaults: { _controller: PCFundationBundle:Admin:jornadacensoedit }
+    
+pc_admin_jornada_censo_agregar:
+    path:     /admin/jornadacenso/agregar
+    defaults: { _controller: PCFundationBundle:Admin:jornadacensodatos }
+
+pc_admin_jornada_censo_add:
+    path:     /admin/jornadacenso/add
+    defaults: { _controller: PCFundationBundle:Admin:jornadacensoadd } 
+
+pc_admin_jornada_censo_create:
+    path:     /admin/jornadacenso/create
+    defaults: { _controller: PCFundationBundle:Admin:jornadacensocreate } 
+    methods:  POST
