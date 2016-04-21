@@ -88,12 +88,6 @@ class Pet
      */
     private $isSterilized;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="birthdate", type="datetime")
-     */
-    private $birthdate;
 
     public function __construct()
     {
@@ -303,29 +297,6 @@ class Pet
         return $this->isSterilized;
     }
 
-    /**
-     * Set birthdate
-     *
-     * @param \DateTime $birthdate
-     *
-     * @return Pet
-     */
-    public function setBirthdate($birthdate)
-    {
-        $this->birthdate = $birthdate;
-
-        return $this;
-    }
-
-    /**
-     * Get birthdate
-     *
-     * @return \DateTime
-     */
-    public function getBirthdate()
-    {
-        return $this->birthdate;
-    }
 
     /**
      * Add photo

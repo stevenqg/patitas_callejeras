@@ -56,11 +56,23 @@
 
 					<div class="row">
 					<br>
+					
 						<div class="col-xs-3 col-md-2 textjusti">
 							<label class="marginlabel"  for="Nombre del adoptante">Contraseña: </label>
 						</div>
 						<div class="col-xs-9 col-md-4">
-							{{form_widget(form.password)}}
+							{{ form_row(form.password.first, {'attr' : {'class' : 'form-control'} }) }}
+							<div  class="logaler alert-danger" id="age-error"></div>
+						</div>
+					</div>
+					<div class="row">
+					<br>
+					
+						<div class="col-xs-3 col-md-2 textjusti">
+							<label class="marginlabel"  for="Nombre del adoptante">Repetir contraseña: </label>
+						</div>
+						<div class="col-xs-9 col-md-4">
+							{{ form_row(form.password.second, {'attr' : {'class' : 'form-control'} } ) }}
 							<div  class="logaler alert-danger" id="age-error"></div>
 						</div>
 					</div>

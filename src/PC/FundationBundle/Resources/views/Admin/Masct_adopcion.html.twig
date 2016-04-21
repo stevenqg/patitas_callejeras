@@ -1,0 +1,201 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+	<div>
+		
+			<h1 class="coloralert">Mascotas para adopción</h1>
+			<div class="sectionstile">
+				<div class="row">
+					<div class="col-md-3">
+					<div><img class="mion img-responsive img-thumbnail" alt="" name="imgmascota"></div>
+					</div>
+					<div class="col-md-9">
+						<div class="row">
+			<div class="textjusti col-md-1"><label class="marginlabel">Nombre:</label></div>	
+			<div class="col-md-5"><input type="text" class="form-control" name="Nomascota" disabled></div>
+			<div class="textjusti col-md-1"><label class="marginlabel">Edad:</label></div>	
+			<div class="col-md-5"><input type="text" class="form-control" name="EDmascota" disabled></div>
+			</div><br><!-- div close row form -->
+			<div class="row">
+			<div class="textjusti col-md-1"><label class="marginlabel">Color:</label></div>	
+			<div class="col-md-5"><input type="text" class="form-control" name="Colmascota" disabled></div>
+			<div class="textjusti col-md-2"><label class="marginlabel">Sexo:</label></div>	
+			<div class="col-md-4"><select class="form-control" disabled>
+						  <option>Macho</option>
+						  <option>hembra</option>
+						</select>
+					</div>
+			</div><br><!-- div close row form -->	
+			<div class="row">
+			<div class="textjusti col-md-1"><label class="marginlabel">Rasgo:</label></div>	
+			<div class="col-md-5"><input type="text" name="Colmascota" class="form-control" disabled></div>
+			<div class="textjusti col-md-2"><label class="marginlabel">Vacunado:</label></div>	
+			<div class="col-md-4"><select class="form-control" disabled>
+						  <option>Si</option>
+						  <option>No</option>
+						</select>
+					</div>
+			</div><br><!-- div close row form -->	
+			<div class="row">
+			<div class="textjusti col-md-2"><label class="marginlabel">Esterilizado:</label></div>	
+			<div class="col-md-4"><select class="form-control" disabled>
+						  <option>Si</option>
+						  <option>No</option>
+						</select>
+					</div>
+					<div class="col-md-2"></div>
+					<div class="col-md-4"><button type="button" class="btn btn-success">Editar datos &nbsp;<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></div>
+			</div><br>
+					</div>
+				</div>
+			
+		</div><!--div sectionsitile-->
+		<br>
+		<div class="sectionsile">
+			     
+			<div>
+
+			  <!-- Nav tabs -->
+			  <ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Perros</a></li>
+			    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">gatos</a></li>
+			    <li><a href="add_mascota.html" type="button" class="btn btn-primary">Agregar mascota</a></li>
+			  </ul>
+
+			  <!-- Tab panes -->
+			  <div class="tab-content">
+			    <div role="tabpanel" class="conmargin tab-pane active" id="home"><br>
+			      	<table class="table table-striped ">
+              <thead>
+                <tr>
+                  <th class="tdxs">#</th>
+                  <th>Nombre</th>
+                  <th>Edadn</th>
+                  <th>Color</th>
+                  <th>Sexo</th>
+                  <th>Rasgo</th>
+                  <th class="tdmd">esteril</th>
+                  <th class="tdmd">Vacunas</th>
+                  <th class="tdxs">ver</th>
+
+
+                </tr>
+              </thead>
+              <tbody>
+                {% for pet in pets %}
+                      {% if pet.species == 'CANINE' %}
+                      <tr>
+                          <td>{{ pet.name }}</td>
+                          <td>{{ pet.age }}</td>
+                          <td>{{ pet.colour }}</td>
+                          <td>
+                            {% if pet.gender == 'MALE'%}
+                              
+                              <strong>macho</strong>
+                              
+                              {% elseif pet.gender == 'FEMALE'%}
+                              
+                              <strong>hembra</strong>
+                              
+                            {%endif%}
+                          </td>
+                          <td>{{ pet.race }}</td>
+                          <td>
+                            {% if pet.isSterilized == 1 %}
+                              
+                              <strong>si</strong>
+                              
+                              {% elseif pet.isSterilized == 0 %}
+                              
+                              <strong>no</strong>
+                              
+                            {%endif%}
+                          </td>
+                          <td>
+                            {% if pet.isVacunated == 1 %}
+                              
+                              <strong>si</strong>
+                              
+                              {% elseif pet.isVacunated == 0 %}
+                              
+                              <strong>no</strong>
+                              
+                            {%endif%}
+                          </td>
+                          <td><a href="" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                      </tr>        
+                      {%endif%}
+                {% endfor %}
+              </tbody>
+            </table>
+			    </div>
+			    <div role="tabpanel" class="conmargin tab-pane" id="profile">
+			    	<br>
+			      	<table class="table table-striped ">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Edad</th>
+                  <th>Color</th>
+                  <th>Sexo</th>
+                  <th>Raza</th>
+                  <th class="tdmd">esterilizada</th>
+                  <th class="tdmd">Vacunada</th>
+                  <th class="tdxs">ver</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                {% for pet in pets %}
+                      {% if pet.species == 'FELINE'%}
+                      <tr>
+                          <td>{{ pet.name }}</td>
+                          <td>{{ pet.age }}</td>
+                          <td>{{ pet.colour }}</td>
+                          <td>
+                            {% if pet.gender == 'MALE'%}
+                              
+                              <strong>macho</strong>
+                              
+                              {% elseif pet.gender == 'FEMALE'%}
+                              
+                              <strong>hembra</strong>
+                              
+                            {%endif%}
+                          </td>
+                          <td>{{ pet.race }}</td>
+                          <td>
+                            {% if pet.isSterilized == 1 %}
+                              
+                              <strong>si</strong>
+                              
+                              {% elseif pet.isSterilized == 0 %}
+                              
+                              <strong>no</strong>
+                              
+                            {%endif%}
+                          </td>
+                          <td>
+                            {% if pet.isVacunated == 1 %}
+                              
+                              <strong>si</strong>
+                              
+                              {% elseif pet.isVacunated == 0 %}
+                              
+                              <strong>no</strong>
+                              
+                            {%endif%}
+                          </td>
+                          <td><a href="" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                      </tr>        
+                      {%endif%}
+                      
+                  {% endfor %}
+              </tbody>
+            </table>
+			    </div>
+			  </div>
+
+			</div><!-- div close panel tab-->
+		</div><!--div close sectionstile 2 -->
+	</div>
+{% endblock %}

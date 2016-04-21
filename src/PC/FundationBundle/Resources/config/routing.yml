@@ -87,6 +87,10 @@ pc_administrator_update:
     path:     /admin/update/{id}
     defaults: { _controller: PCFundationBundle:Admin:update }   
     
+#--------------------------------------------------------------
+#--- rutas del administrador para censo -----------------------
+#--------------------------------------------------------------
+
 pc_admin_jornada_censo:
     path:     /admin/jornadacenso/view
     defaults: { _controller: PCFundationBundle:Admin:jornadacenso } 
@@ -111,3 +115,11 @@ pc_admin_jornada_censo_create:
     path:     /admin/jornadacenso/create
     defaults: { _controller: PCFundationBundle:Admin:jornadacensocreate } 
     methods:  POST
+
+#--------------------------------------------------------------
+#--- rutas del administrador para mascotas --------------------
+#--------------------------------------------------------------
+
+pc_admin_adopt_pet:
+    path:     /admin/adopcion/
+    defaults: { _controller: PCFundationBundle:Admin:adopcionview }

@@ -9,7 +9,6 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class PetType extends AbstractType
@@ -29,7 +28,6 @@ class PetType extends AbstractType
             ->add('gender', ChoiceType::class, array('choices' => array('macho'=>'MALE', 'hembra'=>'FEMALE'), 'placeholder' => 'genero de la mascota'))
             ->add('isVacunated', CheckboxType::class)
             ->add('isSterilized', CheckboxType::class)
-            ->add('birthdate', DateTimeType::class , array('placeholder' => 'fecha de nacimiento'))
             ->add('save', SubmitType::class, array('label' => 'save pet'))
         ;
     }

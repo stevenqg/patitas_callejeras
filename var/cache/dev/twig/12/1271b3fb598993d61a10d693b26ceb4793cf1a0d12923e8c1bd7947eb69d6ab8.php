@@ -21,23 +21,23 @@ class __TwigTemplate_cf9315d2f56ddc17e1be860ad77c629036fff360e679cc904a065da0aa7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4f62aada421f09d2fde98b6e64c2c90222fce6c0e99a660721d0fb690089eaaa = $this->env->getExtension("native_profiler");
-        $__internal_4f62aada421f09d2fde98b6e64c2c90222fce6c0e99a660721d0fb690089eaaa->enter($__internal_4f62aada421f09d2fde98b6e64c2c90222fce6c0e99a660721d0fb690089eaaa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:jornadascenso.html.twig"));
+        $__internal_3b193af6e211d46c1ea583aaa54218e69b425c7426c63eecfbc89aead489bc44 = $this->env->getExtension("native_profiler");
+        $__internal_3b193af6e211d46c1ea583aaa54218e69b425c7426c63eecfbc89aead489bc44->enter($__internal_3b193af6e211d46c1ea583aaa54218e69b425c7426c63eecfbc89aead489bc44_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:jornadascenso.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4f62aada421f09d2fde98b6e64c2c90222fce6c0e99a660721d0fb690089eaaa->leave($__internal_4f62aada421f09d2fde98b6e64c2c90222fce6c0e99a660721d0fb690089eaaa_prof);
+        $__internal_3b193af6e211d46c1ea583aaa54218e69b425c7426c63eecfbc89aead489bc44->leave($__internal_3b193af6e211d46c1ea583aaa54218e69b425c7426c63eecfbc89aead489bc44_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_758f352d8dc09cc7660bf0924e0c591f0a7631670a9acdb7cab80f9decd64d16 = $this->env->getExtension("native_profiler");
-        $__internal_758f352d8dc09cc7660bf0924e0c591f0a7631670a9acdb7cab80f9decd64d16->enter($__internal_758f352d8dc09cc7660bf0924e0c591f0a7631670a9acdb7cab80f9decd64d16_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_84e6058d78aa3975b4b8f8c3cf564b0a84d4873d231a7dc0c637eb1b7925324d = $this->env->getExtension("native_profiler");
+        $__internal_84e6058d78aa3975b4b8f8c3cf564b0a84d4873d231a7dc0c637eb1b7925324d->enter($__internal_84e6058d78aa3975b4b8f8c3cf564b0a84d4873d231a7dc0c637eb1b7925324d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
-        echo "  <div class=\"container\">
+        echo "  <div>
 \t<h1 class=\"coloralert\">Jornadas censo</h1>
               <div class=\"sectionstile\">
               <div class=\"row\">
@@ -72,39 +72,69 @@ class __TwigTemplate_cf9315d2f56ddc17e1be860ad77c629036fff360e679cc904a065da0aa7
                 <tr>
                   <th>#</th>
                   <th>Zona</th>
-                  <th>FEcha de realización</th>
+                  <th>Fecha de realización</th>
                   <th>Colaboradores</th>
                   <th>mas</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>comuna 2 distrito</td>
-                  <td>09/09/2012</td>
-                  <td>juan,pedro,carlos</td>
-                  <td><a href=\"";
-        // line 46
-        echo $this->env->getExtension('routing')->getPath("pc_admin_jornada_censo_mas");
-        echo "\" id=\"censomas\">&nbsp;<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></a></td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>comuna 2 distrito</td>
-                  <td>09/09/2012</td>
-                  <td>juan,pedro,carlos</td>
-                  <td><a href=\"";
-        // line 53
-        echo $this->env->getExtension('routing')->getPath("pc_admin_jornada_censo_mas");
-        echo "\" id=\"censomas\">&nbsp;<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></a></td>
-                </tr>
+                  ";
+        // line 41
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["meetings"]) ? $context["meetings"] : $this->getContext($context, "meetings")));
+        foreach ($context['_seq'] as $context["_key"] => $context["meeting"]) {
+            // line 42
+            echo "                      <tr>
+                          <td>";
+            // line 43
+            echo twig_escape_filter($this->env, $this->getAttribute($context["meeting"], "id", array()), "html", null, true);
+            echo "</td>
+                          <td>";
+            // line 44
+            echo twig_escape_filter($this->env, $this->getAttribute($context["meeting"], "address", array()), "html", null, true);
+            echo "</td>
+                          <td>";
+            // line 45
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["meeting"], "createdAt", array()), "d-m-Y h:i"), "html", null, true);
+            echo "</td>
+                          <td>
+                            ";
+            // line 47
+            if (($this->getAttribute($context["meeting"], "meetingType", array()) == "CENSUS")) {
+                // line 48
+                echo "                              
+                              <strong>censo</strong>
+                              
+                              ";
+            } elseif (($this->getAttribute(            // line 51
+$context["meeting"], "meetingType", array()) == "STERILIZATION")) {
+                // line 52
+                echo "                              
+                              <strong>esterilización</strong>
+                              
+                            ";
+            }
+            // line 56
+            echo "                          </td>
+                          <td><a href=\"";
+            // line 57
+            echo $this->env->getExtension('routing')->getPath("pc_admin_jornada_censo_mas");
+            echo "\" id=\"censomas\">&nbsp;<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></a></td>
+                      </tr>
+                  ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['meeting'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 59
+        echo "              
               </tbody>
             </table>
           </div><!--div close sectionstile-->
           </div><!--div container-->
 ";
         
-        $__internal_758f352d8dc09cc7660bf0924e0c591f0a7631670a9acdb7cab80f9decd64d16->leave($__internal_758f352d8dc09cc7660bf0924e0c591f0a7631670a9acdb7cab80f9decd64d16_prof);
+        $__internal_84e6058d78aa3975b4b8f8c3cf564b0a84d4873d231a7dc0c637eb1b7925324d->leave($__internal_84e6058d78aa3975b4b8f8c3cf564b0a84d4873d231a7dc0c637eb1b7925324d_prof);
 
     }
 
@@ -120,12 +150,12 @@ class __TwigTemplate_cf9315d2f56ddc17e1be860ad77c629036fff360e679cc904a065da0aa7
 
     public function getDebugInfo()
     {
-        return array (  98 => 53,  88 => 46,  47 => 8,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  130 => 59,  121 => 57,  118 => 56,  112 => 52,  110 => 51,  105 => 48,  103 => 47,  98 => 45,  94 => 44,  90 => 43,  87 => 42,  83 => 41,  47 => 8,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
 /* {% block capa %}*/
-/*   <div class="container">*/
+/*   <div>*/
 /* 	<h1 class="coloralert">Jornadas censo</h1>*/
 /*               <div class="sectionstile">*/
 /*               <div class="row">*/
@@ -157,26 +187,31 @@ class __TwigTemplate_cf9315d2f56ddc17e1be860ad77c629036fff360e679cc904a065da0aa7
 /*                 <tr>*/
 /*                   <th>#</th>*/
 /*                   <th>Zona</th>*/
-/*                   <th>FEcha de realización</th>*/
+/*                   <th>Fecha de realización</th>*/
 /*                   <th>Colaboradores</th>*/
 /*                   <th>mas</th>*/
 /*                 </tr>*/
 /*               </thead>*/
 /*               <tbody>*/
-/*                 <tr>*/
-/*                   <td>1</td>*/
-/*                   <td>comuna 2 distrito</td>*/
-/*                   <td>09/09/2012</td>*/
-/*                   <td>juan,pedro,carlos</td>*/
-/*                   <td><a href="{{ path('pc_admin_jornada_censo_mas')}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>*/
-/*                 </tr>*/
-/*                 <tr>*/
-/*                   <td>2</td>*/
-/*                   <td>comuna 2 distrito</td>*/
-/*                   <td>09/09/2012</td>*/
-/*                   <td>juan,pedro,carlos</td>*/
-/*                   <td><a href="{{ path('pc_admin_jornada_censo_mas')}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>*/
-/*                 </tr>*/
+/*                   {% for meeting in meetings %}*/
+/*                       <tr>*/
+/*                           <td>{{ meeting.id }}</td>*/
+/*                           <td>{{ meeting.address }}</td>*/
+/*                           <td>{{ meeting.createdAt | date('d-m-Y h:i')  }}</td>*/
+/*                           <td>*/
+/*                             {% if meeting.meetingType == 'CENSUS'%}*/
+/*                               */
+/*                               <strong>censo</strong>*/
+/*                               */
+/*                               {% elseif meeting.meetingType == 'STERILIZATION'%}*/
+/*                               */
+/*                               <strong>esterilización</strong>*/
+/*                               */
+/*                             {%endif%}*/
+/*                           </td>*/
+/*                           <td><a href="{{ path('pc_admin_jornada_censo_mas')}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>*/
+/*                       </tr>*/
+/*                   {% endfor %}              */
 /*               </tbody>*/
 /*             </table>*/
 /*           </div><!--div close sectionstile-->*/

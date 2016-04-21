@@ -131,7 +131,7 @@ class AdminController extends Controller
     {
         $pet = new Pet();
         $form = $this->createPetform($pet);
-        return $this->render('PCFundationBundle:fundation:registroMascota.html.twig', array('form'=>$form->createview())); 
+        return $this->render('PCFundationBundle:Admin:add_mascota.html.twig', array('form'=>$form->createview())); 
     }
     
     /*
@@ -158,7 +158,7 @@ class AdminController extends Controller
             $em->persist($pet);
             $em->flush();
             
-            return $this->redirectToRoute('pc_administrator_index');
+            return $this->redirectToRoute('pc_admin_adopt_pet');
         }
         
         return $this->render('PCFundationBundle:fundation:registromascota.html.twig', array('form'=>$form->createview())); 
@@ -208,10 +208,25 @@ class AdminController extends Controller
     /*
     permite ver y gestionar las jornadas de censo en el area de trabajo - bloque capa
     */
-    public function jornadacensoAction()
+    public function jornadacensoAction(Request $request)
     {
-        return $this->render('PCFundationBundle:Admin:jornadascenso.html.twig');
+        $meetings = $this->getDoctrine()->getRepository('PCFundationBundle:Meeting')->findBy(array('meetingType' => 'CENSUS'));
+        
+        return $this->render('PCFundationBundle:Admin:jornadascenso.html.twig', array('meetings' => $meetings));
     }
+    
+    
+    /*
+    permite ver y gestionar las mascotas en espera de adopción en el area de trabajo - bloque capa
+    */
+    public function adopcionviewAction(Request $request)
+    {
+        $pets = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->findAll();
+        
+        return $this->render('PCFundationBundle:Admin:Masct_adopcion.html.twig', array('pets' => $pets));
+    }
+    
+    
     
     /*
     permite ver mas información del censo

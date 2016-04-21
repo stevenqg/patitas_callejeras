@@ -1,6 +1,6 @@
 {% extends "PCFundationBundle:Admin:admin.html.twig"%}
 {% block capa %}
-  <div class="container">
+  <div>
 	<h1 class="coloralert">Jornadas censo</h1>
               <div class="sectionstile">
               <div class="row">
@@ -32,26 +32,31 @@
                 <tr>
                   <th>#</th>
                   <th>Zona</th>
-                  <th>FEcha de realización</th>
+                  <th>Fecha de realización</th>
                   <th>Colaboradores</th>
                   <th>mas</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>comuna 2 distrito</td>
-                  <td>09/09/2012</td>
-                  <td>juan,pedro,carlos</td>
-                  <td><a href="{{ path('pc_admin_jornada_censo_mas')}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>comuna 2 distrito</td>
-                  <td>09/09/2012</td>
-                  <td>juan,pedro,carlos</td>
-                  <td><a href="{{ path('pc_admin_jornada_censo_mas')}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>
-                </tr>
+                  {% for meeting in meetings %}
+                      <tr>
+                          <td>{{ meeting.id }}</td>
+                          <td>{{ meeting.address }}</td>
+                          <td>{{ meeting.createdAt | date('d-m-Y h:i')  }}</td>
+                          <td>
+                            {% if meeting.meetingType == 'CENSUS'%}
+                              
+                              <strong>censo</strong>
+                              
+                              {% elseif meeting.meetingType == 'STERILIZATION'%}
+                              
+                              <strong>esterilización</strong>
+                              
+                            {%endif%}
+                          </td>
+                          <td><a href="{{ path('pc_admin_jornada_censo_mas')}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>
+                      </tr>
+                  {% endfor %}              
               </tbody>
             </table>
           </div><!--div close sectionstile-->

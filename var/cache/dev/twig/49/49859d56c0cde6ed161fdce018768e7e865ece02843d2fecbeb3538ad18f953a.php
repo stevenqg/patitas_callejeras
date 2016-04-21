@@ -22,23 +22,23 @@ class __TwigTemplate_c0b01ead418d05f74af2768f9afc97ac2c77e928acf5fe5f4d60e13d207
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0fd52f87865526fb50517eda161b5963feeb42fff489e97143654eff84aea87b = $this->env->getExtension("native_profiler");
-        $__internal_0fd52f87865526fb50517eda161b5963feeb42fff489e97143654eff84aea87b->enter($__internal_0fd52f87865526fb50517eda161b5963feeb42fff489e97143654eff84aea87b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:nuevocenso.html.twig"));
+        $__internal_fe29940724dce4f507abe0944881eb69f0d8694d402719ea3ab089f0c38f86a5 = $this->env->getExtension("native_profiler");
+        $__internal_fe29940724dce4f507abe0944881eb69f0d8694d402719ea3ab089f0c38f86a5->enter($__internal_fe29940724dce4f507abe0944881eb69f0d8694d402719ea3ab089f0c38f86a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:nuevocenso.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0fd52f87865526fb50517eda161b5963feeb42fff489e97143654eff84aea87b->leave($__internal_0fd52f87865526fb50517eda161b5963feeb42fff489e97143654eff84aea87b_prof);
+        $__internal_fe29940724dce4f507abe0944881eb69f0d8694d402719ea3ab089f0c38f86a5->leave($__internal_fe29940724dce4f507abe0944881eb69f0d8694d402719ea3ab089f0c38f86a5_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_d4ac48f843b80403ca2dba82ce30cc5f8fa82727e270ba53fa25a7a8a768ef2a = $this->env->getExtension("native_profiler");
-        $__internal_d4ac48f843b80403ca2dba82ce30cc5f8fa82727e270ba53fa25a7a8a768ef2a->enter($__internal_d4ac48f843b80403ca2dba82ce30cc5f8fa82727e270ba53fa25a7a8a768ef2a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_6ebaee7f8facbf163f6196bf36e058391da9b3fa4f1122091389c553031fc783 = $this->env->getExtension("native_profiler");
+        $__internal_6ebaee7f8facbf163f6196bf36e058391da9b3fa4f1122091389c553031fc783->enter($__internal_6ebaee7f8facbf163f6196bf36e058391da9b3fa4f1122091389c553031fc783_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
-        echo "\t<div class=\"container\">
+        echo "\t<div>
 \t\t
 \t\t
 \t\t<h1 class=\"coloralert\">Crear nuevo censo &nbsp; <a href=\"\" type=\"button\" class=\" buttonborder pull-right btn btn-primary\"> <span class=\"glyphicon glyphicon-hand-left\" aria-hidden=\"true\"></span>&nbsp;regresar</a></h1>
@@ -111,15 +111,15 @@ class __TwigTemplate_c0b01ead418d05f74af2768f9afc97ac2c77e928acf5fe5f4d60e13d207
 \t</div>
 ";
         
-        $__internal_d4ac48f843b80403ca2dba82ce30cc5f8fa82727e270ba53fa25a7a8a768ef2a->leave($__internal_d4ac48f843b80403ca2dba82ce30cc5f8fa82727e270ba53fa25a7a8a768ef2a_prof);
+        $__internal_6ebaee7f8facbf163f6196bf36e058391da9b3fa4f1122091389c553031fc783->leave($__internal_6ebaee7f8facbf163f6196bf36e058391da9b3fa4f1122091389c553031fc783_prof);
 
     }
 
     // line 58
     public function block_javascript($context, array $blocks = array())
     {
-        $__internal_9811ff8f32051323dbf565d63d81c903e653af4dc4869c2b3ce13dc3f0d414eb = $this->env->getExtension("native_profiler");
-        $__internal_9811ff8f32051323dbf565d63d81c903e653af4dc4869c2b3ce13dc3f0d414eb->enter($__internal_9811ff8f32051323dbf565d63d81c903e653af4dc4869c2b3ce13dc3f0d414eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascript"));
+        $__internal_dff61b6a6b5930c93f0309aea7822d8edfea6e63f391e33a56bd0a6dda97e17a = $this->env->getExtension("native_profiler");
+        $__internal_dff61b6a6b5930c93f0309aea7822d8edfea6e63f391e33a56bd0a6dda97e17a->enter($__internal_dff61b6a6b5930c93f0309aea7822d8edfea6e63f391e33a56bd0a6dda97e17a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascript"));
 
         // line 59
         $this->displayParentBlock("javascript", $context, $blocks);
@@ -135,7 +135,7 @@ class __TwigTemplate_c0b01ead418d05f74af2768f9afc97ac2c77e928acf5fe5f4d60e13d207
         echo "\"></script>
 ";
         
-        $__internal_9811ff8f32051323dbf565d63d81c903e653af4dc4869c2b3ce13dc3f0d414eb->leave($__internal_9811ff8f32051323dbf565d63d81c903e653af4dc4869c2b3ce13dc3f0d414eb_prof);
+        $__internal_dff61b6a6b5930c93f0309aea7822d8edfea6e63f391e33a56bd0a6dda97e17a->leave($__internal_dff61b6a6b5930c93f0309aea7822d8edfea6e63f391e33a56bd0a6dda97e17a_prof);
 
     }
 
@@ -156,7 +156,7 @@ class __TwigTemplate_c0b01ead418d05f74af2768f9afc97ac2c77e928acf5fe5f4d60e13d207
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
 /* {% block capa %}*/
-/* 	<div class="container">*/
+/* 	<div>*/
 /* 		*/
 /* 		*/
 /* 		<h1 class="coloralert">Crear nuevo censo &nbsp; <a href="" type="button" class=" buttonborder pull-right btn btn-primary"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a></h1>*/

@@ -271,6 +271,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
+            // pc_admin_adopt_pet
+            if (rtrim($pathinfo, '/') === '/admin/adopcion') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'pc_admin_adopt_pet');
+                }
+
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::adopcionviewAction',  '_route' => 'pc_admin_adopt_pet',);
+            }
+
         }
 
         // homepage

@@ -21,25 +21,25 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_02ede83571cfdec84883d15d0983a6b668503dd91388facffa7b448d06a15c87 = $this->env->getExtension("native_profiler");
-        $__internal_02ede83571cfdec84883d15d0983a6b668503dd91388facffa7b448d06a15c87->enter($__internal_02ede83571cfdec84883d15d0983a6b668503dd91388facffa7b448d06a15c87_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:censo.html.twig"));
+        $__internal_4309f148c6d679083036aa8ade162be7eb1294fca284ea81a6d06fac281e27ec = $this->env->getExtension("native_profiler");
+        $__internal_4309f148c6d679083036aa8ade162be7eb1294fca284ea81a6d06fac281e27ec->enter($__internal_4309f148c6d679083036aa8ade162be7eb1294fca284ea81a6d06fac281e27ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:censo.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_02ede83571cfdec84883d15d0983a6b668503dd91388facffa7b448d06a15c87->leave($__internal_02ede83571cfdec84883d15d0983a6b668503dd91388facffa7b448d06a15c87_prof);
+        $__internal_4309f148c6d679083036aa8ade162be7eb1294fca284ea81a6d06fac281e27ec->leave($__internal_4309f148c6d679083036aa8ade162be7eb1294fca284ea81a6d06fac281e27ec_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_05d6849409c6d7476120a9ef365fe004c3635679d38599d4cc4171c944b2186c = $this->env->getExtension("native_profiler");
-        $__internal_05d6849409c6d7476120a9ef365fe004c3635679d38599d4cc4171c944b2186c->enter($__internal_05d6849409c6d7476120a9ef365fe004c3635679d38599d4cc4171c944b2186c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_74d67b4a6e0fb2c92cc3459175f46aaed91bb3f1036ac4cd4c545761a526efa9 = $this->env->getExtension("native_profiler");
+        $__internal_74d67b4a6e0fb2c92cc3459175f46aaed91bb3f1036ac4cd4c545761a526efa9->enter($__internal_74d67b4a6e0fb2c92cc3459175f46aaed91bb3f1036ac4cd4c545761a526efa9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "
-      <div class=\"container\">
-        <h1 class=\"coloralert\">Solicitud de Adopción &nbsp; <a href=\"\" type=\"button\" class=\" buttonborder pull-right btn btn-primary\"> <span class=\"glyphicon glyphicon-hand-left\" aria-hidden=\"true\"></span>&nbsp;regresar</a></h1>
+      <div>
+        <h1 class=\"coloralert\">Información del Censo &nbsp; <a href=\"\" type=\"button\" class=\" buttonborder pull-right btn btn-primary\"> <span class=\"glyphicon glyphicon-hand-left\" aria-hidden=\"true\"></span>&nbsp;regresar</a></h1>
       <div class=\"sectionstile\">
               <div class=\"row\">
               <div class=\"textjusti col-xs-8 col-md-4 col-lg-5\">
@@ -171,7 +171,7 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
         </div>
 ";
         
-        $__internal_05d6849409c6d7476120a9ef365fe004c3635679d38599d4cc4171c944b2186c->leave($__internal_05d6849409c6d7476120a9ef365fe004c3635679d38599d4cc4171c944b2186c_prof);
+        $__internal_74d67b4a6e0fb2c92cc3459175f46aaed91bb3f1036ac4cd4c545761a526efa9->leave($__internal_74d67b4a6e0fb2c92cc3459175f46aaed91bb3f1036ac4cd4c545761a526efa9_prof);
 
     }
 
@@ -193,8 +193,8 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
 /* {% block capa %}*/
 /* */
-/*       <div class="container">*/
-/*         <h1 class="coloralert">Solicitud de Adopción &nbsp; <a href="" type="button" class=" buttonborder pull-right btn btn-primary"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a></h1>*/
+/*       <div>*/
+/*         <h1 class="coloralert">Información del Censo &nbsp; <a href="" type="button" class=" buttonborder pull-right btn btn-primary"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a></h1>*/
 /*       <div class="sectionstile">*/
 /*               <div class="row">*/
 /*               <div class="textjusti col-xs-8 col-md-4 col-lg-5">*/

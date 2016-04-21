@@ -283,3 +283,5 @@ td, th {text-align: left;padding: 8px;}
 }
 .bdleft{border-left:#ddd 1px solid;}
 .buttonborder{border-radius: 20px;box-shadow: 2px 3px 6px #999 ;}
+.check{    width: 20%;
+    height: 20px;}

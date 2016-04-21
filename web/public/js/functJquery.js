@@ -112,8 +112,3 @@ function jornadacenso () {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
-$(function (){
-	$("#fecha1").datepicker({
-			showButtonPanel: true,
-			});
-});

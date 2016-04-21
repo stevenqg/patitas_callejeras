@@ -1,0 +1,93 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block stylesheets %}
+{{ parent() }}
+ <link href="{{ asset('public/css/fileinput.css') }}" media="all" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block capa %}
+<div>
+		
+		<h1 class="coloralert"> Agregar Mascotas</h1>
+		<div class="sectionstile">
+		
+			
+		<form enctype="multipart/form-data">
+			<div class="form-group">
+                <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any">
+            </div>
+        </form>
+		
+		{{ form_start(form, {'attr' : {'role' : 'form'} }) }}
+		<div class="form-group">
+			<div class="row">
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Nombre:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.name, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombre de la mascota' } })}}
+				</div>
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Edad:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.age, {'attr' : {'class' : 'form-control', 'placeholder' : 'edad de la mascota' } })}}
+				</div>
+			</div><br><!-- div close row form -->
+			
+			<div class="row">
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Especie:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.species, {'attr' : {'class' : 'form-control', 'placeholder' : 'que especie de mascota es?' } })}}
+				</div>
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Raza:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.race, {'attr' : {'class' : 'form-control', 'placeholder' : 'a que raza pertenece?' } })}}
+				</div>
+			</div><br><!-- div close row form -->
+			
+			<div class="row">
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Sexo:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.gender, {'attr' : {'class' : 'form-control', 'placeholder' : '¿macho o hembra?' } })}}
+				</div>
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Color:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.colour, {'attr' : {'class' : 'form-control', 'placeholder' : 'color de la mascota' } })}}
+				</div>
+			</div><br><!-- div close row form -->	
+			
+			<div class="row">
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Vacunado:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.isVacunated, {'attr' : {'class' : 'check checkbox'} })}}
+				</div>
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Esterilizado:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.isSterilized, {'attr' : {'class' : 'check checkbox'} })}}
+				</div>
+				
+			</div><br><!-- div close row form -->	
+				<div class="row">
+				<div class="col-md-2">
+					{{ form_widget(form.save, {'label' : 'Agregar mascota', 'attr' : {'class' : 'btn btn-success'} }) }}
+				</div></div>
+		</div>
+		{{ form_end(form) }}
+	</div><!--div sectionsitile-->
+</div>
+{% endblock %}	
+{% block javascript %}
+{{ parent() }}
+	    <script src="{{ asset('public/js/fileinput.min.js') }}" type="text/javascript"></script>
+{% endblock %}
