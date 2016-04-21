@@ -51,6 +51,16 @@ pc_administrator_index:
     path:     /admin/
     defaults: { _controller: PCFundationBundle:Admin:index }
 
+pc_administrator_login:
+    path:     /admin/login
+    defaults: { _controller: PCFundationBundle:Admin:login }
+    
+pc_administrator_logout:
+    path:     /admin/logout
+    defaults: { _controller: PCFundationBundle:Admin:logout }
+    
+
+
 pc_administrator_pet_add:
     path:     /admin/pet/add
     defaults: { _controller: PCFundationBundle:Admin:addpet }

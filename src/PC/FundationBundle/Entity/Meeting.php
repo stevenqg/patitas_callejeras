@@ -10,7 +10,6 @@ use Doctrine\Common\Collections\ArrayCollection;
  *
  * @ORM\Table(name="meetings")
  * @ORM\Entity(repositoryClass="PC\FundationBundle\Repository\MeetingRepository")
- * @ORM\HasLifecycleCallbacks()
  */
 class Meeting
 {
@@ -150,15 +149,13 @@ class Meeting
 
     /**
      * Set administrator
-     * @ORM/PrePersist
      * @param \PC\FundationBundle\Entity\Administrator $administrator
      *
      * @return Meeting
      */
     public function setAdministrator(\PC\FundationBundle\Entity\Administrator $administrator = null)
     {
-        //$this->administrator = $administrator; esta es la linea original - NO BORRAR POR NADA
-        $this->administrator = 1;
+        $this->administrator = $administrator;
         return $this;
     }
 

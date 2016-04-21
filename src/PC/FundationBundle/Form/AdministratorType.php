@@ -9,6 +9,8 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 class AdministratorType extends AbstractType
 {
@@ -23,7 +25,11 @@ class AdministratorType extends AbstractType
             ->add('lastName', TextType::class)
             ->add('age', IntegerType::class)
             ->add('email', TextType::class)
-            ->add('password', TextType::class)
+            ->add('password', RepeatedType::class, array(
+                    'type' => PasswordType::class,
+                    'first_options' => array('label' => 'Password'),
+                    'second_options' => array('label' => 'Repeat Password'),
+                    ))
             ->add('save', SubmitType::class, array('label' => 'save administrator'))
         ;
     }

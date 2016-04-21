@@ -21,11 +21,58 @@ class AdminController extends Controller
     /*
     muestra los administradores registrados en la base de datos
     */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-        $admins = $em->getRepository('PCFundationBundle:Administrator')->findAll();
-        return $this->render('PCFundationBundle:Admin:admin.html.twig', array('admins'=>$admins));
+        $session = $request->getSession();
+        if($session->has("id"))
+        {
+            return $this->render('PCFundationBundle:Admin:admin.html.twig');    
+        }
+        else
+        {
+            echo '<script language="javascript">alert("debe estar logueado para acceder a este contenido.");</script>'; 
+            return $this->render('PCFundationBundle:Admin:login.html.twig');
+        }
+    }
+    
+    /*
+    permite ver la ventana login para el adminsitrador, realizar el login y crear la sesion.
+    */
+    public function loginAction(Request $request)
+    {
+        if($request->getMethod()=="POST")
+        {
+            $email = $request->get("email");
+            $password =$request->get("password");
+            
+            $admin = $this->getDoctrine()->getRepository('PCFundationBundle:Administrator')->findOneBy(array("email" => $email, "password" => $password));
+            if($admin)
+            {
+                $session = $request->getSession();
+                $session->set("id", $admin->getId());
+                $session->set("name", $admin->getName());
+            
+                return $this->redirectToRoute('pc_administrator_index');
+            }
+            else
+            {
+                echo '<script language="javascript">alert("credenciales incorrectas, intentelo de nuevo.");</script>'; 
+                return $this->render('PCFundationBundle:Admin:login.html.twig');
+            }
+        }
+        
+        return $this->render('PCFundationBundle:Admin:login.html.twig');
+    }
+    
+    /*
+    permite cerrar la sesion actual y redireccionar a la ventana de inicio publica   
+    */
+    public function logoutAction(Request $request)
+    {
+        $session = $request->getSession();
+        $session->clear();
+        echo '<script language="javascript">alert("ha cerrado sesión correctamente.");</script>';
+        return $this->redirectToRoute('pc_fundation_homepage');
     }
     
     /*
@@ -141,12 +188,15 @@ class AdminController extends Controller
     */
     public function jornadacensocreateAction(request $request)
     {
+        $session = $request->getSession();
         $meeting = new Meeting();
         $form = $this->createMeetingForm($meeting);
         $form->handlerequest($request);
         if($form->isvalid())
         {
             $em = $this->getDoctrine()->getManager();
+            $admin = $this->getDoctrine()->getRepository('PCFundationBundle:Administrator')->find($session->get("id"));
+            $meeting->setAdministrator($admin);
             $em->persist($meeting);
             $em->flush();
             

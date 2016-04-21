@@ -30,8 +30,8 @@
           
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a>Nombre admin</a></li>
+          <ul class="bagnone nav navbar-nav navbar-right">
+            <li><a id="nombreUsuario">{{ app.session.get('name') }}</a></li>
             <li class="link3 btn-group dropdown">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="caret"></span></a>
                   <ul class="drop dropdown-menu" role="menu">
@@ -39,7 +39,7 @@
                   <li><a href="#" id="ventemerg1"><p class="ctext">Editar Información</p></a></li>
                 </ul>
           </li>
-            <li class="link3"><a href="index1.html">Salir <span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
+            <li class="link3"><a href="{{ path('pc_administrator_logout')}}">Salir <span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
           </ul>
           <form class="navbar-form navbar-right">
              <div class="input-group">

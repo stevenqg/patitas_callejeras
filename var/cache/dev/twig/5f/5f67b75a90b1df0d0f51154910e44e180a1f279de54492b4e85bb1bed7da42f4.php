@@ -15,8 +15,8 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_92e0310f86e0acb3f18d91de37681aad45f15e5af8bfb7f163867fc32c965631 = $this->env->getExtension("native_profiler");
-        $__internal_92e0310f86e0acb3f18d91de37681aad45f15e5af8bfb7f163867fc32c965631->enter($__internal_92e0310f86e0acb3f18d91de37681aad45f15e5af8bfb7f163867fc32c965631_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
+        $__internal_6cb3e9545bc3abac3060575971c674d99056109ec364281083edcfd327ce4d7e = $this->env->getExtension("native_profiler");
+        $__internal_6cb3e9545bc3abac3060575971c674d99056109ec364281083edcfd327ce4d7e->enter($__internal_6cb3e9545bc3abac3060575971c674d99056109ec364281083edcfd327ce4d7e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
 
         // line 1
         echo "<header>
@@ -55,8 +55,8 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
         echo "\" >Nosotros</a></li>
                       <li><a class=\"links\" href=\"";
         // line 23
-        echo $this->env->getExtension('routing')->getPath("pc_administrator_index");
-        echo "\" >menú administrador</a></li>
+        echo $this->env->getExtension('routing')->getPath("pc_administrator_login");
+        echo "\" >admin login</a></li>
                 </ul>
             </div> 
         </div> 
@@ -66,7 +66,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 \t\t</div>
 </header>";
         
-        $__internal_92e0310f86e0acb3f18d91de37681aad45f15e5af8bfb7f163867fc32c965631->leave($__internal_92e0310f86e0acb3f18d91de37681aad45f15e5af8bfb7f163867fc32c965631_prof);
+        $__internal_6cb3e9545bc3abac3060575971c674d99056109ec364281083edcfd327ce4d7e->leave($__internal_6cb3e9545bc3abac3060575971c674d99056109ec364281083edcfd327ce4d7e_prof);
 
     }
 
@@ -107,7 +107,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 /*                       <li><a class="links" href="{{ path('pc_fundation_adoptar')}}" >Adoptar</a></li>*/
 /*                       <li><a class="links" href="" >Donaciones</a></li>*/
 /*                       <li><a class="links" href="{{ path('pc_fundation_nosotros')}}" >Nosotros</a></li>*/
-/*                       <li><a class="links" href="{{ path('pc_administrator_index')}}" >menú administrador</a></li>*/
+/*                       <li><a class="links" href="{{ path('pc_administrator_login')}}" >admin login</a></li>*/
 /*                 </ul>*/
 /*             </div> */
 /*         </div> */

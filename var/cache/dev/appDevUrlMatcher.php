@@ -171,6 +171,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::indexAction',  '_route' => 'pc_administrator_index',);
             }
 
+            if (0 === strpos($pathinfo, '/admin/log')) {
+                // pc_administrator_login
+                if ($pathinfo === '/admin/login') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::loginAction',  '_route' => 'pc_administrator_login',);
+                }
+
+                // pc_administrator_logout
+                if ($pathinfo === '/admin/logout') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::logoutAction',  '_route' => 'pc_administrator_logout',);
+                }
+
+            }
+
             if (0 === strpos($pathinfo, '/admin/pet')) {
                 // pc_administrator_pet_add
                 if ($pathinfo === '/admin/pet/add') {

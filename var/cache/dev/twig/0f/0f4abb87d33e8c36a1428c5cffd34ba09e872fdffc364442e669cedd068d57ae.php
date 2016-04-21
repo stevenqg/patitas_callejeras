@@ -22,32 +22,32 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9b9f91f9900bdfe04e22bfe07ade6f7ba826f8f94035a5a3643281bc7396099f = $this->env->getExtension("native_profiler");
-        $__internal_9b9f91f9900bdfe04e22bfe07ade6f7ba826f8f94035a5a3643281bc7396099f->enter($__internal_9b9f91f9900bdfe04e22bfe07ade6f7ba826f8f94035a5a3643281bc7396099f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:NewAdmin.html.twig"));
+        $__internal_49b3f9e1942778b7c2537ab8a81887aae438124f13207e43267b5edbe2c1b819 = $this->env->getExtension("native_profiler");
+        $__internal_49b3f9e1942778b7c2537ab8a81887aae438124f13207e43267b5edbe2c1b819->enter($__internal_49b3f9e1942778b7c2537ab8a81887aae438124f13207e43267b5edbe2c1b819_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:NewAdmin.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9b9f91f9900bdfe04e22bfe07ade6f7ba826f8f94035a5a3643281bc7396099f->leave($__internal_9b9f91f9900bdfe04e22bfe07ade6f7ba826f8f94035a5a3643281bc7396099f_prof);
+        $__internal_49b3f9e1942778b7c2537ab8a81887aae438124f13207e43267b5edbe2c1b819->leave($__internal_49b3f9e1942778b7c2537ab8a81887aae438124f13207e43267b5edbe2c1b819_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_135e3863b47f4cdeab3e5411b0aa01e36a01aed8db9febe674192c5c682a7b12 = $this->env->getExtension("native_profiler");
-        $__internal_135e3863b47f4cdeab3e5411b0aa01e36a01aed8db9febe674192c5c682a7b12->enter($__internal_135e3863b47f4cdeab3e5411b0aa01e36a01aed8db9febe674192c5c682a7b12_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_b21beade11e5bd21b813f151e081b961b4e63cde358f514af19282067fbe2f42 = $this->env->getExtension("native_profiler");
+        $__internal_b21beade11e5bd21b813f151e081b961b4e63cde358f514af19282067fbe2f42->enter($__internal_b21beade11e5bd21b813f151e081b961b4e63cde358f514af19282067fbe2f42_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Nuevo Administrador";
         
-        $__internal_135e3863b47f4cdeab3e5411b0aa01e36a01aed8db9febe674192c5c682a7b12->leave($__internal_135e3863b47f4cdeab3e5411b0aa01e36a01aed8db9febe674192c5c682a7b12_prof);
+        $__internal_b21beade11e5bd21b813f151e081b961b4e63cde358f514af19282067fbe2f42->leave($__internal_b21beade11e5bd21b813f151e081b961b4e63cde358f514af19282067fbe2f42_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_dde77b818ca0cd4e163e8eb977f9b35ae7145e7490edcba0f303ef9dd8a503ab = $this->env->getExtension("native_profiler");
-        $__internal_dde77b818ca0cd4e163e8eb977f9b35ae7145e7490edcba0f303ef9dd8a503ab->enter($__internal_dde77b818ca0cd4e163e8eb977f9b35ae7145e7490edcba0f303ef9dd8a503ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_1e8094980201951df80aae10386f431485a865e3b28c753707d3a2f37e63bc63 = $this->env->getExtension("native_profiler");
+        $__internal_1e8094980201951df80aae10386f431485a865e3b28c753707d3a2f37e63bc63->enter($__internal_1e8094980201951df80aae10386f431485a865e3b28c753707d3a2f37e63bc63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
@@ -129,7 +129,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
         // line 63
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "password", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "más de 8 caracteres")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "password", array()), 'widget');
         echo "
 \t\t\t\t\t\t\t<div  class=\"logaler alert-danger\" id=\"age-error\"></div>
 \t\t\t\t\t\t</div>
@@ -162,7 +162,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 </container>
 ";
         
-        $__internal_dde77b818ca0cd4e163e8eb977f9b35ae7145e7490edcba0f303ef9dd8a503ab->leave($__internal_dde77b818ca0cd4e163e8eb977f9b35ae7145e7490edcba0f303ef9dd8a503ab_prof);
+        $__internal_1e8094980201951df80aae10386f431485a865e3b28c753707d3a2f37e63bc63->leave($__internal_1e8094980201951df80aae10386f431485a865e3b28c753707d3a2f37e63bc63_prof);
 
     }
 
@@ -243,7 +243,7 @@ class __TwigTemplate_215bd3a09600e23f290ee610aec479a391f225fc160435d0a5abf419594
 /* 							<label class="marginlabel"  for="Nombre del adoptante">Contraseña: </label>*/
 /* 						</div>*/
 /* 						<div class="col-xs-9 col-md-4">*/
-/* 							{{form_widget(form.password, {'attr' : {'class' : 'form-control', 'placeholder' : 'más de 8 caracteres' } })}}*/
+/* 							{{form_widget(form.password)}}*/
 /* 							<div  class="logaler alert-danger" id="age-error"></div>*/
 /* 						</div>*/
 /* 					</div>*/
