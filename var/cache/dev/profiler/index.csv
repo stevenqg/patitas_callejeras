@@ -673,3 +673,4 @@ b25675,10.240.0.186,GET,http://patitas-callejeras-steven-quintero.c9users.io/web
 04328b,10.240.0.192,GET,http://patitas-callejeras-steven-quintero.c9users.io/web/app_dev.php/admin/jornadacenso/view,1461267749,,200
 5d8ecc,10.240.0.157,GET,http://patitas-callejeras-steven-quintero.c9users.io/web/app_dev.php/admin/jornadacenso/jornadascenso.html,1461267750,328941,200
 328941,10.240.0.157,POST,http://patitas-callejeras-steven-quintero.c9users.io/web/app_dev.php/admin/jornadacenso/jornadascenso.html,1461267750,,404
+e7fb68,10.240.0.206,GET,http://patitas-callejeras-steven-quintero.c9users.io/web/app_dev.php/admin/jornadacenso/add,1461268303,,200
