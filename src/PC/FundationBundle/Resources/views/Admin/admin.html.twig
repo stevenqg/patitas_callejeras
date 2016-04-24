@@ -36,7 +36,7 @@
                 <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="caret"></span></a>
                   <ul class="drop dropdown-menu" role="menu">
                   <li><a href="{{ path('pc_administrator_add') }}" id="ventemerg" ><p class="ctext">Nuevo administrador</p></a></li>
-                  <li><a href="#" id="ventemerg1"><p class="ctext">Editar Información</p></a></li>
+                  <li><a href="{{ path('pc_administrator_edit') }}" id="ventemerg1"><p class="ctext">Editar Información</p></a></li>
                 </ul>
           </li>
             <li class="link3"><a href="{{ path('pc_administrator_logout')}}">Salir <span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
@@ -78,7 +78,7 @@
                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                   <div class="padinone panel-body">
                      <div class="contlat">
-                        <a href="#"><p class="padp">Jornada de esterilización</p></a>
+                        <a href="{{ path('pc_admin_jornada_esterilizacion')}}"><p class="padp">Jornada de esterilización</p></a>
                       </div> 
                       <hr class="margnone">
                        <div class="contlat">
@@ -91,7 +91,7 @@
 
             </li>
             <hr class="margnone">
-            <li class="textjusti"><a href="#">solicitudes adopción<span class="pull-right contarnum badge">02</span></a></li>
+            <li class="textjusti"><a href="{{path('pc_admin_pet_solicitudes')}}">solicitudes adopción<span class="pull-right contarnum badge">02</span></a></li>
             <hr class="margnone">
             <li>
               <div class="butstil margnone spanel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -110,7 +110,7 @@
                       </div> 
                       <hr class="margnone">
                        <div class="contlat">
-                        <a href="#"><p class="padp">mascotas Adoptadas</p></a>
+                        <a href="{{path('pc_admin_adoptada_pet')}}"><p class="padp">mascotas Adoptadas</p></a>
                       </div>
                       <hr class="margnone">
                        <div class="contlat">

@@ -6,15 +6,9 @@
 {% block capa %}
 <div>
 		
-		<h1 class="coloralert"> Agregar Mascotas</h1>
-		<div class="sectionstile">
-		
-			
-		<form enctype="multipart/form-data">
-			<div class="form-group">
-                <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any">
-            </div>
-        </form>
+	<h1 class="coloralert"> Agregar Mascota - paso 1</h1>
+	<div class="sectionstile">
+	
 		
 		{{ form_start(form, {'attr' : {'role' : 'form'} }) }}
 		<div class="form-group">
@@ -80,7 +74,7 @@
 			</div><br><!-- div close row form -->	
 				<div class="row">
 				<div class="col-md-2">
-					{{ form_widget(form.save, {'label' : 'Agregar mascota', 'attr' : {'class' : 'btn btn-success'} }) }}
+					{{ form_widget(form.save, {'label' : 'Continuar', 'attr' : {'class' : 'btn btn-success'} }) }}
 				</div></div>
 		</div>
 		{{ form_end(form) }}

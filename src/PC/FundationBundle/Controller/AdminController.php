@@ -7,7 +7,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Form\FormError;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
+use PC\FundationBundle\Models\Document;
+use PC\FundationBundle\Entity\Photo;
 use PC\FundationBundle\Entity\Administrator;
 use PC\FundationBundle\Form\AdministratorType;
 use PC\FundationBundle\Entity\Pet;
@@ -119,7 +122,7 @@ class AdminController extends Controller
     */
     public function editAction()
     {
-       return $this->render('PCFundationBundle:Admin:admin.html.twig');
+       return $this->render('PCFundationBundle:Admin:edit_admin.html.twig');
     }
     
     
@@ -154,14 +157,59 @@ class AdminController extends Controller
         
         if($form->isvalid())
         {
+            $session = $request->getSession();
+            $session->set("petId", $pet->getId());
+            
             $em = $this->getDoctrine()->getManager();
             $em->persist($pet);
             $em->flush();
             
-            return $this->redirectToRoute('pc_admin_adopt_pet');
+            return $this->redirectToRoute('pc_admin_pet_photo');
         }
         
-        return $this->render('PCFundationBundle:fundation:registromascota.html.twig', array('form'=>$form->createview())); 
+        return $this->render('PCFundationBundle:Admin:add_mascota.html.twig', array('form'=>$form->createview())); 
+    }
+    
+    /*
+    carga la imagen de la mascota
+    */
+    public function uploadAction(request $request)
+    {
+        if($request->getMethod()=='POST')
+        {
+            $image = $request->files->get('file');
+            
+            if(($image instanceof UploadedFile) && ($image->getError() == '0'))
+            {
+                $originalName = $image->getClientOriginalName();
+                $name_array = explode('.', $originalName);
+                $file_type = $name_array[sizeof($name_array)-1];
+                $valid_filetypes = array('jpg', 'jpeg', 'png', 'gif');
+                if(in_array(strtolower($file_type), $valid_filetypes))
+                {
+                    $document = new Document();
+                    $document->setFile($image);
+                    $document->setSubDirectory('pets');
+                    $document->processFile();
+                    
+                    $photo = new Photo();
+                    $route = $document->getUploadDirectory() . DIRECTORY_SEPARATOR . $document->getSubDirectory() . DIRECTORY_SEPARATOR . $image->getBaseName();
+                    $photo->setRoute($route);
+                    $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->find($session->get("petId"));
+                    $photo->setPet($pet);
+                    
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($photo);
+                    $em->flush();
+                    
+                    $session = $request->getSession();
+                    $session->remove("petId");
+                    
+                    return $this->redirectToRoute('pc_admin_adopt_pet');
+                }
+            }
+        }
+       return $this->render('PCFundationBundle:Admin:add_photo_mascota.html.twig');
     }
     
     /*
@@ -251,5 +299,28 @@ class AdminController extends Controller
     {
         return $this->render('PCFundationBundle:Admin:agregardatos.html.twig');
     }
-    
+    public function jornadaesterilizaAction()
+    {
+        return $this->render('PCFundationBundle:Admin:jornada_esteriliza.html.twig');
+    }
+    public function esterilizacionAction()
+    {
+        return $this->render('PCFundationBundle:Admin:esterilizacio.html.twig');
+    }
+     public function esterilizacionAddAction()
+    {
+        return $this->render('PCFundationBundle:Admin:esteriliza_add.html.twig');
+    }
+    public function solicitudesAction()
+    {
+        return $this->render('PCFundationBundle:Admin:solicitudes.html.twig');
+    }
+    public function solicituddateAction()
+    {
+        return $this->render('PCFundationBundle:Admin:solicitud_adopcion.html.twig');
+    }
+    public function mascotadoptadaAction()
+    {
+        return $this->render('PCFundationBundle:Admin:masc_adopatada.html.twig');
+    }
 }

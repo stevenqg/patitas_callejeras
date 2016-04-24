@@ -23,20 +23,20 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4eff1221730d962e0608407ee6c2b0d2494d3191739c42533abad4038a72bd03 = $this->env->getExtension("native_profiler");
-        $__internal_4eff1221730d962e0608407ee6c2b0d2494d3191739c42533abad4038a72bd03->enter($__internal_4eff1221730d962e0608407ee6c2b0d2494d3191739c42533abad4038a72bd03_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:add_mascota.html.twig"));
+        $__internal_c11f92f15baf77dc348b70c60c27a36a5c97e71ca2c550bf52827bf2ad7eb9cc = $this->env->getExtension("native_profiler");
+        $__internal_c11f92f15baf77dc348b70c60c27a36a5c97e71ca2c550bf52827bf2ad7eb9cc->enter($__internal_c11f92f15baf77dc348b70c60c27a36a5c97e71ca2c550bf52827bf2ad7eb9cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:add_mascota.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4eff1221730d962e0608407ee6c2b0d2494d3191739c42533abad4038a72bd03->leave($__internal_4eff1221730d962e0608407ee6c2b0d2494d3191739c42533abad4038a72bd03_prof);
+        $__internal_c11f92f15baf77dc348b70c60c27a36a5c97e71ca2c550bf52827bf2ad7eb9cc->leave($__internal_c11f92f15baf77dc348b70c60c27a36a5c97e71ca2c550bf52827bf2ad7eb9cc_prof);
 
     }
 
     // line 2
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_e9400d6a6ec11c34598c6d662441a39faa9fe930cb3191a39c06b0fc45d5cfe7 = $this->env->getExtension("native_profiler");
-        $__internal_e9400d6a6ec11c34598c6d662441a39faa9fe930cb3191a39c06b0fc45d5cfe7->enter($__internal_e9400d6a6ec11c34598c6d662441a39faa9fe930cb3191a39c06b0fc45d5cfe7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_319e61d6e9f9f75dec7d5a42c5304cfe4d3b30e2764b9a5694e55c8d617fdab6 = $this->env->getExtension("native_profiler");
+        $__internal_319e61d6e9f9f75dec7d5a42c5304cfe4d3b30e2764b9a5694e55c8d617fdab6->enter($__internal_319e61d6e9f9f75dec7d5a42c5304cfe4d3b30e2764b9a5694e55c8d617fdab6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 3
         $this->displayParentBlock("stylesheets", $context, $blocks);
@@ -47,31 +47,25 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
         echo "\" media=\"all\" rel=\"stylesheet\" type=\"text/css\" />
 ";
         
-        $__internal_e9400d6a6ec11c34598c6d662441a39faa9fe930cb3191a39c06b0fc45d5cfe7->leave($__internal_e9400d6a6ec11c34598c6d662441a39faa9fe930cb3191a39c06b0fc45d5cfe7_prof);
+        $__internal_319e61d6e9f9f75dec7d5a42c5304cfe4d3b30e2764b9a5694e55c8d617fdab6->leave($__internal_319e61d6e9f9f75dec7d5a42c5304cfe4d3b30e2764b9a5694e55c8d617fdab6_prof);
 
     }
 
     // line 6
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_5b9e6893558a8154c5856348880748484e68cd688a4c08b814af532ab0e23f6b = $this->env->getExtension("native_profiler");
-        $__internal_5b9e6893558a8154c5856348880748484e68cd688a4c08b814af532ab0e23f6b->enter($__internal_5b9e6893558a8154c5856348880748484e68cd688a4c08b814af532ab0e23f6b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_7f3413ad4e0932e5d2bd82ed2cf315bea07464f1d7d9012a5b2ba164e4827559 = $this->env->getExtension("native_profiler");
+        $__internal_7f3413ad4e0932e5d2bd82ed2cf315bea07464f1d7d9012a5b2ba164e4827559->enter($__internal_7f3413ad4e0932e5d2bd82ed2cf315bea07464f1d7d9012a5b2ba164e4827559_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 7
         echo "<div>
 \t\t
-\t\t<h1 class=\"coloralert\"> Agregar Mascotas</h1>
-\t\t<div class=\"sectionstile\">
-\t\t
-\t\t\t
-\t\t<form enctype=\"multipart/form-data\">
-\t\t\t<div class=\"form-group\">
-                <input id=\"file-1\" type=\"file\" class=\"file\" multiple=true data-preview-file-type=\"any\">
-            </div>
-        </form>
+\t<h1 class=\"coloralert\"> Agregar Mascota - paso 1</h1>
+\t<div class=\"sectionstile\">
+\t
 \t\t
 \t\t";
-        // line 19
+        // line 13
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("role" => "form")));
         echo "
 \t\t<div class=\"form-group\">
@@ -81,7 +75,7 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 \t\t\t\t</div>\t
 \t\t\t\t<div class=\"col-md-5\">
 \t\t\t\t\t";
-        // line 26
+        // line 20
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "name", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "nombre de la mascota")));
         echo "
 \t\t\t\t</div>
@@ -90,7 +84,7 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 \t\t\t\t</div>\t
 \t\t\t\t<div class=\"col-md-5\">
 \t\t\t\t\t";
-        // line 32
+        // line 26
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "age", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "edad de la mascota")));
         echo "
 \t\t\t\t</div>
@@ -102,7 +96,7 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 \t\t\t\t</div>\t
 \t\t\t\t<div class=\"col-md-5\">
 \t\t\t\t\t";
-        // line 41
+        // line 35
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "species", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "que especie de mascota es?")));
         echo "
 \t\t\t\t</div>
@@ -111,7 +105,7 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 \t\t\t\t</div>\t
 \t\t\t\t<div class=\"col-md-5\">
 \t\t\t\t\t";
-        // line 47
+        // line 41
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "race", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "a que raza pertenece?")));
         echo "
 \t\t\t\t</div>
@@ -123,7 +117,7 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 \t\t\t\t</div>\t
 \t\t\t\t<div class=\"col-md-5\">
 \t\t\t\t\t";
-        // line 56
+        // line 50
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "gender", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "¿macho o hembra?")));
         echo "
 \t\t\t\t</div>
@@ -132,7 +126,7 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 \t\t\t\t</div>\t
 \t\t\t\t<div class=\"col-md-5\">
 \t\t\t\t\t";
-        // line 62
+        // line 56
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "colour", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "color de la mascota")));
         echo "
 \t\t\t\t</div>
@@ -144,7 +138,7 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 \t\t\t\t</div>\t
 \t\t\t\t<div class=\"col-md-5\">
 \t\t\t\t\t";
-        // line 71
+        // line 65
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "isVacunated", array()), 'widget', array("attr" => array("class" => "check checkbox")));
         echo "
 \t\t\t\t</div>
@@ -153,7 +147,7 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 \t\t\t\t</div>\t
 \t\t\t\t<div class=\"col-md-5\">
 \t\t\t\t\t";
-        // line 77
+        // line 71
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "isSterilized", array()), 'widget', array("attr" => array("class" => "check checkbox")));
         echo "
 \t\t\t\t</div>
@@ -162,39 +156,39 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 \t\t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-md-2\">
 \t\t\t\t\t";
-        // line 83
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("label" => "Agregar mascota", "attr" => array("class" => "btn btn-success")));
+        // line 77
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("label" => "Continuar", "attr" => array("class" => "btn btn-success")));
         echo "
 \t\t\t\t</div></div>
 \t\t</div>
 \t\t";
-        // line 86
+        // line 80
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 \t</div><!--div sectionsitile-->
 </div>
 ";
         
-        $__internal_5b9e6893558a8154c5856348880748484e68cd688a4c08b814af532ab0e23f6b->leave($__internal_5b9e6893558a8154c5856348880748484e68cd688a4c08b814af532ab0e23f6b_prof);
+        $__internal_7f3413ad4e0932e5d2bd82ed2cf315bea07464f1d7d9012a5b2ba164e4827559->leave($__internal_7f3413ad4e0932e5d2bd82ed2cf315bea07464f1d7d9012a5b2ba164e4827559_prof);
 
     }
 
-    // line 90
+    // line 84
     public function block_javascript($context, array $blocks = array())
     {
-        $__internal_53abcc6d3c268c2f5af3aff0c5872a227896dc5a698391cf066dbae955b603bd = $this->env->getExtension("native_profiler");
-        $__internal_53abcc6d3c268c2f5af3aff0c5872a227896dc5a698391cf066dbae955b603bd->enter($__internal_53abcc6d3c268c2f5af3aff0c5872a227896dc5a698391cf066dbae955b603bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascript"));
+        $__internal_b56e5055b86e105a08d286410cbfcec0f867dda626784a3553a8c86a8ff615d0 = $this->env->getExtension("native_profiler");
+        $__internal_b56e5055b86e105a08d286410cbfcec0f867dda626784a3553a8c86a8ff615d0->enter($__internal_b56e5055b86e105a08d286410cbfcec0f867dda626784a3553a8c86a8ff615d0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascript"));
 
-        // line 91
+        // line 85
         $this->displayParentBlock("javascript", $context, $blocks);
         echo "
 \t    <script src=\"";
-        // line 92
+        // line 86
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/js/fileinput.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 ";
         
-        $__internal_53abcc6d3c268c2f5af3aff0c5872a227896dc5a698391cf066dbae955b603bd->leave($__internal_53abcc6d3c268c2f5af3aff0c5872a227896dc5a698391cf066dbae955b603bd_prof);
+        $__internal_b56e5055b86e105a08d286410cbfcec0f867dda626784a3553a8c86a8ff615d0->leave($__internal_b56e5055b86e105a08d286410cbfcec0f867dda626784a3553a8c86a8ff615d0_prof);
 
     }
 
@@ -210,7 +204,7 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 
     public function getDebugInfo()
     {
-        return array (  193 => 92,  189 => 91,  183 => 90,  172 => 86,  166 => 83,  157 => 77,  148 => 71,  136 => 62,  127 => 56,  115 => 47,  106 => 41,  94 => 32,  85 => 26,  75 => 19,  61 => 7,  55 => 6,  46 => 4,  42 => 3,  36 => 2,  11 => 1,);
+        return array (  187 => 86,  183 => 85,  177 => 84,  166 => 80,  160 => 77,  151 => 71,  142 => 65,  130 => 56,  121 => 50,  109 => 41,  100 => 35,  88 => 26,  79 => 20,  69 => 13,  61 => 7,  55 => 6,  46 => 4,  42 => 3,  36 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
@@ -221,15 +215,9 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 /* {% block capa %}*/
 /* <div>*/
 /* 		*/
-/* 		<h1 class="coloralert"> Agregar Mascotas</h1>*/
-/* 		<div class="sectionstile">*/
-/* 		*/
-/* 			*/
-/* 		<form enctype="multipart/form-data">*/
-/* 			<div class="form-group">*/
-/*                 <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any">*/
-/*             </div>*/
-/*         </form>*/
+/* 	<h1 class="coloralert"> Agregar Mascota - paso 1</h1>*/
+/* 	<div class="sectionstile">*/
+/* 	*/
 /* 		*/
 /* 		{{ form_start(form, {'attr' : {'role' : 'form'} }) }}*/
 /* 		<div class="form-group">*/
@@ -295,7 +283,7 @@ class __TwigTemplate_dc8c50a409fba6ac9490619397d5e2914167df1f5063675aae8889fb253
 /* 			</div><br><!-- div close row form -->	*/
 /* 				<div class="row">*/
 /* 				<div class="col-md-2">*/
-/* 					{{ form_widget(form.save, {'label' : 'Agregar mascota', 'attr' : {'class' : 'btn btn-success'} }) }}*/
+/* 					{{ form_widget(form.save, {'label' : 'Continuar', 'attr' : {'class' : 'btn btn-success'} }) }}*/
 /* 				</div></div>*/
 /* 		</div>*/
 /* 		{{ form_end(form) }}*/

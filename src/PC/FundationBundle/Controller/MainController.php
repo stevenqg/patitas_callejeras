@@ -3,6 +3,8 @@
 namespace PC\FundationBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class MainController extends Controller
 {
@@ -21,9 +23,10 @@ class MainController extends Controller
         return $this->render('PCFundationBundle:fundation:tapitas.html.twig');
     }
     
-    public function adoptarAction()
+    public function adoptarAction(Request $request)
     {
-        return $this->render('PCFundationBundle:fundation:adopcion.html.twig');
+        $pets = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->findAll();
+        return $this->render('PCFundationBundle:fundation:adopcion.html.twig', array('pets' => $pets));
     }
     
     public function nosotrosAction()
@@ -31,7 +34,7 @@ class MainController extends Controller
         return $this->render('PCFundationBundle:fundation:nosotros.html.twig');
     }
     
-        public function encuestaAction()
+    public function encuestaAction()
     {
         return $this->render('PCFundationBundle:fundation:encuesta.html.twig');
     }

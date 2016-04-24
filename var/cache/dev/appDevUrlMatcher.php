@@ -184,25 +184,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
-            if (0 === strpos($pathinfo, '/admin/pet')) {
-                // pc_administrator_pet_add
-                if ($pathinfo === '/admin/pet/add') {
-                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::addpetAction',  '_route' => 'pc_administrator_pet_add',);
-                }
-
-                // pc_administrator_pet_create
-                if ($pathinfo === '/admin/pet/create') {
-                    if ($this->context->getMethod() != 'POST') {
-                        $allow[] = 'POST';
-                        goto not_pc_administrator_pet_create;
-                    }
-
-                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::createpetAction',  '_route' => 'pc_administrator_pet_create',);
-                }
-                not_pc_administrator_pet_create:
-
-            }
-
             // pc_administrator_add
             if ($pathinfo === '/admin/add') {
                 return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::addAction',  '_route' => 'pc_administrator_add',);
@@ -220,8 +201,8 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             not_pc_administrator_create:
 
             // pc_administrator_edit
-            if (0 === strpos($pathinfo, '/admin/edit') && preg_match('#^/admin/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_administrator_edit')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::editAction',));
+            if ($pathinfo === '/admin/edit') {
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::editAction',  '_route' => 'pc_administrator_edit',);
             }
 
             // pc_administrator_update
@@ -271,6 +252,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
+            if (0 === strpos($pathinfo, '/admin/esteriliza')) {
+                // pc_admin_jornada_esterilizacion
+                if ($pathinfo === '/admin/esterilizacion') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::jornadaesterilizaAction',  '_route' => 'pc_admin_jornada_esterilizacion',);
+                }
+
+                // pc_admin_esterilizacion
+                if ($pathinfo === '/admin/esteriliza/mas') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::esterilizacionAction',  '_route' => 'pc_admin_esterilizacion',);
+                }
+
+                // pc_admin_esterilizacion_add
+                if ($pathinfo === '/admin/esterilizacion/add') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::esterilizacionAddAction',  '_route' => 'pc_admin_esterilizacion_add',);
+                }
+
+            }
+
             // pc_admin_adopt_pet
             if (rtrim($pathinfo, '/') === '/admin/adopcion') {
                 if (substr($pathinfo, -1) !== '/') {
@@ -278,6 +277,48 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 }
 
                 return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::adopcionviewAction',  '_route' => 'pc_admin_adopt_pet',);
+            }
+
+            if (0 === strpos($pathinfo, '/admin/pet')) {
+                // pc_administrator_pet_add
+                if ($pathinfo === '/admin/pet/add') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::addpetAction',  '_route' => 'pc_administrator_pet_add',);
+                }
+
+                // pc_administrator_pet_create
+                if ($pathinfo === '/admin/pet/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_pc_administrator_pet_create;
+                    }
+
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::createpetAction',  '_route' => 'pc_administrator_pet_create',);
+                }
+                not_pc_administrator_pet_create:
+
+                // pc_admin_pet_photo
+                if ($pathinfo === '/admin/pet/photo') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::uploadAction',  '_route' => 'pc_admin_pet_photo',);
+                }
+
+                if (0 === strpos($pathinfo, '/admin/pet/solicitud')) {
+                    // pc_admin_pet_solicitudes
+                    if ($pathinfo === '/admin/pet/solicitudes') {
+                        return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::solicitudesAction',  '_route' => 'pc_admin_pet_solicitudes',);
+                    }
+
+                    // pc_admin_pet_solicitudes_date
+                    if ($pathinfo === '/admin/pet/solicitud/date') {
+                        return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::solicituddateAction',  '_route' => 'pc_admin_pet_solicitudes_date',);
+                    }
+
+                }
+
+            }
+
+            // pc_admin_adoptada_pet
+            if ($pathinfo === '/admin/adoptada/pet') {
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::mascotadoptadaAction',  '_route' => 'pc_admin_adoptada_pet',);
             }
 
         }

@@ -1,0 +1,109 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+
+	<h1 class="coloralert textjusti">&nbsp;Esterilización</h1><hr>
+	<div class="sectionstile">
+		<div class="row">
+			<div class="col-md-1">
+					<label class="marginlabel">Zona:</label>
+			</div>
+			<div class="col-md-3">
+				<input type="text" class="form-control" placeholder="Jornada censo" disabled>
+			</div>
+			<div class="col-md-1">
+					<label class="marginlabel">Fecha:</label>
+			</div>
+			<div class="col-md-3">
+				<input type="text" class="form-control" placeholder="dd-mm-aaaa" disabled>
+			</div>
+			<div class="col-md-1"><label class="marginlabel">Costo $:</label></div>
+			<div class="col-md-3"><input type="text" class="form-control"></div>
+
+		</div>
+		<hr>
+            
+           <table class="tabl table-striped">
+              <thead>
+                <tr><td class="pestwo" colspan="3">información del Animal</td>
+                  <td colspan="2"></td>
+                  <td  class="pestwo" colspan="3">informacion responsable</td>
+                </tr>
+                <tr class="tdb">
+                 
+                  <th>Clasificación</th>
+                  <th>Rasgo</th>
+                  <th>Color</th>
+                  <th class="tdxs">Edad</th>
+                  <th class="tdxs">¿cirugia?</th>
+                 
+                  <th class="bdleft">Nombre</th>
+                  <th>Telefono</th>
+                  <th class="tdxs">Mas</th>
+                </tr>
+              </thead>
+              <tbody class="tdb">
+                <tr>
+                 
+                  <td>gato</td>
+                  <td class="tdd">crio</td>
+                  <td>negro</td>
+                  <td>1</td>
+                  <td>no</td>
+                  
+                  <td class="bdleft">juan</td>
+                  <td>3122345678</td>
+                  <td><a href="" data-toggle="modal" data-target="#myModa2">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a>
+
+                    <div class="modal fade bs-example-modal-sm" id="myModa2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  
+                  <div class="timod modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="exampleModalLabel">Información de responsable<span class="btn-lg glyphicon glyphicon-user" aria-hidden="true"></span></h5>
+                  </div>
+
+                   <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <label for="recipient-name" class="textjusti control-label">Nombre:</label>
+                          <input type="password" class="form-control" id="recipient-name"
+                          placeholder="Nombre"disabled>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="recipient-name" class="textjusti control-label">Edad:</label>
+                          <input type="password" class="form-control" id="recipient-name"
+                          placeholder="Edad"disabled>
+                        </div>
+                        <div class="form-group">
+                          <label for="recipient-name" class="textjusti control-label">Dirección:</label>
+                          <input type="password" class="form-control" id="recipient-name"
+                          placeholder="Dirección"disabled>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="recipient-name" class="textjusti control-label">Telefono:</label>
+                          <input type="password" class="form-control" id="recipient-name"
+                          placeholder="Telefono"disabled>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+              </div>
+              </div>
+            </div>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+	</div>
+
+	
+		<script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+	  	<script src="js/bootstrap.min.js"type="text/javascript"></script>	
+{% endblock %}

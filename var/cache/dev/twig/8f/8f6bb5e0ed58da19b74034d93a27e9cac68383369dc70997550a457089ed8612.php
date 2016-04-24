@@ -21,20 +21,20 @@ class __TwigTemplate_ad4b0d62f5f159a5a2be23c233de94eb976199a40a5abdfe2fa2132427d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_92ab7a003fc93cbea3a85d1254e2fde550170f43c8b752fc026f801cd40f2d6c = $this->env->getExtension("native_profiler");
-        $__internal_92ab7a003fc93cbea3a85d1254e2fde550170f43c8b752fc026f801cd40f2d6c->enter($__internal_92ab7a003fc93cbea3a85d1254e2fde550170f43c8b752fc026f801cd40f2d6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:Masct_adopcion.html.twig"));
+        $__internal_5b2a1726604d6622057b508e1eb54feec5d3dfa0ddc12313dba98f3e98c6e1d5 = $this->env->getExtension("native_profiler");
+        $__internal_5b2a1726604d6622057b508e1eb54feec5d3dfa0ddc12313dba98f3e98c6e1d5->enter($__internal_5b2a1726604d6622057b508e1eb54feec5d3dfa0ddc12313dba98f3e98c6e1d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:Masct_adopcion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_92ab7a003fc93cbea3a85d1254e2fde550170f43c8b752fc026f801cd40f2d6c->leave($__internal_92ab7a003fc93cbea3a85d1254e2fde550170f43c8b752fc026f801cd40f2d6c_prof);
+        $__internal_5b2a1726604d6622057b508e1eb54feec5d3dfa0ddc12313dba98f3e98c6e1d5->leave($__internal_5b2a1726604d6622057b508e1eb54feec5d3dfa0ddc12313dba98f3e98c6e1d5_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_89ac2fcd5b53e81054734f14355d8df34327e4c4a0e122c57c221c7e11cb5694 = $this->env->getExtension("native_profiler");
-        $__internal_89ac2fcd5b53e81054734f14355d8df34327e4c4a0e122c57c221c7e11cb5694->enter($__internal_89ac2fcd5b53e81054734f14355d8df34327e4c4a0e122c57c221c7e11cb5694_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_c0badaf5e3aacbfb4c60798e2bbe7eecf1429894d4b95733d30b4adf7e6a4f7b = $this->env->getExtension("native_profiler");
+        $__internal_c0badaf5e3aacbfb4c60798e2bbe7eecf1429894d4b95733d30b4adf7e6a4f7b->enter($__internal_c0badaf5e3aacbfb4c60798e2bbe7eecf1429894d4b95733d30b4adf7e6a4f7b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "\t<div>
@@ -95,7 +95,10 @@ class __TwigTemplate_ad4b0d62f5f159a5a2be23c233de94eb976199a40a5abdfe2fa2132427d
 \t\t\t  <ul class=\"nav nav-tabs\" role=\"tablist\">
 \t\t\t    <li role=\"presentation\" class=\"active\"><a href=\"#home\" aria-controls=\"home\" role=\"tab\" data-toggle=\"tab\">Perros</a></li>
 \t\t\t    <li role=\"presentation\"><a href=\"#profile\" aria-controls=\"profile\" role=\"tab\" data-toggle=\"tab\">gatos</a></li>
-\t\t\t    <li><a href=\"add_mascota.html\" type=\"button\" class=\"btn btn-primary\">Agregar mascota</a></li>
+\t\t\t    <li><a href=\"";
+        // line 61
+        echo $this->env->getExtension('routing')->getPath("pc_administrator_pet_add");
+        echo "\" type=\"button\" class=\"btn btn-primary\">Agregar mascota</a></li>
 \t\t\t  </ul>
 
 \t\t\t  <!-- Tab panes -->
@@ -104,9 +107,9 @@ class __TwigTemplate_ad4b0d62f5f159a5a2be23c233de94eb976199a40a5abdfe2fa2132427d
 \t\t\t      \t<table class=\"table table-striped \">
               <thead>
                 <tr>
-                  <th class=\"tdxs\">#</th>
+                  
                   <th>Nombre</th>
-                  <th>Edadn</th>
+                  <th>Edad</th>
                   <th>Color</th>
                   <th>Sexo</th>
                   <th>Rasgo</th>
@@ -337,7 +340,7 @@ $context["pet"], "isVacunated", array()) == 0)) {
 \t</div>
 ";
         
-        $__internal_89ac2fcd5b53e81054734f14355d8df34327e4c4a0e122c57c221c7e11cb5694->leave($__internal_89ac2fcd5b53e81054734f14355d8df34327e4c4a0e122c57c221c7e11cb5694_prof);
+        $__internal_c0badaf5e3aacbfb4c60798e2bbe7eecf1429894d4b95733d30b4adf7e6a4f7b->leave($__internal_c0badaf5e3aacbfb4c60798e2bbe7eecf1429894d4b95733d30b4adf7e6a4f7b_prof);
 
     }
 
@@ -353,7 +356,7 @@ $context["pet"], "isVacunated", array()) == 0)) {
 
     public function getDebugInfo()
     {
-        return array (  330 => 193,  323 => 191,  317 => 187,  311 => 183,  309 => 182,  304 => 179,  302 => 178,  298 => 176,  292 => 172,  290 => 171,  285 => 168,  283 => 167,  278 => 165,  275 => 164,  269 => 160,  267 => 159,  262 => 156,  260 => 155,  255 => 153,  251 => 152,  247 => 151,  244 => 150,  241 => 149,  237 => 148,  215 => 128,  209 => 127,  203 => 123,  197 => 119,  195 => 118,  190 => 115,  188 => 114,  184 => 112,  178 => 108,  176 => 107,  171 => 104,  169 => 103,  164 => 101,  161 => 100,  155 => 96,  153 => 95,  148 => 92,  146 => 91,  141 => 89,  137 => 88,  133 => 87,  130 => 86,  127 => 85,  123 => 84,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  333 => 193,  326 => 191,  320 => 187,  314 => 183,  312 => 182,  307 => 179,  305 => 178,  301 => 176,  295 => 172,  293 => 171,  288 => 168,  286 => 167,  281 => 165,  278 => 164,  272 => 160,  270 => 159,  265 => 156,  263 => 155,  258 => 153,  254 => 152,  250 => 151,  247 => 150,  244 => 149,  240 => 148,  218 => 128,  212 => 127,  206 => 123,  200 => 119,  198 => 118,  193 => 115,  191 => 114,  187 => 112,  181 => 108,  179 => 107,  174 => 104,  172 => 103,  167 => 101,  164 => 100,  158 => 96,  156 => 95,  151 => 92,  149 => 91,  144 => 89,  140 => 88,  136 => 87,  133 => 86,  130 => 85,  126 => 84,  100 => 61,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
@@ -416,7 +419,7 @@ $context["pet"], "isVacunated", array()) == 0)) {
 /* 			  <ul class="nav nav-tabs" role="tablist">*/
 /* 			    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Perros</a></li>*/
 /* 			    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">gatos</a></li>*/
-/* 			    <li><a href="add_mascota.html" type="button" class="btn btn-primary">Agregar mascota</a></li>*/
+/* 			    <li><a href="{{ path('pc_administrator_pet_add') }}" type="button" class="btn btn-primary">Agregar mascota</a></li>*/
 /* 			  </ul>*/
 /* */
 /* 			  <!-- Tab panes -->*/
@@ -425,9 +428,9 @@ $context["pet"], "isVacunated", array()) == 0)) {
 /* 			      	<table class="table table-striped ">*/
 /*               <thead>*/
 /*                 <tr>*/
-/*                   <th class="tdxs">#</th>*/
+/*                   */
 /*                   <th>Nombre</th>*/
-/*                   <th>Edadn</th>*/
+/*                   <th>Edad</th>*/
 /*                   <th>Color</th>*/
 /*                   <th>Sexo</th>*/
 /*                   <th>Rasgo</th>*/

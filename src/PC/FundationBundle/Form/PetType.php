@@ -26,8 +26,8 @@ class PetType extends AbstractType
             ->add('race', TextType::class)
             ->add('colour', TextType::class)
             ->add('gender', ChoiceType::class, array('choices' => array('macho'=>'MALE', 'hembra'=>'FEMALE'), 'placeholder' => 'genero de la mascota'))
-            ->add('isVacunated', CheckboxType::class)
-            ->add('isSterilized', CheckboxType::class)
+            ->add('isVacunated', CheckboxType::class, array('required' => false))
+            ->add('isSterilized', CheckboxType::class, array('required' => false))
             ->add('save', SubmitType::class, array('label' => 'save pet'))
         ;
     }

@@ -283,5 +283,26 @@ td, th {text-align: left;padding: 8px;}
 }
 .bdleft{border-left:#ddd 1px solid;}
 .buttonborder{border-radius: 20px;box-shadow: 2px 3px 6px #999 ;}
+
 .check{    width: 20%;
     height: 20px;}
+
+.pestwo {
+    background-color: rgb(197, 197, 197);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+}
+.fondadmi {
+    background-image: url('../img/df.png');
+    width: 100%;
+    bottom: 0px;
+    position: fixed;
+    height: 100%;
+    margin-top: 61px;
+    top: 0px;
+    left: 0px;
+    margin-left: 15%;
+   
+    
+}

@@ -24,7 +24,7 @@ class UserController extends Controller
     {
         $user = new User();
         $form = $this->createCreateform($user);
-        return $this->render('PCFundationBundle:fundation:encuestaUsuario.html.twig', array('form'=>$form->createview())); 
+        return $this->render('PCFundationBundle:fundation:encuestaUsuario.html.twig', array('form' => $form->createview())); 
     }
     
     private function createCreateForm(User $entity)

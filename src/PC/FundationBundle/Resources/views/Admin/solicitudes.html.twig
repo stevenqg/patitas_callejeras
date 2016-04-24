@@ -1,0 +1,44 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+	<div>
+		
+			<h1 class="coloralert">Solicitudes de Adopción</h1><hr>
+			<br>
+		<div class="sectionsile">
+			
+			 <table class="tabl table-striped">
+              <thead>
+                <tr><td class="pest" colspan="3">Adoptante</td>
+                </tr>
+                <tr class="tdb">
+                  <th class="tdxs">#</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th class="tdxs">Edad</th>
+                  <th>Cedula</th>
+                  <th>Telefono</th>
+                  <th>Dirección</th>
+                  <th>Correo</th>
+                  <th class="bdleft tdxs">responder</th>
+                </tr>
+              </thead>
+              <tbody class="tdb">
+              <tr>
+                  <td>1</td>
+                  <td>Steven</td>
+                  <td>quintero</td>
+                  <td>12</td>
+                  <td>1223534</td>
+                  <td>724354</td>
+                  <td> B/ villa sasa</td>
+                  <td>qunte@hotm...</td>                  
+                  <td class="bdlef"><a href="{{path('pc_admin_pet_solicitudes_date')}}" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+                </tr>
+              </tbody>
+            </table>
+
+			
+		</div><!--div close sectionstile 2 -->
+	</div>
+	
+{% endblock %}

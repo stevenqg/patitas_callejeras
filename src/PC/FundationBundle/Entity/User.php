@@ -319,4 +319,5 @@ class User
     {
         return $this->credits;
     }
+    
 }

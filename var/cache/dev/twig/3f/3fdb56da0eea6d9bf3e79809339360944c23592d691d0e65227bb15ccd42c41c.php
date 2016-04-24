@@ -21,30 +21,41 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4309f148c6d679083036aa8ade162be7eb1294fca284ea81a6d06fac281e27ec = $this->env->getExtension("native_profiler");
-        $__internal_4309f148c6d679083036aa8ade162be7eb1294fca284ea81a6d06fac281e27ec->enter($__internal_4309f148c6d679083036aa8ade162be7eb1294fca284ea81a6d06fac281e27ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:censo.html.twig"));
+        $__internal_dd05ceccd6b8a4d43ab0fa68f33728cd3e22f7809523ef448b33ea507ed92968 = $this->env->getExtension("native_profiler");
+        $__internal_dd05ceccd6b8a4d43ab0fa68f33728cd3e22f7809523ef448b33ea507ed92968->enter($__internal_dd05ceccd6b8a4d43ab0fa68f33728cd3e22f7809523ef448b33ea507ed92968_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:censo.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4309f148c6d679083036aa8ade162be7eb1294fca284ea81a6d06fac281e27ec->leave($__internal_4309f148c6d679083036aa8ade162be7eb1294fca284ea81a6d06fac281e27ec_prof);
+        $__internal_dd05ceccd6b8a4d43ab0fa68f33728cd3e22f7809523ef448b33ea507ed92968->leave($__internal_dd05ceccd6b8a4d43ab0fa68f33728cd3e22f7809523ef448b33ea507ed92968_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_74d67b4a6e0fb2c92cc3459175f46aaed91bb3f1036ac4cd4c545761a526efa9 = $this->env->getExtension("native_profiler");
-        $__internal_74d67b4a6e0fb2c92cc3459175f46aaed91bb3f1036ac4cd4c545761a526efa9->enter($__internal_74d67b4a6e0fb2c92cc3459175f46aaed91bb3f1036ac4cd4c545761a526efa9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_6def3edf16c4ed851c8d6e0f45ee2b987ba4a6f1954292b500590e069fa8abfe = $this->env->getExtension("native_profiler");
+        $__internal_6def3edf16c4ed851c8d6e0f45ee2b987ba4a6f1954292b500590e069fa8abfe->enter($__internal_6def3edf16c4ed851c8d6e0f45ee2b987ba4a6f1954292b500590e069fa8abfe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "
       <div>
-        <h1 class=\"coloralert\">Información del Censo &nbsp; <a href=\"\" type=\"button\" class=\" buttonborder pull-right btn btn-primary\"> <span class=\"glyphicon glyphicon-hand-left\" aria-hidden=\"true\"></span>&nbsp;regresar</a></h1>
+        <h1 class=\"coloralert\"><a href=\"";
+        // line 5
+        echo $this->env->getExtension('routing')->getPath("pc_admin_jornada_censo");
+        echo "\" type=\"button\" class=\" buttonborder btn btn-default\"> <span class=\"glyphicon glyphicon-hand-left\" aria-hidden=\"true\"></span>&nbsp;regresar</a> &nbsp;Información del Censo
+        <a href=\"";
+        // line 6
+        echo $this->env->getExtension('routing')->getPath("pc_admin_esterilizacion_add");
+        echo "\" type=\"button\" id=\"ventemerg3\" class=\"buttonborder btn btn-default pull-right\"data-toggle=\"tooltip\" data-placement=\"top\" title=\"Nueva jornada de esterilización\">Esterilizar</a>
+        </h1>
+        
       <div class=\"sectionstile\">
               <div class=\"row\">
+              
               <div class=\"textjusti col-xs-8 col-md-4 col-lg-5\">
                 <table class=\"table table-striped\">
                 <thead>
+                  <br>
                     <tr>
                       <th>Zona:</th>
                       <th> </th>
@@ -57,35 +68,73 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
                 </table> <!-- table de nombre zona. -->
                 <br>
                  <a href=\"";
-        // line 22
+        // line 27
         echo $this->env->getExtension('routing')->getPath("pc_admin_jornada_censo_agregar");
-        echo "\" id=\"ventemerg2\" class=\"btn btn-info\">Agregar datos »</a>
+        echo "\" id=\"ventemerg2\" class=\"buttonborder  btn btn-info\">Agregar datos »</a>
               </div>
-              <div class=\"col-md-1 col-lg-1\"></div>
-              <div class=\"col-xs-4 col-md-5 col-lg-5\">
+             <div class=\"col-md-1 col-lg-1\"></div>
+             <div class=\"col-xs-4 col-md-5 col-lg-5\">
                 
-                <h4>Colaboradores.</h4>
-                <table class=\"tabl\">
+                <h4 class=\"textjusti\">Colaboradores &nbsp;  <button type=\"button\" class=\"btn btn-info\" aria-label=\"Left Align\" data-toggle=\"modal\" data-target=\"#myModal\">
+               <span class=\"glyphicon glyphicon-plus-sign\" aria-hidden=\"true\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Agregar colaboradores\"></span>
+               </button>
+                <div class=\"modal fade bs-example-modal-sm\" id=\"myModal\"  tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\">
+              <div class=\"modal-dialog modal-sm\">
+                <div class=\"modal-content\">
+                  
+                  <div class=\"timod modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"></button>
+                    <h5 class=\"modal-title\" id=\"exampleModalLabel\">Agregar colaborador &nbsp;<span class=\" glyphicon glyphicon-user\" aria-hidden=\"true\"></span></h5>
+                  </div>
+
+                   <div class=\"modal-body\">
+                      <form>
+                        <div class=\"form-group\">
+                          <label for=\"recipient-name\" class=\"textjusti control-label\"><h5>Nombre:</h5></label>
+                          <input type=\"text\" class=\"form-control\" id=\"recipient-name\"
+                          placeholder=\"Nombre\">
+                        </div>
+
+                        <div class=\"form-group\">
+                          <label for=\"recipient-name\" class=\"textjusti control-label\"><h5>Dirección:</h5></label>
+                          <input type=\"text\" class=\"form-control\" id=\"recipient-name\"
+                          placeholder=\"Dirección\">
+                        </div>
+                        <div class=\"form-group\">
+                          <label for=\"recipient-name\" class=\"textjusti control-label\"><h5>Telefono:</h5></label>
+                          <input type=\"text\" class=\"form-control\" id=\"recipient-name\"
+                          placeholder=\"Telefono\">
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class=\"modal-footer\">
+                      <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Agregar</button>
+                      <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cerrar</button>
+                    </div>
+              </div>
+              </div>
+            </div>
+             </h4>
+                  <table class=\"table table-hove\">
                      <tr>
-                      <td class=\"tdd\">Nombre: </td>
-                      <td class=\"tdb\">  </td>
+                      <th>Nombre: </th>
+                      <th>Dirección</th>
+                      <th>Telefono</th>
                      </tr>
                     <tr>
-                      <td class=\"tdd\">Nombre: </td>
-                      <td class=\"tdb\">  </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
                     </tr>
-                    <tr>
-                      <td class=\"tdd\">Nombre: </td>
-                      <td class=\"tdb\">  </td>
-                    </tr>
-               </table>
+                  </table>
 
               </div> 
+              
               <div class=\"col-md-1 col-lg-1\"></div>
             </div> <!-- div row-->
             <hr>
-            <h5></h5>
-           <table class=\"tabl table-striped\">
+             <table class=\"tabl table-striped\">
               <thead>
                 <tr><td class=\"pest\" colspan=\"3\">información del Animal</td>
                   <td colspan=\"4\"></td>
@@ -113,14 +162,14 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
                   <td>1</td>
                   <td>no</td>
                   <td><a href=\"";
-        // line 75
+        // line 118
         echo $this->env->getExtension('routing')->getPath("pc_admin_jornada_censo_edit");
         echo " \" id=\"ventemerg3\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Editar información\">&nbsp;<span class=\"glyphicon glyphicon-minus-sign\" aria-hidden=\"true\"></a></td>
                   <td>juan</td>
                   <td>3122345678</td>
-                  <td><a href=\"\" data-toggle=\"modal\" data-target=\".bs-example-modal-sm\">&nbsp;<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></a>
+                  <td><a href=\"\" data-toggle=\"modal\" data-target=\"#myModal2\">&nbsp;<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></a>
 
-                    <div class=\"modal fade bs-example-modal-sm\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\">
+                    <div class=\"modal fade bs-example-modal-sm\"id=\"myModal2\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\">
               <div class=\"modal-dialog modal-sm\">
                 <div class=\"modal-content\">
                   
@@ -171,7 +220,7 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
         </div>
 ";
         
-        $__internal_74d67b4a6e0fb2c92cc3459175f46aaed91bb3f1036ac4cd4c545761a526efa9->leave($__internal_74d67b4a6e0fb2c92cc3459175f46aaed91bb3f1036ac4cd4c545761a526efa9_prof);
+        $__internal_6def3edf16c4ed851c8d6e0f45ee2b987ba4a6f1954292b500590e069fa8abfe->leave($__internal_6def3edf16c4ed851c8d6e0f45ee2b987ba4a6f1954292b500590e069fa8abfe_prof);
 
     }
 
@@ -187,19 +236,24 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
 
     public function getDebugInfo()
     {
-        return array (  117 => 75,  61 => 22,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  166 => 118,  72 => 27,  48 => 6,  44 => 5,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
 /* {% block capa %}*/
 /* */
 /*       <div>*/
-/*         <h1 class="coloralert">Información del Censo &nbsp; <a href="" type="button" class=" buttonborder pull-right btn btn-primary"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a></h1>*/
+/*         <h1 class="coloralert"><a href="{{ path('pc_admin_jornada_censo')}}" type="button" class=" buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a> &nbsp;Información del Censo*/
+/*         <a href="{{ path('pc_admin_esterilizacion_add')}}" type="button" id="ventemerg3" class="buttonborder btn btn-default pull-right"data-toggle="tooltip" data-placement="top" title="Nueva jornada de esterilización">Esterilizar</a>*/
+/*         </h1>*/
+/*         */
 /*       <div class="sectionstile">*/
 /*               <div class="row">*/
+/*               */
 /*               <div class="textjusti col-xs-8 col-md-4 col-lg-5">*/
 /*                 <table class="table table-striped">*/
 /*                 <thead>*/
+/*                   <br>*/
 /*                     <tr>*/
 /*                       <th>Zona:</th>*/
 /*                       <th> </th>*/
@@ -211,33 +265,71 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
 /*                 </thead>*/
 /*                 </table> <!-- table de nombre zona. -->*/
 /*                 <br>*/
-/*                  <a href="{{ path('pc_admin_jornada_censo_agregar')}}" id="ventemerg2" class="btn btn-info">Agregar datos »</a>*/
+/*                  <a href="{{ path('pc_admin_jornada_censo_agregar')}}" id="ventemerg2" class="buttonborder  btn btn-info">Agregar datos »</a>*/
 /*               </div>*/
-/*               <div class="col-md-1 col-lg-1"></div>*/
-/*               <div class="col-xs-4 col-md-5 col-lg-5">*/
+/*              <div class="col-md-1 col-lg-1"></div>*/
+/*              <div class="col-xs-4 col-md-5 col-lg-5">*/
 /*                 */
-/*                 <h4>Colaboradores.</h4>*/
-/*                 <table class="tabl">*/
+/*                 <h4 class="textjusti">Colaboradores &nbsp;  <button type="button" class="btn btn-info" aria-label="Left Align" data-toggle="modal" data-target="#myModal">*/
+/*                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Agregar colaboradores"></span>*/
+/*                </button>*/
+/*                 <div class="modal fade bs-example-modal-sm" id="myModal"  tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">*/
+/*               <div class="modal-dialog modal-sm">*/
+/*                 <div class="modal-content">*/
+/*                   */
+/*                   <div class="timod modal-header">*/
+/*                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>*/
+/*                     <h5 class="modal-title" id="exampleModalLabel">Agregar colaborador &nbsp;<span class=" glyphicon glyphicon-user" aria-hidden="true"></span></h5>*/
+/*                   </div>*/
+/* */
+/*                    <div class="modal-body">*/
+/*                       <form>*/
+/*                         <div class="form-group">*/
+/*                           <label for="recipient-name" class="textjusti control-label"><h5>Nombre:</h5></label>*/
+/*                           <input type="text" class="form-control" id="recipient-name"*/
+/*                           placeholder="Nombre">*/
+/*                         </div>*/
+/* */
+/*                         <div class="form-group">*/
+/*                           <label for="recipient-name" class="textjusti control-label"><h5>Dirección:</h5></label>*/
+/*                           <input type="text" class="form-control" id="recipient-name"*/
+/*                           placeholder="Dirección">*/
+/*                         </div>*/
+/*                         <div class="form-group">*/
+/*                           <label for="recipient-name" class="textjusti control-label"><h5>Telefono:</h5></label>*/
+/*                           <input type="text" class="form-control" id="recipient-name"*/
+/*                           placeholder="Telefono">*/
+/*                         </div>*/
+/*                       </form>*/
+/*                     </div>*/
+/* */
+/*                     <div class="modal-footer">*/
+/*                       <button type="button" class="btn btn-primary" data-dismiss="modal">Agregar</button>*/
+/*                       <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>*/
+/*                     </div>*/
+/*               </div>*/
+/*               </div>*/
+/*             </div>*/
+/*              </h4>*/
+/*                   <table class="table table-hove">*/
 /*                      <tr>*/
-/*                       <td class="tdd">Nombre: </td>*/
-/*                       <td class="tdb">  </td>*/
+/*                       <th>Nombre: </th>*/
+/*                       <th>Dirección</th>*/
+/*                       <th>Telefono</th>*/
 /*                      </tr>*/
 /*                     <tr>*/
-/*                       <td class="tdd">Nombre: </td>*/
-/*                       <td class="tdb">  </td>*/
+/*                       <td> </td>*/
+/*                       <td> </td>*/
+/*                       <td> </td>*/
 /*                     </tr>*/
-/*                     <tr>*/
-/*                       <td class="tdd">Nombre: </td>*/
-/*                       <td class="tdb">  </td>*/
-/*                     </tr>*/
-/*                </table>*/
+/*                   </table>*/
 /* */
 /*               </div> */
+/*               */
 /*               <div class="col-md-1 col-lg-1"></div>*/
 /*             </div> <!-- div row-->*/
 /*             <hr>*/
-/*             <h5></h5>*/
-/*            <table class="tabl table-striped">*/
+/*              <table class="tabl table-striped">*/
 /*               <thead>*/
 /*                 <tr><td class="pest" colspan="3">información del Animal</td>*/
 /*                   <td colspan="4"></td>*/
@@ -267,9 +359,9 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
 /*                   <td><a href="{{ path('pc_admin_jornada_censo_edit')}} " id="ventemerg3" data-toggle="tooltip" data-placement="right" title="Editar información">&nbsp;<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></a></td>*/
 /*                   <td>juan</td>*/
 /*                   <td>3122345678</td>*/
-/*                   <td><a href="" data-toggle="modal" data-target=".bs-example-modal-sm">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a>*/
+/*                   <td><a href="" data-toggle="modal" data-target="#myModal2">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a>*/
 /* */
-/*                     <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">*/
+/*                     <div class="modal fade bs-example-modal-sm"id="myModal2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">*/
 /*               <div class="modal-dialog modal-sm">*/
 /*                 <div class="modal-content">*/
 /*                   */

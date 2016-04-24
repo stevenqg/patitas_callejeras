@@ -59,17 +59,6 @@ pc_administrator_logout:
     path:     /admin/logout
     defaults: { _controller: PCFundationBundle:Admin:logout }
     
-
-
-pc_administrator_pet_add:
-    path:     /admin/pet/add
-    defaults: { _controller: PCFundationBundle:Admin:addpet }
-
-pc_administrator_pet_create:
-    path:     /admin/pet/create
-    defaults: { _controller: PCFundationBundle:Admin:createpet }
-    methods:  POST
-    
 pc_administrator_add:
     path:     /admin/add
     defaults: { _controller: PCFundationBundle:Admin:add }
@@ -80,7 +69,7 @@ pc_administrator_create:
     methods:  POST
     
 pc_administrator_edit:
-    path:     /admin/edit/{id}
+    path:     /admin/edit
     defaults: { _controller: PCFundationBundle:Admin:edit }
     
 pc_administrator_update:
@@ -115,6 +104,18 @@ pc_admin_jornada_censo_create:
     path:     /admin/jornadacenso/create
     defaults: { _controller: PCFundationBundle:Admin:jornadacensocreate } 
     methods:  POST
+    
+pc_admin_jornada_esterilizacion:
+    path:     /admin/esterilizacion
+    defaults: { _controller: PCFundationBundle:Admin:jornadaesteriliza } 
+    
+pc_admin_esterilizacion:
+    path:     /admin/esteriliza/mas
+    defaults: { _controller: PCFundationBundle:Admin:esterilizacion } 
+    
+pc_admin_esterilizacion_add:
+    path:   /admin/esterilizacion/add
+    defaults: {_controller: PCFundationBundle:Admin:esterilizacionAdd }
 
 #--------------------------------------------------------------
 #--- rutas del administrador para mascotas --------------------
@@ -123,3 +124,28 @@ pc_admin_jornada_censo_create:
 pc_admin_adopt_pet:
     path:     /admin/adopcion/
     defaults: { _controller: PCFundationBundle:Admin:adopcionview }
+
+pc_administrator_pet_add:
+    path:     /admin/pet/add
+    defaults: { _controller: PCFundationBundle:Admin:addpet }
+
+pc_administrator_pet_create:
+    path:     /admin/pet/create
+    defaults: { _controller: PCFundationBundle:Admin:createpet }
+    methods:  POST
+
+pc_admin_pet_photo:
+    path:     /admin/pet/photo
+    defaults: { _controller: PCFundationBundle:Admin:upload }
+    
+pc_admin_pet_solicitudes:
+    path: /admin/pet/solicitudes
+    defaults: { _controller: PCFundationBundle:Admin:solicitudes}
+
+pc_admin_pet_solicitudes_date:
+    path: /admin/pet/solicitud/date
+    defaults: { _controller: PCFundationBundle:Admin:solicituddate}
+ 
+pc_admin_adoptada_pet:
+    path: /admin/adoptada/pet
+    defaults: { _controller: PCFundationBundle:Admin:mascotadoptada}

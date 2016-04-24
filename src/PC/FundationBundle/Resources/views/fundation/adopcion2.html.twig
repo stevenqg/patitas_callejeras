@@ -1,0 +1,338 @@
+{% extends "layout.html.twig" %}
+{% block scroll_nav %}
+{% endblock %}
+
+{% block body %}
+{{ parent() }}
+<div class="liner"></div>
+<section>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="jumbotron">
+        <h1>Proceso de adopción </h1>
+        <p class="h1estle">La fundación patitas callejeras en función de asegurar la integridad de los animales y el compromiso de las personas que quieren adoptar, establece una serie de actividades para definir si se cumplen con las condiciones estipuladas por la institución. </p>
+        <p class="h1estle">Debe tener en cuenta los tres puntos que se muestran a continuación.</p>
+        <div class="alert alert-warning">Es muy importante que leas los requisitos de adopción</div>
+
+  <div class="continer">
+	
+	<button class="btn btn-warning" data-toggle="modal" data-target="#miVentana">Ver requisitos</button>
+
+	<div class="modal fade" id="miVentana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" area-hidden="true">&times;</button>
+				<h4 class="pull-left"> Requisitos de Adopción</h4>
+				</div>
+				<div class="modal-body">
+					
+					<dl class="textjusti dl-horizontal">
+						<dt>mayor de edad</dt>
+						<dd>la persona que realise la solicitud de adopcion debe ser mayor de edad o bajo el amparo de un adulto responsable.</dd>
+						<br>
+						<dt>aceptación familiar</dt>
+						<dd>todo el nucleo familiar que convive con la persona que realiza el proceso de adopción debe estar de acuerdo con el la solicitud que esta realiza.</dd>
+					</dl>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+     </div>    
+
+  </div>
+  <div class="col-md-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+     <div class="col-md-10">
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{ asset('public/img/ENC.png') }}" alt="Generic placeholder image" width="140" height="140">
+          <h4> encuesta de adopción</h4>
+          <p>En el cuestionario trataremos los temas más importantes sobre la adopción y tendremos una visión general de la persona o familia que quiere adoptar el anima.</p>
+          
+       </div>
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{asset('public/img/CAS.png')}}" alt="Generic placeholder image" width="140" height="140">
+          <h4>Visita domiciliaria</h4>
+          <p>Después de analizar las respuestas del cuestionario, se procederá a programar una visita domiciliaria donde se analizará el ambiente y el espacio en el que vivirá la mascota.</p>
+         </div>
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{asset('public/img/REL.png')}}" alt="Generic placeholder image" width="140" height="140">
+          <h4>Seguimiento de adaptación</h4>
+          <p>La fundación realizará un contacto posterior a la entrega de la mascota con el fin de verificar el estado de esta y las condiciones en que es mantenida, dicho contacto pueden ser visitas domiciliarias, llamadas telefónicas y/u otros medios que la fundación en su momento disponga.</p>
+          </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+
+        <!-- Nav tabs -->
+        <ul class="contmasc nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">PERRITOS</a></li>
+          <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">GATICOS</a></li>
+         
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!-- Tab panel 1 perritos contentet-->
+        <div role="tabpanel" class="conmargin tab-pane fade in active" id="home">
+          
+      <div class="row">
+     
+          <div class="col-md-4">
+            <div class="conteneter">
+              <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptar" href=""> 
+              <div class="banername back1">
+                      
+                  <img src="{{asset('public/img/pnot.png')}}" class="imgadop img-circle" alt="">
+                              
+                  <h3 class="namemasct"><b>NOMBRE</b></h3>
+                
+            </div>
+            <div class="estileinfo">
+            <ul>
+              <li><label>Edad:</label>
+              <span>......</span></li>
+
+              <li><label>Sexo:</label>
+              <span>......</span></li>
+            </ul>
+          </div></a>
+          
+          	<div class="modal fade" id="ventanaadoptar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          		<div class="modal-dialog">
+		        	<div class="modal-content">
+		      		<div class="alert alert-info modal-header">
+		    		<button type="button" class="close" data-dismiss="modal" area-hidden="true"></button>
+			    	<h4 class="pull-left"><b>Adoptar</b></h4>
+			    	</div>
+			    	<div class="modal-body">
+					
+			  		<dl class="textjusti dl-horizontal">
+				  		<dt><img src="{{asset('public/img/pnot.png')}}" class="imgadop img-thumbnail img-responsive" alt=""></dt>
+				        <dd>
+				          <table class="table">
+                   <tr><td><b>Nombre:</b></td><td>............</td></tr>
+                   <tr><td><b>Edad:</b></td><td>............</td></tr>
+                   <tr><td><b>sexo:</b></td><td>............</td></tr>
+                   <tr><td rowspan=2 colspan=2>Descripcion: </tr>
+                  </table>
+				        </dd>
+				      	</dl>
+				      </div>
+				  <div class="modal-footer">
+				 <p><a class="btn btn-info" href="{{ path('pc_user_encuesta')}}" target="_blank" role="button" id="ventemerg">Adoptar mascota</a></p>
+			  	</div>
+		  	</div>
+	  	</div>
+  	</div>
+  </div>
+      </div>
+
+    <div class="col-md-4">
+            <div class="conteneter">
+              <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptar" href=""> 
+              <div class="banername back1">
+                      
+                  <img src="{{asset('public/img/pnot.png')}}" class="imgadop img-circle" alt="">
+                              
+                  <h3 class="namemasct"><b>NOMBRE</b></h3>
+                
+            </div>
+            <div class="estileinfo">
+            <ul>
+              <li><label>Edad:</label>
+              <span>......</span></li>
+
+              <li><label>Sexo:</label>
+              <span>......</span></li>
+            </ul>
+          </div></a>
+          
+          	<div class="modal fade" id="ventanaadoptar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          		<div class="modal-dialog">
+		        	<div class="modal-content">
+		      		<div class="alert alert-info modal-header">
+		    		<button type="button" class="close" data-dismiss="modal" area-hidden="true"></button>
+			    	<h4 class="pull-left"><b>Adoptar</b></h4>
+			    	</div>
+			    	<div class="modal-body">
+					
+			  		<dl class="textjusti dl-horizontal">
+				  		<dt><img src="{{asset('public/img/pnot.png')}}" class="imgadop img-thumbnail img-responsive" alt=""></dt>
+				        <dd>
+				          <table class="table">
+                   <tr><td><b>Nombre:</b></td><td>............</td></tr>
+                   <tr><td><b>Edad:</b></td><td>............</td></tr>
+                   <tr><td><b>sexo:</b></td><td>............</td></tr>
+                   <tr><td rowspan=2 colspan=2>Descripciom: </tr>
+                  </table>
+				        </dd>
+				      	</dl>
+				      </div>
+				  <div class="modal-footer">
+				 <button type="button" class="btn btn-info" href="{{ path('pc_fundation_encuesta') }}" target="_blank" role="button" id="ventemerg" data-dismiss="modal">Adoptar mascota</button>
+			  	</div>
+		  	</div>
+	  	</div>
+  	</div>
+  </div>
+      </div>
+      
+
+    <div class="col-md-4">
+            <div class="conteneter">
+              <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptar" href=""> 
+              <div class="banername back1">
+                      
+                  <img src="{{asset('public/img/pnot.png')}}" class="imgadop img-circle" alt="">
+                              
+                  <h3 class="namemasct"><b>NOMBRE</b></h3>
+                
+            </div>
+            <div class="estileinfo">
+            <ul>
+              <li><label>Edad:</label>
+              <span>......</span></li>
+
+              <li><label>Sexo:</label>
+              <span>......</span></li>
+            </ul>
+          </div></a>
+          
+          	<div class="modal fade" id="ventanaadoptar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          		<div class="modal-dialog">
+		        	<div class="modal-content">
+		      		<div class="alert alert-info modal-header">
+		    		<button type="button" class="close" data-dismiss="modal" area-hidden="true"></button>
+			    	<h4 class="pull-left"><b>Adoptar</b></h4>
+			    	</div>
+			    	<div class="modal-body">
+					
+			  		<dl class="textjusti dl-horizontal">
+				  		<dt><img src="{{asset('public/img/pnot.png')}}" class="imgadop img-thumbnail img-responsive" alt=""></dt>
+				        <dd>
+				          <table class="table">
+                   <tr><td><b>Nombre:</b></td><td>............</td></tr>
+                   <tr><td><b>Edad:</b></td><td>............</td></tr>
+                   <tr><td><b>sexo:</b></td><td>............</td></tr>
+                   <tr><td rowspan=2 colspan=2>Descripciom: </tr>
+                  </table>
+				        </dd>
+				      	</dl>
+				      </div>
+				  <div class="modal-footer">
+				 <button type="button" class="btn btn-primary" data-dismiss="modal">Adoptar mascota</button>
+			  	</div>
+		  	</div>
+	  	</div>
+  	</div>
+  </div>
+      </div>
+
+         
+  </div>
+        </div>
+
+
+
+        <!-- tab panel 2 gaticos contenet-->
+        <div role="tabpanel" class="conmargin tab-pane fade" id="profile">
+
+          <div class="row">
+     
+          <div class="col-md-4">
+            <div class="conteneter">
+              <a  class="links2" href="##"> 
+              <div class="banername back1">
+                      
+                   <img src="{{asset('public/img/gnot.png')}}" class="imgadop img-circle" alt="">
+                              
+                  <h3 class="namemasct"><b>NOMBRE</b></h3>
+                
+            </div>
+            <div class="estileinfo">
+            <ul>
+              <li><label>Edad:</label>
+              <span>......</span></li>
+
+              <li><label>Sexo:</label>
+              <span>......</span></li>
+            </ul>
+          </div></a>
+            </div>
+          </div>
+
+        <div class="col-md-4">
+            <div class="conteneter">
+              <a  class="links2" href="##"> 
+              <div class="banername back1">
+                      
+                   <img src="{{asset('public/img/gnot.png')}}" class="imgadop img-circle" alt="">
+                              
+                  <h3 class="namemasct"><b>NOMBRE</b></h3>
+                
+            </div>
+            <div class="estileinfo">
+            <ul>
+              <li><label>Edad:</label>
+              <span>......</span></li>
+
+              <li><label>Sexo:</label>
+              <span>......</span></li>
+            </ul>
+          </div></a>
+            </div>
+          </div>
+
+        <div class="col-md-4">
+            <div class="conteneter">
+              <a  class="links2" href="##"> 
+              <div class="banername back1">
+                      
+                  <img src="{{asset('public/img/gnot.png')}}" class="imgadop img-circle" alt="">
+                              
+                  <h3 class="namemasct"><b>NOMBRE</b></h3>
+                
+            </div>
+            <div class="estileinfo">
+            <ul>
+              <li><label>Edad:</label>
+              <span>......</span></li>
+
+              <li><label>Sexo:</label>
+              <span>......</span></li>
+            </ul>
+          </div></a>
+            </div>
+          </div>
+
+         
+  </div>
+ 
+
+        </div>
+       
+      </div>
+
+    
+  </div>
+  
+
+<div class="col-md-1"> </div>
+</div>
+</section>
+{% endblock %}
+ {% block javascripts %}
+ {{ parent() }}
+ <script src="{{ asset('https://code.jquery.com/jquery-latest.js') }}"></script>
+ {% endblock %}
