@@ -21,20 +21,20 @@ class __TwigTemplate_cf9315d2f56ddc17e1be860ad77c629036fff360e679cc904a065da0aa7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f1fe14b2f1609adc87216cf769d915fe02ce52c00e5c8ccdbb2848e0a0184dc4 = $this->env->getExtension("native_profiler");
-        $__internal_f1fe14b2f1609adc87216cf769d915fe02ce52c00e5c8ccdbb2848e0a0184dc4->enter($__internal_f1fe14b2f1609adc87216cf769d915fe02ce52c00e5c8ccdbb2848e0a0184dc4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:jornadascenso.html.twig"));
+        $__internal_4ff58213321d8efb55c16d5c340810e6d111c704b1950ab47ddd847efa64b2c2 = $this->env->getExtension("native_profiler");
+        $__internal_4ff58213321d8efb55c16d5c340810e6d111c704b1950ab47ddd847efa64b2c2->enter($__internal_4ff58213321d8efb55c16d5c340810e6d111c704b1950ab47ddd847efa64b2c2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:jornadascenso.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f1fe14b2f1609adc87216cf769d915fe02ce52c00e5c8ccdbb2848e0a0184dc4->leave($__internal_f1fe14b2f1609adc87216cf769d915fe02ce52c00e5c8ccdbb2848e0a0184dc4_prof);
+        $__internal_4ff58213321d8efb55c16d5c340810e6d111c704b1950ab47ddd847efa64b2c2->leave($__internal_4ff58213321d8efb55c16d5c340810e6d111c704b1950ab47ddd847efa64b2c2_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_a1a449a61a184f4e44318bbde2ed438db0123abe70b3930bf7b616265b191f74 = $this->env->getExtension("native_profiler");
-        $__internal_a1a449a61a184f4e44318bbde2ed438db0123abe70b3930bf7b616265b191f74->enter($__internal_a1a449a61a184f4e44318bbde2ed438db0123abe70b3930bf7b616265b191f74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_8369952ff8aa2999430374560b11b6db228a347c85ec30e59b3fa36e5860dd58 = $this->env->getExtension("native_profiler");
+        $__internal_8369952ff8aa2999430374560b11b6db228a347c85ec30e59b3fa36e5860dd58->enter($__internal_8369952ff8aa2999430374560b11b6db228a347c85ec30e59b3fa36e5860dd58_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "  <div>
@@ -134,7 +134,7 @@ $context["meeting"], "meetingType", array()) == "STERILIZATION")) {
           </div><!--div container-->
 ";
         
-        $__internal_a1a449a61a184f4e44318bbde2ed438db0123abe70b3930bf7b616265b191f74->leave($__internal_a1a449a61a184f4e44318bbde2ed438db0123abe70b3930bf7b616265b191f74_prof);
+        $__internal_8369952ff8aa2999430374560b11b6db228a347c85ec30e59b3fa36e5860dd58->leave($__internal_8369952ff8aa2999430374560b11b6db228a347c85ec30e59b3fa36e5860dd58_prof);
 
     }
 

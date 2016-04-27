@@ -23,31 +23,31 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fcee9985a912b3c2b172475043b318aec9edcea94fe4ef94288106f229e7a7c3 = $this->env->getExtension("native_profiler");
-        $__internal_fcee9985a912b3c2b172475043b318aec9edcea94fe4ef94288106f229e7a7c3->enter($__internal_fcee9985a912b3c2b172475043b318aec9edcea94fe4ef94288106f229e7a7c3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
+        $__internal_912ed45662cb1edd3812d915db2ddeed7ff5f4f298c0d7aff0fe9c910b5d5b67 = $this->env->getExtension("native_profiler");
+        $__internal_912ed45662cb1edd3812d915db2ddeed7ff5f4f298c0d7aff0fe9c910b5d5b67->enter($__internal_912ed45662cb1edd3812d915db2ddeed7ff5f4f298c0d7aff0fe9c910b5d5b67_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_fcee9985a912b3c2b172475043b318aec9edcea94fe4ef94288106f229e7a7c3->leave($__internal_fcee9985a912b3c2b172475043b318aec9edcea94fe4ef94288106f229e7a7c3_prof);
+        $__internal_912ed45662cb1edd3812d915db2ddeed7ff5f4f298c0d7aff0fe9c910b5d5b67->leave($__internal_912ed45662cb1edd3812d915db2ddeed7ff5f4f298c0d7aff0fe9c910b5d5b67_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_cf848b63cc62b0e350c4256ca9a6151950bee3353860df5a6e0b4a73efe13cb9 = $this->env->getExtension("native_profiler");
-        $__internal_cf848b63cc62b0e350c4256ca9a6151950bee3353860df5a6e0b4a73efe13cb9->enter($__internal_cf848b63cc62b0e350c4256ca9a6151950bee3353860df5a6e0b4a73efe13cb9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_b5c8a63110379b3897df865baf483a592639f9296cfa20ec8512767100a3e6ec = $this->env->getExtension("native_profiler");
+        $__internal_b5c8a63110379b3897df865baf483a592639f9296cfa20ec8512767100a3e6ec->enter($__internal_b5c8a63110379b3897df865baf483a592639f9296cfa20ec8512767100a3e6ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_cf848b63cc62b0e350c4256ca9a6151950bee3353860df5a6e0b4a73efe13cb9->leave($__internal_cf848b63cc62b0e350c4256ca9a6151950bee3353860df5a6e0b4a73efe13cb9_prof);
+        $__internal_b5c8a63110379b3897df865baf483a592639f9296cfa20ec8512767100a3e6ec->leave($__internal_b5c8a63110379b3897df865baf483a592639f9296cfa20ec8512767100a3e6ec_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_0453faa25a79b9070881367342295615b1bff68ecaa14b949c7bec5226979487 = $this->env->getExtension("native_profiler");
-        $__internal_0453faa25a79b9070881367342295615b1bff68ecaa14b949c7bec5226979487->enter($__internal_0453faa25a79b9070881367342295615b1bff68ecaa14b949c7bec5226979487_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d4c62845b6275a0549d3332d062b8c105d0c51c003b53ed0551682fbb2e631b7 = $this->env->getExtension("native_profiler");
+        $__internal_d4c62845b6275a0549d3332d062b8c105d0c51c003b53ed0551682fbb2e631b7->enter($__internal_d4c62845b6275a0549d3332d062b8c105d0c51c003b53ed0551682fbb2e631b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         $this->displayParentBlock("body", $context, $blocks);
@@ -259,7 +259,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 \t\t\t\t  <div class=\"modal-footer\">
 \t\t\t\t <p><a class=\"btn btn-info\" href=\"";
                 // line 150
-                echo $this->env->getExtension('routing')->getPath("pc_user_encuesta");
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_user_encuesta", array("petId" => $this->getAttribute($context["pet"], "id", array()))), "html", null, true);
                 echo "\" target=\"_blank\" role=\"button\" id=\"ventemerg\">Adoptar mascota</a></p>
 \t\t\t  \t</div>
 \t\t  \t</div>
@@ -401,7 +401,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 \t\t\t\t  <div class=\"modal-footer\">
 \t\t\t\t <p><a class=\"btn btn-info\" href=\"";
                 // line 229
-                echo $this->env->getExtension('routing')->getPath("pc_user_encuesta");
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_user_encuesta", array("petId" => $this->getAttribute($context["pet"], "id", array()))), "html", null, true);
                 echo "\" target=\"_blank\" role=\"button\" id=\"ventemerg\">Adoptar mascota</a></p>
 \t\t\t  \t</div>
 \t\t  \t</div>
@@ -435,15 +435,15 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 </section>
 ";
         
-        $__internal_0453faa25a79b9070881367342295615b1bff68ecaa14b949c7bec5226979487->leave($__internal_0453faa25a79b9070881367342295615b1bff68ecaa14b949c7bec5226979487_prof);
+        $__internal_d4c62845b6275a0549d3332d062b8c105d0c51c003b53ed0551682fbb2e631b7->leave($__internal_d4c62845b6275a0549d3332d062b8c105d0c51c003b53ed0551682fbb2e631b7_prof);
 
     }
 
     // line 254
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_9a40c0e86abe66e10f918cf5b42e17397db27f7d0ed669a64a8e8fb3b0ecbce2 = $this->env->getExtension("native_profiler");
-        $__internal_9a40c0e86abe66e10f918cf5b42e17397db27f7d0ed669a64a8e8fb3b0ecbce2->enter($__internal_9a40c0e86abe66e10f918cf5b42e17397db27f7d0ed669a64a8e8fb3b0ecbce2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_241331a786d6322dc57397018c07cbd21c0af8dec4ec4180e775d9c2efd62aac = $this->env->getExtension("native_profiler");
+        $__internal_241331a786d6322dc57397018c07cbd21c0af8dec4ec4180e775d9c2efd62aac->enter($__internal_241331a786d6322dc57397018c07cbd21c0af8dec4ec4180e775d9c2efd62aac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 255
         echo " ";
@@ -455,7 +455,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
         echo "\"></script>
  ";
         
-        $__internal_9a40c0e86abe66e10f918cf5b42e17397db27f7d0ed669a64a8e8fb3b0ecbce2->leave($__internal_9a40c0e86abe66e10f918cf5b42e17397db27f7d0ed669a64a8e8fb3b0ecbce2_prof);
+        $__internal_241331a786d6322dc57397018c07cbd21c0af8dec4ec4180e775d9c2efd62aac->leave($__internal_241331a786d6322dc57397018c07cbd21c0af8dec4ec4180e775d9c2efd62aac_prof);
 
     }
 
@@ -623,7 +623,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /* 				      	</dl>*/
 /* 				      </div>*/
 /* 				  <div class="modal-footer">*/
-/* 				 <p><a class="btn btn-info" href="{{ path('pc_user_encuesta') }}" target="_blank" role="button" id="ventemerg">Adoptar mascota</a></p>*/
+/* 				 <p><a class="btn btn-info" href="{{ path('pc_user_encuesta', {'petId' : pet.id }) }}" target="_blank" role="button" id="ventemerg">Adoptar mascota</a></p>*/
 /* 			  	</div>*/
 /* 		  	</div>*/
 /* 	  	</div>*/
@@ -702,7 +702,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /* 				      	</dl>*/
 /* 				      </div>*/
 /* 				  <div class="modal-footer">*/
-/* 				 <p><a class="btn btn-info" href="{{ path('pc_user_encuesta')}}" target="_blank" role="button" id="ventemerg">Adoptar mascota</a></p>*/
+/* 				 <p><a class="btn btn-info" href="{{ path('pc_user_encuesta', {'petId' : pet.id })}}" target="_blank" role="button" id="ventemerg">Adoptar mascota</a></p>*/
 /* 			  	</div>*/
 /* 		  	</div>*/
 /* 	  	</div>*/

@@ -77,7 +77,6 @@ class User
      */
     private $email;
     
-    
     public function __construct()
     {
         $this->credits = new ArrayCollection();

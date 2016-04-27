@@ -11,7 +11,6 @@
                 <tr><td class="pest" colspan="3">Adoptante</td>
                 </tr>
                 <tr class="tdb">
-                  <th class="tdxs">#</th>
                   <th>Nombre</th>
                   <th>Apellido</th>
                   <th class="tdxs">Edad</th>
@@ -23,17 +22,18 @@
                 </tr>
               </thead>
               <tbody class="tdb">
+              {% for user in users %}
               <tr>
-                  <td>1</td>
-                  <td>Steven</td>
-                  <td>quintero</td>
-                  <td>12</td>
-                  <td>1223534</td>
-                  <td>724354</td>
-                  <td> B/ villa sasa</td>
-                  <td>qunte@hotm...</td>                  
-                  <td class="bdlef"><a href="{{path('pc_admin_pet_solicitudes_date')}}" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
-                </tr>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.lastName }}</td>
+                  <td>{{ user.age }}</td>
+                  <td>{{ user.identificationNumber }}</td>
+                  <td>{{ user.phone_number }}</td>
+                  <td>{{ user.address }}</td>
+                  <td>{{ user.email }}</td>                  
+                  <td class="bdlef"><a href="{{path('pc_admin_pet_solicitudes_date', {'userId' : user.id })}}" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>
+              </tr>
+              {% endfor%}
               </tbody>
             </table>
 

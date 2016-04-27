@@ -219,10 +219,11 @@ nav{
   position: fixed;
   z-index: 10;
 }
-@media (min-width: 768px)
+@media (min-width: 768px){
 .main {
     padding-right: 40px;
     padding-left: 40px;
+}
 }
 .main {
     padding: 20px;

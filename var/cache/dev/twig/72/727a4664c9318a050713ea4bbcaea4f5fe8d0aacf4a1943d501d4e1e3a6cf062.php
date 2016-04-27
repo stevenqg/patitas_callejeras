@@ -21,20 +21,20 @@ class __TwigTemplate_5ae6b21a029059da32b667813c26e0a99c4373f765080850d04f3677132
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f45b95a528c99fcc5aaae2dfbee06bdd5de159e2b21b52936059e71ffc91074f = $this->env->getExtension("native_profiler");
-        $__internal_f45b95a528c99fcc5aaae2dfbee06bdd5de159e2b21b52936059e71ffc91074f->enter($__internal_f45b95a528c99fcc5aaae2dfbee06bdd5de159e2b21b52936059e71ffc91074f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:solicitudes.html.twig"));
+        $__internal_993b33a7b3c3044e47fa4540046452252b1c1e4c3eee0f762cda7a36c4f8905b = $this->env->getExtension("native_profiler");
+        $__internal_993b33a7b3c3044e47fa4540046452252b1c1e4c3eee0f762cda7a36c4f8905b->enter($__internal_993b33a7b3c3044e47fa4540046452252b1c1e4c3eee0f762cda7a36c4f8905b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:solicitudes.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f45b95a528c99fcc5aaae2dfbee06bdd5de159e2b21b52936059e71ffc91074f->leave($__internal_f45b95a528c99fcc5aaae2dfbee06bdd5de159e2b21b52936059e71ffc91074f_prof);
+        $__internal_993b33a7b3c3044e47fa4540046452252b1c1e4c3eee0f762cda7a36c4f8905b->leave($__internal_993b33a7b3c3044e47fa4540046452252b1c1e4c3eee0f762cda7a36c4f8905b_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_38c2a99621a70797003f42399065c70b58fbddeb587974e55d5829a8c76e58a8 = $this->env->getExtension("native_profiler");
-        $__internal_38c2a99621a70797003f42399065c70b58fbddeb587974e55d5829a8c76e58a8->enter($__internal_38c2a99621a70797003f42399065c70b58fbddeb587974e55d5829a8c76e58a8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_6ac6941f38b1dfa6cdb980fd405141a07901524f2143035a2322fa36a4c1be8f = $this->env->getExtension("native_profiler");
+        $__internal_6ac6941f38b1dfa6cdb980fd405141a07901524f2143035a2322fa36a4c1be8f->enter($__internal_6ac6941f38b1dfa6cdb980fd405141a07901524f2143035a2322fa36a4c1be8f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "\t<div>
@@ -48,7 +48,6 @@ class __TwigTemplate_5ae6b21a029059da32b667813c26e0a99c4373f765080850d04f3677132
                 <tr><td class=\"pest\" colspan=\"3\">Adoptante</td>
                 </tr>
                 <tr class=\"tdb\">
-                  <th class=\"tdxs\">#</th>
                   <th>Nombre</th>
                   <th>Apellido</th>
                   <th class=\"tdxs\">Edad</th>
@@ -60,21 +59,53 @@ class __TwigTemplate_5ae6b21a029059da32b667813c26e0a99c4373f765080850d04f3677132
                 </tr>
               </thead>
               <tbody class=\"tdb\">
-              <tr>
-                  <td>1</td>
-                  <td>Steven</td>
-                  <td>quintero</td>
-                  <td>12</td>
-                  <td>1223534</td>
-                  <td>724354</td>
-                  <td> B/ villa sasa</td>
-                  <td>qunte@hotm...</td>                  
+              ";
+        // line 25
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) ? $context["users"] : $this->getContext($context, "users")));
+        foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
+            // line 26
+            echo "              <tr>
+                  <td>";
+            // line 27
+            echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "name", array()), "html", null, true);
+            echo "</td>
+                  <td>";
+            // line 28
+            echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "lastName", array()), "html", null, true);
+            echo "</td>
+                  <td>";
+            // line 29
+            echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "age", array()), "html", null, true);
+            echo "</td>
+                  <td>";
+            // line 30
+            echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "identificationNumber", array()), "html", null, true);
+            echo "</td>
+                  <td>";
+            // line 31
+            echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "phone_number", array()), "html", null, true);
+            echo "</td>
+                  <td>";
+            // line 32
+            echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "address", array()), "html", null, true);
+            echo "</td>
+                  <td>";
+            // line 33
+            echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "email", array()), "html", null, true);
+            echo "</td>                  
                   <td class=\"bdlef\"><a href=\"";
-        // line 35
-        echo $this->env->getExtension('routing')->getPath("pc_admin_pet_solicitudes_date");
-        echo "\" id=\"vermas\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"ver datos\"><span class=\"glyphicon glyphicon-new-window\" aria-hidden=\"true\"></span></a></td>
-                </tr>
-              </tbody>
+            // line 34
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_admin_pet_solicitudes_date", array("userId" => $this->getAttribute($context["user"], "id", array()))), "html", null, true);
+            echo "\" id=\"vermas\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"ver datos\"><span class=\"glyphicon glyphicon-new-window\" aria-hidden=\"true\"></span></a></td>
+              </tr>
+              ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 37
+        echo "              </tbody>
             </table>
 
 \t\t\t
@@ -83,7 +114,7 @@ class __TwigTemplate_5ae6b21a029059da32b667813c26e0a99c4373f765080850d04f3677132
 \t
 ";
         
-        $__internal_38c2a99621a70797003f42399065c70b58fbddeb587974e55d5829a8c76e58a8->leave($__internal_38c2a99621a70797003f42399065c70b58fbddeb587974e55d5829a8c76e58a8_prof);
+        $__internal_6ac6941f38b1dfa6cdb980fd405141a07901524f2143035a2322fa36a4c1be8f->leave($__internal_6ac6941f38b1dfa6cdb980fd405141a07901524f2143035a2322fa36a4c1be8f_prof);
 
     }
 
@@ -99,7 +130,7 @@ class __TwigTemplate_5ae6b21a029059da32b667813c26e0a99c4373f765080850d04f3677132
 
     public function getDebugInfo()
     {
-        return array (  74 => 35,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  108 => 37,  99 => 34,  95 => 33,  91 => 32,  87 => 31,  83 => 30,  79 => 29,  75 => 28,  71 => 27,  68 => 26,  64 => 25,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
@@ -115,7 +146,6 @@ class __TwigTemplate_5ae6b21a029059da32b667813c26e0a99c4373f765080850d04f3677132
 /*                 <tr><td class="pest" colspan="3">Adoptante</td>*/
 /*                 </tr>*/
 /*                 <tr class="tdb">*/
-/*                   <th class="tdxs">#</th>*/
 /*                   <th>Nombre</th>*/
 /*                   <th>Apellido</th>*/
 /*                   <th class="tdxs">Edad</th>*/
@@ -127,17 +157,18 @@ class __TwigTemplate_5ae6b21a029059da32b667813c26e0a99c4373f765080850d04f3677132
 /*                 </tr>*/
 /*               </thead>*/
 /*               <tbody class="tdb">*/
+/*               {% for user in users %}*/
 /*               <tr>*/
-/*                   <td>1</td>*/
-/*                   <td>Steven</td>*/
-/*                   <td>quintero</td>*/
-/*                   <td>12</td>*/
-/*                   <td>1223534</td>*/
-/*                   <td>724354</td>*/
-/*                   <td> B/ villa sasa</td>*/
-/*                   <td>qunte@hotm...</td>                  */
-/*                   <td class="bdlef"><a href="{{path('pc_admin_pet_solicitudes_date')}}" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>*/
-/*                 </tr>*/
+/*                   <td>{{ user.name }}</td>*/
+/*                   <td>{{ user.lastName }}</td>*/
+/*                   <td>{{ user.age }}</td>*/
+/*                   <td>{{ user.identificationNumber }}</td>*/
+/*                   <td>{{ user.phone_number }}</td>*/
+/*                   <td>{{ user.address }}</td>*/
+/*                   <td>{{ user.email }}</td>                  */
+/*                   <td class="bdlef"><a href="{{path('pc_admin_pet_solicitudes_date', {'userId' : user.id })}}" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></td>*/
+/*               </tr>*/
+/*               {% endfor%}*/
 /*               </tbody>*/
 /*             </table>*/
 /* */

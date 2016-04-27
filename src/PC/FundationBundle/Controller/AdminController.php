@@ -276,7 +276,111 @@ class AdminController extends Controller
     
     
     
-    /*
+   
+    public function solicitudesAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery('SELECT u FROM PCFundationBundle:User u JOIN PCFundationBundle:Adoption a WHERE u.id=a.user');
+        $users = $query->getResult();
+        
+        return $this->render('PCFundationBundle:Admin:solicitudes.html.twig', array( 'users' => $users ));
+    }
+    
+    public function solicituddateAction($userId)
+    {
+        $user = $this->getDoctrine()->getRepository('PCFundationBundle:User')->find($userId);
+        $adoption = $this->getDoctrine()->getRepository('PCFundationBundle:Adoption')->findOneBy(array('user'=>$userId));
+        $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->find($adoption->getPet()->getId());
+        
+        /**die("".$adoption->getId());*/
+        
+        return $this->render('PCFundationBundle:Admin:solicitud_adopcion.html.twig', array('user'=>$user, 'pet'=>$pet, 'adoption' => $adoption));
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public function solaceptarAction($solicitudId)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $adoption = $em->getRepository('PCFundationBundle:Adoption')->find($solicitudId);
+    
+        if (!$adoption) {
+            throw $this->createNotFoundException(
+                'No adoption found for id '.$solicitudId
+            );
+        }
+    
+        $adoption->setStatus('APPROVED');
+        $em->flush();
+        
+        
+    
+        return $this->redirectToRoute('pc_admin_pet_solicitudes');
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public function solpendienteAction($solicitudId)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $adoption = $em->getRepository('PCFundationBundle:Adoption')->find($solicitudId);
+    
+        if (!$adoption) {
+            throw $this->createNotFoundException(
+                'No adoption found for id '.$solicitudId
+            );
+        }
+    
+        $adoption->setStatus('PENDING');
+        $em->flush();
+    
+        return $this->redirectToRoute('pc_admin_pet_solicitudes');
+    }
+    
+    public function solrechazarAction($solicitudId)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $adoption = $em->getRepository('PCFundationBundle:Adoption')->find($solicitudId);
+    
+        if (!$adoption) {
+            throw $this->createNotFoundException(
+                'No adoption found for id '.$solicitudId
+            );
+        }
+    
+        $adoption->setStatus('DISAPPROVED');
+        $em->flush();
+    
+        return $this->redirectToRoute('pc_admin_pet_solicitudes');
+    }
+    
+    
+    
+    
+    
+    
+    public function mascotadoptadaAction()
+    {
+        return $this->render('PCFundationBundle:Admin:masc_adopatada.html.twig');
+    }
+    
+     /*
     permite ver mas información del censo
     */
     public function jornadacensomasAction()
@@ -310,17 +414,5 @@ class AdminController extends Controller
      public function esterilizacionAddAction()
     {
         return $this->render('PCFundationBundle:Admin:esteriliza_add.html.twig');
-    }
-    public function solicitudesAction()
-    {
-        return $this->render('PCFundationBundle:Admin:solicitudes.html.twig');
-    }
-    public function solicituddateAction()
-    {
-        return $this->render('PCFundationBundle:Admin:solicitud_adopcion.html.twig');
-    }
-    public function mascotadoptadaAction()
-    {
-        return $this->render('PCFundationBundle:Admin:masc_adopatada.html.twig');
     }
 }

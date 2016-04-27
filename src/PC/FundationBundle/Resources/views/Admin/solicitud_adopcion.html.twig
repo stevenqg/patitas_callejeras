@@ -5,90 +5,98 @@
 			<h1 class="coloralert">Solicitud de Adopción &nbsp; <a href="{{path('pc_admin_pet_solicitudes')}}" type="button" class=" buttonborder pull-right btn btn-primary"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a></h1>
 			<hr>
 			<div class="col-md-6">
-			<div class="titinfo">Mascota</div>
-			<div class="sectionstile2">
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">Nombre:</label></div>	
-			<div class="col-md-9"><input type="text" class="form-control" name="Nomascota" disabled></div>
-			</div><br><!-- div close row form -->
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">Edad:</label></div>	
-			<div class="col-md-9"><input type="text" class="form-control" name="EDmascota" disabled></div>
-			</div><br>
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">Color:</label></div>	
-			<div class="col-md-9"><input type="text" class="form-control" name="Colmascota" disabled></div>
-			</div><br><!-- div close row form -->	
-			<div class="row">
-				<div class="textjusti col-md-3"><label class="marginlabel">Sexo:</label></div>	
-			<div class="col-md-9"><select class="form-control" disabled>
-						  <option>Macho</option>
-						  <option>hembra</option>
-						</select>
-					</div>
-			</div><br>
-
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">Rasgo:</label></div>	
-			<div class="col-md-9"><input type="text" name="Colmascota" class="form-control" disabled></div>
-			</div><br><!-- div close row form -->
-			<div class="row">
-				<div class="textjusti col-md-3"><label class="marginlabel">Vacunado:</label></div>	
-				<div class="col-md-9"><select class="form-control" disabled>
-						  <option>Si</option>
-						  <option>No</option>
-						</select>
-					</div>
-			</div>	<br>
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">Esterilizado:</label></div>	
-			<div class="col-md-9"><select class="form-control" disabled>
-						  <option>Si</option>
-						  <option>No</option>
-						</select>
-			</div><br>
-					
-			</div>
-			
-		</div><!--div sectionsitile-->
-	</div><!-- div close col-md-6 mascota info-->
-		<div class="col-md-6">
-			<div class="titinfo">Adoptante</div>
-			<div class="sectionstile2">
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">Nombre:</label></div>	
-			<div class="col-md-9"><input type="text" class="form-control" name="Nomascota" disabled></div>
-			</div><br><!-- div close row form -->
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">Apellado:</label></div>	
-			<div class="col-md-9"><input type="text" class="form-control" name="EDmascota" disabled></div>
-			</div><br>
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">Edad:</label></div>	
-			<div class="col-md-9"><input type="text" class="form-control" name="Colmascota" disabled></div>
-			</div><br><!-- div close row form -->
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">cedula:</label></div>	
-			<div class="col-md-9"><input type="text" class="form-control" name="Nomascota" disabled></div>
-			</div><br><!-- div close row form -->
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">Dirección:</label></div>	
-			<div class="col-md-9"><input type="text" class="form-control" name="EDmascota" disabled></div>
-			</div><br>
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">Telefono:</label></div>	
-			<div class="col-md-9"><input type="text" class="form-control" name="Colmascota" disabled></div>
-			</div><br><!-- div close row form -->	
-			<div class="row">
-			<div class="textjusti col-md-3"><label class="marginlabel">Correo:</label></div>	
-			<div class="col-md-9"><input type="text" class="form-control" name="Colmascota" disabled></div>
-			</div><!-- div close row form -->	
+				<div class="titinfo">Mascota</div>
+				<div class="sectionstile2">
+					<div class="row">
+					<div class="textjusti col-md-3"><label class="marginlabel">Nombre:</label></div>	
+					<div class="col-md-9"><input type="text" class="form-control" name="Nomascota" value="{{ pet.name }}" disabled></div>
+					</div><br><!-- div close row form -->
+					<div class="row">
+					<div class="textjusti col-md-3"><label class="marginlabel">Edad:</label></div>	
+					<div class="col-md-9"><input type="text" class="form-control" name="EDmascota" value="{{ pet.age }}" disabled></div>
+					</div><br>
+					<div class="row">
+					<div class="textjusti col-md-3"><label class="marginlabel">Color:</label></div>	
+					<div class="col-md-9"><input type="text" class="form-control" name="Colmascota" value="{{ pet.colour }}" disabled></div>
+					</div><br><!-- div close row form -->	
+					<div class="row">
+					<div class="textjusti col-md-3"><label class="marginlabel">Género:</label></div>	
+					<div class="col-md-9"><input type="text" class="form-control" name="genmascota" value="
+					{% if pet.gender == 'MALE' %}
+	                    macho
+	                {% elseif pet.gender == 'FEMALE' %}
+	                    hembra
+	                {%endif%}
+	                " disabled></div>
+					</div><br><!-- div close row form -->
+					<div class="row">
+					<div class="textjusti col-md-3"><label class="marginlabel">Raza:</label></div>	
+					<div class="col-md-9"><input type="text" name="razamascota" class="form-control" value="{{ pet.race }}" disabled></div>
+					</div><br><!-- div close row form -->
+					<div class="row">
+					<div class="textjusti col-md-3"><label class="marginlabel">Vacunada:</label></div>	
+					<div class="col-md-9"><input type="text" name="razamascota" class="form-control" value="
+					{% if pet.isVacunated == 1 %}
+	                    si
+	                {% elseif pet.isVacunated == 0 %}
+	                    no
+	                {%endif%}
+					" disabled></div>
+					</div><br><!-- div close row form -->
+					<div class="row">
+					<div class="textjusti col-md-3"><label class="marginlabel">Esterilizada:</label></div>	
+					<div class="col-md-9"><input type="text" name="razamascota" class="form-control" value="
+					{% if pet.isSterilized == 1 %}
+			            si
+			        {% elseif pet.isSterilized == 0 %}
+			            no
+			        {%endif%}
+					" disabled></div>
+					</div><br><!-- div close row form -->
+				</div>
+			</div><!--div sectionsitile-->
+		</div><!-- div close col-md-6 mascota info-->
+			<div class="col-md-6">
+				<div class="titinfo">Adoptante</div>
+				<div class="sectionstile2">
+				<div class="row">
+				<div class="textjusti col-md-3"><label class="marginlabel">Nombre:</label></div>	
+				<div class="col-md-9"><input type="text" class="form-control" name="Nomascota" value="{{ user.name }}" disabled></div>
+				</div><br><!-- div close row form -->
+				<div class="row">
+				<div class="textjusti col-md-3"><label class="marginlabel">Apellido:</label></div>	
+				<div class="col-md-9"><input type="text" class="form-control" name="EDmascota" value="{{ user.lastname }}" disabled></div>
+				</div><br>
+				<div class="row">
+				<div class="textjusti col-md-3"><label class="marginlabel">Edad:</label></div>	
+				<div class="col-md-9"><input type="text" class="form-control" name="Colmascota" value="{{ user.age }}" disabled></div>
+				</div><br><!-- div close row form -->
+				<div class="row">
+				<div class="textjusti col-md-3"><label class="marginlabel">cedula:</label></div>	
+				<div class="col-md-9"><input type="text" class="form-control" name="Nomascota" value="{{ user.identificationNumber }}" disabled></div>
+				</div><br><!-- div close row form -->
+				<div class="row">
+				<div class="textjusti col-md-3"><label class="marginlabel">Dirección:</label></div>	
+				<div class="col-md-9"><input type="text" class="form-control" name="EDmascota" value="{{ user.address }}" disabled></div>
+				</div><br>
+				<div class="row">
+				<div class="textjusti col-md-3"><label class="marginlabel">Telefono:</label></div>	
+				<div class="col-md-9"><input type="text" class="form-control" name="Colmascota" value="{{ user.phone_number }}" disabled></div>
+				</div><br><!-- div close row form -->	
+				<div class="row">
+				<div class="textjusti col-md-3"><label class="marginlabel">Correo:</label></div>	
+				<div class="col-md-9"><input type="text" class="form-control" name="Colmascota" value="{{ user.email }}" disabled></div>
+				</div><!-- div close row form -->	
+				<div class="row">
+				<div class="textjusti col-md-3"><label class="marginlabel">id de adopción:</label></div>	
+				<div class="col-md-9"><input type="text" class="form-control" name="Colmascota" value="{{ adoption.id }}" disabled></div>
+				</div><!-- div close row form -->
 			</div>
 		</div>
 		</div><!--div close row conten ful-->
-			<button type="button" class="btn btn-primary" id="aceptar">Aprobar </button>
-			<button type="button" class="btn btn-info" id="aceptar">Pendiente</button>
-			<button type="button" class="btn btn-default" id="aceptar">Denegar</button>
+			<a type="button" href="{{ path('pc_admin_aceptar_solicitud', {'solicitudId' : adoption.id})}}" class="btn btn-primary" id="aceptar">Aprobar </a>
+			<a type="button" href="{{ path('pc_admin_pendiente_solicitud', {'solicitudId' : adoption.id})}}" class="btn btn-info" id="aceptar">Pendiente</a>
+			<a type="button" href="{{ path('pc_admin_rechazar_solicitud', {'solicitudId' : adoption.id})}}" class="btn btn-default" id="aceptar">Denegar</a>
 	</div>
 
 {% endblock %}

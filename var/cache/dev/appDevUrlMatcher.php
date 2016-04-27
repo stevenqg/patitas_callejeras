@@ -144,18 +144,18 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         if (0 === strpos($pathinfo, '/user')) {
             // pc_user_encuesta
-            if ($pathinfo === '/user/add') {
-                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\UserController::addAction',  '_route' => 'pc_user_encuesta',);
+            if (0 === strpos($pathinfo, '/user/add') && preg_match('#^/user/add/(?P<petId>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_user_encuesta')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\UserController::addAction',));
             }
 
             // pc_user_create
-            if ($pathinfo === '/user/create') {
+            if (0 === strpos($pathinfo, '/user/create') && preg_match('#^/user/create/(?P<petId>[^/]++)$#s', $pathinfo, $matches)) {
                 if ($this->context->getMethod() != 'POST') {
                     $allow[] = 'POST';
                     goto not_pc_user_create;
                 }
 
-                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\UserController::createAction',  '_route' => 'pc_user_create',);
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_user_create')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\UserController::createAction',));
             }
             not_pc_user_create:
 
@@ -301,17 +301,29 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::uploadAction',  '_route' => 'pc_admin_pet_photo',);
                 }
 
-                if (0 === strpos($pathinfo, '/admin/pet/solicitud')) {
-                    // pc_admin_pet_solicitudes
-                    if ($pathinfo === '/admin/pet/solicitudes') {
-                        return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::solicitudesAction',  '_route' => 'pc_admin_pet_solicitudes',);
-                    }
+                // pc_admin_pet_solicitudes
+                if ($pathinfo === '/admin/pet/solicitudes') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::solicitudesAction',  '_route' => 'pc_admin_pet_solicitudes',);
+                }
 
-                    // pc_admin_pet_solicitudes_date
-                    if ($pathinfo === '/admin/pet/solicitud/date') {
-                        return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::solicituddateAction',  '_route' => 'pc_admin_pet_solicitudes_date',);
-                    }
+                // pc_admin_aceptar_solicitud
+                if (0 === strpos($pathinfo, '/admin/pet/aceptar') && preg_match('#^/admin/pet/aceptar/(?P<solicitudId>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_aceptar_solicitud')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::solaceptarAction',));
+                }
 
+                // pc_admin_pendiente_solicitud
+                if (0 === strpos($pathinfo, '/admin/pet/pendiente') && preg_match('#^/admin/pet/pendiente/(?P<solicitudId>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_pendiente_solicitud')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::solpendienteAction',));
+                }
+
+                // pc_admin_rechazar_solicitud
+                if (0 === strpos($pathinfo, '/admin/pet/rechazar') && preg_match('#^/admin/pet/rechazar/(?P<solicitudId>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_rechazar_solicitud')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::solrechazarAction',));
+                }
+
+                // pc_admin_pet_solicitudes_date
+                if (0 === strpos($pathinfo, '/admin/pet/solicitud/date') && preg_match('#^/admin/pet/solicitud/date/(?P<userId>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_pet_solicitudes_date')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::solicituddateAction',));
                 }
 
             }

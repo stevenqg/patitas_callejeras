@@ -35,11 +35,11 @@ pc_fundation_encuesta:
     defaults: { _controller: PCFundationBundle:Main:encuesta }
     
 pc_user_encuesta:
-    path:     /user/add
+    path:     /user/add/{petId}
     defaults: { _controller: PCFundationBundle:User:add }
 
 pc_user_create:
-    path:     /user/create
+    path:     /user/create/{petId}
     defaults: { _controller: PCFundationBundle:User:create }
     methods:  POST
     
@@ -142,8 +142,20 @@ pc_admin_pet_solicitudes:
     path: /admin/pet/solicitudes
     defaults: { _controller: PCFundationBundle:Admin:solicitudes}
 
+pc_admin_aceptar_solicitud:
+    path: /admin/pet/aceptar/{solicitudId}
+    defaults: { _controller: PCFundationBundle:Admin:solaceptar}
+
+pc_admin_pendiente_solicitud:
+    path: /admin/pet/pendiente/{solicitudId}
+    defaults: { _controller: PCFundationBundle:Admin:solpendiente}
+
+pc_admin_rechazar_solicitud:
+    path: /admin/pet/rechazar/{solicitudId}
+    defaults: { _controller: PCFundationBundle:Admin:solrechazar}
+
 pc_admin_pet_solicitudes_date:
-    path: /admin/pet/solicitud/date
+    path: /admin/pet/solicitud/date/{userId}
     defaults: { _controller: PCFundationBundle:Admin:solicituddate}
  
 pc_admin_adoptada_pet:
