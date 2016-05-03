@@ -296,11 +296,7 @@ td, th {text-align: left;padding: 8px;}.tdlg{ width: 80%; margin-left: 20px;}
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     color: white;}
-.tetlecenso{
-    width:100%;
-    position:absolute;
-    height:30px;
-}
+
 .timod{ background-color: rgb(0, 134, 156); color: white;}
 .titedit{color: white;background-color: rgb(81, 167, 71);}
 .coloralert{color:#07A2B3;}.colordanger{color: #FFB300;}.colorer{color: red;}

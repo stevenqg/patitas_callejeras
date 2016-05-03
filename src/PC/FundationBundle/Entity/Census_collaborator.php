@@ -19,10 +19,10 @@ class Census_collaborator
     protected $collaborator;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Census", inversedBy="censusCollaborator")
-     * @ORM\JoinColumn(name="census_id", referencedColumnName="id", onDelete="CASCADE")
+     * @ORM\ManyToOne(targetEntity="Meeting", inversedBy="censusCollaborator")
+     * @ORM\JoinColumn(name="meeting_id", referencedColumnName="id", onDelete="CASCADE")
      */
-    protected $census;
+    protected $meeting;
     
     /**
      * @var int
@@ -69,26 +69,26 @@ class Census_collaborator
     }
 
     /**
-     * Set census
+     * Set meeting
      *
-     * @param \PC\FundationBundle\Entity\Census $census
+     * @param \PC\FundationBundle\Entity\Meeting $meeting
      *
      * @return Census_collaborator
      */
-    public function setCensus(\PC\FundationBundle\Entity\Census $census = null)
+    public function setCensus(\PC\FundationBundle\Entity\Meeting $meeting = null)
     {
-        $this->census = $census;
+        $this->meeting = $meeting;
 
         return $this;
     }
 
     /**
-     * Get census
+     * Get meeting
      *
-     * @return \PC\FundationBundle\Entity\Census
+     * @return \PC\FundationBundle\Entity\Meeting
      */
-    public function getCensus()
+    public function getMeeting()
     {
-        return $this->census;
+        return $this->meeting;
     }
 }

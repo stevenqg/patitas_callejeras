@@ -13,6 +13,12 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class Meeting
 {
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Census_collaborator", mappedBy="meeting")
+     */ 
+    protected $censusCollaborator;
+    
     /**
      * @ORM\OneToMany(targetEntity="Census", mappedBy="meeting")
      */ 
@@ -20,7 +26,7 @@ class Meeting
     
     /**
      * @ORM\OneToMany(targetEntity="Sterilization", mappedBy="meeting")
-     */ 
+     */
     protected $sterilizations;
     
     /**
@@ -63,6 +69,7 @@ class Meeting
     {
         $this->censuses = new ArrayCollection();
         $this->sterilizations = new ArrayCollection();
+        $this->censusCollaborator = new ArrayCollection();
     }
     
     /**
@@ -236,4 +243,39 @@ class Meeting
     {
         return $this->sterilizations;
     }
+    
+    /**
+     * Add censusCollaborator
+     *
+     * @param \PC\FundationBundle\Entity\Census_collaborator $censusCollaborator
+     *
+     * @return Meeting
+     */
+    public function addCensusCollaborator(\PC\FundationBundle\Entity\Census_collaborator $censusCollaborator)
+    {
+        $this->censusCollaborator[] = $censusCollaborator;
+
+        return $this;
+    }
+
+    /**
+     * Remove censusCollaborator
+     *
+     * @param \PC\FundationBundle\Entity\Census_collaborator $censusCollaborator
+     */
+    public function removeCensusCollaborator(\PC\FundationBundle\Entity\Census_collaborator $censusCollaborator)
+    {
+        $this->censusCollaborator->removeElement($censusCollaborator);
+    }
+
+    /**
+     * Get censusCollaborator
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCensusCollaborator()
+    {
+        return $this->censusCollaborator;
+    }
+    
 }

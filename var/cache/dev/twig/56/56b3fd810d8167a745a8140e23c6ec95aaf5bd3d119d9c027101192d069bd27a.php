@@ -22,47 +22,47 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_246a711abc37baba151f6d304ff44dc3063a0e339482c2f60c713a556ac6c492 = $this->env->getExtension("native_profiler");
-        $__internal_246a711abc37baba151f6d304ff44dc3063a0e339482c2f60c713a556ac6c492->enter($__internal_246a711abc37baba151f6d304ff44dc3063a0e339482c2f60c713a556ac6c492_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:agregardatos.html.twig"));
+        $__internal_9973beb282f9d7a79329a51eb845aac9dc1af9b3308b3e79fd754b13f1eca1ce = $this->env->getExtension("native_profiler");
+        $__internal_9973beb282f9d7a79329a51eb845aac9dc1af9b3308b3e79fd754b13f1eca1ce->enter($__internal_9973beb282f9d7a79329a51eb845aac9dc1af9b3308b3e79fd754b13f1eca1ce_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:agregardatos.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_246a711abc37baba151f6d304ff44dc3063a0e339482c2f60c713a556ac6c492->leave($__internal_246a711abc37baba151f6d304ff44dc3063a0e339482c2f60c713a556ac6c492_prof);
+        $__internal_9973beb282f9d7a79329a51eb845aac9dc1af9b3308b3e79fd754b13f1eca1ce->leave($__internal_9973beb282f9d7a79329a51eb845aac9dc1af9b3308b3e79fd754b13f1eca1ce_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_df251781e77f224a15034d41c171e0cd2272371e726bb4a6c1ccadaf1023eea1 = $this->env->getExtension("native_profiler");
-        $__internal_df251781e77f224a15034d41c171e0cd2272371e726bb4a6c1ccadaf1023eea1->enter($__internal_df251781e77f224a15034d41c171e0cd2272371e726bb4a6c1ccadaf1023eea1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_deb946288c0a062140804de76b6889d16b10870edaa95d40327557ee9af9fc60 = $this->env->getExtension("native_profiler");
+        $__internal_deb946288c0a062140804de76b6889d16b10870edaa95d40327557ee9af9fc60->enter($__internal_deb946288c0a062140804de76b6889d16b10870edaa95d40327557ee9af9fc60_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "agregar datos jornada de censo";
         
-        $__internal_df251781e77f224a15034d41c171e0cd2272371e726bb4a6c1ccadaf1023eea1->leave($__internal_df251781e77f224a15034d41c171e0cd2272371e726bb4a6c1ccadaf1023eea1_prof);
+        $__internal_deb946288c0a062140804de76b6889d16b10870edaa95d40327557ee9af9fc60->leave($__internal_deb946288c0a062140804de76b6889d16b10870edaa95d40327557ee9af9fc60_prof);
 
     }
 
     // line 3
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_08607019d5b30f7e8415238fcb59e2ef4a6d454a079c603dca12a5120809e74b = $this->env->getExtension("native_profiler");
-        $__internal_08607019d5b30f7e8415238fcb59e2ef4a6d454a079c603dca12a5120809e74b->enter($__internal_08607019d5b30f7e8415238fcb59e2ef4a6d454a079c603dca12a5120809e74b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_074e060ba204aff80fb26ae53f9682f6b0f3db5126679035d2cad7be4537cbd1 = $this->env->getExtension("native_profiler");
+        $__internal_074e060ba204aff80fb26ae53f9682f6b0f3db5126679035d2cad7be4537cbd1->enter($__internal_074e060ba204aff80fb26ae53f9682f6b0f3db5126679035d2cad7be4537cbd1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 4
         echo "
 
 \t
-\t\t\t<h4 class=\"coloralert\">Datos jornada censo<span class=\"btn-lg glyphicon glyphicon-check\" aria-hidden=\"true\"></span></h4>
+\t\t\t<h2 class=\"coloralert\">Datos jornada censo<span class=\"btn-lg glyphicon glyphicon-check\" aria-hidden=\"true\"></span></h2>
 \t\t\t<div class=\"sectionstile\">
 \t\t\t\t
 \t\t\t\t";
         // line 10
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
-\t\t\t\t<div class=\"timod tetlecenso\">\t
-\t\t\t\t<h4 class=\"textjusti\">datos del responsable</h4>
-\t\t\t\t</div>
+\t\t\t\t\t
+\t\t\t\t<h4 class=\"textjusti titulosection\">datos del responsable</h4>
+\t\t\t\t
 \t\t\t\t<hr>
 \t\t\t\t<div class=\"form-group\">
 \t\t\t\t\t<div class=\"row\">
@@ -283,7 +283,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t</div>\t
 ";
         
-        $__internal_08607019d5b30f7e8415238fcb59e2ef4a6d454a079c603dca12a5120809e74b->leave($__internal_08607019d5b30f7e8415238fcb59e2ef4a6d454a079c603dca12a5120809e74b_prof);
+        $__internal_074e060ba204aff80fb26ae53f9682f6b0f3db5126679035d2cad7be4537cbd1->leave($__internal_074e060ba204aff80fb26ae53f9682f6b0f3db5126679035d2cad7be4537cbd1_prof);
 
     }
 
@@ -308,13 +308,13 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 /* */
 /* */
 /* 	*/
-/* 			<h4 class="coloralert">Datos jornada censo<span class="btn-lg glyphicon glyphicon-check" aria-hidden="true"></span></h4>*/
+/* 			<h2 class="coloralert">Datos jornada censo<span class="btn-lg glyphicon glyphicon-check" aria-hidden="true"></span></h2>*/
 /* 			<div class="sectionstile">*/
 /* 				*/
 /* 				{{ form_start(form) }}*/
-/* 				<div class="timod tetlecenso">	*/
-/* 				<h4 class="textjusti">datos del responsable</h4>*/
-/* 				</div>*/
+/* 					*/
+/* 				<h4 class="textjusti titulosection">datos del responsable</h4>*/
+/* 				*/
 /* 				<hr>*/
 /* 				<div class="form-group">*/
 /* 					<div class="row">*/

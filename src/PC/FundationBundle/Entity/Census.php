@@ -13,12 +13,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class Census
 {
-    /**
-     * @ORM\OneToMany(targetEntity="Census_collaborator", mappedBy="census")
-     */ 
-    protected $censusCollaborator;
-    
-    
+
     /**
      * @ORM\OneToOne(targetEntity="User")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
@@ -195,37 +190,4 @@ class Census
         return $this->pet;
     }
 
-    /**
-     * Add censusCollaborator
-     *
-     * @param \PC\FundationBundle\Entity\Census_collaborator $censusCollaborator
-     *
-     * @return Census
-     */
-    public function addCensusCollaborator(\PC\FundationBundle\Entity\Census_collaborator $censusCollaborator)
-    {
-        $this->censusCollaborator[] = $censusCollaborator;
-
-        return $this;
-    }
-
-    /**
-     * Remove censusCollaborator
-     *
-     * @param \PC\FundationBundle\Entity\Census_collaborator $censusCollaborator
-     */
-    public function removeCensusCollaborator(\PC\FundationBundle\Entity\Census_collaborator $censusCollaborator)
-    {
-        $this->censusCollaborator->removeElement($censusCollaborator);
-    }
-
-    /**
-     * Get censusCollaborator
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCensusCollaborator()
-    {
-        return $this->censusCollaborator;
-    }
 }
