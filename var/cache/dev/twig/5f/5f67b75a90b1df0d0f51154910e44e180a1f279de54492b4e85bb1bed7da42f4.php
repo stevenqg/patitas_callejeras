@@ -15,8 +15,8 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_eddf66e5df9b62a6b5e58e7fab049cfcd24f9c58b0ab0078750dbb7137db9d73 = $this->env->getExtension("native_profiler");
-        $__internal_eddf66e5df9b62a6b5e58e7fab049cfcd24f9c58b0ab0078750dbb7137db9d73->enter($__internal_eddf66e5df9b62a6b5e58e7fab049cfcd24f9c58b0ab0078750dbb7137db9d73_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
+        $__internal_00daff618fc6b794c313a7f738f1e4ecfd0a93507960a90662180854bbedcdaa = $this->env->getExtension("native_profiler");
+        $__internal_00daff618fc6b794c313a7f738f1e4ecfd0a93507960a90662180854bbedcdaa->enter($__internal_00daff618fc6b794c313a7f738f1e4ecfd0a93507960a90662180854bbedcdaa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "nav.html.twig"));
 
         // line 1
         echo "<header>
@@ -43,16 +43,19 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
                       <li ><a class=\"links\" href=\"";
         // line 19
         echo $this->env->getExtension('routing')->getPath("pc_fundation_index");
-        echo "\" >Inicio <span class=\"sr-only\"></span></a></li>
+        echo "\" ><span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>&nbsp; Inicio <span class=\"sr-only\"></span></a></li>
                       <li><a class=\"links\" href=\"";
         // line 20
         echo $this->env->getExtension('routing')->getPath("pc_fundation_adoptar");
-        echo "\" >Adoptar</a></li>
-                      <li><a class=\"links\" href=\"\" >Donaciones</a></li>
+        echo "\" ><span class=\"glyphicon glyphicon-heart-empty\" aria-hidden=\"true\"></span>&nbsp; Adoptar</a></li>
+                      <li><a class=\"links\" href=\"";
+        // line 21
+        echo $this->env->getExtension('routing')->getPath("pc_fundation_eventos");
+        echo "\" ><span class=\"glyphicon glyphicon-blackboard\" aria-hidden=\"true\"></span>&nbsp;Eventos</a></li>
                       <li><a class=\"links\" href=\"";
         // line 22
         echo $this->env->getExtension('routing')->getPath("pc_fundation_nosotros");
-        echo "\" >Nosotros</a></li>
+        echo "\" ><span class=\"glyphicon glyphicon-certificate\" aria-hidden=\"true\"></span>&nbsp;Nosotros</a></li>
                       <li><a class=\"links\" href=\"";
         // line 23
         echo $this->env->getExtension('routing')->getPath("pc_administrator_login");
@@ -66,7 +69,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 \t\t</div>
 </header>";
         
-        $__internal_eddf66e5df9b62a6b5e58e7fab049cfcd24f9c58b0ab0078750dbb7137db9d73->leave($__internal_eddf66e5df9b62a6b5e58e7fab049cfcd24f9c58b0ab0078750dbb7137db9d73_prof);
+        $__internal_00daff618fc6b794c313a7f738f1e4ecfd0a93507960a90662180854bbedcdaa->leave($__internal_00daff618fc6b794c313a7f738f1e4ecfd0a93507960a90662180854bbedcdaa_prof);
 
     }
 
@@ -82,7 +85,7 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 
     public function getDebugInfo()
     {
-        return array (  58 => 23,  54 => 22,  49 => 20,  45 => 19,  38 => 15,  22 => 1,);
+        return array (  61 => 23,  57 => 22,  53 => 21,  49 => 20,  45 => 19,  38 => 15,  22 => 1,);
     }
 }
 /* <header>*/
@@ -103,10 +106,10 @@ class __TwigTemplate_c881504104584c80c8af809ebfdf4489f109c48b3b5d41c51afd40f9153
 /*             </div> */
 /*             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-5" aria-expanded="false" style="height: 1px;"> */
 /*                <ul class="nav navbar-nav">*/
-/*                       <li ><a class="links" href="{{ path('pc_fundation_index')}}" >Inicio <span class="sr-only"></span></a></li>*/
-/*                       <li><a class="links" href="{{ path('pc_fundation_adoptar')}}" >Adoptar</a></li>*/
-/*                       <li><a class="links" href="" >Donaciones</a></li>*/
-/*                       <li><a class="links" href="{{ path('pc_fundation_nosotros')}}" >Nosotros</a></li>*/
+/*                       <li ><a class="links" href="{{ path('pc_fundation_index')}}" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp; Inicio <span class="sr-only"></span></a></li>*/
+/*                       <li><a class="links" href="{{ path('pc_fundation_adoptar')}}" ><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>&nbsp; Adoptar</a></li>*/
+/*                       <li><a class="links" href="{{path('pc_fundation_eventos')}}" ><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>&nbsp;Eventos</a></li>*/
+/*                       <li><a class="links" href="{{ path('pc_fundation_nosotros')}}" ><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>&nbsp;Nosotros</a></li>*/
 /*                       <li><a class="links" href="{{ path('pc_administrator_login')}}" >admin login</a></li>*/
 /*                 </ul>*/
 /*             </div> */

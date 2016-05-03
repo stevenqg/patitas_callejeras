@@ -23,31 +23,31 @@ class __TwigTemplate_e98305a9e1b0666bfaec4a9a4c4ea2fa1e7ace5ab323808a8aa60a6ba51
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_29e177253b9f26b0563c8e59ad64714ad5efa719d685ce922eecdd8399b3a756 = $this->env->getExtension("native_profiler");
-        $__internal_29e177253b9f26b0563c8e59ad64714ad5efa719d685ce922eecdd8399b3a756->enter($__internal_29e177253b9f26b0563c8e59ad64714ad5efa719d685ce922eecdd8399b3a756_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:nosotros.html.twig"));
+        $__internal_7980c92a57cd7d866ed45949118a1f29b69964b415c64fd1c66662a20a30f83e = $this->env->getExtension("native_profiler");
+        $__internal_7980c92a57cd7d866ed45949118a1f29b69964b415c64fd1c66662a20a30f83e->enter($__internal_7980c92a57cd7d866ed45949118a1f29b69964b415c64fd1c66662a20a30f83e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:nosotros.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_29e177253b9f26b0563c8e59ad64714ad5efa719d685ce922eecdd8399b3a756->leave($__internal_29e177253b9f26b0563c8e59ad64714ad5efa719d685ce922eecdd8399b3a756_prof);
+        $__internal_7980c92a57cd7d866ed45949118a1f29b69964b415c64fd1c66662a20a30f83e->leave($__internal_7980c92a57cd7d866ed45949118a1f29b69964b415c64fd1c66662a20a30f83e_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_1a822506539e0d5582a2edf3ad50cb698bedbb459a51e1f535db288c4a8a34cb = $this->env->getExtension("native_profiler");
-        $__internal_1a822506539e0d5582a2edf3ad50cb698bedbb459a51e1f535db288c4a8a34cb->enter($__internal_1a822506539e0d5582a2edf3ad50cb698bedbb459a51e1f535db288c4a8a34cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_fbe42cd04bf78b10f1e40765621fb3a01c71793f83525b34be438a21d8e9d65b = $this->env->getExtension("native_profiler");
+        $__internal_fbe42cd04bf78b10f1e40765621fb3a01c71793f83525b34be438a21d8e9d65b->enter($__internal_fbe42cd04bf78b10f1e40765621fb3a01c71793f83525b34be438a21d8e9d65b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_1a822506539e0d5582a2edf3ad50cb698bedbb459a51e1f535db288c4a8a34cb->leave($__internal_1a822506539e0d5582a2edf3ad50cb698bedbb459a51e1f535db288c4a8a34cb_prof);
+        $__internal_fbe42cd04bf78b10f1e40765621fb3a01c71793f83525b34be438a21d8e9d65b->leave($__internal_fbe42cd04bf78b10f1e40765621fb3a01c71793f83525b34be438a21d8e9d65b_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_69fc62af6be7ba98a17262c762ed6a5bfdd091e653451ff57ef8e4f10af65ebc = $this->env->getExtension("native_profiler");
-        $__internal_69fc62af6be7ba98a17262c762ed6a5bfdd091e653451ff57ef8e4f10af65ebc->enter($__internal_69fc62af6be7ba98a17262c762ed6a5bfdd091e653451ff57ef8e4f10af65ebc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_43c101e4bc0ccc96cdfe48c6813e81eee46ee6e15eaf976aad099f204652755e = $this->env->getExtension("native_profiler");
+        $__internal_43c101e4bc0ccc96cdfe48c6813e81eee46ee6e15eaf976aad099f204652755e->enter($__internal_43c101e4bc0ccc96cdfe48c6813e81eee46ee6e15eaf976aad099f204652755e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         $this->displayParentBlock("body", $context, $blocks);
@@ -90,7 +90,7 @@ class __TwigTemplate_e98305a9e1b0666bfaec4a9a4c4ea2fa1e7ace5ab323808a8aa60a6ba51
         </a>
       </h4>
     </div>
-    <div id=\"collapseOne\" class=\"panel-collapse collapse in\" role=\"tabpanel\" aria-labelledby=\"headingOne\">
+    <div id=\"collapseOne\" class=\"panel-collapse collapse \" role=\"tabpanel\" aria-labelledby=\"headingOne\">
       <div class=\"panel-body\">
         <div class=\"row\">
           <div class=\" col-md-9\">
@@ -209,15 +209,15 @@ class __TwigTemplate_e98305a9e1b0666bfaec4a9a4c4ea2fa1e7ace5ab323808a8aa60a6ba51
 </section>
 ";
         
-        $__internal_69fc62af6be7ba98a17262c762ed6a5bfdd091e653451ff57ef8e4f10af65ebc->leave($__internal_69fc62af6be7ba98a17262c762ed6a5bfdd091e653451ff57ef8e4f10af65ebc_prof);
+        $__internal_43c101e4bc0ccc96cdfe48c6813e81eee46ee6e15eaf976aad099f204652755e->leave($__internal_43c101e4bc0ccc96cdfe48c6813e81eee46ee6e15eaf976aad099f204652755e_prof);
 
     }
 
     // line 149
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_d93df8ac4a2698cddb00cf476802ff66df0f74329ed1be6112e5b73fd69ebad8 = $this->env->getExtension("native_profiler");
-        $__internal_d93df8ac4a2698cddb00cf476802ff66df0f74329ed1be6112e5b73fd69ebad8->enter($__internal_d93df8ac4a2698cddb00cf476802ff66df0f74329ed1be6112e5b73fd69ebad8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_f271546f99ce355632a5054d26a0dc391b48c1cdc2661821291d5c9896aaaeca = $this->env->getExtension("native_profiler");
+        $__internal_f271546f99ce355632a5054d26a0dc391b48c1cdc2661821291d5c9896aaaeca->enter($__internal_f271546f99ce355632a5054d26a0dc391b48c1cdc2661821291d5c9896aaaeca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 150
         echo " ";
@@ -235,7 +235,7 @@ class __TwigTemplate_e98305a9e1b0666bfaec4a9a4c4ea2fa1e7ace5ab323808a8aa60a6ba51
         echo "\"></script>
  ";
         
-        $__internal_d93df8ac4a2698cddb00cf476802ff66df0f74329ed1be6112e5b73fd69ebad8->leave($__internal_d93df8ac4a2698cddb00cf476802ff66df0f74329ed1be6112e5b73fd69ebad8_prof);
+        $__internal_f271546f99ce355632a5054d26a0dc391b48c1cdc2661821291d5c9896aaaeca->leave($__internal_f271546f99ce355632a5054d26a0dc391b48c1cdc2661821291d5c9896aaaeca_prof);
 
     }
 
@@ -292,7 +292,7 @@ class __TwigTemplate_e98305a9e1b0666bfaec4a9a4c4ea2fa1e7ace5ab323808a8aa60a6ba51
 /*         </a>*/
 /*       </h4>*/
 /*     </div>*/
-/*     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">*/
+/*     <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">*/
 /*       <div class="panel-body">*/
 /*         <div class="row">*/
 /*           <div class=" col-md-9">*/

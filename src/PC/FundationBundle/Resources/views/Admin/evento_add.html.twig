@@ -1,0 +1,48 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block body %}
+
+	<div class="liner"></div>
+	<br>
+	<div class="container">
+	<div class="row">
+		<div class="col-xs-1 col-md-1"></div>	
+		<div class="col-xs-10 col-md-10">
+			<div class="timod  pestile">
+			<h4 class="margnone">Crear Evento<span class="btn-lg glyphicon glyphicon-edit" aria-hidden="true"></span></h4>
+			</div>
+			<div class="conteform">
+				<br>
+				<div class="form-group">
+					<div class="row">
+					<div class="col-xs-3 col-md-2 textjusti">
+					<label class="marginlabel"  for="Nombre del adoptante">Titulo: </label></div>
+					<div class="col-xs-9 col-md-4"><input type="text" class="form-control" id="age_user" placeholder="Nombre del Evento"><div  class="logaler alert-danger" id="age-error"></div><br>
+					</div>
+					<br>
+					<div class="textjusti col-xs-3 col-md-2">
+					<label class="marginlabel textjusti"  for="Apellidos del adoptante">Lugar:</label></div>
+					<div class="col-xs-9 col-md-4"><input type="text" class="form-control" id="last_name"placeholder="donde se realiza el evento"><div  class="logaler alert-danger" id="last_name-error"></div>
+					</div>
+					</div>
+
+					<div class="row">
+					<br>
+					<div class="col-xs-3 col-md-2 textjusti">
+					<label class="marginlabel"  for="Nombre del adoptante">Fecha: </label></div>
+					<div class="col-xs-9 col-md-4"><input type="text" class="form-control" id="age_user" placeholder="Fecha de realización"><div  class="logaler alert-danger" id="age-error"></div><br>
+					</div>
+					<div class="textjusti col-xs-3 col-md-2">
+					<label class="marginlabel"  for="Edad del adoptante">Descripcion:</label></div>
+					<div class="col-xs-9 col-md-4">
+						<textarea  class="form-control" rows="5" name="descripción"></textarea>
+					</div>
+					</div>
+					<hr>
+				</div>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Guardar »&nbsp;<span class="glyphicon glyphicon-saved" aria-hidden="true"></span></button>
+			</div>	<!-- div conten-form-->
+			</div>	<!-- div col-->
+			<div class="col-xs-1 col-md-1"></div>	
+	</div>
+	</div>
+{% endblock %}

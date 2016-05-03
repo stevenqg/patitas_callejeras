@@ -8,17 +8,18 @@
 <section>
 
 <div class="row">
+  <div class="backfonttree">
   <div class="col-md-1"></div>
   <div class="col-md-10">
-    <div class="jumbotron">
-        <h1>Proceso de adopción </h1>
-        <p class="h1estle">La fundación patitas callejeras en función de asegurar la integridad de los animales y el compromiso de las personas que quieren adoptar, establece una serie de actividades para definir si se cumplen con las condiciones estipuladas por la institución. </p>
-        <p class="h1estle">Debe tener en cuenta los tres puntos que se muestran a continuación.</p>
-        <div class="alert alert-warning">Es muy importante que leas los requisitos de adopción</div>
+      <div class="wor">
+        <div class="col-md-6">
+         <h3 class="titulosection"><img src="{{ asset('public/img/mn.png')}}" alt=""><b>&nbsp;PROCESO DE ADOPCIÓN&nbsp;</b><img src="{{ asset('public/img/m.png')}}" alt=""></h3><hr class="margnone">
+        <p class="h1estle textjusti">La fundación patitas callejeras en función de asegurar la integridad de los animales y el compromiso de las personas que quieren adoptar, establece una serie de actividades para definir si el adoptante cumplen con las condiciones estipuladas por la institución. </p>
+        <p class="h1estle">Debe tener en cuenta los cuatro puntos que se muestran a continuación.</p>
+       <div class="continer">
+        <div class="textjusti alert alert-info">Es muy importante que leas los requisitos de adopción</div>
 
-  <div class="continer">
-	
-	<button class="btn btn-warning" data-toggle="modal" data-target="#miVentana">Ver requisitos</button>
+	<button class="butglass glass butposadop" data-toggle="modal" data-target="#miVentana">Ver requisitos</button>
 
 	<div class="modal fade" id="miVentana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -37,40 +38,69 @@
 						<dd>todo el nucleo familiar que convive con la persona que realiza el proceso de adopción debe estar de acuerdo con el la solicitud que esta realiza.</dd>
 					</dl>
 				</div>
-
-			</div>
-		</div>
-	</div>
-</div>
-
+    
+    			</div>
+    		</div>
+    	</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img  src="{{ asset('public/img/adopt.png')}}"class="img-responsive"></img>
+    </div>
+      
      </div>    
 
   </div>
   <div class="col-md-1"></div>
   </div>
+  </div>
+  <br>
   <div class="row">
     <div class="col-md-1"></div>
      <div class="col-md-10">
-        <div class="col-lg-4">
-          <img class="img-circle" src="{{ asset('public/img/ENC.png') }}" alt="Generic placeholder image" width="140" height="140">
-          <h4> encuesta de adopción</h4>
-          <p>En el cuestionario trataremos los temas más importantes sobre la adopción y tendremos una visión general de la persona o familia que quiere adoptar el anima.</p>
+       <br>
+       <hr>
+       <div class="ue"></div>
+        <div class="col-lg-3">
+          <img class="img-circle iconadop" src="{{ asset('public/img/a1.png') }}" alt="Generic placeholder image" width="140" height="140">
+          <div class="backtwo comenterytwo">
+					<h4>1.  mascotas</h4>
+					</div>
+          <p class="textjusti">seleciona la mascota que deseas adoptar del  catalogo de mscotas de la fundacion Patitas Callejeras.</p>
           
        </div>
-        <div class="col-lg-4">
-          <img class="img-circle" src="{{asset('public/img/CAS.png')}}" alt="Generic placeholder image" width="140" height="140">
-          <h4>Visita domiciliaria</h4>
-          <p>Después de analizar las respuestas del cuestionario, se procederá a programar una visita domiciliaria donde se analizará el ambiente y el espacio en el que vivirá la mascota.</p>
+        <div class="col-lg-3">
+          <img class="img-circle iconadop" src="{{asset('public/img/a2.png')}}" alt="Generic placeholder image" width="140" height="140">
+          <div class="backtwo comenterytwo">
+					<h4>2.  encuesta de adopción</h4>
+					</div>
+          <p class="textjusti">Ingresa la información solicitada (datos personales) y responde la encuesta de perfil del adoptante para enviar la solicitud de adopción.</p>
          </div>
-        <div class="col-lg-4">
-          <img class="img-circle" src="{{asset('public/img/REL.png')}}" alt="Generic placeholder image" width="140" height="140">
-          <h4>Seguimiento de adaptación</h4>
-          <p>La fundación realizará un contacto posterior a la entrega de la mascota con el fin de verificar el estado de esta y las condiciones en que es mantenida, dicho contacto pueden ser visitas domiciliarias, llamadas telefónicas y/u otros medios que la fundación en su momento disponga.</p>
+        <div class="col-lg-3">
+          
+          <img class="img-circle iconadop" src="{{asset('public/img/a3.png')}}" alt="Generic placeholder image" width="140" height="140">
+           <div class="backtwo comenterytwo">
+					<h4>3.  Visita domiciliaria</h4>
+					</div>
+           <p class="textjusti">Después de verificar la solicitud de adopción la Fundación se pondrá en contacto para programas la visita residencial. </p>
+         
           </div>
-        <div class="col-md-1"></div>
+          
+          <div class="col-lg-3">
+          <img class="img-circle iconadop" src="{{asset('public/img/a4.png')}}" alt="Generic placeholder image" width="140" height="140">
+          <div class="backtwo comenterytwo">
+					<h4>4.  Seguimiento de adopcion</h4>
+					</div>
+          <p class="textjusti">La fundación programara con el adoptante visitas para verificar la adaptación de la mascota en su nuevo hogar. </p>
+          <hr>
+          </div>
+
+        
       </div>
+      <div class="col-md-1"></div>
     </div>
-</div>
+
+<br>
 <div class="row">
   <div class="col-md-1"></div>
   <div class="col-md-10">
@@ -84,11 +114,12 @@
         <!-- Tab panes -->
         <div class="tab-content">
           <!-- Tab panel 1 perritos contentet-->
-        <div role="tabpanel" class="conmargin tab-pane fade in active" id="home">
+        <div role="tabpanel" class="fonadop conmargin tab-pane fade in active" id="home">
           
       <div class="row">
            {% for pet in pets %}
-           {% if pet.species == 'CANINE' %}
+           
+           {% if pet.species == 'CANINE' and pet.status != 'ADOPTED' %}
           <div class="col-md-4">
             <div class="conteneter">
               <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptardog{{pet.id}}" href=""> 
@@ -121,33 +152,50 @@
           	<div class="modal fade" id="ventanaadoptardog{{pet.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           		<div class="modal-dialog">
 		        	<div class="modal-content">
-		      		<div class="alert alert-info modal-header">
+		      		<div class="timod modal-header">
 		    		<button type="button" class="close" data-dismiss="modal" area-hidden="true"></button>
-			    	<h4 class="pull-left"><b>Adoptar</b></h4>
+			    	<h4 class="modal-title"><b>Adoptar</b></h4>
 			    	</div>
 			    	<div class="modal-body">
-					
-			  		<dl class="textjusti dl-horizontal">
-				  		<dt><img src="{{asset('public/img/pnot.png')}}" class="imgadop img-thumbnail img-responsive" alt=""></dt>
-				        <dd>
-				          <table class="table">
-                   <tr><td><b>Nombre:</b></td><td>{{ pet.name }}</td></tr>
-                   <tr><td><b>Edad:</b></td><td>{{ pet.age }}&nbsp;años.</td></tr>
-                   <tr><td><b>sexo:</b></td><td>
-                     {% if pet.gender == 'MALE'%}
+			    	 	  <div class="row">
+			  		    <div class="col-md-6">
+			  		      <img src="{{asset('public/img/pnot.png')}}" class="img-responsive" alt="">
+			  		    </div>
+			  		     <div class="col-md-6">
+			  		       <br>
+			  		       <table class="table table-striped textjusti">
+                    <tr>
+                      <th class="tdd">Nombre:</th>
+                      <td>{{ pet.name }}</td>
+                    </tr>
+                    <tr>
+                      <th>raza:</th>
+                      <td>{{ pet.race }}</td>
+                    </tr>
+                    <tr>
+                      <th>Edad:</th>
+                      <td>{{ pet.age }}&nbsp;años.</td>
+                    </tr>
+                    <tr>
+                      <th>Color:</th>
+                      <td>{{ pet.colour }}</td>
+                    </tr>
+                    <tr>
+                      <th>sexo:</th>
+                      <td>
+                        {% if pet.gender == 'MALE'%}
                        macho
                      {% elseif pet.gender == 'FEMALE'%}
                        hembra
                      {%endif%}
-                     </td></tr>
-                   <tr><td><b>Color:</b></td><td>{{ pet.colour }}</td></tr>
-                   <tr><td><b>raza:</b></td><td>{{ pet.race }}</td></tr>
+                     </td>
+                    </tr>
                   </table>
-				        </dd>
-				      	</dl>
+			  		    </div>
+			  		  </div>
 				      </div>
 				  <div class="modal-footer">
-				 <p><a class="btn btn-info" href="{{ path('pc_user_encuesta', {'petId' : pet.id }) }}" target="_blank" role="button" id="ventemerg">Adoptar mascota</a></p>
+				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta',{'petId' : pet.id }) }}" target="_blank" role="button">Adoptar mascota</a></p>
 			  	</div>
 		  	</div>
 	  	</div>
@@ -162,12 +210,12 @@
 
 
         <!-- tab panel 2 gaticos contenet-->
-        <div role="tabpanel" class="conmargin tab-pane fade" id="profile">
+        <div role="tabpanel" class="fonadop conmargin tab-pane fade" id="profile">
 
           <div class="row">
             
             {% for pet in pets %}
-           {% if pet.species == 'FELINE' %}
+           {% if pet.species == 'FELINE' and pet.status != 'ADOPTED'  %}
           <div class="col-md-4">
             <div class="conteneter">
               <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptarcat{{pet.id}}" href=""> 
@@ -197,36 +245,53 @@
             </ul>
           </div></a>
           
-          	<div class="modal fade" id="ventanaadoptarcat{{pet.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          	 	<div class="modal fade" id="ventanaadoptarcat{{pet.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           		<div class="modal-dialog">
 		        	<div class="modal-content">
-		      		<div class="alert alert-info modal-header">
+		      		<div class="timod modal-header">
 		    		<button type="button" class="close" data-dismiss="modal" area-hidden="true"></button>
-			    	<h4 class="pull-left"><b>Adoptar</b></h4>
+			    	<h4 class="modal-title"><b>Adoptar</b></h4>
 			    	</div>
 			    	<div class="modal-body">
-					
-			  		<dl class="textjusti dl-horizontal">
-				  		<dt><img src="{{asset('public/img/gnot.png')}}" class="imgadop img-thumbnail img-responsive" alt=""></dt>
-				        <dd>
-				          <table class="table">
-                   <tr><td><b>Nombre:</b></td><td>{{ pet.name }}</td></tr>
-                   <tr><td><b>Edad:</b></td><td>{{ pet.age }}&nbsp;años.</td></tr>
-                   <tr><td><b>sexo:</b></td><td>
-                     {% if pet.gender == 'MALE'%}
+			    	 	  <div class="row">
+			  		    <div class="col-md-6">
+			  		      <img src="{{asset('public/img/gnot.png')}}" class="img-responsive" alt="">
+			  		    </div>
+			  		     <div class="col-md-6">
+			  		       <br>
+			  		       <table class="table table-striped textjusti">
+                    <tr>
+                      <th class="tdd">Nombre:</th>
+                      <td>{{ pet.name }}</td>
+                    </tr>
+                    <tr>
+                      <th>raza:</th>
+                      <td>{{ pet.race }}</td>
+                    </tr>
+                    <tr>
+                      <th>Edad:</th>
+                      <td>{{ pet.age }}&nbsp;años.</td>
+                    </tr>
+                    <tr>
+                      <th>Color:</th>
+                      <td>{{ pet.colour }}</td>
+                    </tr>
+                    <tr>
+                      <th>sexo:</th>
+                      <td>
+                        {% if pet.gender == 'MALE'%}
                        macho
                      {% elseif pet.gender == 'FEMALE'%}
                        hembra
                      {%endif%}
-                     </td></tr>
-                   <tr><td><b>Color:</b></td><td>{{ pet.colour }}</td></tr>
-                   <tr><td><b>raza:</b></td><td>{{ pet.race }}</td></tr>
+                     </td>
+                    </tr>
                   </table>
-				        </dd>
-				      	</dl>
+			  		    </div>
+			  		  </div>
 				      </div>
 				  <div class="modal-footer">
-				 <p><a class="btn btn-info" href="{{ path('pc_user_encuesta', {'petId' : pet.id })}}" target="_blank" role="button" id="ventemerg">Adoptar mascota</a></p>
+				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta', {'petId' : pet.id }) }}" target="_blank" role="button">Adoptar mascota</a></p>
 			  	</div>
 		  	</div>
 	  	</div>

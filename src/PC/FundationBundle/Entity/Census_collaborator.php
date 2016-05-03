@@ -13,16 +13,16 @@ use Doctrine\ORM\Mapping as ORM;
 class Census_collaborator
 {
     /**
-     * @ORM\OneToOne(targetEntity="Collaborator")
-     * @ORM\JoinColumn(name="collaborator_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Collaborator", inversedBy="censusCollaborator")
+     * @ORM\JoinColumn(name="collaborator_id", referencedColumnName="id", onDelete="CASCADE")
      */
-    private $collaborator;
+    protected $collaborator;
     
     /**
-     * @ORM\OneToOne(targetEntity="Census")
-     * @ORM\JoinColumn(name="census_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Census", inversedBy="censusCollaborator")
+     * @ORM\JoinColumn(name="census_id", referencedColumnName="id", onDelete="CASCADE")
      */
-    private $census;
+    protected $census;
     
     /**
      * @var int

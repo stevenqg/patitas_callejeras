@@ -12,6 +12,8 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use PC\FundationBundle\Models\Document;
 use PC\FundationBundle\Entity\Photo;
 use PC\FundationBundle\Entity\Administrator;
+use PC\FundationBundle\Entity\User;
+use PC\FundationBundle\Entity\Census;
 use PC\FundationBundle\Form\AdministratorType;
 use PC\FundationBundle\Entity\Pet;
 use PC\FundationBundle\Form\PetType;
@@ -19,10 +21,17 @@ use PC\FundationBundle\Entity\Meeting;
 use PC\FundationBundle\Form\MeetingType;
 
 
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+
+
 class AdminController extends Controller
 {
-    /*
-    muestra los administradores registrados en la base de datos
+    /**
+    * muestra los administradores registrados en la base de datos
     */
     public function indexAction(Request $request)
     {
@@ -38,8 +47,8 @@ class AdminController extends Controller
         }
     }
     
-    /*
-    permite ver la ventana login para el adminsitrador, realizar el login y crear la sesion.
+    /**
+    *permite ver la ventana login para el adminsitrador, realizar el login y crear la sesion.
     */
     public function loginAction(Request $request)
     {
@@ -67,8 +76,8 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:login.html.twig');
     }
     
-    /*
-    permite cerrar la sesion actual y redireccionar a la ventana de inicio publica   
+    /**
+    * permite cerrar la sesion actual y redireccionar a la ventana de inicio publica   
     */
     public function logoutAction(Request $request)
     {
@@ -78,8 +87,8 @@ class AdminController extends Controller
         return $this->redirectToRoute('pc_fundation_homepage');
     }
     
-    /*
-    muestra el formulario para ingreso de un nuevo admin
+    /**
+    * muestra el formulario para ingreso de un nuevo admin
     */
     public function addAction()
     {
@@ -88,8 +97,8 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:NewAdmin.html.twig', array('form'=>$form->createView()));
     }
     
-    /*
-    crea el formulario para registro de admin
+    /**
+    * crea el formulario para registro de admin
     */
     private function createAdminForm(Administrator $admin)
     {
@@ -97,8 +106,8 @@ class AdminController extends Controller
         return $form;
     }
     
-    /*
-    se encarga de registrar el admin en la base de datos
+    /**
+    * se encarga de registrar el admin en la base de datos
     */
     public function createAction(Request $request)
     {
@@ -117,8 +126,8 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:NewAdmin.html.twig', array('form'=>$form->createView()));
     }
     
-    /*
-    muestra el formulario para editar el adminsitrador ---aún en construcción---
+    /**
+    * muestra el formulario para editar el adminsitrador ---aún en construcción---
     */
     public function editAction()
     {
@@ -127,8 +136,8 @@ class AdminController extends Controller
     
     
     
-    /*
-    muestra el formulario para ingreso de una mascota
+    /**
+    * muestra el formulario para ingreso de una mascota
     */
     public function addpetAction()
     {
@@ -137,8 +146,8 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:add_mascota.html.twig', array('form'=>$form->createview())); 
     }
     
-    /*
-    crea el formularo para ingresar los datos de la mascota
+    /**
+    * crea el formularo para ingresar los datos de la mascota
     */
     private function createPetForm(Pet $entity)
     {
@@ -146,8 +155,8 @@ class AdminController extends Controller
         return $form;
     }
     
-    /*
-    registra la mascota en la base de datos
+    /**
+    * registra la mascota en la base de datos
     */
     public function createpetAction(request $request)
     {
@@ -159,6 +168,7 @@ class AdminController extends Controller
         {
             $session = $request->getSession();
             $session->set("petId", $pet->getId());
+            $pet->setStatus("UNADOPTED");
             
             $em = $this->getDoctrine()->getManager();
             $em->persist($pet);
@@ -170,8 +180,8 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:add_mascota.html.twig', array('form'=>$form->createview())); 
     }
     
-    /*
-    carga la imagen de la mascota
+    /**
+    * carga la imagen de la mascota
     */
     public function uploadAction(request $request)
     {
@@ -212,8 +222,8 @@ class AdminController extends Controller
        return $this->render('PCFundationBundle:Admin:add_photo_mascota.html.twig');
     }
     
-    /*
-    permite ver, agregar y gestionar las jornadas de censo en el area de trabajo - bloque capa
+    /**
+    * permite ver, agregar y gestionar las jornadas de censo en el area de trabajo - bloque capa
     */
     public function jornadacensoaddAction()
     {
@@ -222,8 +232,8 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:nuevocenso.html.twig', array('form'=>$form->createView()));
     }
     
-    /*
-    crea el formularo para ingresar los datos de la jornada de censo
+    /**
+    * crea el formularo para ingresar los datos de la jornada de censo
     */
     private function createMeetingForm(Meeting $entity)
     {
@@ -231,8 +241,8 @@ class AdminController extends Controller
         return $form;
     }
     
-    /*
-    registra la jornada de censo en la base de datos
+    /**
+    * registra la jornada de censo en la base de datos
     */
     public function jornadacensocreateAction(request $request)
     {
@@ -253,19 +263,19 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:fundation:nuevocenso.html.twig', array('form'=>$form->createview())); 
     }
     
-    /*
-    permite ver y gestionar las jornadas de censo en el area de trabajo - bloque capa
+    /**
+    * permite ver y gestionar las jornadas de censo en el area de trabajo - bloque capa
     */
     public function jornadacensoAction(Request $request)
     {
         $meetings = $this->getDoctrine()->getRepository('PCFundationBundle:Meeting')->findBy(array('meetingType' => 'CENSUS'));
-        
         return $this->render('PCFundationBundle:Admin:jornadascenso.html.twig', array('meetings' => $meetings));
+        
     }
     
     
-    /*
-    permite ver y gestionar las mascotas en espera de adopción en el area de trabajo - bloque capa
+    /**
+    / permite ver y gestionar las mascotas en espera de adopción en el area de trabajo - bloque capa
     */
     public function adopcionviewAction(Request $request)
     {
@@ -280,7 +290,7 @@ class AdminController extends Controller
     public function solicitudesAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $query = $em->createQuery('SELECT u FROM PCFundationBundle:User u JOIN PCFundationBundle:Adoption a WHERE u.id=a.user');
+        $query = $em->createQuery('SELECT u FROM PCFundationBundle:User u JOIN PCFundationBundle:Adoption a WHERE u.id=a.user AND a.status!=:status')->setParameter('status', 'APPROVED');
         $users = $query->getResult();
         
         return $this->render('PCFundationBundle:Admin:solicitudes.html.twig', array( 'users' => $users ));
@@ -304,7 +314,9 @@ class AdminController extends Controller
     
     
     
-    
+    /**
+     * cambia el estado de la solicitud a aprovado y el de la mascota a adoptada 
+     */
     public function solaceptarAction($solicitudId)
     {
         $em = $this->getDoctrine()->getManager();
@@ -315,27 +327,23 @@ class AdminController extends Controller
                 'No adoption found for id '.$solicitudId
             );
         }
-    
+        
+        $pet = $adoption->getPet();
+        
         $adoption->setStatus('APPROVED');
+        $em->persist($adoption);
         $em->flush();
         
-        
+        $pet->setStatus('ADOPTED');
+        $em->persist($pet);
+        $em->flush();
     
         return $this->redirectToRoute('pc_admin_pet_solicitudes');
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    /**
+     * cambia el estado de la solicitud a pendiente
+     */
     public function solpendienteAction($solicitudId)
     {
         $em = $this->getDoctrine()->getManager();
@@ -348,11 +356,15 @@ class AdminController extends Controller
         }
     
         $adoption->setStatus('PENDING');
+        $em->persist($adoption);
         $em->flush();
     
         return $this->redirectToRoute('pc_admin_pet_solicitudes');
     }
     
+    /**
+     * cambia el estado de la solicitud a rechazado y el de la mascota a no adoptada
+     */
     public function solrechazarAction($solicitudId)
     {
         $em = $this->getDoctrine()->getManager();
@@ -363,8 +375,15 @@ class AdminController extends Controller
                 'No adoption found for id '.$solicitudId
             );
         }
-    
+        
+        $pet = $adoption->getPet();
+        
         $adoption->setStatus('DISAPPROVED');
+        $em->persist($adoption);
+        $em->flush();
+        
+        $pet->setStatus('UNADOPTED');
+        $em->persist($pet);
         $em->flush();
     
         return $this->redirectToRoute('pc_admin_pet_solicitudes');
@@ -374,35 +393,144 @@ class AdminController extends Controller
     
     
     
-    
+    /**
+     * muestra la lista de las solicitudes de mascotas aprobadas
+     */ 
     public function mascotadoptadaAction()
     {
-        return $this->render('PCFundationBundle:Admin:masc_adopatada.html.twig');
+        $adoptions = $this->getDoctrine()->getRepository('PCFundationBundle:Adoption')->findByStatus('APPROVED');
+        return $this->render('PCFundationBundle:Admin:masc_adoptada.html.twig', array( 'adoptions' => $adoptions ));
     }
     
-     /*
-    permite ver mas información del censo
+    /**
+    * permite ver mas información del censo
     */
-    public function jornadacensomasAction()
+    public function jornadacensomasAction($meetingId)
     {
-        return $this->render('PCFundationBundle:Admin:censo.html.twig');
+        $meeting = $this->getDoctrine()->getRepository('PCFundationBundle:Meeting')->find($meetingId);
+        $censuses = $this->getDoctrine()->getRepository('PCFundationBundle:Census')->findByMeeting($meeting);
+        return $this->render('PCFundationBundle:Admin:censo.html.twig', array( 'meeting' => $meeting, 'censuses' => $censuses ));
     }
+    
+    /**
+     * permite agregar información de cada censo asociado a la jornada actual
+     */
+    public function jornadacensodatosAction($meetingId)
+    {
+        $defaultData = array('message' => 'Type your message here');
+        $form = $this->crearFormularioCenso($defaultData);
+        return $this->render('PCFundationBundle:Admin:agregardatos.html.twig', array('form'=>$form->createview(), 'meetingId' => $meetingId));
+    }
+    /**
+     * permite crear el formulario para registrar tanto la mascota como el usuario realcionados en la jornada de esterilización 
+     */
+    public function crearformularioCenso($defaultData)
+    {
+        $form = $this->createFormBuilder($defaultData)
+            ->setAction($this->generateUrl('pc_admin_jornada_censo_registrar'))
+            ->setMethod('POST')
+            ->add('meetingId', Integertype::class, array( 'attr'=>array('style'=>'display:none;')))
+            ->add('petName', TextType::class)
+            ->add('petAge', IntegerType::class)
+            ->add('species', ChoiceType::class, array('choices' => array('canino'=>'CANINE', 'felino'=>'FELINE'), 'placeholder' => 'especie de la mascota'))
+            ->add('race', TextType::class)
+            ->add('colour', TextType::class)
+            ->add('gender', ChoiceType::class, array('choices' => array('macho'=>'MALE', 'hembra'=>'FEMALE'), 'placeholder' => 'genero de la mascota'))
+            ->add('isVacunated', CheckboxType::class, array('required' => false))
+            ->add('isSterilized', CheckboxType::class, array('required' => false))
+            ->add('isStray', CheckboxType::class, array('required' => false))
+            ->add('isNeedSurgery', CheckboxType::class, array('required' => false))
+            ->add('userName', TextType::class)
+            ->add('lastName', TextType::class)
+            ->add('userAge', IntegerType::class)
+            ->add('identificationNumber', textType::class)
+            ->add('address', textType::class)
+            ->add('phone_number', textType::class)
+            ->add('email', textType::class)
+            ->add('save', SubmitType::class, array('label' => 'save pet'))
+            ->getForm();
+        
+        return $form;
+    }
+    
+    public function registrarcensoAction(Request $request)
+    {
+        $defaultData = array('message' => 'Type your message here');
+        $form = $this->crearformularioCenso($defaultData);
+        $form->handlerequest($request);
+        if($form->isvalid())
+        {   
+            $em = $this->getDoctrine()->getManager();
+            
+            //recuperamos el id de la jornada
+            $meetingId = $form->get("meetingId")->getData();
+            
+            //set de las variables que componen el censo
+            $user = new User();
+            $pet = new Pet();
+            $meeting = $this->getDoctrine()->getRepository("PCFundationBundle:Meeting")->find($meetingId);
+            $census = new Census();
+
+            
+            //creación del usuario
+            $user->setName($form->get("userName")->getData());
+            $user->setLastName($form->get("lastName")->getData());
+            $user->setAge($form->get("userAge")->getData());
+            $user->setIdentificationNumber($form->get("identificationNumber")->getData());
+            $user->setAddress($form->get("address")->getData());
+            $user->setPhone_number($form->get("phone_number")->getData());
+            $user->setEmail($form->get("email")->getData());
+            
+            $em->persist($user);
+            $em->flush();
+            
+            //creación de la mascota
+            $pet->setName($form->get("petName")->getData());
+            $pet->setAge($form->get("petAge")->getData());
+            $pet->setSpecies($form->get("species")->getData());
+            $pet->setrace($form->get("race")->getData());
+            $pet->setColour($form->get("colour")->getData());
+            $pet->setGender($form->get("gender")->getData());
+            $pet->setIsVacunated($form->get("isVacunated")->getData());
+            $pet->setIsSterilized($form->get("isSterilized")->getData());
+            $pet->setStatus("EXTERNAL");
+            
+            $em->persist($pet);
+            $em->flush();
+            
+            //creación del registro de censo
+            $census->setUser($user);
+            $census->setPet($pet);
+            $census->setMeeting($meeting);
+            $census->setIsNeedSurgery($form->get('isNeedSurgery')->getData());
+            $census->setIsStrayDog($form->get('isStray')->getData());
+            
+            $em->persist($census);
+            $em->flush();
+            
+            return $this->redirectToRoute('pc_admin_jornada_censo_mas', array('meetingId' => $meetingId));
+            
+        }
+        return $this->render('PCFundationBundle:Admin:agregardatos.html.twig', array('form'=>$form->createview(), 'meetingId' => $meetingId));
+    }
+    
+    
+    
+    
+    
+    
+    
     
     /*
-    permite ver mas información del censo
+    * permite ver mas información del censo
     */
     public function jornadacensoeditAction()
     {
         return $this->render('PCFundationBundle:Admin:editdatos.html.twig');
     }
     
-    /*
     
-    */
-    public function jornadacensodatosAction()
-    {
-        return $this->render('PCFundationBundle:Admin:agregardatos.html.twig');
-    }
+    
     public function jornadaesterilizaAction()
     {
         return $this->render('PCFundationBundle:Admin:jornada_esteriliza.html.twig');
@@ -414,5 +542,17 @@ class AdminController extends Controller
      public function esterilizacionAddAction()
     {
         return $this->render('PCFundationBundle:Admin:esteriliza_add.html.twig');
+    }
+      public function eventosAction()
+    {
+        return $this->render('PCFundationBundle:Admin:eventos.html.twig');
+    }
+     public function eventosaddAction()
+    {
+        return $this->render('PCFundationBundle:Admin:evento_add.html.twig');
+    }
+     public function eventoeditAction()
+    {
+        return $this->render('PCFundationBundle:Admin:evento_edit.html.twig');
     }
 }

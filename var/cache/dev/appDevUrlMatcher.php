@@ -132,6 +132,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // pc_fundation_eventos
+        if ($pathinfo === '/eventos') {
+            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\MainController::eventosAction',  '_route' => 'pc_fundation_eventos',);
+        }
+
         // pc_fundation_nosotros
         if ($pathinfo === '/nosotros') {
             return array (  '_controller' => 'PC\\FundationBundle\\Controller\\MainController::nosotrosAction',  '_route' => 'pc_fundation_nosotros',);
@@ -210,6 +215,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_administrator_update')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::updateAction',));
             }
 
+            if (0 === strpos($pathinfo, '/admin/eventos')) {
+                // pc_administrator_eventos
+                if ($pathinfo === '/admin/eventos') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::eventosAction',  '_route' => 'pc_administrator_eventos',);
+                }
+
+                // pc_administrator_eventos_add
+                if ($pathinfo === '/admin/eventos/add') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::eventosaddAction',  '_route' => 'pc_administrator_eventos_add',);
+                }
+
+                // pc_administrator_evento_edit
+                if ($pathinfo === '/admin/eventos/edit') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::eventoeditAction',  '_route' => 'pc_administrator_evento_edit',);
+                }
+
+            }
+
             if (0 === strpos($pathinfo, '/admin/jornadacenso')) {
                 // pc_admin_jornada_censo
                 if ($pathinfo === '/admin/jornadacenso/view') {
@@ -217,8 +240,8 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 }
 
                 // pc_admin_jornada_censo_mas
-                if ($pathinfo === '/admin/jornadacenso/mas') {
-                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::jornadacensomasAction',  '_route' => 'pc_admin_jornada_censo_mas',);
+                if (0 === strpos($pathinfo, '/admin/jornadacenso/mas') && preg_match('#^/admin/jornadacenso/mas/(?P<meetingId>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_jornada_censo_mas')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::jornadacensomasAction',));
                 }
 
                 // pc_admin_jornada_censo_edit
@@ -227,9 +250,23 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 }
 
                 if (0 === strpos($pathinfo, '/admin/jornadacenso/a')) {
-                    // pc_admin_jornada_censo_agregar
-                    if ($pathinfo === '/admin/jornadacenso/agregar') {
-                        return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::jornadacensodatosAction',  '_route' => 'pc_admin_jornada_censo_agregar',);
+                    if (0 === strpos($pathinfo, '/admin/jornadacenso/agregar')) {
+                        // pc_admin_jornada_censo_agregar
+                        if (preg_match('#^/admin/jornadacenso/agregar/(?P<meetingId>[^/]++)$#s', $pathinfo, $matches)) {
+                            return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_jornada_censo_agregar')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::jornadacensodatosAction',));
+                        }
+
+                        // pc_admin_jornada_censo_registrar
+                        if ($pathinfo === '/admin/jornadacenso/agregar') {
+                            if ($this->context->getMethod() != 'POST') {
+                                $allow[] = 'POST';
+                                goto not_pc_admin_jornada_censo_registrar;
+                            }
+
+                            return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::registrarcensoAction',  '_route' => 'pc_admin_jornada_censo_registrar',);
+                        }
+                        not_pc_admin_jornada_censo_registrar:
+
                     }
 
                     // pc_admin_jornada_censo_add

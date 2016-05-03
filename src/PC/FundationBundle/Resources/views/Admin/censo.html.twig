@@ -2,7 +2,7 @@
 {% block capa %}
 
       <div>
-        <h1 class="coloralert"><a href="{{ path('pc_admin_jornada_censo')}}" type="button" class=" buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a> &nbsp;Información del Censo
+        <h1 class="coloralert"><a href="{{ path('pc_admin_jornada_censo')}}" type="button" class=" buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a> &nbsp;Información del Censo en {{ meeting.address }}
         <a href="{{ path('pc_admin_esterilizacion_add')}}" type="button" id="ventemerg3" class="buttonborder btn btn-default pull-right"data-toggle="tooltip" data-placement="top" title="Nueva jornada de esterilización">Esterilizar</a>
         </h1>
         
@@ -15,16 +15,16 @@
                   <br>
                     <tr>
                       <th>Zona:</th>
-                      <th> </th>
+                      <th>{{meeting.address}}</th>
                     </tr>
                     <tr>
                       <th>fecha:</th>
-                      <th> </th>
+                      <th>{{meeting.createdAt | date("m/d/Y")}}</th>
                     </tr>
                 </thead>
                 </table> <!-- table de nombre zona. -->
                 <br>
-                 <a href="{{ path('pc_admin_jornada_censo_agregar')}}" id="ventemerg2" class="buttonborder  btn btn-info">Agregar datos »</a>
+                 <a href="{{ path('pc_admin_jornada_censo_agregar', {'meetingId' : meeting.id} )}}" id="fdfdfd" class="buttonborder  btn btn-info">Agregar datos »</a>
               </div>
              <div class="col-md-1 col-lg-1"></div>
              <div class="col-xs-4 col-md-5 col-lg-5">
@@ -91,11 +91,10 @@
              <table class="tabl table-striped">
               <thead>
                 <tr><td class="pest" colspan="3">información del Animal</td>
-                  <td colspan="4"></td>
+                  <td colspan="3"></td>
                   <td  class="pest" colspan="3">informacion responsable</td>
                 </tr>
                 <tr class="tdb">
-                  <th class="tdxs">#</th>
                   <th class="tdmd">Clasificación</th>
                   <th class="tdd">Rasgo</th>
                   <th class="tdd">Color</th>
@@ -108,63 +107,84 @@
                 </tr>
               </thead>
               <tbody class="tdb">
+                {% for census in censuses %}
                 <tr>
-                  <td>1</td>
-                  <td>gato</td>
-                  <td class="tdd">crio</td>
-                  <td>negro</td>
-                  <td>1</td>
-                  <td>no</td>
-                  <td><a href="{{ path('pc_admin_jornada_censo_edit')}} " id="ventemerg3" data-toggle="tooltip" data-placement="right" title="Editar información">&nbsp;<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></a></td>
-                  <td>juan</td>
-                  <td>3122345678</td>
+                  <td>
+                    {% if census.pet.gender == 'MALE' %}
+                              
+                      macho
+                              
+                      {% elseif census.pet.gender == 'FEMALE' %}
+                              
+                      hembra
+                      
+                    {%endif%}
+                  </td>
+                  <td class="tdd">{{ census.pet.race }}</td>
+                  <td>{{ census.pet.colour }}</td>
+                  <td>{{ census.pet.age }}</td>
+                  <td>
+                    {% if census.isNeedSurgery == '0' %}
+                              
+                      <strong>NO</strong>
+                              
+                      {% elseif census.isNeedSurgery == '1' %}
+                              
+                      <strong>SI</strong>
+                      
+                    {%endif%}
+                  </td>
+                  <td><a href="" id="ventemerg3" data-toggle="tooltip" data-placement="right" title="Editar información">&nbsp;<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></a></td>
+                  <td>{{ census.user.name }}</td>
+                  <td>{{ census.user.phone_number }}</td>
                   <td><a href="" data-toggle="modal" data-target="#myModal2">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a>
 
-                    <div class="modal fade bs-example-modal-sm"id="myModal2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-              <div class="modal-dialog modal-sm">
-                <div class="modal-content">
+                  <div class="modal fade bs-example-modal-sm"id="myModal2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
                   
-                  <div class="timod modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-                    <h5 class="modal-title" id="exampleModalLabel">Información de responsable<span class="btn-lg glyphicon glyphicon-user" aria-hidden="true"></span></h5>
+                        <div class="timod modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                          <h5 class="modal-title" id="exampleModalLabel">Información de responsable<span class="btn-lg glyphicon glyphicon-user" aria-hidden="true"></span></h5>
+                        </div>
+
+                        <div class="modal-body">
+                          <form>
+                            <div class="form-group">
+                              <label for="recipient-name" class="textjusti control-label">Nombre:</label>
+                              <input type="text" class="form-control" id="recipient-name"
+                              value="{{ census.user.name }}" disabled>
+                            </div>
+    
+                            <div class="form-group">
+                              <label for="recipient-name" class="textjusti control-label">Edad:</label>
+                              <input type="text" class="form-control" id="recipient-name"
+                              value="{{ census.user.age }}" disabled>
+                            </div>
+                            
+                            <div class="form-group">
+                              <label for="recipient-name" class="textjusti control-label">Dirección:</label>
+                              <input type="text" class="form-control" id="recipient-name"
+                              value="{{ census.user.address }}" disabled>
+                            </div>
+    
+                            <div class="form-group">
+                              <label for="recipient-name" class="textjusti control-label">Telefono:</label>
+                              <input type="text" class="form-control" id="recipient-name"
+                              value="{{ census.user.phone_number }}" disabled>
+                            </div>
+                          </form>
+                        </div>
+                        
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
-                   <div class="modal-body">
-                      <form>
-                        <div class="form-group">
-                          <label for="recipient-name" class="textjusti control-label">Nombre:</label>
-                          <input type="password" class="form-control" id="recipient-name"
-                          placeholder="Nombre"disabled>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="recipient-name" class="textjusti control-label">Edad:</label>
-                          <input type="password" class="form-control" id="recipient-name"
-                          placeholder="Edad"disabled>
-                        </div>
-                        <div class="form-group">
-                          <label for="recipient-name" class="textjusti control-label">Dirección:</label>
-                          <input type="password" class="form-control" id="recipient-name"
-                          placeholder="Dirección"disabled>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="recipient-name" class="textjusti control-label">Telefono:</label>
-                          <input type="password" class="form-control" id="recipient-name"
-                          placeholder="Telefono"disabled>
-                        </div>
-                      </form>
-                    </div>
-
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    </div>
-              </div>
-              </div>
-            </div>
-
                   </td>
                 </tr>
+                {% endfor %}
               </tbody>
             </table>
           </div> <!-- div close section estile-->

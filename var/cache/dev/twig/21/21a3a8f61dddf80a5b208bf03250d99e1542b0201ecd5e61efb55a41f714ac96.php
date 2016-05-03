@@ -23,31 +23,31 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_912ed45662cb1edd3812d915db2ddeed7ff5f4f298c0d7aff0fe9c910b5d5b67 = $this->env->getExtension("native_profiler");
-        $__internal_912ed45662cb1edd3812d915db2ddeed7ff5f4f298c0d7aff0fe9c910b5d5b67->enter($__internal_912ed45662cb1edd3812d915db2ddeed7ff5f4f298c0d7aff0fe9c910b5d5b67_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
+        $__internal_d7b99495fd8224bf7cfd56b89cb3ddb402342509bbeaf9b2a6e0558f228655dc = $this->env->getExtension("native_profiler");
+        $__internal_d7b99495fd8224bf7cfd56b89cb3ddb402342509bbeaf9b2a6e0558f228655dc->enter($__internal_d7b99495fd8224bf7cfd56b89cb3ddb402342509bbeaf9b2a6e0558f228655dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_912ed45662cb1edd3812d915db2ddeed7ff5f4f298c0d7aff0fe9c910b5d5b67->leave($__internal_912ed45662cb1edd3812d915db2ddeed7ff5f4f298c0d7aff0fe9c910b5d5b67_prof);
+        $__internal_d7b99495fd8224bf7cfd56b89cb3ddb402342509bbeaf9b2a6e0558f228655dc->leave($__internal_d7b99495fd8224bf7cfd56b89cb3ddb402342509bbeaf9b2a6e0558f228655dc_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_b5c8a63110379b3897df865baf483a592639f9296cfa20ec8512767100a3e6ec = $this->env->getExtension("native_profiler");
-        $__internal_b5c8a63110379b3897df865baf483a592639f9296cfa20ec8512767100a3e6ec->enter($__internal_b5c8a63110379b3897df865baf483a592639f9296cfa20ec8512767100a3e6ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_7f52490ecd6699098a5c2c8bfe540dc854a11aadbeb20ee89cb37f4dee44e611 = $this->env->getExtension("native_profiler");
+        $__internal_7f52490ecd6699098a5c2c8bfe540dc854a11aadbeb20ee89cb37f4dee44e611->enter($__internal_7f52490ecd6699098a5c2c8bfe540dc854a11aadbeb20ee89cb37f4dee44e611_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_b5c8a63110379b3897df865baf483a592639f9296cfa20ec8512767100a3e6ec->leave($__internal_b5c8a63110379b3897df865baf483a592639f9296cfa20ec8512767100a3e6ec_prof);
+        $__internal_7f52490ecd6699098a5c2c8bfe540dc854a11aadbeb20ee89cb37f4dee44e611->leave($__internal_7f52490ecd6699098a5c2c8bfe540dc854a11aadbeb20ee89cb37f4dee44e611_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_d4c62845b6275a0549d3332d062b8c105d0c51c003b53ed0551682fbb2e631b7 = $this->env->getExtension("native_profiler");
-        $__internal_d4c62845b6275a0549d3332d062b8c105d0c51c003b53ed0551682fbb2e631b7->enter($__internal_d4c62845b6275a0549d3332d062b8c105d0c51c003b53ed0551682fbb2e631b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_52bec878c3ad166f5ebde6ed50fbe6c1b25ef3abc834219cdac215f0d2c306f6 = $this->env->getExtension("native_profiler");
+        $__internal_52bec878c3ad166f5ebde6ed50fbe6c1b25ef3abc834219cdac215f0d2c306f6->enter($__internal_52bec878c3ad166f5ebde6ed50fbe6c1b25ef3abc834219cdac215f0d2c306f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         $this->displayParentBlock("body", $context, $blocks);
@@ -56,17 +56,23 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 <section>
 
 <div class=\"row\">
+  <div class=\"backfonttree\">
   <div class=\"col-md-1\"></div>
   <div class=\"col-md-10\">
-    <div class=\"jumbotron\">
-        <h1>Proceso de adopción </h1>
-        <p class=\"h1estle\">La fundación patitas callejeras en función de asegurar la integridad de los animales y el compromiso de las personas que quieren adoptar, establece una serie de actividades para definir si se cumplen con las condiciones estipuladas por la institución. </p>
-        <p class=\"h1estle\">Debe tener en cuenta los tres puntos que se muestran a continuación.</p>
-        <div class=\"alert alert-warning\">Es muy importante que leas los requisitos de adopción</div>
+      <div class=\"wor\">
+        <div class=\"col-md-6\">
+         <h3 class=\"titulosection\"><img src=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/mn.png"), "html", null, true);
+        echo "\" alt=\"\"><b>&nbsp;PROCESO DE ADOPCIÓN&nbsp;</b><img src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/m.png"), "html", null, true);
+        echo "\" alt=\"\"></h3><hr class=\"margnone\">
+        <p class=\"h1estle textjusti\">La fundación patitas callejeras en función de asegurar la integridad de los animales y el compromiso de las personas que quieren adoptar, establece una serie de actividades para definir si el adoptante cumplen con las condiciones estipuladas por la institución. </p>
+        <p class=\"h1estle\">Debe tener en cuenta los cuatro puntos que se muestran a continuación.</p>
+       <div class=\"continer\">
+        <div class=\"textjusti alert alert-info\">Es muy importante que leas los requisitos de adopción</div>
 
-  <div class=\"continer\">
-\t
-\t<button class=\"btn btn-warning\" data-toggle=\"modal\" data-target=\"#miVentana\">Ver requisitos</button>
+\t<button class=\"butglass glass butposadop\" data-toggle=\"modal\" data-target=\"#miVentana\">Ver requisitos</button>
 
 \t<div class=\"modal fade\" id=\"miVentana\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
 \t\t<div class=\"modal-dialog\">
@@ -85,49 +91,84 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 \t\t\t\t\t\t<dd>todo el nucleo familiar que convive con la persona que realiza el proceso de adopción debe estar de acuerdo con el la solicitud que esta realiza.</dd>
 \t\t\t\t\t</dl>
 \t\t\t\t</div>
-
-\t\t\t</div>
-\t\t</div>
-\t</div>
-</div>
-
+    
+    \t\t\t</div>
+    \t\t</div>
+    \t</div>
+      </div>
+    </div>
+    <div class=\"col-md-6\">
+      <img  src=\"";
+        // line 48
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/adopt.png"), "html", null, true);
+        echo "\"class=\"img-responsive\"></img>
+    </div>
+      
      </div>    
 
   </div>
   <div class=\"col-md-1\"></div>
   </div>
+  </div>
+  <br>
   <div class=\"row\">
     <div class=\"col-md-1\"></div>
      <div class=\"col-md-10\">
-        <div class=\"col-lg-4\">
-          <img class=\"img-circle\" src=\"";
-        // line 55
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/ENC.png"), "html", null, true);
+       <br>
+       <hr>
+       <div class=\"ue\"></div>
+        <div class=\"col-lg-3\">
+          <img class=\"img-circle iconadop\" src=\"";
+        // line 65
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/a1.png"), "html", null, true);
         echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
-          <h4> encuesta de adopción</h4>
-          <p>En el cuestionario trataremos los temas más importantes sobre la adopción y tendremos una visión general de la persona o familia que quiere adoptar el anima.</p>
+          <div class=\"backtwo comenterytwo\">
+\t\t\t\t\t<h4>1.  mascotas</h4>
+\t\t\t\t\t</div>
+          <p class=\"textjusti\">seleciona la mascota que deseas adoptar del  catalogo de mscotas de la fundacion Patitas Callejeras.</p>
           
        </div>
-        <div class=\"col-lg-4\">
-          <img class=\"img-circle\" src=\"";
-        // line 61
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/CAS.png"), "html", null, true);
+        <div class=\"col-lg-3\">
+          <img class=\"img-circle iconadop\" src=\"";
+        // line 73
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/a2.png"), "html", null, true);
         echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
-          <h4>Visita domiciliaria</h4>
-          <p>Después de analizar las respuestas del cuestionario, se procederá a programar una visita domiciliaria donde se analizará el ambiente y el espacio en el que vivirá la mascota.</p>
+          <div class=\"backtwo comenterytwo\">
+\t\t\t\t\t<h4>2.  encuesta de adopción</h4>
+\t\t\t\t\t</div>
+          <p class=\"textjusti\">Ingresa la información solicitada (datos personales) y responde la encuesta de perfil del adoptante para enviar la solicitud de adopción.</p>
          </div>
-        <div class=\"col-lg-4\">
-          <img class=\"img-circle\" src=\"";
-        // line 66
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/REL.png"), "html", null, true);
+        <div class=\"col-lg-3\">
+          
+          <img class=\"img-circle iconadop\" src=\"";
+        // line 81
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/a3.png"), "html", null, true);
         echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
-          <h4>Seguimiento de adaptación</h4>
-          <p>La fundación realizará un contacto posterior a la entrega de la mascota con el fin de verificar el estado de esta y las condiciones en que es mantenida, dicho contacto pueden ser visitas domiciliarias, llamadas telefónicas y/u otros medios que la fundación en su momento disponga.</p>
+           <div class=\"backtwo comenterytwo\">
+\t\t\t\t\t<h4>3.  Visita domiciliaria</h4>
+\t\t\t\t\t</div>
+           <p class=\"textjusti\">Después de verificar la solicitud de adopción la Fundación se pondrá en contacto para programas la visita residencial. </p>
+         
           </div>
-        <div class=\"col-md-1\"></div>
+          
+          <div class=\"col-lg-3\">
+          <img class=\"img-circle iconadop\" src=\"";
+        // line 90
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/a4.png"), "html", null, true);
+        echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
+          <div class=\"backtwo comenterytwo\">
+\t\t\t\t\t<h4>4.  Seguimiento de adopcion</h4>
+\t\t\t\t\t</div>
+          <p class=\"textjusti\">La fundación programara con el adoptante visitas para verificar la adaptación de la mascota en su nuevo hogar. </p>
+          <hr>
+          </div>
+
+        
       </div>
+      <div class=\"col-md-1\"></div>
     </div>
-</div>
+
+<br>
 <div class=\"row\">
   <div class=\"col-md-1\"></div>
   <div class=\"col-md-10\">
@@ -141,33 +182,35 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
         <!-- Tab panes -->
         <div class=\"tab-content\">
           <!-- Tab panel 1 perritos contentet-->
-        <div role=\"tabpanel\" class=\"conmargin tab-pane fade in active\" id=\"home\">
+        <div role=\"tabpanel\" class=\"fonadop conmargin tab-pane fade in active\" id=\"home\">
           
       <div class=\"row\">
            ";
-        // line 90
+        // line 120
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pets"]) ? $context["pets"] : $this->getContext($context, "pets")));
         foreach ($context['_seq'] as $context["_key"] => $context["pet"]) {
-            // line 91
-            echo "           ";
-            if (($this->getAttribute($context["pet"], "species", array()) == "CANINE")) {
-                // line 92
+            // line 121
+            echo "           
+           ";
+            // line 122
+            if ((($this->getAttribute($context["pet"], "species", array()) == "CANINE") && ($this->getAttribute($context["pet"], "status", array()) != "ADOPTED"))) {
+                // line 123
                 echo "          <div class=\"col-md-4\">
             <div class=\"conteneter\">
               <a  class=\"links2\"  data-toggle=\"modal\" data-target=\"#ventanaadoptardog";
-                // line 94
+                // line 125
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "id", array()), "html", null, true);
                 echo "\" href=\"\"> 
               <div class=\"banername back1\">
                       
                   <img src=\"";
-                // line 97
+                // line 128
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
                 echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
                   <h3 class=\"namemasct\"><b>";
-                // line 99
+                // line 130
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "name", array()), "html", null, true);
                 echo "</b></h3>
                 
@@ -176,91 +219,108 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
             <ul>
               <li><label>Edad:</label>
               <span>";
-                // line 105
+                // line 136
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "age", array()), "html", null, true);
                 echo "&nbsp;años.</span></li>
 
               <li><label>Sexo:</label>
               ";
-                // line 108
+                // line 139
                 if (($this->getAttribute($context["pet"], "gender", array()) == "MALE")) {
-                    // line 109
+                    // line 140
                     echo "                              
               <span>macho</span></li>
               
               ";
-                } elseif (($this->getAttribute(                // line 112
+                } elseif (($this->getAttribute(                // line 143
 $context["pet"], "gender", array()) == "FEMALE")) {
-                    // line 113
+                    // line 144
                     echo "              
               <span>hembra</span></li>
                               
               ";
                 }
-                // line 117
+                // line 148
                 echo "              
             </ul>
           </div></a>
           
           \t<div class=\"modal fade\" id=\"ventanaadoptardog";
-                // line 121
+                // line 152
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "id", array()), "html", null, true);
                 echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
           \t\t<div class=\"modal-dialog\">
 \t\t        \t<div class=\"modal-content\">
-\t\t      \t\t<div class=\"alert alert-info modal-header\">
+\t\t      \t\t<div class=\"timod modal-header\">
 \t\t    \t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" area-hidden=\"true\"></button>
-\t\t\t    \t<h4 class=\"pull-left\"><b>Adoptar</b></h4>
+\t\t\t    \t<h4 class=\"modal-title\"><b>Adoptar</b></h4>
 \t\t\t    \t</div>
 \t\t\t    \t<div class=\"modal-body\">
-\t\t\t\t\t
-\t\t\t  \t\t<dl class=\"textjusti dl-horizontal\">
-\t\t\t\t  \t\t<dt><img src=\"";
-                // line 131
+\t\t\t    \t \t  <div class=\"row\">
+\t\t\t  \t\t    <div class=\"col-md-6\">
+\t\t\t  \t\t      <img src=\"";
+                // line 162
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
-                echo "\" class=\"imgadop img-thumbnail img-responsive\" alt=\"\"></dt>
-\t\t\t\t        <dd>
-\t\t\t\t          <table class=\"table\">
-                   <tr><td><b>Nombre:</b></td><td>";
-                // line 134
+                echo "\" class=\"img-responsive\" alt=\"\">
+\t\t\t  \t\t    </div>
+\t\t\t  \t\t     <div class=\"col-md-6\">
+\t\t\t  \t\t       <br>
+\t\t\t  \t\t       <table class=\"table table-striped textjusti\">
+                    <tr>
+                      <th class=\"tdd\">Nombre:</th>
+                      <td>";
+                // line 169
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "name", array()), "html", null, true);
-                echo "</td></tr>
-                   <tr><td><b>Edad:</b></td><td>";
-                // line 135
+                echo "</td>
+                    </tr>
+                    <tr>
+                      <th>raza:</th>
+                      <td>";
+                // line 173
+                echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "race", array()), "html", null, true);
+                echo "</td>
+                    </tr>
+                    <tr>
+                      <th>Edad:</th>
+                      <td>";
+                // line 177
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "age", array()), "html", null, true);
-                echo "&nbsp;años.</td></tr>
-                   <tr><td><b>sexo:</b></td><td>
-                     ";
-                // line 137
+                echo "&nbsp;años.</td>
+                    </tr>
+                    <tr>
+                      <th>Color:</th>
+                      <td>";
+                // line 181
+                echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "colour", array()), "html", null, true);
+                echo "</td>
+                    </tr>
+                    <tr>
+                      <th>sexo:</th>
+                      <td>
+                        ";
+                // line 186
                 if (($this->getAttribute($context["pet"], "gender", array()) == "MALE")) {
-                    // line 138
+                    // line 187
                     echo "                       macho
                      ";
-                } elseif (($this->getAttribute(                // line 139
+                } elseif (($this->getAttribute(                // line 188
 $context["pet"], "gender", array()) == "FEMALE")) {
-                    // line 140
+                    // line 189
                     echo "                       hembra
                      ";
                 }
-                // line 142
-                echo "                     </td></tr>
-                   <tr><td><b>Color:</b></td><td>";
-                // line 143
-                echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "colour", array()), "html", null, true);
-                echo "</td></tr>
-                   <tr><td><b>raza:</b></td><td>";
-                // line 144
-                echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "race", array()), "html", null, true);
-                echo "</td></tr>
+                // line 191
+                echo "                     </td>
+                    </tr>
                   </table>
-\t\t\t\t        </dd>
-\t\t\t\t      \t</dl>
+\t\t\t  \t\t    </div>
+\t\t\t  \t\t  </div>
 \t\t\t\t      </div>
 \t\t\t\t  <div class=\"modal-footer\">
-\t\t\t\t <p><a class=\"btn btn-info\" href=\"";
-                // line 150
+\t\t\t\t <p><a class=\"buttonborder  btn btn-primary\" href=\"";
+                // line 198
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_user_encuesta", array("petId" => $this->getAttribute($context["pet"], "id", array()))), "html", null, true);
-                echo "\" target=\"_blank\" role=\"button\" id=\"ventemerg\">Adoptar mascota</a></p>
+                echo "\" target=\"_blank\" role=\"button\">Adoptar mascota</a></p>
 \t\t\t  \t</div>
 \t\t  \t</div>
 \t  \t</div>
@@ -269,47 +329,47 @@ $context["pet"], "gender", array()) == "FEMALE")) {
       </div>
       ";
             }
-            // line 158
+            // line 206
             echo "      ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pet'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 159
+        // line 207
         echo "  </div>
         </div>
 
 
 
         <!-- tab panel 2 gaticos contenet-->
-        <div role=\"tabpanel\" class=\"conmargin tab-pane fade\" id=\"profile\">
+        <div role=\"tabpanel\" class=\"fonadop conmargin tab-pane fade\" id=\"profile\">
 
           <div class=\"row\">
             
             ";
-        // line 169
+        // line 217
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pets"]) ? $context["pets"] : $this->getContext($context, "pets")));
         foreach ($context['_seq'] as $context["_key"] => $context["pet"]) {
-            // line 170
+            // line 218
             echo "           ";
-            if (($this->getAttribute($context["pet"], "species", array()) == "FELINE")) {
-                // line 171
+            if ((($this->getAttribute($context["pet"], "species", array()) == "FELINE") && ($this->getAttribute($context["pet"], "status", array()) != "ADOPTED"))) {
+                // line 219
                 echo "          <div class=\"col-md-4\">
             <div class=\"conteneter\">
               <a  class=\"links2\"  data-toggle=\"modal\" data-target=\"#ventanaadoptarcat";
-                // line 173
+                // line 221
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "id", array()), "html", null, true);
                 echo "\" href=\"\"> 
               <div class=\"banername back1\">
                       
                   <img src=\"";
-                // line 176
+                // line 224
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
                 echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
                   <h3 class=\"namemasct\"><b>";
-                // line 178
+                // line 226
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "name", array()), "html", null, true);
                 echo "</b></h3>
                 
@@ -318,91 +378,108 @@ $context["pet"], "gender", array()) == "FEMALE")) {
             <ul>
               <li><label>Edad:</label>
               <span>";
-                // line 184
+                // line 232
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "age", array()), "html", null, true);
                 echo "&nbsp;años.</span></li>
 
               <li><label>Sexo:</label>
               ";
-                // line 187
+                // line 235
                 if (($this->getAttribute($context["pet"], "gender", array()) == "MALE")) {
-                    // line 188
+                    // line 236
                     echo "                              
               <span>macho</span></li>
               
               ";
-                } elseif (($this->getAttribute(                // line 191
+                } elseif (($this->getAttribute(                // line 239
 $context["pet"], "gender", array()) == "FEMALE")) {
-                    // line 192
+                    // line 240
                     echo "              
               <span>hembra</span></li>
                               
               ";
                 }
-                // line 196
+                // line 244
                 echo "              
             </ul>
           </div></a>
           
-          \t<div class=\"modal fade\" id=\"ventanaadoptarcat";
-                // line 200
+          \t \t<div class=\"modal fade\" id=\"ventanaadoptarcat";
+                // line 248
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "id", array()), "html", null, true);
                 echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
           \t\t<div class=\"modal-dialog\">
 \t\t        \t<div class=\"modal-content\">
-\t\t      \t\t<div class=\"alert alert-info modal-header\">
+\t\t      \t\t<div class=\"timod modal-header\">
 \t\t    \t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" area-hidden=\"true\"></button>
-\t\t\t    \t<h4 class=\"pull-left\"><b>Adoptar</b></h4>
+\t\t\t    \t<h4 class=\"modal-title\"><b>Adoptar</b></h4>
 \t\t\t    \t</div>
 \t\t\t    \t<div class=\"modal-body\">
-\t\t\t\t\t
-\t\t\t  \t\t<dl class=\"textjusti dl-horizontal\">
-\t\t\t\t  \t\t<dt><img src=\"";
-                // line 210
+\t\t\t    \t \t  <div class=\"row\">
+\t\t\t  \t\t    <div class=\"col-md-6\">
+\t\t\t  \t\t      <img src=\"";
+                // line 258
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
-                echo "\" class=\"imgadop img-thumbnail img-responsive\" alt=\"\"></dt>
-\t\t\t\t        <dd>
-\t\t\t\t          <table class=\"table\">
-                   <tr><td><b>Nombre:</b></td><td>";
-                // line 213
+                echo "\" class=\"img-responsive\" alt=\"\">
+\t\t\t  \t\t    </div>
+\t\t\t  \t\t     <div class=\"col-md-6\">
+\t\t\t  \t\t       <br>
+\t\t\t  \t\t       <table class=\"table table-striped textjusti\">
+                    <tr>
+                      <th class=\"tdd\">Nombre:</th>
+                      <td>";
+                // line 265
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "name", array()), "html", null, true);
-                echo "</td></tr>
-                   <tr><td><b>Edad:</b></td><td>";
-                // line 214
+                echo "</td>
+                    </tr>
+                    <tr>
+                      <th>raza:</th>
+                      <td>";
+                // line 269
+                echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "race", array()), "html", null, true);
+                echo "</td>
+                    </tr>
+                    <tr>
+                      <th>Edad:</th>
+                      <td>";
+                // line 273
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "age", array()), "html", null, true);
-                echo "&nbsp;años.</td></tr>
-                   <tr><td><b>sexo:</b></td><td>
-                     ";
-                // line 216
+                echo "&nbsp;años.</td>
+                    </tr>
+                    <tr>
+                      <th>Color:</th>
+                      <td>";
+                // line 277
+                echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "colour", array()), "html", null, true);
+                echo "</td>
+                    </tr>
+                    <tr>
+                      <th>sexo:</th>
+                      <td>
+                        ";
+                // line 282
                 if (($this->getAttribute($context["pet"], "gender", array()) == "MALE")) {
-                    // line 217
+                    // line 283
                     echo "                       macho
                      ";
-                } elseif (($this->getAttribute(                // line 218
+                } elseif (($this->getAttribute(                // line 284
 $context["pet"], "gender", array()) == "FEMALE")) {
-                    // line 219
+                    // line 285
                     echo "                       hembra
                      ";
                 }
-                // line 221
-                echo "                     </td></tr>
-                   <tr><td><b>Color:</b></td><td>";
-                // line 222
-                echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "colour", array()), "html", null, true);
-                echo "</td></tr>
-                   <tr><td><b>raza:</b></td><td>";
-                // line 223
-                echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "race", array()), "html", null, true);
-                echo "</td></tr>
+                // line 287
+                echo "                     </td>
+                    </tr>
                   </table>
-\t\t\t\t        </dd>
-\t\t\t\t      \t</dl>
+\t\t\t  \t\t    </div>
+\t\t\t  \t\t  </div>
 \t\t\t\t      </div>
 \t\t\t\t  <div class=\"modal-footer\">
-\t\t\t\t <p><a class=\"btn btn-info\" href=\"";
-                // line 229
+\t\t\t\t <p><a class=\"buttonborder  btn btn-primary\" href=\"";
+                // line 294
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_user_encuesta", array("petId" => $this->getAttribute($context["pet"], "id", array()))), "html", null, true);
-                echo "\" target=\"_blank\" role=\"button\" id=\"ventemerg\">Adoptar mascota</a></p>
+                echo "\" target=\"_blank\" role=\"button\">Adoptar mascota</a></p>
 \t\t\t  \t</div>
 \t\t  \t</div>
 \t  \t</div>
@@ -411,13 +488,13 @@ $context["pet"], "gender", array()) == "FEMALE")) {
       </div>
       ";
             }
-            // line 237
+            // line 302
             echo "      ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pet'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 238
+        // line 303
         echo "          
   </div>
  
@@ -435,27 +512,27 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 </section>
 ";
         
-        $__internal_d4c62845b6275a0549d3332d062b8c105d0c51c003b53ed0551682fbb2e631b7->leave($__internal_d4c62845b6275a0549d3332d062b8c105d0c51c003b53ed0551682fbb2e631b7_prof);
+        $__internal_52bec878c3ad166f5ebde6ed50fbe6c1b25ef3abc834219cdac215f0d2c306f6->leave($__internal_52bec878c3ad166f5ebde6ed50fbe6c1b25ef3abc834219cdac215f0d2c306f6_prof);
 
     }
 
-    // line 254
+    // line 319
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_241331a786d6322dc57397018c07cbd21c0af8dec4ec4180e775d9c2efd62aac = $this->env->getExtension("native_profiler");
-        $__internal_241331a786d6322dc57397018c07cbd21c0af8dec4ec4180e775d9c2efd62aac->enter($__internal_241331a786d6322dc57397018c07cbd21c0af8dec4ec4180e775d9c2efd62aac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_8a3a6239e4907216af7949ba8104badf4abc3d76ced0db024a455bc7d72c8f7d = $this->env->getExtension("native_profiler");
+        $__internal_8a3a6239e4907216af7949ba8104badf4abc3d76ced0db024a455bc7d72c8f7d->enter($__internal_8a3a6239e4907216af7949ba8104badf4abc3d76ced0db024a455bc7d72c8f7d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 255
+        // line 320
         echo " ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
  <script src=\"";
-        // line 256
+        // line 321
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("https://code.jquery.com/jquery-latest.js"), "html", null, true);
         echo "\"></script>
  ";
         
-        $__internal_241331a786d6322dc57397018c07cbd21c0af8dec4ec4180e775d9c2efd62aac->leave($__internal_241331a786d6322dc57397018c07cbd21c0af8dec4ec4180e775d9c2efd62aac_prof);
+        $__internal_8a3a6239e4907216af7949ba8104badf4abc3d76ced0db024a455bc7d72c8f7d->leave($__internal_8a3a6239e4907216af7949ba8104badf4abc3d76ced0db024a455bc7d72c8f7d_prof);
 
     }
 
@@ -471,7 +548,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 
     public function getDebugInfo()
     {
-        return array (  454 => 256,  449 => 255,  443 => 254,  421 => 238,  415 => 237,  404 => 229,  395 => 223,  391 => 222,  388 => 221,  384 => 219,  382 => 218,  379 => 217,  377 => 216,  372 => 214,  368 => 213,  362 => 210,  349 => 200,  343 => 196,  337 => 192,  335 => 191,  330 => 188,  328 => 187,  322 => 184,  313 => 178,  308 => 176,  302 => 173,  298 => 171,  295 => 170,  291 => 169,  279 => 159,  273 => 158,  262 => 150,  253 => 144,  249 => 143,  246 => 142,  242 => 140,  240 => 139,  237 => 138,  235 => 137,  230 => 135,  226 => 134,  220 => 131,  207 => 121,  201 => 117,  195 => 113,  193 => 112,  188 => 109,  186 => 108,  180 => 105,  171 => 99,  166 => 97,  160 => 94,  156 => 92,  153 => 91,  149 => 90,  122 => 66,  114 => 61,  105 => 55,  53 => 6,  47 => 5,  36 => 2,  11 => 1,);
+        return array (  531 => 321,  526 => 320,  520 => 319,  498 => 303,  492 => 302,  481 => 294,  472 => 287,  468 => 285,  466 => 284,  463 => 283,  461 => 282,  453 => 277,  446 => 273,  439 => 269,  432 => 265,  422 => 258,  409 => 248,  403 => 244,  397 => 240,  395 => 239,  390 => 236,  388 => 235,  382 => 232,  373 => 226,  368 => 224,  362 => 221,  358 => 219,  355 => 218,  351 => 217,  339 => 207,  333 => 206,  322 => 198,  313 => 191,  309 => 189,  307 => 188,  304 => 187,  302 => 186,  294 => 181,  287 => 177,  280 => 173,  273 => 169,  263 => 162,  250 => 152,  244 => 148,  238 => 144,  236 => 143,  231 => 140,  229 => 139,  223 => 136,  214 => 130,  209 => 128,  203 => 125,  199 => 123,  197 => 122,  194 => 121,  190 => 120,  157 => 90,  145 => 81,  134 => 73,  123 => 65,  103 => 48,  66 => 16,  53 => 6,  47 => 5,  36 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
@@ -484,17 +561,18 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /* <section>*/
 /* */
 /* <div class="row">*/
+/*   <div class="backfonttree">*/
 /*   <div class="col-md-1"></div>*/
 /*   <div class="col-md-10">*/
-/*     <div class="jumbotron">*/
-/*         <h1>Proceso de adopción </h1>*/
-/*         <p class="h1estle">La fundación patitas callejeras en función de asegurar la integridad de los animales y el compromiso de las personas que quieren adoptar, establece una serie de actividades para definir si se cumplen con las condiciones estipuladas por la institución. </p>*/
-/*         <p class="h1estle">Debe tener en cuenta los tres puntos que se muestran a continuación.</p>*/
-/*         <div class="alert alert-warning">Es muy importante que leas los requisitos de adopción</div>*/
+/*       <div class="wor">*/
+/*         <div class="col-md-6">*/
+/*          <h3 class="titulosection"><img src="{{ asset('public/img/mn.png')}}" alt=""><b>&nbsp;PROCESO DE ADOPCIÓN&nbsp;</b><img src="{{ asset('public/img/m.png')}}" alt=""></h3><hr class="margnone">*/
+/*         <p class="h1estle textjusti">La fundación patitas callejeras en función de asegurar la integridad de los animales y el compromiso de las personas que quieren adoptar, establece una serie de actividades para definir si el adoptante cumplen con las condiciones estipuladas por la institución. </p>*/
+/*         <p class="h1estle">Debe tener en cuenta los cuatro puntos que se muestran a continuación.</p>*/
+/*        <div class="continer">*/
+/*         <div class="textjusti alert alert-info">Es muy importante que leas los requisitos de adopción</div>*/
 /* */
-/*   <div class="continer">*/
-/* 	*/
-/* 	<button class="btn btn-warning" data-toggle="modal" data-target="#miVentana">Ver requisitos</button>*/
+/* 	<button class="butglass glass butposadop" data-toggle="modal" data-target="#miVentana">Ver requisitos</button>*/
 /* */
 /* 	<div class="modal fade" id="miVentana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">*/
 /* 		<div class="modal-dialog">*/
@@ -513,40 +591,69 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /* 						<dd>todo el nucleo familiar que convive con la persona que realiza el proceso de adopción debe estar de acuerdo con el la solicitud que esta realiza.</dd>*/
 /* 					</dl>*/
 /* 				</div>*/
-/* */
-/* 			</div>*/
-/* 		</div>*/
-/* 	</div>*/
-/* </div>*/
-/* */
+/*     */
+/*     			</div>*/
+/*     		</div>*/
+/*     	</div>*/
+/*       </div>*/
+/*     </div>*/
+/*     <div class="col-md-6">*/
+/*       <img  src="{{ asset('public/img/adopt.png')}}"class="img-responsive"></img>*/
+/*     </div>*/
+/*       */
 /*      </div>    */
 /* */
 /*   </div>*/
 /*   <div class="col-md-1"></div>*/
 /*   </div>*/
+/*   </div>*/
+/*   <br>*/
 /*   <div class="row">*/
 /*     <div class="col-md-1"></div>*/
 /*      <div class="col-md-10">*/
-/*         <div class="col-lg-4">*/
-/*           <img class="img-circle" src="{{ asset('public/img/ENC.png') }}" alt="Generic placeholder image" width="140" height="140">*/
-/*           <h4> encuesta de adopción</h4>*/
-/*           <p>En el cuestionario trataremos los temas más importantes sobre la adopción y tendremos una visión general de la persona o familia que quiere adoptar el anima.</p>*/
+/*        <br>*/
+/*        <hr>*/
+/*        <div class="ue"></div>*/
+/*         <div class="col-lg-3">*/
+/*           <img class="img-circle iconadop" src="{{ asset('public/img/a1.png') }}" alt="Generic placeholder image" width="140" height="140">*/
+/*           <div class="backtwo comenterytwo">*/
+/* 					<h4>1.  mascotas</h4>*/
+/* 					</div>*/
+/*           <p class="textjusti">seleciona la mascota que deseas adoptar del  catalogo de mscotas de la fundacion Patitas Callejeras.</p>*/
 /*           */
 /*        </div>*/
-/*         <div class="col-lg-4">*/
-/*           <img class="img-circle" src="{{asset('public/img/CAS.png')}}" alt="Generic placeholder image" width="140" height="140">*/
-/*           <h4>Visita domiciliaria</h4>*/
-/*           <p>Después de analizar las respuestas del cuestionario, se procederá a programar una visita domiciliaria donde se analizará el ambiente y el espacio en el que vivirá la mascota.</p>*/
+/*         <div class="col-lg-3">*/
+/*           <img class="img-circle iconadop" src="{{asset('public/img/a2.png')}}" alt="Generic placeholder image" width="140" height="140">*/
+/*           <div class="backtwo comenterytwo">*/
+/* 					<h4>2.  encuesta de adopción</h4>*/
+/* 					</div>*/
+/*           <p class="textjusti">Ingresa la información solicitada (datos personales) y responde la encuesta de perfil del adoptante para enviar la solicitud de adopción.</p>*/
 /*          </div>*/
-/*         <div class="col-lg-4">*/
-/*           <img class="img-circle" src="{{asset('public/img/REL.png')}}" alt="Generic placeholder image" width="140" height="140">*/
-/*           <h4>Seguimiento de adaptación</h4>*/
-/*           <p>La fundación realizará un contacto posterior a la entrega de la mascota con el fin de verificar el estado de esta y las condiciones en que es mantenida, dicho contacto pueden ser visitas domiciliarias, llamadas telefónicas y/u otros medios que la fundación en su momento disponga.</p>*/
+/*         <div class="col-lg-3">*/
+/*           */
+/*           <img class="img-circle iconadop" src="{{asset('public/img/a3.png')}}" alt="Generic placeholder image" width="140" height="140">*/
+/*            <div class="backtwo comenterytwo">*/
+/* 					<h4>3.  Visita domiciliaria</h4>*/
+/* 					</div>*/
+/*            <p class="textjusti">Después de verificar la solicitud de adopción la Fundación se pondrá en contacto para programas la visita residencial. </p>*/
+/*          */
 /*           </div>*/
-/*         <div class="col-md-1"></div>*/
+/*           */
+/*           <div class="col-lg-3">*/
+/*           <img class="img-circle iconadop" src="{{asset('public/img/a4.png')}}" alt="Generic placeholder image" width="140" height="140">*/
+/*           <div class="backtwo comenterytwo">*/
+/* 					<h4>4.  Seguimiento de adopcion</h4>*/
+/* 					</div>*/
+/*           <p class="textjusti">La fundación programara con el adoptante visitas para verificar la adaptación de la mascota en su nuevo hogar. </p>*/
+/*           <hr>*/
+/*           </div>*/
+/* */
+/*         */
 /*       </div>*/
+/*       <div class="col-md-1"></div>*/
 /*     </div>*/
-/* </div>*/
+/* */
+/* <br>*/
 /* <div class="row">*/
 /*   <div class="col-md-1"></div>*/
 /*   <div class="col-md-10">*/
@@ -560,11 +667,12 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /*         <!-- Tab panes -->*/
 /*         <div class="tab-content">*/
 /*           <!-- Tab panel 1 perritos contentet-->*/
-/*         <div role="tabpanel" class="conmargin tab-pane fade in active" id="home">*/
+/*         <div role="tabpanel" class="fonadop conmargin tab-pane fade in active" id="home">*/
 /*           */
 /*       <div class="row">*/
 /*            {% for pet in pets %}*/
-/*            {% if pet.species == 'CANINE' %}*/
+/*            */
+/*            {% if pet.species == 'CANINE' and pet.status != 'ADOPTED' %}*/
 /*           <div class="col-md-4">*/
 /*             <div class="conteneter">*/
 /*               <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptardog{{pet.id}}" href=""> */
@@ -597,33 +705,50 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /*           	<div class="modal fade" id="ventanaadoptardog{{pet.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">*/
 /*           		<div class="modal-dialog">*/
 /* 		        	<div class="modal-content">*/
-/* 		      		<div class="alert alert-info modal-header">*/
+/* 		      		<div class="timod modal-header">*/
 /* 		    		<button type="button" class="close" data-dismiss="modal" area-hidden="true"></button>*/
-/* 			    	<h4 class="pull-left"><b>Adoptar</b></h4>*/
+/* 			    	<h4 class="modal-title"><b>Adoptar</b></h4>*/
 /* 			    	</div>*/
 /* 			    	<div class="modal-body">*/
-/* 					*/
-/* 			  		<dl class="textjusti dl-horizontal">*/
-/* 				  		<dt><img src="{{asset('public/img/pnot.png')}}" class="imgadop img-thumbnail img-responsive" alt=""></dt>*/
-/* 				        <dd>*/
-/* 				          <table class="table">*/
-/*                    <tr><td><b>Nombre:</b></td><td>{{ pet.name }}</td></tr>*/
-/*                    <tr><td><b>Edad:</b></td><td>{{ pet.age }}&nbsp;años.</td></tr>*/
-/*                    <tr><td><b>sexo:</b></td><td>*/
-/*                      {% if pet.gender == 'MALE'%}*/
+/* 			    	 	  <div class="row">*/
+/* 			  		    <div class="col-md-6">*/
+/* 			  		      <img src="{{asset('public/img/pnot.png')}}" class="img-responsive" alt="">*/
+/* 			  		    </div>*/
+/* 			  		     <div class="col-md-6">*/
+/* 			  		       <br>*/
+/* 			  		       <table class="table table-striped textjusti">*/
+/*                     <tr>*/
+/*                       <th class="tdd">Nombre:</th>*/
+/*                       <td>{{ pet.name }}</td>*/
+/*                     </tr>*/
+/*                     <tr>*/
+/*                       <th>raza:</th>*/
+/*                       <td>{{ pet.race }}</td>*/
+/*                     </tr>*/
+/*                     <tr>*/
+/*                       <th>Edad:</th>*/
+/*                       <td>{{ pet.age }}&nbsp;años.</td>*/
+/*                     </tr>*/
+/*                     <tr>*/
+/*                       <th>Color:</th>*/
+/*                       <td>{{ pet.colour }}</td>*/
+/*                     </tr>*/
+/*                     <tr>*/
+/*                       <th>sexo:</th>*/
+/*                       <td>*/
+/*                         {% if pet.gender == 'MALE'%}*/
 /*                        macho*/
 /*                      {% elseif pet.gender == 'FEMALE'%}*/
 /*                        hembra*/
 /*                      {%endif%}*/
-/*                      </td></tr>*/
-/*                    <tr><td><b>Color:</b></td><td>{{ pet.colour }}</td></tr>*/
-/*                    <tr><td><b>raza:</b></td><td>{{ pet.race }}</td></tr>*/
+/*                      </td>*/
+/*                     </tr>*/
 /*                   </table>*/
-/* 				        </dd>*/
-/* 				      	</dl>*/
+/* 			  		    </div>*/
+/* 			  		  </div>*/
 /* 				      </div>*/
 /* 				  <div class="modal-footer">*/
-/* 				 <p><a class="btn btn-info" href="{{ path('pc_user_encuesta', {'petId' : pet.id }) }}" target="_blank" role="button" id="ventemerg">Adoptar mascota</a></p>*/
+/* 				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta',{'petId' : pet.id }) }}" target="_blank" role="button">Adoptar mascota</a></p>*/
 /* 			  	</div>*/
 /* 		  	</div>*/
 /* 	  	</div>*/
@@ -638,12 +763,12 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /* */
 /* */
 /*         <!-- tab panel 2 gaticos contenet-->*/
-/*         <div role="tabpanel" class="conmargin tab-pane fade" id="profile">*/
+/*         <div role="tabpanel" class="fonadop conmargin tab-pane fade" id="profile">*/
 /* */
 /*           <div class="row">*/
 /*             */
 /*             {% for pet in pets %}*/
-/*            {% if pet.species == 'FELINE' %}*/
+/*            {% if pet.species == 'FELINE' and pet.status != 'ADOPTED'  %}*/
 /*           <div class="col-md-4">*/
 /*             <div class="conteneter">*/
 /*               <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptarcat{{pet.id}}" href=""> */
@@ -673,36 +798,53 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /*             </ul>*/
 /*           </div></a>*/
 /*           */
-/*           	<div class="modal fade" id="ventanaadoptarcat{{pet.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">*/
+/*           	 	<div class="modal fade" id="ventanaadoptarcat{{pet.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">*/
 /*           		<div class="modal-dialog">*/
 /* 		        	<div class="modal-content">*/
-/* 		      		<div class="alert alert-info modal-header">*/
+/* 		      		<div class="timod modal-header">*/
 /* 		    		<button type="button" class="close" data-dismiss="modal" area-hidden="true"></button>*/
-/* 			    	<h4 class="pull-left"><b>Adoptar</b></h4>*/
+/* 			    	<h4 class="modal-title"><b>Adoptar</b></h4>*/
 /* 			    	</div>*/
 /* 			    	<div class="modal-body">*/
-/* 					*/
-/* 			  		<dl class="textjusti dl-horizontal">*/
-/* 				  		<dt><img src="{{asset('public/img/gnot.png')}}" class="imgadop img-thumbnail img-responsive" alt=""></dt>*/
-/* 				        <dd>*/
-/* 				          <table class="table">*/
-/*                    <tr><td><b>Nombre:</b></td><td>{{ pet.name }}</td></tr>*/
-/*                    <tr><td><b>Edad:</b></td><td>{{ pet.age }}&nbsp;años.</td></tr>*/
-/*                    <tr><td><b>sexo:</b></td><td>*/
-/*                      {% if pet.gender == 'MALE'%}*/
+/* 			    	 	  <div class="row">*/
+/* 			  		    <div class="col-md-6">*/
+/* 			  		      <img src="{{asset('public/img/gnot.png')}}" class="img-responsive" alt="">*/
+/* 			  		    </div>*/
+/* 			  		     <div class="col-md-6">*/
+/* 			  		       <br>*/
+/* 			  		       <table class="table table-striped textjusti">*/
+/*                     <tr>*/
+/*                       <th class="tdd">Nombre:</th>*/
+/*                       <td>{{ pet.name }}</td>*/
+/*                     </tr>*/
+/*                     <tr>*/
+/*                       <th>raza:</th>*/
+/*                       <td>{{ pet.race }}</td>*/
+/*                     </tr>*/
+/*                     <tr>*/
+/*                       <th>Edad:</th>*/
+/*                       <td>{{ pet.age }}&nbsp;años.</td>*/
+/*                     </tr>*/
+/*                     <tr>*/
+/*                       <th>Color:</th>*/
+/*                       <td>{{ pet.colour }}</td>*/
+/*                     </tr>*/
+/*                     <tr>*/
+/*                       <th>sexo:</th>*/
+/*                       <td>*/
+/*                         {% if pet.gender == 'MALE'%}*/
 /*                        macho*/
 /*                      {% elseif pet.gender == 'FEMALE'%}*/
 /*                        hembra*/
 /*                      {%endif%}*/
-/*                      </td></tr>*/
-/*                    <tr><td><b>Color:</b></td><td>{{ pet.colour }}</td></tr>*/
-/*                    <tr><td><b>raza:</b></td><td>{{ pet.race }}</td></tr>*/
+/*                      </td>*/
+/*                     </tr>*/
 /*                   </table>*/
-/* 				        </dd>*/
-/* 				      	</dl>*/
+/* 			  		    </div>*/
+/* 			  		  </div>*/
 /* 				      </div>*/
 /* 				  <div class="modal-footer">*/
-/* 				 <p><a class="btn btn-info" href="{{ path('pc_user_encuesta', {'petId' : pet.id })}}" target="_blank" role="button" id="ventemerg">Adoptar mascota</a></p>*/
+/* 				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta', {'petId' : pet.id }) }}" target="_blank" role="button">Adoptar mascota</a></p>*/
 /* 			  	</div>*/
 /* 		  	</div>*/
 /* 	  	</div>*/

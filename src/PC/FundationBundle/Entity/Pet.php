@@ -87,6 +87,13 @@ class Pet
      * @ORM\Column(name="is_sterilized", type="boolean")
      */
     private $isSterilized;
+    
+    /**
+     * @var string
+     * 
+     * @ORM\Column(name="status", type="string", columnDefinition="ENUM('UNADOPTED', 'PENDING', 'ADOPTED', 'EXTERNAL')", length=50)
+     */
+    private $status;
 
 
     public function __construct()
@@ -364,5 +371,29 @@ class Pet
     public function getCredits()
     {
         return $this->credits;
+    }
+    
+    /**
+     * Set status
+     *
+     * @param string $status
+     *
+     * @return Pet
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 }

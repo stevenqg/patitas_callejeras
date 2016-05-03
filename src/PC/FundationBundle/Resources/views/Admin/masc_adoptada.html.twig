@@ -1,0 +1,47 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+		
+			<h1 class="coloralert">Mascotas Adoptadas</h1><hr>
+			<br>
+		<div class="sectionsile">
+			
+			 <table class="tabl table-striped">
+              <thead>
+                <tr><td class="pest" colspan="3">Adoptante</td>
+                </tr>
+                <tr class="tdb">
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th class="tdxs">Edad</th>
+                  <th>Teléfono</th>
+                  <th>Dirección</th>
+                  <th>Correo</th>
+                  <th class="bdleft">Mascota</th>
+                  <th>Edad mascota</th>
+                  <th>Estado solicitud</th>
+                  <th class="tdxs">visita</th>
+                </tr>
+              </thead>
+              <tbody class="tdb">
+              {% for adoption in adoptions %}
+              <tr>
+                  <td>{{ adoption.user.name }}</td>
+                  <td>{{ adoption.user.lastName }}</td>
+                  <td>{{ adoption.user.age }}</td>
+                  <td>{{ adoption.user.phone_number }}</td>
+                  <td>{{ adoption.user.address }}</td>
+                  <td>{{ adoption.user.email }}</td>
+                  <td class="bdleft">{{ adoption.pet.name }}</td>
+                  <td class="tdxs">{{ adoption.pet.age }}</td>
+                  <td>{{ adoption.status }}</td>
+                  
+                  <td><a href="" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                </tr>
+                {% endfor%}
+              </tbody>
+            </table>
+
+			
+		</div><!--div close sectionstile 2 -->
+	</div>
+	{% endblock %}

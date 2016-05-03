@@ -64,10 +64,10 @@ class Pet extends \PC\FundationBundle\Entity\Pet implements \Doctrine\ORM\Proxy\
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', 'photos', 'credits', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'species', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'race', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'colour', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'gender', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isVacunated', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isSterilized'];
+            return ['__isInitialized__', 'photos', 'credits', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'species', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'race', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'colour', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'gender', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isVacunated', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isSterilized', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'status'];
         }
 
-        return ['__isInitialized__', 'photos', 'credits', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'species', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'race', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'colour', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'gender', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isVacunated', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isSterilized'];
+        return ['__isInitialized__', 'photos', 'credits', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'species', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'race', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'colour', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'gender', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isVacunated', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isSterilized', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'status'];
     }
 
     /**
@@ -428,6 +428,28 @@ class Pet extends \PC\FundationBundle\Entity\Pet implements \Doctrine\ORM\Proxy\
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCredits', []);
 
         return parent::getCredits();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setStatus($status)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setStatus', [$status]);
+
+        return parent::setStatus($status);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getStatus()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getStatus', []);
+
+        return parent::getStatus();
     }
 
 }

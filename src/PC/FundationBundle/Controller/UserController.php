@@ -65,7 +65,10 @@ class UserController extends Controller
             
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
+            $em->flush();
             
+            $pet->setStatus('PENDING');
+            $em->persist($pet);
             $em->flush();
             
             $adoption = new Adoption();

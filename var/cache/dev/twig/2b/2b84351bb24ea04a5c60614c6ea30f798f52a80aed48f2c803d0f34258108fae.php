@@ -1,6 +1,6 @@
 <?php
 
-/* WebProfilerBundle:Profiler:table.html.twig */
+/* @WebProfiler/Profiler/table.html.twig */
 class __TwigTemplate_d69284e32d6775542afff40ec1850fe6f58823ce0ec3b37391016b03adb7e9f8 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_d69284e32d6775542afff40ec1850fe6f58823ce0ec3b37391016b03adb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4ad1352281dd76135c3119e2431b8f5919307fff45679b5f175946a6ca888f2a = $this->env->getExtension("native_profiler");
-        $__internal_4ad1352281dd76135c3119e2431b8f5919307fff45679b5f175946a6ca888f2a->enter($__internal_4ad1352281dd76135c3119e2431b8f5919307fff45679b5f175946a6ca888f2a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:table.html.twig"));
+        $__internal_a45bdcaa434f492803a0ce2622a4bc9b4c06d1f11c5b6165bbca34bf11d43867 = $this->env->getExtension("native_profiler");
+        $__internal_a45bdcaa434f492803a0ce2622a4bc9b4c06d1f11c5b6165bbca34bf11d43867->enter($__internal_a45bdcaa434f492803a0ce2622a4bc9b4c06d1f11c5b6165bbca34bf11d43867_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/table.html.twig"));
 
         // line 1
         echo "<table class=\"";
@@ -61,13 +61,13 @@ class __TwigTemplate_d69284e32d6775542afff40ec1850fe6f58823ce0ec3b37391016b03adb
 </table>
 ";
         
-        $__internal_4ad1352281dd76135c3119e2431b8f5919307fff45679b5f175946a6ca888f2a->leave($__internal_4ad1352281dd76135c3119e2431b8f5919307fff45679b5f175946a6ca888f2a_prof);
+        $__internal_a45bdcaa434f492803a0ce2622a4bc9b4c06d1f11c5b6165bbca34bf11d43867->leave($__internal_a45bdcaa434f492803a0ce2622a4bc9b4c06d1f11c5b6165bbca34bf11d43867_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "WebProfilerBundle:Profiler:table.html.twig";
+        return "@WebProfiler/Profiler/table.html.twig";
     }
 
     public function isTraitable()

@@ -3,6 +3,8 @@ $ (document).ready(function() {
 	 var aler = $('#controlcamp').click(validatelogin);
 	 var user = $('#controleuser').click(validateuser);
 	 var vent = $('#ventemerg').click(nuevaventana);
+	 var ventevent = $('#ventevento').click(nuevaventana);
+	 var venteventedit = $('#ventevento1').click(nuevaventana);
 	 var vent1 = $('#ventemerg1').click(nuevaventana1);
 	 var vent2 = $('#ventemerg2').click(nuevaventana2);
 	 var vent3 = $('#ventemerg3').click(nuevaventana2);
@@ -98,7 +100,7 @@ function nuevaventana1 () {
 };
 function nuevaventana2 () {
 
-	window.open(this.href, this.target,'width=820,height=700'); return false;
+	window.open(this.href, this.target,'width=1000,height=700'); return false;
 };
 function jornadacenso () {
 	 

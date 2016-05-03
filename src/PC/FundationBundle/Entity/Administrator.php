@@ -24,6 +24,10 @@ class Administrator
      */ 
     protected $meetings;
     
+    /**
+     * @ORM\OneToMany(targetEntity="Event", mappedBy="administrator")
+     */ 
+    protected $events;
     
     
     /**
@@ -74,6 +78,7 @@ class Administrator
     {
         $this->donatives = new ArrayCollection();
         $this->meetings = new ArrayCollection();
+        $this->events = new ArrayCollection();
     }
 
     /**

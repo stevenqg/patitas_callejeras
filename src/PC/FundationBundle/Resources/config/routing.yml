@@ -21,6 +21,10 @@ pc_fundation_adoptar:
 pc_fundation_index:
     path:     /index
     defaults: { _controller: PCFundationBundle:Main:index }
+
+pc_fundation_eventos:
+    path:   /eventos
+    defaults: { _controller: PCFundationBundle:Main:eventos }
     
 pc_fundation_nosotros:
     path:     /nosotros
@@ -42,7 +46,7 @@ pc_user_create:
     path:     /user/create/{petId}
     defaults: { _controller: PCFundationBundle:User:create }
     methods:  POST
-    
+
 #--------------------------------------------------------------
 #--- rutas del administrador ----------------------------------
 #--------------------------------------------------------------
@@ -75,6 +79,18 @@ pc_administrator_edit:
 pc_administrator_update:
     path:     /admin/update/{id}
     defaults: { _controller: PCFundationBundle:Admin:update }   
+
+pc_administrator_eventos:
+    path:     /admin/eventos
+    defaults: { _controller: PCFundationBundle:Admin:eventos }
+
+pc_administrator_eventos_add:
+    path:     /admin/eventos/add
+    defaults: { _controller: PCFundationBundle:Admin:eventosadd }
+
+pc_administrator_evento_edit:
+    path:   /admin/eventos/edit
+    defaults: {_controller: PCFundationBundle:Admin:eventoedit }
     
 #--------------------------------------------------------------
 #--- rutas del administrador para censo -----------------------
@@ -85,7 +101,7 @@ pc_admin_jornada_censo:
     defaults: { _controller: PCFundationBundle:Admin:jornadacenso } 
 
 pc_admin_jornada_censo_mas:
-    path:     /admin/jornadacenso/mas
+    path:     /admin/jornadacenso/mas/{meetingId}
     defaults: { _controller: PCFundationBundle:Admin:jornadacensomas }
 
 pc_admin_jornada_censo_edit:
@@ -93,8 +109,13 @@ pc_admin_jornada_censo_edit:
     defaults: { _controller: PCFundationBundle:Admin:jornadacensoedit }
     
 pc_admin_jornada_censo_agregar:
-    path:     /admin/jornadacenso/agregar
+    path:     /admin/jornadacenso/agregar/{meetingId}
     defaults: { _controller: PCFundationBundle:Admin:jornadacensodatos }
+
+pc_admin_jornada_censo_registrar:
+    path:     /admin/jornadacenso/agregar
+    defaults: { _controller: PCFundationBundle:Admin:registrarcenso }
+    methods:  POST
 
 pc_admin_jornada_censo_add:
     path:     /admin/jornadacenso/add

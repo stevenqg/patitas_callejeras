@@ -24,31 +24,31 @@ class __TwigTemplate_615beea4958deea148cb827d8ca752a4bb317e4c6d7dc6b78da7ab3e4fc
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c657a78c9805a8a7c8acbdf7a06fc90613b30a92b2d928cd40b290043835fc90 = $this->env->getExtension("native_profiler");
-        $__internal_c657a78c9805a8a7c8acbdf7a06fc90613b30a92b2d928cd40b290043835fc90->enter($__internal_c657a78c9805a8a7c8acbdf7a06fc90613b30a92b2d928cd40b290043835fc90_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:comedogs.html.twig"));
+        $__internal_03abb04c3084f38638606dadf48f3ce0e72f925c7ad365236000578b2a869966 = $this->env->getExtension("native_profiler");
+        $__internal_03abb04c3084f38638606dadf48f3ce0e72f925c7ad365236000578b2a869966->enter($__internal_03abb04c3084f38638606dadf48f3ce0e72f925c7ad365236000578b2a869966_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:comedogs.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c657a78c9805a8a7c8acbdf7a06fc90613b30a92b2d928cd40b290043835fc90->leave($__internal_c657a78c9805a8a7c8acbdf7a06fc90613b30a92b2d928cd40b290043835fc90_prof);
+        $__internal_03abb04c3084f38638606dadf48f3ce0e72f925c7ad365236000578b2a869966->leave($__internal_03abb04c3084f38638606dadf48f3ce0e72f925c7ad365236000578b2a869966_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_2caabdfebd6a5478a667343c28a091ec0dc541b86e15f00fcb425367470ad0c9 = $this->env->getExtension("native_profiler");
-        $__internal_2caabdfebd6a5478a667343c28a091ec0dc541b86e15f00fcb425367470ad0c9->enter($__internal_2caabdfebd6a5478a667343c28a091ec0dc541b86e15f00fcb425367470ad0c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_1daacd153eb10af33e8ebac97c9077c6599d02ecee8be1056c92048d4d95e8d7 = $this->env->getExtension("native_profiler");
+        $__internal_1daacd153eb10af33e8ebac97c9077c6599d02ecee8be1056c92048d4d95e8d7->enter($__internal_1daacd153eb10af33e8ebac97c9077c6599d02ecee8be1056c92048d4d95e8d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_2caabdfebd6a5478a667343c28a091ec0dc541b86e15f00fcb425367470ad0c9->leave($__internal_2caabdfebd6a5478a667343c28a091ec0dc541b86e15f00fcb425367470ad0c9_prof);
+        $__internal_1daacd153eb10af33e8ebac97c9077c6599d02ecee8be1056c92048d4d95e8d7->leave($__internal_1daacd153eb10af33e8ebac97c9077c6599d02ecee8be1056c92048d4d95e8d7_prof);
 
     }
 
     // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_85d52a51d8fcaa2b3276dfc0e4c220ad5191dd6ec943c702f027fe5372a6f15a = $this->env->getExtension("native_profiler");
-        $__internal_85d52a51d8fcaa2b3276dfc0e4c220ad5191dd6ec943c702f027fe5372a6f15a->enter($__internal_85d52a51d8fcaa2b3276dfc0e4c220ad5191dd6ec943c702f027fe5372a6f15a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5557b03b8e2758cc0acbac03ebf6f9c2381c55ed3ebefd3e9b5ce20f63191343 = $this->env->getExtension("native_profiler");
+        $__internal_5557b03b8e2758cc0acbac03ebf6f9c2381c55ed3ebefd3e9b5ce20f63191343->enter($__internal_5557b03b8e2758cc0acbac03ebf6f9c2381c55ed3ebefd3e9b5ce20f63191343_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
         echo "
@@ -62,8 +62,6 @@ class __TwigTemplate_615beea4958deea148cb827d8ca752a4bb317e4c6d7dc6b78da7ab3e4fc
 \t\t\t<img  class=\"logocomedog\" src=\"";
         // line 10
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/comedog.png"), "html", null, true);
-        echo "\"><img class=\"titlecome\" src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/titcome.png"), "html", null, true);
         echo "\">
 \t\t</div>
 \t\t<div class=\"col-md-1\"></div>
@@ -72,114 +70,59 @@ class __TwigTemplate_615beea4958deea148cb827d8ca752a4bb317e4c6d7dc6b78da7ab3e4fc
 \t
 \t\t<div class=\"row\">
 \t\t<div class=\"col-md-6\">
-\t\t\t\t<div class=\"col-md-6\">
-\t\t\t\t\t<table>
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Nombre:</label></td>
-\t\t\t\t  \t\t<td><span> Cristian Arbelaez Duque. </span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Email:</label></td>
-\t\t\t\t  \t\t<td><span> <a \"email me\">cristinaarbelaezcsp@hotmail.com</a></span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Tel:</label></td>
-\t\t\t\t\t  \t<td><span> 314 883 6159.</span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t  \t\t</table>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-6\">
-\t\t\t\t\t<table>
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Nombre:</label></td>
-\t\t\t\t  \t\t<td><span> Katheryn Tatiana Patiño. </span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Email:</label></td>
-\t\t\t\t  \t\t<td><span> <a \"email me\">katheryn_tatiana@hotmail.com</a></span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Tel:</label></td>
-\t\t\t\t\t  \t<td><span> 316 787 3734.</span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t  \t\t</table>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-6\">
-\t\t\t\t\t<table>
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Nombre:</label></td>
-\t\t\t\t  \t\t<td><span> Juliana Andrea Bedoya. </span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Email:</label></td>
-\t\t\t\t  \t\t<td><span> <a \"email me\">Julisbedoya0612@gmail.com</a></span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Tel:</label></td>
-\t\t\t\t\t  \t<td><span>320 775 6822</span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t  \t\t</table>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-6\">
-\t\t\t\t\t<table>
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Nombre:</label></td>
-\t\t\t\t  \t\t<td><span>Carlos José Ángel</span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Email:</label></td>
-\t\t\t\t  \t\t<td><span> <a \"email me\">xicodeliacj@hotmal.com</a></span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Tel:</label></td>
-\t\t\t\t\t  \t<td><span>310 441 6976</span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t  \t\t</table>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-6\">
-\t\t\t\t\t<table>
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Nombre:</label></td>
-\t\t\t\t  \t\t<td><span>Gloria Cristina Valencia Isaza</span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Email:</label></td>
-\t\t\t\t  \t\t<td><span> <a \"email me\">soporte@systemlife.com.co</a></span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Tel:</label></td>
-\t\t\t\t\t  \t<td><span>310 519 3887</span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t  \t\t</table>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-6\">
-\t\t\t\t\t<table>
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Nombre:</label></td>
-\t\t\t\t  \t\t<td><span>Leonela Serna Beltran</span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Email:</label></td>
-\t\t\t\t  \t\t<td><span> <a \"email me\">leonelaserna@gmail.com</a></span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t\t 
-\t\t\t\t\t\t<tr>
-\t\t\t\t  \t\t<td><label>Tel:</label></td>
-\t\t\t\t\t  \t<td><span> 314 883 6159.</span></td>
-\t\t\t\t\t\t</tr>
-\t\t\t  \t\t</table>
-\t\t\t\t</div>
+\t\t\t<h4 class=\"textjusti titulosection\"> &nbsp; Encargados Comedog´s</h4><hr>
+\t\t\t<dl class=\" textjusti dl-horizontal\">
+\t\t\t\t\t\t<dt>Nombre:</dt>
+\t\t\t\t\t\t<dd>Cristian Arbelaez Duque.</dd>
+\t\t\t\t\t\t<dt>Email:</dt>
+\t\t\t\t\t\t<dd>cristinaarbelaezcsp@hotmail.com</dd>
+\t\t\t\t\t\t<dt>Telefono:</dt>
+\t\t\t\t\t\t<dd>314 883 6159</dd>
+\t\t\t\t\t</dl>
+\t\t\t\t\t<dl class=\" textjusti dl-horizontal\">
+\t\t\t\t\t\t<dt>Nombre:</dt>
+\t\t\t\t\t\t<dd>Katheryn Tatiana Patiño.</dd>
+\t\t\t\t\t\t<dt>Email:</dt>
+\t\t\t\t\t\t<dd>katheryn_tatiana@hotmail.com</dd>
+\t\t\t\t\t\t<dt>Telefono:</dt>
+\t\t\t\t\t\t<dd>316 787 3734</dd>
+\t\t\t\t\t</dl>
+\t\t\t\t\t<dl class=\"textjusti dl-horizontal\">
+\t\t\t\t\t\t<dt>Nombre:</dt>
+\t\t\t\t\t\t<dd>Juliana Andrea Bedoya.</dd>
+\t\t\t\t\t\t<dt>Email:</dt>
+\t\t\t\t\t\t<dd>Julisbedoya0612@gmail.com</dd>
+\t\t\t\t\t\t<dt>Telefono:</dt>
+\t\t\t\t\t\t<dd>320 775 6822</dd>
+\t\t\t\t\t</dl>
+\t\t\t\t\t\t<dl class=\" textjusti dl-horizontal\">
+\t\t\t\t\t\t<dt>Nombre:</dt>
+\t\t\t\t\t\t<dd>Carlos José Ángel.</dd>
+\t\t\t\t\t\t<dt>Email:</dt>
+\t\t\t\t\t\t<dd>xicodeliacj@hotmal.com</dd>
+\t\t\t\t\t\t<dt>Telefono:</dt>
+\t\t\t\t\t\t<dd>310 441 6976</dd>
+\t\t\t\t\t</dl>
+\t\t\t\t\t</dl>
+\t\t\t\t\t\t<dl class=\"textjusti dl-horizontal\">
+\t\t\t\t\t\t<dt>Nombre:</dt>
+\t\t\t\t\t\t<dd>Gloria Cristina Valencia Isaza.</dd>
+\t\t\t\t\t\t<dt>Email:</dt>
+\t\t\t\t\t\t<dd>soporte@systemlife.com.co</dd>
+\t\t\t\t\t\t<dt>Telefono:</dt>
+\t\t\t\t\t\t<dd>310 519 3887</dd>
+\t\t\t\t\t</dl>
+\t\t\t\t\t</dl>
+\t\t\t\t\t\t<dl class=\"textjusti dl-horizontal\">
+\t\t\t\t\t\t<dt>Nombre:</dt>
+\t\t\t\t\t\t<dd>Leonela Serna Beltran.</dd>
+\t\t\t\t\t\t<dt>Email:</dt>
+\t\t\t\t\t\t<dd>leonelaserna@gmail.com</dd>
+\t\t\t\t\t\t<dt>Telefono:</dt>
+\t\t\t\t\t\t<dd>314 883 6159</dd>
+\t\t\t\t\t</dl>
+\t\t\t<hr>
+\t\t\t<a type=\"button\" class=\"btn btn-primary\" href=\"http://www.comedog.org/\">Ir Sitio oficial</a>
      \t</div>
 \t\t<div class=\"col-md-6\">
 \t\t\t  <div class=\"contenmap\" id=\"mymap\"></div>
@@ -187,43 +130,43 @@ class __TwigTemplate_615beea4958deea148cb827d8ca752a4bb317e4c6d7dc6b78da7ab3e4fc
 \t</div>
 ";
         
-        $__internal_85d52a51d8fcaa2b3276dfc0e4c220ad5191dd6ec943c702f027fe5372a6f15a->leave($__internal_85d52a51d8fcaa2b3276dfc0e4c220ad5191dd6ec943c702f027fe5372a6f15a_prof);
+        $__internal_5557b03b8e2758cc0acbac03ebf6f9c2381c55ed3ebefd3e9b5ce20f63191343->leave($__internal_5557b03b8e2758cc0acbac03ebf6f9c2381c55ed3ebefd3e9b5ce20f63191343_prof);
 
     }
 
-    // line 132
+    // line 77
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_64d1861ead5e711aebc45cdb4b7e617ca2ca93672afbd8031332b91a5630290f = $this->env->getExtension("native_profiler");
-        $__internal_64d1861ead5e711aebc45cdb4b7e617ca2ca93672afbd8031332b91a5630290f->enter($__internal_64d1861ead5e711aebc45cdb4b7e617ca2ca93672afbd8031332b91a5630290f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_98324410587d5d62ed8b2db5a4c75ba6ebf817d11bc579988ad3e18cb4f7e608 = $this->env->getExtension("native_profiler");
+        $__internal_98324410587d5d62ed8b2db5a4c75ba6ebf817d11bc579988ad3e18cb4f7e608->enter($__internal_98324410587d5d62ed8b2db5a4c75ba6ebf817d11bc579988ad3e18cb4f7e608_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 133
+        // line 78
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
 \t<script async defer
       src=\"";
-        // line 135
+        // line 80
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("https://maps.googleapis.com/maps/api/js?key=AIzaSyARyp3ONt4Ax4J7JBBC8bFggOp4zntwd-s&callback=initMap"), "html", null, true);
         echo "\">
     </script>
     <script src=\"";
-        // line 137
+        // line 82
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/js/jsgoogle.js"), "html", null, true);
         echo "\"  ></script>
 ";
         
-        $__internal_64d1861ead5e711aebc45cdb4b7e617ca2ca93672afbd8031332b91a5630290f->leave($__internal_64d1861ead5e711aebc45cdb4b7e617ca2ca93672afbd8031332b91a5630290f_prof);
+        $__internal_98324410587d5d62ed8b2db5a4c75ba6ebf817d11bc579988ad3e18cb4f7e608->leave($__internal_98324410587d5d62ed8b2db5a4c75ba6ebf817d11bc579988ad3e18cb4f7e608_prof);
 
     }
 
-    // line 139
+    // line 84
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_77e939b9956519d76c12edd5e24ff9d3d4f9f6b273f8783761aeb47cb17b107e = $this->env->getExtension("native_profiler");
-        $__internal_77e939b9956519d76c12edd5e24ff9d3d4f9f6b273f8783761aeb47cb17b107e->enter($__internal_77e939b9956519d76c12edd5e24ff9d3d4f9f6b273f8783761aeb47cb17b107e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_9cc237940e549153648d42533e5ce1eeb018e69df962409729b80e9b1cb41cdb = $this->env->getExtension("native_profiler");
+        $__internal_9cc237940e549153648d42533e5ce1eeb018e69df962409729b80e9b1cb41cdb->enter($__internal_9cc237940e549153648d42533e5ce1eeb018e69df962409729b80e9b1cb41cdb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
         
-        $__internal_77e939b9956519d76c12edd5e24ff9d3d4f9f6b273f8783761aeb47cb17b107e->leave($__internal_77e939b9956519d76c12edd5e24ff9d3d4f9f6b273f8783761aeb47cb17b107e_prof);
+        $__internal_9cc237940e549153648d42533e5ce1eeb018e69df962409729b80e9b1cb41cdb->leave($__internal_9cc237940e549153648d42533e5ce1eeb018e69df962409729b80e9b1cb41cdb_prof);
 
     }
 
@@ -239,7 +182,7 @@ class __TwigTemplate_615beea4958deea148cb827d8ca752a4bb317e4c6d7dc6b78da7ab3e4fc
 
     public function getDebugInfo()
     {
-        return array (  220 => 139,  211 => 137,  206 => 135,  201 => 133,  195 => 132,  64 => 10,  60 => 9,  54 => 5,  48 => 4,  37 => 2,  11 => 1,);
+        return array (  163 => 84,  154 => 82,  149 => 80,  144 => 78,  138 => 77,  64 => 10,  60 => 9,  54 => 5,  48 => 4,  37 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
@@ -251,7 +194,7 @@ class __TwigTemplate_615beea4958deea148cb827d8ca752a4bb317e4c6d7dc6b78da7ab3e4fc
 /* 		<div class="col-md-1"></div>*/
 /* 		<div class="col-md-10">*/
 /* 			<img class="posrigth" src="{{ asset('public/img/logo.png') }}" alt="logo">*/
-/* 			<img  class="logocomedog" src="{{ asset('public/img/comedog.png') }}"><img class="titlecome" src="{{ asset('public/img/titcome.png') }}">*/
+/* 			<img  class="logocomedog" src="{{ asset('public/img/comedog.png') }}">*/
 /* 		</div>*/
 /* 		<div class="col-md-1"></div>*/
 /* 	</div>*/
@@ -259,114 +202,59 @@ class __TwigTemplate_615beea4958deea148cb827d8ca752a4bb317e4c6d7dc6b78da7ab3e4fc
 /* 	*/
 /* 		<div class="row">*/
 /* 		<div class="col-md-6">*/
-/* 				<div class="col-md-6">*/
-/* 					<table>*/
-/* 						<tr>*/
-/* 				  		<td><label>Nombre:</label></td>*/
-/* 				  		<td><span> Cristian Arbelaez Duque. </span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Email:</label></td>*/
-/* 				  		<td><span> <a "email me">cristinaarbelaezcsp@hotmail.com</a></span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Tel:</label></td>*/
-/* 					  	<td><span> 314 883 6159.</span></td>*/
-/* 						</tr>*/
-/* 			  		</table>*/
-/* 				</div>*/
-/* 				<div class="col-md-6">*/
-/* 					<table>*/
-/* 						<tr>*/
-/* 				  		<td><label>Nombre:</label></td>*/
-/* 				  		<td><span> Katheryn Tatiana Patiño. </span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Email:</label></td>*/
-/* 				  		<td><span> <a "email me">katheryn_tatiana@hotmail.com</a></span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Tel:</label></td>*/
-/* 					  	<td><span> 316 787 3734.</span></td>*/
-/* 						</tr>*/
-/* 			  		</table>*/
-/* 				</div>*/
-/* 				<div class="col-md-6">*/
-/* 					<table>*/
-/* 						<tr>*/
-/* 				  		<td><label>Nombre:</label></td>*/
-/* 				  		<td><span> Juliana Andrea Bedoya. </span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Email:</label></td>*/
-/* 				  		<td><span> <a "email me">Julisbedoya0612@gmail.com</a></span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Tel:</label></td>*/
-/* 					  	<td><span>320 775 6822</span></td>*/
-/* 						</tr>*/
-/* 			  		</table>*/
-/* 				</div>*/
-/* 				<div class="col-md-6">*/
-/* 					<table>*/
-/* 						<tr>*/
-/* 				  		<td><label>Nombre:</label></td>*/
-/* 				  		<td><span>Carlos José Ángel</span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Email:</label></td>*/
-/* 				  		<td><span> <a "email me">xicodeliacj@hotmal.com</a></span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Tel:</label></td>*/
-/* 					  	<td><span>310 441 6976</span></td>*/
-/* 						</tr>*/
-/* 			  		</table>*/
-/* 				</div>*/
-/* 				<div class="col-md-6">*/
-/* 					<table>*/
-/* 						<tr>*/
-/* 				  		<td><label>Nombre:</label></td>*/
-/* 				  		<td><span>Gloria Cristina Valencia Isaza</span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Email:</label></td>*/
-/* 				  		<td><span> <a "email me">soporte@systemlife.com.co</a></span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Tel:</label></td>*/
-/* 					  	<td><span>310 519 3887</span></td>*/
-/* 						</tr>*/
-/* 			  		</table>*/
-/* 				</div>*/
-/* 				<div class="col-md-6">*/
-/* 					<table>*/
-/* 						<tr>*/
-/* 				  		<td><label>Nombre:</label></td>*/
-/* 				  		<td><span>Leonela Serna Beltran</span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Email:</label></td>*/
-/* 				  		<td><span> <a "email me">leonelaserna@gmail.com</a></span></td>*/
-/* 						</tr>*/
-/* 				 */
-/* 						<tr>*/
-/* 				  		<td><label>Tel:</label></td>*/
-/* 					  	<td><span> 314 883 6159.</span></td>*/
-/* 						</tr>*/
-/* 			  		</table>*/
-/* 				</div>*/
+/* 			<h4 class="textjusti titulosection"> &nbsp; Encargados Comedog´s</h4><hr>*/
+/* 			<dl class=" textjusti dl-horizontal">*/
+/* 						<dt>Nombre:</dt>*/
+/* 						<dd>Cristian Arbelaez Duque.</dd>*/
+/* 						<dt>Email:</dt>*/
+/* 						<dd>cristinaarbelaezcsp@hotmail.com</dd>*/
+/* 						<dt>Telefono:</dt>*/
+/* 						<dd>314 883 6159</dd>*/
+/* 					</dl>*/
+/* 					<dl class=" textjusti dl-horizontal">*/
+/* 						<dt>Nombre:</dt>*/
+/* 						<dd>Katheryn Tatiana Patiño.</dd>*/
+/* 						<dt>Email:</dt>*/
+/* 						<dd>katheryn_tatiana@hotmail.com</dd>*/
+/* 						<dt>Telefono:</dt>*/
+/* 						<dd>316 787 3734</dd>*/
+/* 					</dl>*/
+/* 					<dl class="textjusti dl-horizontal">*/
+/* 						<dt>Nombre:</dt>*/
+/* 						<dd>Juliana Andrea Bedoya.</dd>*/
+/* 						<dt>Email:</dt>*/
+/* 						<dd>Julisbedoya0612@gmail.com</dd>*/
+/* 						<dt>Telefono:</dt>*/
+/* 						<dd>320 775 6822</dd>*/
+/* 					</dl>*/
+/* 						<dl class=" textjusti dl-horizontal">*/
+/* 						<dt>Nombre:</dt>*/
+/* 						<dd>Carlos José Ángel.</dd>*/
+/* 						<dt>Email:</dt>*/
+/* 						<dd>xicodeliacj@hotmal.com</dd>*/
+/* 						<dt>Telefono:</dt>*/
+/* 						<dd>310 441 6976</dd>*/
+/* 					</dl>*/
+/* 					</dl>*/
+/* 						<dl class="textjusti dl-horizontal">*/
+/* 						<dt>Nombre:</dt>*/
+/* 						<dd>Gloria Cristina Valencia Isaza.</dd>*/
+/* 						<dt>Email:</dt>*/
+/* 						<dd>soporte@systemlife.com.co</dd>*/
+/* 						<dt>Telefono:</dt>*/
+/* 						<dd>310 519 3887</dd>*/
+/* 					</dl>*/
+/* 					</dl>*/
+/* 						<dl class="textjusti dl-horizontal">*/
+/* 						<dt>Nombre:</dt>*/
+/* 						<dd>Leonela Serna Beltran.</dd>*/
+/* 						<dt>Email:</dt>*/
+/* 						<dd>leonelaserna@gmail.com</dd>*/
+/* 						<dt>Telefono:</dt>*/
+/* 						<dd>314 883 6159</dd>*/
+/* 					</dl>*/
+/* 			<hr>*/
+/* 			<a type="button" class="btn btn-primary" href="http://www.comedog.org/">Ir Sitio oficial</a>*/
 /*      	</div>*/
 /* 		<div class="col-md-6">*/
 /* 			  <div class="contenmap" id="mymap"></div>*/

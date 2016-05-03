@@ -21,20 +21,20 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4330de45fc2a88c09ecc8c7981bf95b0f01fa350829d8269fda9230545a0523a = $this->env->getExtension("native_profiler");
-        $__internal_4330de45fc2a88c09ecc8c7981bf95b0f01fa350829d8269fda9230545a0523a->enter($__internal_4330de45fc2a88c09ecc8c7981bf95b0f01fa350829d8269fda9230545a0523a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:index.html.twig"));
+        $__internal_270e96944ee2078a10d5bb6abdf4425b1d725ab2c1d3d2ee58db77eaacd348a2 = $this->env->getExtension("native_profiler");
+        $__internal_270e96944ee2078a10d5bb6abdf4425b1d725ab2c1d3d2ee58db77eaacd348a2->enter($__internal_270e96944ee2078a10d5bb6abdf4425b1d725ab2c1d3d2ee58db77eaacd348a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4330de45fc2a88c09ecc8c7981bf95b0f01fa350829d8269fda9230545a0523a->leave($__internal_4330de45fc2a88c09ecc8c7981bf95b0f01fa350829d8269fda9230545a0523a_prof);
+        $__internal_270e96944ee2078a10d5bb6abdf4425b1d725ab2c1d3d2ee58db77eaacd348a2->leave($__internal_270e96944ee2078a10d5bb6abdf4425b1d725ab2c1d3d2ee58db77eaacd348a2_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_2b16710f50057b1d1945ff904b3849a59673f5687494293d7322283a089a2c2a = $this->env->getExtension("native_profiler");
-        $__internal_2b16710f50057b1d1945ff904b3849a59673f5687494293d7322283a089a2c2a->enter($__internal_2b16710f50057b1d1945ff904b3849a59673f5687494293d7322283a089a2c2a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_bf4fd3799f6bf60aa93730a7f5ec2b52934eaff05b7cb4b8ec7064e511e57c49 = $this->env->getExtension("native_profiler");
+        $__internal_bf4fd3799f6bf60aa93730a7f5ec2b52934eaff05b7cb4b8ec7064e511e57c49->enter($__internal_bf4fd3799f6bf60aa93730a7f5ec2b52934eaff05b7cb4b8ec7064e511e57c49_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         $this->displayParentBlock("body", $context, $blocks);
@@ -99,45 +99,37 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 \t\t
 \t\t<div class=\"col-md-1\"></div>
 \t\t<div class=\"col-md-10\">
-\t\t\t<div class=\"col-lg-4\">
+\t\t\t
+\t\t\t<div class=\"col-lg-6\">
 \t\t\t<div class=\"sectionstile\"> 
           <img class=\"img-circle\" src=\"";
-        // line 42
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/tapitas.png"), "html", null, true);
+        // line 43
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/tpc.png"), "html", null, true);
         echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
-          <h2>Recolección de tapitas</h2>
-          <p>cDonec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class=\"btn btn-default\" href=\"";
-        // line 45
+          <h2 class=\"titulosection\">Tapitas Plastica</h2>
+          <p class=\"textjusti\">Con la recolección de tapas plásticas no solo colaboramos para comprar el cuido de los animales sin hogar, si no quede de  igual manera estamos ayudamos al cuidado y protección del medio ambiente reciclando estos objetos que tarada en promedio más de  100 años en proceso de descomposición.</p>
+          <p><a class=\"btn btn-primary\" href=\"";
+        // line 46
         echo $this->env->getExtension('routing')->getPath("pc_fundation_tapitas");
-        echo "\" target=\"_blank\" role=\"button\" id=\"ventemerg\">View details »</a></p>
+        echo "\" target=\"_blank\" role=\"button\" id=\"ventemerg\">Donde depositar »</a></p>
         </div></div>
 
-        <div class=\"col-lg-4\">
+        <div class=\"col-lg-6\">
         \t<div class=\"sectionstile\">
           <img class=\"img-circle\" src=\" ";
-        // line 50
+        // line 51
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/comedog.png"), "html", null, true);
         echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <h2 class=\"titulosection\">Comedogs armenia</h2>
+          <p class=\"textjusti\">concebido como una iniciativa personal para promover el bienestar de nuestros amigos caninos, debido a la gran acogida nacional nos animamos y queremos convertirnos en una gran comunidad de apoyo sin animo de lucro, por esta razón continuamos con nuestro objetivo integral y estamos avanzando en diferentes frentes para facilitar la gestión de ComeDog.</p>
 
-          <p><a class=\"btn btn-default\" href=\"";
-        // line 54
+          <p><a class=\"btn btn-primary\" href=\"";
+        // line 55
         echo $this->env->getExtension('routing')->getPath("pc_fundation_comedogs");
-        echo "\" target=\"_blank\" role=\"button\" id=\"ventemerg2\" >View details »</a></p>
+        echo "\" target=\"_blank\" role=\"button\" id=\"ventemerg2\" >ComeDog´s Armenia »</a></p>
         </div></div>
-
-        <div class=\"col-lg-4\">
-        \t<div class=\"sectionstile\">    \t
-          <img class=\"img-circle\" src=\"";
-        // line 59
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/tp.jpg"), "html", null, true);
-        echo "\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details »</a></p>
-        </div></div></div> 
+\t\t\t\t
+        </div> 
        <div class=\"col-md-1\"></div>    
 \t</div>
 
@@ -146,16 +138,21 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 \t\t<div class=\"row margin\">
         <div class=\"col-md-1\"></div>
 \t\t<div class=\"col-md-5\">
-\t\t\t<h2>  NORMAS Y LEYES DE PROTECCION ANIMAL</h2>
-\t\t\t<p>El hecho de reconocer que los animales ya no sean considerados cosas dentro del código civil  en su artículo 655 donde los declaran como bienes muebles y  que sean reconocidos como seres sintientes abre las puertas para que los derechos de los animales sean tenidos en cuenta  en nuestro país, que los casos de maltrato animal no se quede en la impunidad y sean ejecutadas multas económicas que van desde 5 a 50 salarios mínimos mensuales legales vigentes y penas que van de 12 a 36 meses de cárcel, con agravantes punitivos</p>
+\t\t\t<h3 class=\"titulosection\"><img src=\"";
+        // line 67
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/mn.png"), "html", null, true);
+        echo "\" alt=\"\">&nbsp;<b> Normas de proteción animal </b>&nbsp;</b><img src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/m.png"), "html", null, true);
+        echo "\" alt=\"\"></h3>
+\t\t\t<p class=\"textjusti\">El hecho de reconocer que los animales ya no sean considerados cosas dentro del código civil  en su artículo 655 donde los declaran como bienes muebles y  que sean reconocidos como seres sintientes abre las puertas para que los derechos de los animales sean tenidos en cuenta  en nuestro país, que los casos de maltrato animal no se quede en la impunidad y sean ejecutadas multas económicas que van desde 5 a 50 salarios mínimos mensuales legales vigentes y penas que van de 12 a 36 meses de cárcel, con agravantes punitivos</p>
 \t\t\t
-\t\t\t<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magnaDonec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna</p> <br>
+\t\t\t<p class=\"text-justify\">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magnaDonec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna</p> <br>
 \t\t\t</div>
 \t\t\t<div class=\"col-md-5\">
 \t\t<img  src= \"";
-        // line 78
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/norma.jpg"), "html", null, true);
-        echo "\"  alt= \"...\"  class= \"img-thumbnail\" > </div>
+        // line 73
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/norma.png"), "html", null, true);
+        echo "\"  alt= \"...\"  class= \"tdlg img-responsive\" > </div>
 
 \t\t<div class=\"col-md-1\"></div>
 \t\t</div>
@@ -166,17 +163,23 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
         <div class=\"col-md-1\"></div>
         <div class=\"col-md-5\">
 \t\t<img  src= \"";
-        // line 88
+        // line 83
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/app.png"), "html", null, true);
-        echo "\"  alt= \"...\"  class= \"img-thumbnail\" > </div>
+        echo "\"  alt= \"...\"  class= \" img-responsive img-thumbnail\" > </div>
         <div class=\"col-md-5\">
-\t\t\t<h2>  nuestra apliacion smartphone \t</h2>
-\t\t\t<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-\t\t\t<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+\t\t\t<h3 class=\"titulosection\"><img src=\"";
+        // line 85
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/mn.png"), "html", null, true);
+        echo "\" alt=\"\">&nbsp;<b> Aplicaion Movil </b>&nbsp;</b><img src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/m.png"), "html", null, true);
+        echo "\" alt=\"\"></h3>
+\t\t\t<p class=\"textjusti\">La fundación patitas callejera ahora cuenta con una aplicación móvil para facilitar el acceso a todos nuestros colaboradores.</p>
+\t\t\t<p class=\"textjusti\">El auge de la portabilidad y la importancia que ha tomado  las aplicaciones móviles durante los últimos años. Nos ha motivado a mejorar nuestro servicio y que su acceso sea mucho más fácil  y rápido. En nuestra aplicación usted podrá estar informado de los próximos eventos a realizar, ver al catálogo de mascotas en adopción y además una gran novedad que traemos para usted es el reporte de pérdida y localización de mascotas extraviadas.  </p>
+\t\t\t<p class=\"textjusti\">Si usted tiene un smartphone u otro tipo de dispositivo móvil, puede adquirir total mente gratis nuestra aplicación </p>
 \t\t\t<br>
-\t\t\t<button type=\"button\" class=\" btn btn-default btn-lg btn-block\"> <img class=\"simg\" src=\"";
-        // line 94
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/play.png"), "html", null, true);
+\t\t\t<button type=\"button\" class=\"playstile btn btn-primary btn-lg btn-block\"> <img class=\"simg\" src=\"";
+        // line 90
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/play1.png"), "html", null, true);
         echo "\" alt=\"\"> Google Play</button>
 \t\t\t<br>
 
@@ -188,7 +191,7 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 
 ";
         
-        $__internal_2b16710f50057b1d1945ff904b3849a59673f5687494293d7322283a089a2c2a->leave($__internal_2b16710f50057b1d1945ff904b3849a59673f5687494293d7322283a089a2c2a_prof);
+        $__internal_bf4fd3799f6bf60aa93730a7f5ec2b52934eaff05b7cb4b8ec7064e511e57c49->leave($__internal_bf4fd3799f6bf60aa93730a7f5ec2b52934eaff05b7cb4b8ec7064e511e57c49_prof);
 
     }
 
@@ -204,7 +207,7 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 
     public function getDebugInfo()
     {
-        return array (  179 => 94,  170 => 88,  157 => 78,  135 => 59,  127 => 54,  120 => 50,  112 => 45,  106 => 42,  88 => 27,  84 => 26,  77 => 22,  73 => 21,  69 => 20,  63 => 17,  59 => 16,  55 => 15,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  182 => 90,  172 => 85,  167 => 83,  154 => 73,  143 => 67,  128 => 55,  121 => 51,  113 => 46,  107 => 43,  88 => 27,  84 => 26,  77 => 22,  73 => 21,  69 => 20,  63 => 17,  59 => 16,  55 => 15,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
@@ -246,30 +249,25 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 /* 		*/
 /* 		<div class="col-md-1"></div>*/
 /* 		<div class="col-md-10">*/
-/* 			<div class="col-lg-4">*/
+/* 			*/
+/* 			<div class="col-lg-6">*/
 /* 			<div class="sectionstile"> */
-/*           <img class="img-circle" src="{{ asset('public/img/tapitas.png') }}" alt="Generic placeholder image" width="140" height="140">*/
-/*           <h2>Recolección de tapitas</h2>*/
-/*           <p>cDonec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>*/
-/*           <p><a class="btn btn-default" href="{{ path('pc_fundation_tapitas')}}" target="_blank" role="button" id="ventemerg">View details »</a></p>*/
+/*           <img class="img-circle" src="{{ asset('public/img/tpc.png') }}" alt="Generic placeholder image" width="140" height="140">*/
+/*           <h2 class="titulosection">Tapitas Plastica</h2>*/
+/*           <p class="textjusti">Con la recolección de tapas plásticas no solo colaboramos para comprar el cuido de los animales sin hogar, si no quede de  igual manera estamos ayudamos al cuidado y protección del medio ambiente reciclando estos objetos que tarada en promedio más de  100 años en proceso de descomposición.</p>*/
+/*           <p><a class="btn btn-primary" href="{{ path('pc_fundation_tapitas')}}" target="_blank" role="button" id="ventemerg">Donde depositar »</a></p>*/
 /*         </div></div>*/
 /* */
-/*         <div class="col-lg-4">*/
+/*         <div class="col-lg-6">*/
 /*         	<div class="sectionstile">*/
 /*           <img class="img-circle" src=" {{ asset('public/img/comedog.png') }}" alt="Generic placeholder image" width="140" height="140">*/
-/*           <h2>Heading</h2>*/
-/*           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>*/
+/*           <h2 class="titulosection">Comedogs armenia</h2>*/
+/*           <p class="textjusti">concebido como una iniciativa personal para promover el bienestar de nuestros amigos caninos, debido a la gran acogida nacional nos animamos y queremos convertirnos en una gran comunidad de apoyo sin animo de lucro, por esta razón continuamos con nuestro objetivo integral y estamos avanzando en diferentes frentes para facilitar la gestión de ComeDog.</p>*/
 /* */
-/*           <p><a class="btn btn-default" href="{{ path('pc_fundation_comedogs')}}" target="_blank" role="button" id="ventemerg2" >View details »</a></p>*/
+/*           <p><a class="btn btn-primary" href="{{ path('pc_fundation_comedogs')}}" target="_blank" role="button" id="ventemerg2" >ComeDog´s Armenia »</a></p>*/
 /*         </div></div>*/
-/* */
-/*         <div class="col-lg-4">*/
-/*         	<div class="sectionstile">    	*/
-/*           <img class="img-circle" src="{{ asset('public/img/tp.jpg') }}" alt="Generic placeholder image" width="140" height="140">*/
-/*           <h2>Heading</h2>*/
-/*           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>*/
-/*           <p><a class="btn btn-default" href="#" role="button">View details »</a></p>*/
-/*         </div></div></div> */
+/* 				*/
+/*         </div> */
 /*        <div class="col-md-1"></div>    */
 /* 	</div>*/
 /* */
@@ -278,13 +276,13 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 /* 		<div class="row margin">*/
 /*         <div class="col-md-1"></div>*/
 /* 		<div class="col-md-5">*/
-/* 			<h2>  NORMAS Y LEYES DE PROTECCION ANIMAL</h2>*/
-/* 			<p>El hecho de reconocer que los animales ya no sean considerados cosas dentro del código civil  en su artículo 655 donde los declaran como bienes muebles y  que sean reconocidos como seres sintientes abre las puertas para que los derechos de los animales sean tenidos en cuenta  en nuestro país, que los casos de maltrato animal no se quede en la impunidad y sean ejecutadas multas económicas que van desde 5 a 50 salarios mínimos mensuales legales vigentes y penas que van de 12 a 36 meses de cárcel, con agravantes punitivos</p>*/
+/* 			<h3 class="titulosection"><img src="{{asset('public/img/mn.png')}}" alt="">&nbsp;<b> Normas de proteción animal </b>&nbsp;</b><img src="{{asset('public/img/m.png')}}" alt=""></h3>*/
+/* 			<p class="textjusti">El hecho de reconocer que los animales ya no sean considerados cosas dentro del código civil  en su artículo 655 donde los declaran como bienes muebles y  que sean reconocidos como seres sintientes abre las puertas para que los derechos de los animales sean tenidos en cuenta  en nuestro país, que los casos de maltrato animal no se quede en la impunidad y sean ejecutadas multas económicas que van desde 5 a 50 salarios mínimos mensuales legales vigentes y penas que van de 12 a 36 meses de cárcel, con agravantes punitivos</p>*/
 /* 			*/
-/* 			<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magnaDonec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna</p> <br>*/
+/* 			<p class="text-justify">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magnaDonec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna</p> <br>*/
 /* 			</div>*/
 /* 			<div class="col-md-5">*/
-/* 		<img  src= "{{ asset('public/img/norma.jpg') }}"  alt= "..."  class= "img-thumbnail" > </div>*/
+/* 		<img  src= "{{ asset('public/img/norma.png') }}"  alt= "..."  class= "tdlg img-responsive" > </div>*/
 /* */
 /* 		<div class="col-md-1"></div>*/
 /* 		</div>*/
@@ -294,13 +292,14 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 /* 		<div class="row margin">*/
 /*         <div class="col-md-1"></div>*/
 /*         <div class="col-md-5">*/
-/* 		<img  src= "{{ asset('public/img/app.png') }}"  alt= "..."  class= "img-thumbnail" > </div>*/
+/* 		<img  src= "{{ asset('public/img/app.png') }}"  alt= "..."  class= " img-responsive img-thumbnail" > </div>*/
 /*         <div class="col-md-5">*/
-/* 			<h2>  nuestra apliacion smartphone 	</h2>*/
-/* 			<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>*/
-/* 			<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>*/
+/* 			<h3 class="titulosection"><img src="{{asset('public/img/mn.png')}}" alt="">&nbsp;<b> Aplicaion Movil </b>&nbsp;</b><img src="{{asset('public/img/m.png')}}" alt=""></h3>*/
+/* 			<p class="textjusti">La fundación patitas callejera ahora cuenta con una aplicación móvil para facilitar el acceso a todos nuestros colaboradores.</p>*/
+/* 			<p class="textjusti">El auge de la portabilidad y la importancia que ha tomado  las aplicaciones móviles durante los últimos años. Nos ha motivado a mejorar nuestro servicio y que su acceso sea mucho más fácil  y rápido. En nuestra aplicación usted podrá estar informado de los próximos eventos a realizar, ver al catálogo de mascotas en adopción y además una gran novedad que traemos para usted es el reporte de pérdida y localización de mascotas extraviadas.  </p>*/
+/* 			<p class="textjusti">Si usted tiene un smartphone u otro tipo de dispositivo móvil, puede adquirir total mente gratis nuestra aplicación </p>*/
 /* 			<br>*/
-/* 			<button type="button" class=" btn btn-default btn-lg btn-block"> <img class="simg" src="{{ asset('public/img/play.png') }}" alt=""> Google Play</button>*/
+/* 			<button type="button" class="playstile btn btn-primary btn-lg btn-block"> <img class="simg" src="{{ asset('public/img/play1.png') }}" alt=""> Google Play</button>*/
 /* 			<br>*/
 /* */
 /* 		</div>*/

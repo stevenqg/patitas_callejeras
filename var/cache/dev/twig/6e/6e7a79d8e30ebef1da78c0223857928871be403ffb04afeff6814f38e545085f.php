@@ -24,62 +24,64 @@ class __TwigTemplate_06e36385fc61f53868e113d1cde23ebb79abe185a92c2a2b6d601a06525
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_80e330ee59d84f51a45184f77e940418df8370f270d72aff7dcd3d4d24b8c4d3 = $this->env->getExtension("native_profiler");
-        $__internal_80e330ee59d84f51a45184f77e940418df8370f270d72aff7dcd3d4d24b8c4d3->enter($__internal_80e330ee59d84f51a45184f77e940418df8370f270d72aff7dcd3d4d24b8c4d3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:login.html.twig"));
+        $__internal_a114e1efd45bc3d372f53790204b328204365371876d41d072f5c4a67cd23f53 = $this->env->getExtension("native_profiler");
+        $__internal_a114e1efd45bc3d372f53790204b328204365371876d41d072f5c4a67cd23f53->enter($__internal_a114e1efd45bc3d372f53790204b328204365371876d41d072f5c4a67cd23f53_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:login.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_80e330ee59d84f51a45184f77e940418df8370f270d72aff7dcd3d4d24b8c4d3->leave($__internal_80e330ee59d84f51a45184f77e940418df8370f270d72aff7dcd3d4d24b8c4d3_prof);
+        $__internal_a114e1efd45bc3d372f53790204b328204365371876d41d072f5c4a67cd23f53->leave($__internal_a114e1efd45bc3d372f53790204b328204365371876d41d072f5c4a67cd23f53_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_dc82b653e3f0070c78b36363a0bfcae27f4b386f019f09c2f66cd3604839b072 = $this->env->getExtension("native_profiler");
-        $__internal_dc82b653e3f0070c78b36363a0bfcae27f4b386f019f09c2f66cd3604839b072->enter($__internal_dc82b653e3f0070c78b36363a0bfcae27f4b386f019f09c2f66cd3604839b072_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_d9eff6b538daa62d7ecbfd713b766b9a249b295fae4749450dd9d1bcf3143269 = $this->env->getExtension("native_profiler");
+        $__internal_d9eff6b538daa62d7ecbfd713b766b9a249b295fae4749450dd9d1bcf3143269->enter($__internal_d9eff6b538daa62d7ecbfd713b766b9a249b295fae4749450dd9d1bcf3143269_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_dc82b653e3f0070c78b36363a0bfcae27f4b386f019f09c2f66cd3604839b072->leave($__internal_dc82b653e3f0070c78b36363a0bfcae27f4b386f019f09c2f66cd3604839b072_prof);
+        $__internal_d9eff6b538daa62d7ecbfd713b766b9a249b295fae4749450dd9d1bcf3143269->leave($__internal_d9eff6b538daa62d7ecbfd713b766b9a249b295fae4749450dd9d1bcf3143269_prof);
 
     }
 
     // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_1c81679842d564e5fd0035a6d2eae084fb1222a2fccab900402077b865f031a1 = $this->env->getExtension("native_profiler");
-        $__internal_1c81679842d564e5fd0035a6d2eae084fb1222a2fccab900402077b865f031a1->enter($__internal_1c81679842d564e5fd0035a6d2eae084fb1222a2fccab900402077b865f031a1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_bc3954f6e86ccd987dc0d45e2ee02804e7d018eb003b79c31e1acf240ba33c1e = $this->env->getExtension("native_profiler");
+        $__internal_bc3954f6e86ccd987dc0d45e2ee02804e7d018eb003b79c31e1acf240ba33c1e->enter($__internal_bc3954f6e86ccd987dc0d45e2ee02804e7d018eb003b79c31e1acf240ba33c1e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
-        echo "<body class=\"backfont\">
+        echo "<body class=\"fondlogin\">
 \t<div class=\"wor\">
-\t\t<div class=\"col-sm-1 col-md-4\"></div>
-\t\t<div class=\"col-sm-10 col-md-4\">
+\t\t<div class=\"col-sm-3 col-md-4\"></div>
+\t\t<div class=\"col-sm-6 col-md-4\">
 \t\t\t<div class=\"sectionstile contengroup\">
+\t\t\t\t<img src=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pun.png"), "html", null, true);
+        echo "\"  class=\" tdmd pull-left img-responsive\" alt=\"\">
+\t\t\t\t<img src=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pun.png"), "html", null, true);
+        echo "\"  class=\" tdmd pull-right img-responsive\" alt=\"\">
 \t\t\t\t<h2><b>INICIAR SESIÓN</b></h2><br>
 \t\t\t\t<form class=\"form-horizontal\" role=\"form\" method=\"post\" action=\"";
-        // line 11
+        // line 13
         echo $this->env->getExtension('routing')->getPath("pc_administrator_login");
         echo "\" style:\"display: block;\">
 \t\t\t\t\t<div class=\"input-group\"> 
-\t\t\t\t\t\t<span class=\"botpd input-group-addon\" id=\"basic-addon1\"><img src=\"";
-        // line 13
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/adm.png"), "html", null, true);
-        echo "\" alt=\"\"></span>
-\t\t\t\t\t\t<input id=\"email\" name=\"email\" type=\"text\" class=\"form-control\" placeholder=\"email\" />
+\t\t\t\t\t\t<span class=\"botpd input-group-addon grupglass\" id=\"basic-addon1\"><span class=\"glyphicon glyphicon-user ntb-lg\" aria-hidden=\"true\"></span></span>
+\t\t\t\t\t\t<input id=\"email\" name=\"email\" type=\"text\" class=\"imputglass form-control\" placeholder=\"email\" />
 \t\t\t\t\t</div>
 \t\t\t\t\t <div  class=\"logaler alert-danger\" id=\"username-error\"></div>
 \t\t\t\t\t<br>
 \t\t\t\t\t<div class=\"input-group\">
-\t\t\t\t\t\t<span class=\"botpd input-group-addon\" id=\"basic-addon1\"><img src=\"";
-        // line 19
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/ps.png"), "html", null, true);
-        echo "\" alt=\"\"></span>
-\t\t\t\t\t\t<input type=\"password\" name=\"password\" id=\"password\" class=\"form-control\" placeholder=\"Contraseña\" />
+\t\t\t\t\t\t<span class=\"botpd input-group-addon grupglass\" id=\"basic-addon1\"><span class=\"glyphicon glyphicon-asterisk ntb-lg\" aria-hidden=\"true\"></span></span>
+\t\t\t\t\t\t<input type=\"password\" name=\"password\" id=\"password\" class=\"imputglass form-control\" placeholder=\"Contraseña\" />
 \t\t\t\t\t</div>
 \t\t\t\t\t<div  class=\"logaler alert-danger\" id=\"password-error\"></div>
 \t\t\t\t\t<br>
-\t\t\t\t\t<button class=\"butonstile btn btn-lg btn-primary btn-block\" onClick=\"\" id=\"controlcamp\" type=\"submit\">Registrarse</button>
+\t\t\t\t\t<button class=\"butglass gls\" onClick=\"\" id=\"controlcamp\" type=\"submit\">Registrarse</button>
 \t\t\t\t</form>
 \t\t\t</div> \t
 \t\t</div>
@@ -87,41 +89,41 @@ class __TwigTemplate_06e36385fc61f53868e113d1cde23ebb79abe185a92c2a2b6d601a06525
 \t</div>
 ";
         
-        $__internal_1c81679842d564e5fd0035a6d2eae084fb1222a2fccab900402077b865f031a1->leave($__internal_1c81679842d564e5fd0035a6d2eae084fb1222a2fccab900402077b865f031a1_prof);
+        $__internal_bc3954f6e86ccd987dc0d45e2ee02804e7d018eb003b79c31e1acf240ba33c1e->leave($__internal_bc3954f6e86ccd987dc0d45e2ee02804e7d018eb003b79c31e1acf240ba33c1e_prof);
 
     }
 
-    // line 32
+    // line 34
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_84a49825b2484896af2dd20351b096e129a2866fd72d251143ea838cc07fd32e = $this->env->getExtension("native_profiler");
-        $__internal_84a49825b2484896af2dd20351b096e129a2866fd72d251143ea838cc07fd32e->enter($__internal_84a49825b2484896af2dd20351b096e129a2866fd72d251143ea838cc07fd32e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_3ac0df4eaf2d075ee576b60216500facad50679266419d49ed64dbdc5a16b06d = $this->env->getExtension("native_profiler");
+        $__internal_3ac0df4eaf2d075ee576b60216500facad50679266419d49ed64dbdc5a16b06d->enter($__internal_3ac0df4eaf2d075ee576b60216500facad50679266419d49ed64dbdc5a16b06d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 33
+        // line 35
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
 \t<script src=\"";
-        // line 34
+        // line 36
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("http://code.jquery.com/jquery.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 35
+        // line 37
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/js/functJquery.js"), "html", null, true);
         echo "\" ></script>
 ";
         
-        $__internal_84a49825b2484896af2dd20351b096e129a2866fd72d251143ea838cc07fd32e->leave($__internal_84a49825b2484896af2dd20351b096e129a2866fd72d251143ea838cc07fd32e_prof);
+        $__internal_3ac0df4eaf2d075ee576b60216500facad50679266419d49ed64dbdc5a16b06d->leave($__internal_3ac0df4eaf2d075ee576b60216500facad50679266419d49ed64dbdc5a16b06d_prof);
 
     }
 
-    // line 38
+    // line 40
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_b52940ac2fe32cba0bf562f21071669e85983a1d5c3d659286e01fb0ad6121dd = $this->env->getExtension("native_profiler");
-        $__internal_b52940ac2fe32cba0bf562f21071669e85983a1d5c3d659286e01fb0ad6121dd->enter($__internal_b52940ac2fe32cba0bf562f21071669e85983a1d5c3d659286e01fb0ad6121dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_91351780d0d9f7f724b062deca02419ab2223e4fa6a6a985060656672f7839fe = $this->env->getExtension("native_profiler");
+        $__internal_91351780d0d9f7f724b062deca02419ab2223e4fa6a6a985060656672f7839fe->enter($__internal_91351780d0d9f7f724b062deca02419ab2223e4fa6a6a985060656672f7839fe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
         
-        $__internal_b52940ac2fe32cba0bf562f21071669e85983a1d5c3d659286e01fb0ad6121dd->leave($__internal_b52940ac2fe32cba0bf562f21071669e85983a1d5c3d659286e01fb0ad6121dd_prof);
+        $__internal_91351780d0d9f7f724b062deca02419ab2223e4fa6a6a985060656672f7839fe->leave($__internal_91351780d0d9f7f724b062deca02419ab2223e4fa6a6a985060656672f7839fe_prof);
 
     }
 
@@ -137,33 +139,35 @@ class __TwigTemplate_06e36385fc61f53868e113d1cde23ebb79abe185a92c2a2b6d601a06525
 
     public function getDebugInfo()
     {
-        return array (  118 => 38,  109 => 35,  105 => 34,  101 => 33,  95 => 32,  76 => 19,  67 => 13,  62 => 11,  54 => 5,  48 => 4,  37 => 2,  11 => 1,);
+        return array (  120 => 40,  111 => 37,  107 => 36,  103 => 35,  97 => 34,  70 => 13,  65 => 11,  61 => 10,  54 => 5,  48 => 4,  37 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
 /* {% block scroll_nav %}*/
 /* {% endblock %}*/
 /* {% block body %}*/
-/* <body class="backfont">*/
+/* <body class="fondlogin">*/
 /* 	<div class="wor">*/
-/* 		<div class="col-sm-1 col-md-4"></div>*/
-/* 		<div class="col-sm-10 col-md-4">*/
+/* 		<div class="col-sm-3 col-md-4"></div>*/
+/* 		<div class="col-sm-6 col-md-4">*/
 /* 			<div class="sectionstile contengroup">*/
+/* 				<img src="{{ asset('public/img/pun.png') }}"  class=" tdmd pull-left img-responsive" alt="">*/
+/* 				<img src="{{ asset('public/img/pun.png') }}"  class=" tdmd pull-right img-responsive" alt="">*/
 /* 				<h2><b>INICIAR SESIÓN</b></h2><br>*/
 /* 				<form class="form-horizontal" role="form" method="post" action="{{ path('pc_administrator_login') }}" style:"display: block;">*/
 /* 					<div class="input-group"> */
-/* 						<span class="botpd input-group-addon" id="basic-addon1"><img src="{{ asset('public/img/adm.png') }}" alt=""></span>*/
-/* 						<input id="email" name="email" type="text" class="form-control" placeholder="email" />*/
+/* 						<span class="botpd input-group-addon grupglass" id="basic-addon1"><span class="glyphicon glyphicon-user ntb-lg" aria-hidden="true"></span></span>*/
+/* 						<input id="email" name="email" type="text" class="imputglass form-control" placeholder="email" />*/
 /* 					</div>*/
 /* 					 <div  class="logaler alert-danger" id="username-error"></div>*/
 /* 					<br>*/
 /* 					<div class="input-group">*/
-/* 						<span class="botpd input-group-addon" id="basic-addon1"><img src="{{ asset('public/img/ps.png') }}" alt=""></span>*/
-/* 						<input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" />*/
+/* 						<span class="botpd input-group-addon grupglass" id="basic-addon1"><span class="glyphicon glyphicon-asterisk ntb-lg" aria-hidden="true"></span></span>*/
+/* 						<input type="password" name="password" id="password" class="imputglass form-control" placeholder="Contraseña" />*/
 /* 					</div>*/
 /* 					<div  class="logaler alert-danger" id="password-error"></div>*/
 /* 					<br>*/
-/* 					<button class="butonstile btn btn-lg btn-primary btn-block" onClick="" id="controlcamp" type="submit">Registrarse</button>*/
+/* 					<button class="butglass gls" onClick="" id="controlcamp" type="submit">Registrarse</button>*/
 /* 				</form>*/
 /* 			</div> 	*/
 /* 		</div>*/

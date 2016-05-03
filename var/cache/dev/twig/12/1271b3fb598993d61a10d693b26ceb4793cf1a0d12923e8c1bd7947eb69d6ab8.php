@@ -21,20 +21,20 @@ class __TwigTemplate_cf9315d2f56ddc17e1be860ad77c629036fff360e679cc904a065da0aa7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4ff58213321d8efb55c16d5c340810e6d111c704b1950ab47ddd847efa64b2c2 = $this->env->getExtension("native_profiler");
-        $__internal_4ff58213321d8efb55c16d5c340810e6d111c704b1950ab47ddd847efa64b2c2->enter($__internal_4ff58213321d8efb55c16d5c340810e6d111c704b1950ab47ddd847efa64b2c2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:jornadascenso.html.twig"));
+        $__internal_3bfc32f1458039e9043ffcc3c1715f00d356cae6128f9d16ecbd0d33a7961524 = $this->env->getExtension("native_profiler");
+        $__internal_3bfc32f1458039e9043ffcc3c1715f00d356cae6128f9d16ecbd0d33a7961524->enter($__internal_3bfc32f1458039e9043ffcc3c1715f00d356cae6128f9d16ecbd0d33a7961524_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:jornadascenso.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4ff58213321d8efb55c16d5c340810e6d111c704b1950ab47ddd847efa64b2c2->leave($__internal_4ff58213321d8efb55c16d5c340810e6d111c704b1950ab47ddd847efa64b2c2_prof);
+        $__internal_3bfc32f1458039e9043ffcc3c1715f00d356cae6128f9d16ecbd0d33a7961524->leave($__internal_3bfc32f1458039e9043ffcc3c1715f00d356cae6128f9d16ecbd0d33a7961524_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_8369952ff8aa2999430374560b11b6db228a347c85ec30e59b3fa36e5860dd58 = $this->env->getExtension("native_profiler");
-        $__internal_8369952ff8aa2999430374560b11b6db228a347c85ec30e59b3fa36e5860dd58->enter($__internal_8369952ff8aa2999430374560b11b6db228a347c85ec30e59b3fa36e5860dd58_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_7f26425f454c49ef55fd0a43235fef1bf3c92e4584c42a49dff01606cf8134aa = $this->env->getExtension("native_profiler");
+        $__internal_7f26425f454c49ef55fd0a43235fef1bf3c92e4584c42a49dff01606cf8134aa->enter($__internal_7f26425f454c49ef55fd0a43235fef1bf3c92e4584c42a49dff01606cf8134aa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "  <div>
@@ -118,7 +118,7 @@ $context["meeting"], "meetingType", array()) == "STERILIZATION")) {
             echo "                          </td>
                           <td><a href=\"";
             // line 57
-            echo $this->env->getExtension('routing')->getPath("pc_admin_jornada_censo_mas");
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_admin_jornada_censo_mas", array("meetingId" => $this->getAttribute($context["meeting"], "id", array()))), "html", null, true);
             echo "\" id=\"censomas\">&nbsp;<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></a></td>
                       </tr>
                   ";
@@ -134,7 +134,7 @@ $context["meeting"], "meetingType", array()) == "STERILIZATION")) {
           </div><!--div container-->
 ";
         
-        $__internal_8369952ff8aa2999430374560b11b6db228a347c85ec30e59b3fa36e5860dd58->leave($__internal_8369952ff8aa2999430374560b11b6db228a347c85ec30e59b3fa36e5860dd58_prof);
+        $__internal_7f26425f454c49ef55fd0a43235fef1bf3c92e4584c42a49dff01606cf8134aa->leave($__internal_7f26425f454c49ef55fd0a43235fef1bf3c92e4584c42a49dff01606cf8134aa_prof);
 
     }
 
@@ -209,7 +209,7 @@ $context["meeting"], "meetingType", array()) == "STERILIZATION")) {
 /*                               */
 /*                             {%endif%}*/
 /*                           </td>*/
-/*                           <td><a href="{{ path('pc_admin_jornada_censo_mas')}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>*/
+/*                           <td><a href="{{ path('pc_admin_jornada_censo_mas', {'meetingId' : meeting.id })}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>*/
 /*                       </tr>*/
 /*                   {% endfor %}              */
 /*               </tbody>*/

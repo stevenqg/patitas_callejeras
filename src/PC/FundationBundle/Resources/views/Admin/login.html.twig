@@ -2,26 +2,28 @@
 {% block scroll_nav %}
 {% endblock %}
 {% block body %}
-<body class="backfont">
+<body class="fondlogin">
 	<div class="wor">
-		<div class="col-sm-1 col-md-4"></div>
-		<div class="col-sm-10 col-md-4">
+		<div class="col-sm-3 col-md-4"></div>
+		<div class="col-sm-6 col-md-4">
 			<div class="sectionstile contengroup">
+				<img src="{{ asset('public/img/pun.png') }}"  class=" tdmd pull-left img-responsive" alt="">
+				<img src="{{ asset('public/img/pun.png') }}"  class=" tdmd pull-right img-responsive" alt="">
 				<h2><b>INICIAR SESIÓN</b></h2><br>
 				<form class="form-horizontal" role="form" method="post" action="{{ path('pc_administrator_login') }}" style:"display: block;">
 					<div class="input-group"> 
-						<span class="botpd input-group-addon" id="basic-addon1"><img src="{{ asset('public/img/adm.png') }}" alt=""></span>
-						<input id="email" name="email" type="text" class="form-control" placeholder="email" />
+						<span class="botpd input-group-addon grupglass" id="basic-addon1"><span class="glyphicon glyphicon-user ntb-lg" aria-hidden="true"></span></span>
+						<input id="email" name="email" type="text" class="imputglass form-control" placeholder="email" />
 					</div>
 					 <div  class="logaler alert-danger" id="username-error"></div>
 					<br>
 					<div class="input-group">
-						<span class="botpd input-group-addon" id="basic-addon1"><img src="{{ asset('public/img/ps.png') }}" alt=""></span>
-						<input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" />
+						<span class="botpd input-group-addon grupglass" id="basic-addon1"><span class="glyphicon glyphicon-asterisk ntb-lg" aria-hidden="true"></span></span>
+						<input type="password" name="password" id="password" class="imputglass form-control" placeholder="Contraseña" />
 					</div>
 					<div  class="logaler alert-danger" id="password-error"></div>
 					<br>
-					<button class="butonstile btn btn-lg btn-primary btn-block" onClick="" id="controlcamp" type="submit">Registrarse</button>
+					<button class="butglass gls" onClick="" id="controlcamp" type="submit">Registrarse</button>
 				</form>
 			</div> 	
 		</div>

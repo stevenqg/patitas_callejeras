@@ -54,7 +54,7 @@
                               
                             {%endif%}
                           </td>
-                          <td><a href="{{ path('pc_admin_jornada_censo_mas')}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>
+                          <td><a href="{{ path('pc_admin_jornada_censo_mas', {'meetingId' : meeting.id })}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>
                       </tr>
                   {% endfor %}              
               </tbody>

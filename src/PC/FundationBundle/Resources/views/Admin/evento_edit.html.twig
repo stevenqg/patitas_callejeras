@@ -1,0 +1,64 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block body %}
+	<div class="liner"></div>
+	<br>
+	<div class="container">
+	<div class="row">
+		<div class="col-xs-1 col-md-1"></div>	
+		<div class="col-xs-10 col-md-10">
+			<div class="timod pestile" >
+			<h4 class="margnone">Editar Evento <span class="btn-lg glyphicon glyphicon-edit" aria-hidden="true"></span></h4>
+			</div>
+			<div class="conteform">
+					<div class="form-group">
+					<div class="row">
+					<br>
+					<div class="col-xs-3 col-md-2 textjusti">
+					<label class="marginlabel"  for="Nombre del adoptante">Titulo: </label></div>
+					<div class="col-xs-9 col-md-4"><input type="text" class="form-control" id="age_user" placeholder="Nombre del Evento"><div  class="logaler alert-danger" id="age-error"></div><br>
+					</div>
+					<br>
+					<div class="textjusti col-xs-3 col-md-2">
+					<label class="marginlabel textjusti"  for="Apellidos del adoptante">Lugar:</label></div>
+					<div class="col-xs-9 col-md-4"><input type="text" class="form-control" id="last_name"placeholder="donde se realiza el evento"><div  class="logaler alert-danger" id="last_name-error"></div>
+					</div>
+					</div>
+
+					<div class="row">
+					<br>
+					<div class="col-xs-3 col-md-2 textjusti">
+					<label class="marginlabel"  for="Nombre del adoptante">Fecha: </label></div>
+					<div class="col-xs-9 col-md-4"><input type="text" class="form-control" id="age_user" placeholder="Fecha de realización"><div  class="logaler alert-danger" id="age-error"></div><br>
+					</div>
+					<br>
+					<div class="textjusti col-xs-3 col-md-2">
+					<label class="marginlabel"  for="Edad del adoptante">Descripcion:</label></div>
+					<div class="col-xs-9 col-md-4">
+						<textarea  class="form-control" rows="5" name="descripción"></textarea>
+					</div>
+					</div>
+					<hr>
+ 				</div>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Guardar Cambios  »&nbsp;<span class="glyphicon glyphicon-saved" aria-hidden="true"></span></button>
+
+						<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+						  <div class="modal-dialog modal-sm">
+						    <div class="modal-content">
+						    	<div class="modal-body">
+						    		<p ><span class="coloralert btn-lg glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp; Esta seguro de efectuar cambios </p>
+						    	</div>
+						    	<div class="modal-footer">
+                    		  <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.close();">Aceptar</button>
+                    		</div>
+						    </div>
+						    
+						  </div>
+						</div>
+
+				<button class="btn btn-default" onclick="window.close();">cancelar</button>
+			</div>	<!-- div conten-form-->
+		</div>	<!-- div col-->
+		<div class="col-xs-1 col-md-1"></div>	
+	</div>
+	</div>
+{% endblock %}
