@@ -2,8 +2,8 @@
 {% block capa %}
 
       <div>
-        <h1 class="coloralert"><a href="{{ path('pc_admin_jornada_censo')}}" type="button" class=" buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a> &nbsp;Información del Censo en {{ meeting.address }}
-        <a href="{{ path('pc_admin_esterilizacion_add')}}" type="button" id="ventemerg3" class="buttonborder btn btn-default pull-right"data-toggle="tooltip" data-placement="top" title="Nueva jornada de esterilización">Esterilizar</a>
+        <h1 class="coloralert"><a href="{{ path('pc_admin_jornada_censo')}}" type="button" class="pull-left buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a> &nbsp;Información del Censo en {{ meeting.address }}
+        <a href="{{ path('pc_admin_esterilizacion_add',{'meetingId' : meeting.id})}}" type="button" onclick="window.open(this.href, this.target,'width=360,height=500'); return false" class="buttonborder btn btn-default pull-right"data-toggle="tooltip" data-placement="top" title="Nueva jornada">jornada Esterilizar</a>
         </h1>
         
       <div class="sectionstile">
@@ -29,58 +29,25 @@
              <div class="col-md-1 col-lg-1"></div>
              <div class="col-xs-4 col-md-5 col-lg-5">
                 
-                <h4 class="textjusti">Colaboradores &nbsp;  <button type="button" class="btn btn-info" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
-               <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Agregar colaboradores"></span>
-               </button>
-                <div class="modal fade bs-example-modal-sm" id="myModal"  tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-              <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                  
-                  <div class="timod modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar colaborador &nbsp;<span class=" glyphicon glyphicon-user" aria-hidden="true"></span></h5>
-                  </div>
-
-                   <div class="modal-body">
-                      <form>
-                        <div class="form-group">
-                          <label for="recipient-name" class="textjusti control-label"><h5>Nombre:</h5></label>
-                          <input type="text" class="form-control" id="recipient-name"
-                          placeholder="Nombre">
-                        </div>
-
-                        <div class="form-group">
-                          <label for="recipient-name" class="textjusti control-label"><h5>Dirección:</h5></label>
-                          <input type="text" class="form-control" id="recipient-name"
-                          placeholder="Dirección">
-                        </div>
-                        <div class="form-group">
-                          <label for="recipient-name" class="textjusti control-label"><h5>Telefono:</h5></label>
-                          <input type="text" class="form-control" id="recipient-name"
-                          placeholder="Telefono">
-                        </div>
-                      </form>
-                    </div>
-
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary" data-dismiss="modal">Agregar</button>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    </div>
-              </div>
-              </div>
-            </div>
+                <h4 class="textjusti">Colaboradores &nbsp;<a href="{{path('pc_admin_jornada_censo_addcollaborator', {'meetingId' : meeting.id} )}}" id="ventcolaborator" type="button" class="btn btn-default">
+               <span class="coloralert glyphicon glyphicon-plus-sign" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Agregar colaboradores"></span>
+               </a>
              </h4>
                   <table class="table table-hove">
                      <tr>
-                      <th>Nombre: </th>
+                      <th>Nombre</th>
                       <th>Dirección</th>
                       <th>Telefono</th>
                      </tr>
+                    
+                    {% for census_collaborator in census_collaborators %}
                     <tr>
-                      <td> </td>
-                      <td> </td>
-                      <td> </td>
+                      <td>{{ census_collaborator.collaborator.name }}</td>
+                      <td>{{ census_collaborator.collaborator.address }}</td>
+                      <td>{{ census_collaborator.collaborator.phone }}</td>
                     </tr>
+                    {% endfor %}
+                    
                   </table>
 
               </div> 
@@ -101,7 +68,7 @@
                   <th class="tdmd">edad</th>
                   <th class="tdxs">¿cirugia?</th>
                   <th class="tdxs">Edit</th>
-                  <th class="tdd">Nombre</th>
+                  <th class="tdd bord">Nombre</th>
                   <th class="tdd">Telefono</th>
                   <th class="tdxs">Mas</th>
                 </tr>
@@ -134,12 +101,12 @@
                       
                     {%endif%}
                   </td>
-                  <td><a href="" id="ventemerg3" data-toggle="tooltip" data-placement="right" title="Editar información">&nbsp;<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></a></td>
-                  <td>{{ census.user.name }}</td>
+                  <td><a href="{{ path('pc_admin_jornada_censo_agregar', {'meetingId' : meeting.id} )}}" data-toggle="tooltip" data-placement="right" title="Editar información">&nbsp;<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></a></td>
+                  <td class="bord">{{ census.user.name }}</td>
                   <td>{{ census.user.phone_number }}</td>
-                  <td><a href="" data-toggle="modal" data-target="#myModal2">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a>
+                  <td><a href="" data-toggle="modal" data-target="#censuuser{{census.user.id}}">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a>
 
-                  <div class="modal fade bs-example-modal-sm"id="myModal2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                  <div class="modal fade bs-example-modal-sm"id="censuuser{{census.user.id}}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
                     <div class="modal-dialog modal-sm">
                       <div class="modal-content">
                   

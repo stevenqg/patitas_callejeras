@@ -75,7 +75,7 @@ class Census_collaborator
      *
      * @return Census_collaborator
      */
-    public function setCensus(\PC\FundationBundle\Entity\Meeting $meeting = null)
+    public function setMeeting(\PC\FundationBundle\Entity\Meeting $meeting = null)
     {
         $this->meeting = $meeting;
 

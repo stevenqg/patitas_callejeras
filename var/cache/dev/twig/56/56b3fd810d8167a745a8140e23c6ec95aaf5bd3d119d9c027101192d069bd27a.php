@@ -22,56 +22,61 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d07a5c698b80d275e3c57704904b3a5d35d047c25cc7c88d4a0624a70459fce9 = $this->env->getExtension("native_profiler");
-        $__internal_d07a5c698b80d275e3c57704904b3a5d35d047c25cc7c88d4a0624a70459fce9->enter($__internal_d07a5c698b80d275e3c57704904b3a5d35d047c25cc7c88d4a0624a70459fce9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:agregardatos.html.twig"));
+        $__internal_763877fd89de658e68bbee5c7d20188b99543ac2422cc34db4539542d2faa46f = $this->env->getExtension("native_profiler");
+        $__internal_763877fd89de658e68bbee5c7d20188b99543ac2422cc34db4539542d2faa46f->enter($__internal_763877fd89de658e68bbee5c7d20188b99543ac2422cc34db4539542d2faa46f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:agregardatos.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d07a5c698b80d275e3c57704904b3a5d35d047c25cc7c88d4a0624a70459fce9->leave($__internal_d07a5c698b80d275e3c57704904b3a5d35d047c25cc7c88d4a0624a70459fce9_prof);
+        $__internal_763877fd89de658e68bbee5c7d20188b99543ac2422cc34db4539542d2faa46f->leave($__internal_763877fd89de658e68bbee5c7d20188b99543ac2422cc34db4539542d2faa46f_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_dd6ac598c98f5b53a8353d92bd6e4d025d10d0aa579ebb645e4d002deb2f5c75 = $this->env->getExtension("native_profiler");
-        $__internal_dd6ac598c98f5b53a8353d92bd6e4d025d10d0aa579ebb645e4d002deb2f5c75->enter($__internal_dd6ac598c98f5b53a8353d92bd6e4d025d10d0aa579ebb645e4d002deb2f5c75_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_0b2ecebdcfcace63131e5310724148f6bf8ed9f99cf63ede535e16bbc4e7d9ea = $this->env->getExtension("native_profiler");
+        $__internal_0b2ecebdcfcace63131e5310724148f6bf8ed9f99cf63ede535e16bbc4e7d9ea->enter($__internal_0b2ecebdcfcace63131e5310724148f6bf8ed9f99cf63ede535e16bbc4e7d9ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "agregar datos jornada de censo";
         
-        $__internal_dd6ac598c98f5b53a8353d92bd6e4d025d10d0aa579ebb645e4d002deb2f5c75->leave($__internal_dd6ac598c98f5b53a8353d92bd6e4d025d10d0aa579ebb645e4d002deb2f5c75_prof);
+        $__internal_0b2ecebdcfcace63131e5310724148f6bf8ed9f99cf63ede535e16bbc4e7d9ea->leave($__internal_0b2ecebdcfcace63131e5310724148f6bf8ed9f99cf63ede535e16bbc4e7d9ea_prof);
 
     }
 
     // line 3
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_b26a96ee28b8048311e2c5751f1c06a375d56e3dcfaf4d09839f8b0a9bec1bd8 = $this->env->getExtension("native_profiler");
-        $__internal_b26a96ee28b8048311e2c5751f1c06a375d56e3dcfaf4d09839f8b0a9bec1bd8->enter($__internal_b26a96ee28b8048311e2c5751f1c06a375d56e3dcfaf4d09839f8b0a9bec1bd8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_57322136bbd7e4d899dc01c24df82de152a031088a0097f1ecf1645562de754f = $this->env->getExtension("native_profiler");
+        $__internal_57322136bbd7e4d899dc01c24df82de152a031088a0097f1ecf1645562de754f->enter($__internal_57322136bbd7e4d899dc01c24df82de152a031088a0097f1ecf1645562de754f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 4
         echo "
 
 \t
-\t\t\t<h2 class=\"coloralert\">Datos jornada censo<span class=\"btn-lg glyphicon glyphicon-check\" aria-hidden=\"true\"></span></h2>
-\t\t\t<div class=\"sectionstile\">
+\t\t\t<h2 class=\"coloralert\"><a href=\"";
+        // line 7
+        echo $this->env->getExtension('routing')->getPath("pc_admin_jornada_censo");
+        echo "\" type=\"button\" class=\"pull-left buttonborder btn btn-default\"> <span class=\"glyphicon glyphicon-hand-left\" aria-hidden=\"true\"></span>&nbsp;regresar</a> &nbsp;Datos jornada censo<span class=\"btn-lg glyphicon glyphicon-check\" aria-hidden=\"true\"></span></h2>
+\t\t\t
 \t\t\t\t
+\t\t\t\t
+\t\t\t\t\t
+\t\t\t\t<h4 class=\"podingtitle1\">datos del responsable</h4>
+\t\t\t\t<div class=\"sectionstile notborad\">
 \t\t\t\t";
-        // line 10
+        // line 14
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
-\t\t\t\t\t
-\t\t\t\t<h4 class=\"textjusti titulosection\">datos del responsable</h4>
-\t\t\t\t
 \t\t\t\t<hr class=margnone>
+\t\t\t\t<br>
 \t\t\t\t<div class=\"form-group\">
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div class=\"textjusti col-xs-3 col-md-2\">
-\t\t\t\t\t\t\t<label class=\"marginlabel textjusti\" for=\"Nombres del adoptante\">Nombre del acudiente:</label>
+\t\t\t\t\t\t\t<label class=\"marginlabel text-left\" for=\"Nombres del adoptante\">Nombre del acudiente:</label>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 21
+        // line 23
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "userName", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "nombres del acudiente")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -81,7 +86,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 28
+        // line 30
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lastName", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "apellidos")));
         echo "
 \t\t\t\t\t\t\t<div  class=\"logaler alert-danger\" id=\"last_name-error\"></div>
@@ -94,7 +99,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 38
+        // line 40
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "userAge", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "edad")));
         echo "
 \t\t\t\t\t\t\t<div  class=\"logaler alert-danger\" id=\"age-error\"></div><br>
@@ -104,7 +109,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 45
+        // line 47
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "identificationNumber", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "cédula")));
         echo "
 \t\t\t\t\t\t</div>
@@ -115,7 +120,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 53
+        // line 55
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "address", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "dirección")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -125,7 +130,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 60
+        // line 62
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phone_number", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "teléfono")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -137,22 +142,25 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 69
+        // line 71
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "correo electrónico")));
         echo "
 \t\t\t\t\t\t\t<br>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t\t<hr>
-\t\t\t\t\t<h4 class=\"text-center coloralert\">datos de la mascota</h4>
-\t\t\t\t\t<hr>
+\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<h4 class=\"podingtitle1\">datos de la mascota</h4>
+\t\t\t\t\t<div class=\"sectionstile notborad\">
+\t\t\t\t\t
+\t\t\t\t\t<div class=\"form-group\">
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div class=\"textjusti col-xs-3 col-md-2\">
 \t\t\t\t\t\t\t<label class=\"marginlabel\" for=\"Edad del adoptante\">Nombre:</label>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 81
+        // line 86
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "petName", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "nombre mascota")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -162,7 +170,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 88
+        // line 93
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "petAge", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "edad")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -174,7 +182,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 97
+        // line 102
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "species", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "seleccione la especie")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -184,7 +192,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 104
+        // line 109
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "race", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "raza de la mascota")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -196,7 +204,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 113
+        // line 118
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "colour", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "color")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -206,7 +214,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 120
+        // line 125
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "gender", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "seleccione el género")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -218,7 +226,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 129
+        // line 134
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "isVacunated", array()), 'widget', array("attr" => array("class" => "check checkbox")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -228,7 +236,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 136
+        // line 141
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "isSterilized", array()), 'widget', array("attr" => array("class" => "check checkbox")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -240,7 +248,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 145
+        // line 150
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "isStray", array()), 'widget', array("attr" => array("class" => "check checkbox")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -250,7 +258,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
-        // line 152
+        // line 157
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "isNeedSurgery", array()), 'widget', array("attr" => array("class" => "check checkbox")));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -262,7 +270,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\" style=\"display:none;\">
 \t\t\t\t\t\t\t";
-        // line 161
+        // line 166
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "meetingId", array()), 'widget', array("attr" => array("class" => "check checkbox", "value" => (isset($context["meetingId"]) ? $context["meetingId"] : $this->getContext($context, "meetingId")))));
         echo "
 \t\t\t\t\t\t\t<br>
@@ -270,20 +278,21 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t</div>
 \t\t\t\t\t
 \t\t\t\t</div>
+\t\t\t\t
+\t\t\t\t</div>
 \t\t\t\t";
-        // line 167
+        // line 174
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("label" => "Continuar", "attr" => array("class" => "btn btn-success")));
         echo "
 \t\t\t\t\t
 \t\t\t\t";
-        // line 169
+        // line 176
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
-\t\t\t
-\t\t</div>\t
+\t\t\t\t
 ";
         
-        $__internal_b26a96ee28b8048311e2c5751f1c06a375d56e3dcfaf4d09839f8b0a9bec1bd8->leave($__internal_b26a96ee28b8048311e2c5751f1c06a375d56e3dcfaf4d09839f8b0a9bec1bd8_prof);
+        $__internal_57322136bbd7e4d899dc01c24df82de152a031088a0097f1ecf1645562de754f->leave($__internal_57322136bbd7e4d899dc01c24df82de152a031088a0097f1ecf1645562de754f_prof);
 
     }
 
@@ -299,7 +308,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 
     public function getDebugInfo()
     {
-        return array (  280 => 169,  275 => 167,  266 => 161,  254 => 152,  244 => 145,  232 => 136,  222 => 129,  210 => 120,  200 => 113,  188 => 104,  178 => 97,  166 => 88,  156 => 81,  141 => 69,  129 => 60,  119 => 53,  108 => 45,  98 => 38,  85 => 28,  75 => 21,  61 => 10,  53 => 4,  47 => 3,  35 => 2,  11 => 1,);
+        return array (  290 => 176,  285 => 174,  274 => 166,  262 => 157,  252 => 150,  240 => 141,  230 => 134,  218 => 125,  208 => 118,  196 => 109,  186 => 102,  174 => 93,  164 => 86,  146 => 71,  134 => 62,  124 => 55,  113 => 47,  103 => 40,  90 => 30,  80 => 23,  68 => 14,  58 => 7,  53 => 4,  47 => 3,  35 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
@@ -308,18 +317,20 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 /* */
 /* */
 /* 	*/
-/* 			<h2 class="coloralert">Datos jornada censo<span class="btn-lg glyphicon glyphicon-check" aria-hidden="true"></span></h2>*/
-/* 			<div class="sectionstile">*/
+/* 			<h2 class="coloralert"><a href="{{ path('pc_admin_jornada_censo')}}" type="button" class="pull-left buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a> &nbsp;Datos jornada censo<span class="btn-lg glyphicon glyphicon-check" aria-hidden="true"></span></h2>*/
+/* 			*/
 /* 				*/
-/* 				{{ form_start(form) }}*/
+/* 				*/
 /* 					*/
-/* 				<h4 class="textjusti titulosection">datos del responsable</h4>*/
-/* 				*/
+/* 				<h4 class="podingtitle1">datos del responsable</h4>*/
+/* 				<div class="sectionstile notborad">*/
+/* 				{{ form_start(form) }}*/
 /* 				<hr class=margnone>*/
+/* 				<br>*/
 /* 				<div class="form-group">*/
 /* 					<div class="row">*/
 /* 						<div class="textjusti col-xs-3 col-md-2">*/
-/* 							<label class="marginlabel textjusti" for="Nombres del adoptante">Nombre del acudiente:</label>*/
+/* 							<label class="marginlabel text-left" for="Nombres del adoptante">Nombre del acudiente:</label>*/
 /* 						</div>*/
 /* 						<div class="col-xs-9 col-md-4">*/
 /* 							{{form_widget(form.userName, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombres del acudiente' } })}}*/
@@ -374,9 +385,12 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 /* 							<br>*/
 /* 						</div>*/
 /* 					</div>*/
-/* 					<hr>*/
-/* 					<h4 class="text-center coloralert">datos de la mascota</h4>*/
-/* 					<hr>*/
+/* 					</div>*/
+/* 					</div>*/
+/* 					<h4 class="podingtitle1">datos de la mascota</h4>*/
+/* 					<div class="sectionstile notborad">*/
+/* 					*/
+/* 					<div class="form-group">*/
 /* 					<div class="row">*/
 /* 						<div class="textjusti col-xs-3 col-md-2">*/
 /* 							<label class="marginlabel" for="Edad del adoptante">Nombre:</label>*/
@@ -468,10 +482,11 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 /* 					</div>*/
 /* 					*/
 /* 				</div>*/
+/* 				*/
+/* 				</div>*/
 /* 				{{ form_widget(form.save, {'label' : 'Continuar', 'attr' : {'class' : 'btn btn-success'} }) }}*/
 /* 					*/
 /* 				{{ form_end(form) }}*/
-/* 			*/
-/* 		</div>	*/
+/* 				*/
 /* {% endblock%}*/
 /* */

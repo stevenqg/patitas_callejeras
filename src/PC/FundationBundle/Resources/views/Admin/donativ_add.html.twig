@@ -1,0 +1,54 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+
+	<h1 class="coloralert"><a href="{{path('pc_admin_donativ')}}" type="button" class="pull-left buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a>&nbsp;Registrar donativo</h1><hr>
+	{{ form_start(form, {'attr' : {'role' : 'form'} }) }}
+	<div class="sectionstile">
+		  <div class="row">
+        <br>
+        <div class="textjusti col-xs-3 col-md-2">
+          <label class="marginlabel"  for="Edad del adoptante">Tipo de donación:</label>
+        </div>
+        <div class="col-xs-9 col-md-4">
+          {{form_widget(form.type, {'attr' : {'class' : 'form-control', 'placeholder' : 'que tipo de donativo es?' } })}}
+        </div>
+      </div>
+      
+      <div class="row">
+      <br>
+        <div class="col-xs-3 col-md-2 textjusti">
+          <label class="marginlabel"  for="EStado de la cirugia">Cuantia: </label>
+        </div>
+        <div class="col-xs-9 col-md-4">
+          {{form_widget(form.quantity, {'attr' : {'class' : 'form-control', 'placeholder' : 'si es dinero el monto y es de otro tipo la cantidad recibida.' } })}}
+        </div>
+        <div class="col-xs-3 col-md-2 textjusti">
+          <label class="marginlabel"  for="EStado de la cirugia">Donante: </label>
+        </div>
+        {{form_widget(form.donor, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombre del donante (opcional)' } })}}
+      </div>
+      
+      </div>
+        <div class="row">
+          <br>
+          <div class="col-xs-3 col-md-2 textjusti">
+            <label class="marginlabel"  for="EStado de la cirugia">Fecha: </label>
+          </div>
+          {{ form_widget(form.receivedAt) }}<br>
+        </div>
+        <div class="row">
+          <br>
+        <div class="textjusti col-xs-3 col-md-2">
+          <label class="marginlabel"  for="Edad del adoptante">Descripción:</label>
+        </div>
+        <div class="col-xs-9 col-md-4">
+          {{form_widget(form.description, {'attr' : {'class' : 'form-control', 'placeholder' : 'descripción del donativo recibído.' } })}}
+        </div>
+      </div>
+	
+	      <div class="col-xs-9 col-md-4">
+          {{ form_widget(form.save, {'label' : 'Continuar', 'attr' : {'class' : 'btn btn-success'} }) }}
+        </div>
+	
+  {{ form_end(form) }}
+{% endblock %}

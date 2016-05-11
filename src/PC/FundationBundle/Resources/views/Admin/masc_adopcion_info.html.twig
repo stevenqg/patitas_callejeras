@@ -1,0 +1,51 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+
+            <h1 class="coloralert"><a href="{{ path('pc_admin_adopt_pet')}}" type="button" class="pull-left buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a> &nbsp;Información de </h1>
+			<div class="sectionstile">
+				<div class="row">
+					<div class="col-md-3">
+					<div><img class="mion img-responsive img-thumbnail" alt="" name="imgmascota"></div>
+					</div>
+					<div class="col-md-9">
+						<div class="row">
+			<div class="textjusti col-md-1"><label class="marginlabel">Nombre:</label></div>	
+			<div class="col-md-5"><input type="text" class="form-control" name="Nomascota" disabled></div>
+			<div class="textjusti col-md-1"><label class="marginlabel">Edad:</label></div>	
+			<div class="col-md-5"><input type="text" class="form-control" name="EDmascota" disabled></div>
+			</div><br><!-- div close row form -->
+			<div class="row">
+			<div class="textjusti col-md-1"><label class="marginlabel">Color:</label></div>	
+			<div class="col-md-5"><input type="text" class="form-control" name="Colmascota" disabled></div>
+			<div class="textjusti col-md-2"><label class="marginlabel">Sexo:</label></div>	
+			<div class="col-md-4"><select class="form-control" disabled>
+						  <option>Macho</option>
+						  <option>hembra</option>
+						</select>
+					</div>
+			</div><br><!-- div close row form -->	
+			<div class="row">
+			<div class="textjusti col-md-1"><label class="marginlabel">Rasgo:</label></div>	
+			<div class="col-md-5"><input type="text" name="Colmascota" class="form-control" disabled></div>
+			<div class="textjusti col-md-2"><label class="marginlabel">Vacunado:</label></div>	
+			<div class="col-md-4"><select class="form-control" disabled>
+						  <option>Si</option>
+						  <option>No</option>
+						</select>
+					</div>
+			</div><br><!-- div close row form -->	
+			<div class="row">
+			<div class="textjusti col-md-2"><label class="marginlabel">Esterilizado:</label></div>	
+			<div class="col-md-4"><select class="form-control" disabled>
+						  <option>Si</option>
+						  <option>No</option>
+						</select>
+					</div>
+					<div class="col-md-2"></div>
+					<div class="col-md-4"><a  href="{{path('pc_admin_adopt_pet_edit')}}"type="button" class="buttonborder btn btn-success">Editar datos &nbsp;<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></div>
+			</div><br>
+					</div>
+				</div>
+			
+		</div><!--div sectionsitile-->
+{% endblock %}

@@ -14,6 +14,11 @@ class Pet
 {
     
     /**
+     * @ORM\OneToMany(targetEntity="Adoption", mappedBy="pet")
+     */ 
+    protected $adoptions;
+    
+    /**
      * @ORM\OneToMany(targetEntity="Photo", mappedBy="pet")
      */ 
     protected $photos;
@@ -100,6 +105,7 @@ class Pet
     {
         $this->photos = new ArrayCollection();
         $this->credits = new ArrayCollection();
+        $this->adoptions = new ArrayCollection();
     }
 
     /**
@@ -395,5 +401,39 @@ class Pet
     public function getStatus()
     {
         return $this->status;
+    }
+
+    /**
+     * Add adoption
+     *
+     * @param \PC\FundationBundle\Entity\Adoption $adoption
+     *
+     * @return Pet
+     */
+    public function addAdoption(\PC\FundationBundle\Entity\Adoption $adoption)
+    {
+        $this->adoptions[] = $adoption;
+
+        return $this;
+    }
+
+    /**
+     * Remove adoption
+     *
+     * @param \PC\FundationBundle\Entity\Adoption $adoption
+     */
+    public function removeAdoption(\PC\FundationBundle\Entity\Adoption $adoption)
+    {
+        $this->adoptions->removeElement($adoption);
+    }
+
+    /**
+     * Get adoptions
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAdoptions()
+    {
+        return $this->adoptions;
     }
 }

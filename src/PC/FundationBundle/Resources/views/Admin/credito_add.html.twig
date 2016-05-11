@@ -1,0 +1,182 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+
+<h1 class="coloralert">Registrar credito de emergencia 	</h1>
+{{ form_start(form, {'attr' : {'role' : 'form'} }) }}			
+<div class="sectionstile"><br>
+	<div class="row">
+		<div class="textjusti col-md-2">
+			<label class="marginlabel">Referencia:</label>
+		</div>	
+		<div class="col-md-4">
+			{{form_widget(form.reference, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombre de la persona natural o jurídica' } })}}
+		</div>
+		<div class="textjusti col-md-2">
+			<label class="marginlabel">Monto:</label>
+		</div>	
+		<div class="col-md-4">
+			{{form_widget(form.amount, {'attr' : {'class' : 'form-control', 'placeholder' : 'monto del crédito' } })}}
+		</div>
+	</div><br><!-- div close row form -->
+	
+	<div class="row">
+		<div class="textjusti col-md-2">
+			<label class="marginlabel">Responsable:</label>
+		</div>	
+		<div class="col-md-4">
+			{{form_widget(form.responsible, {'attr' : {'class' : 'form-control', 'placeholder' : 'responsable del crédito' } })}}
+		</div>
+		<div class="textjusti col-md-2">
+			<label class="marginlabel">Destino:</label>
+		</div>	
+		<div class="col-md-4">
+			{{form_widget(form.destiny, {'attr' : {'class' : 'form-control', 'placeholder' : 'destino del crédito' } })}}
+		</div>
+	</div><br><!-- div close row form -->
+	
+	<hr>
+	<div class="titcred">Datos de la Mascota</div>
+	<div class="sectionstile3">
+	
+		<div class="row">
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Nombre:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.petName, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombre mascota' } })}}
+			</div>
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Edad:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.petAge, {'attr' : {'class' : 'form-control', 'placeholder' : 'edad' } })}}
+			</div>
+		</div><br><!-- div close row form -->
+		<div class="row">
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Color:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.colour, {'attr' : {'class' : 'form-control', 'placeholder' : 'color' } })}}
+			</div>
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Género:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.gender, {'attr' : {'class' : 'form-control', 'placeholder' : 'seleccione el género' } })}}
+			</div>
+		</div><br><!-- div close row form -->	
+
+		<div class="row">
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Raza:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.race, {'attr' : {'class' : 'form-control', 'placeholder' : 'raza de la mascota' } })}}
+			</div>
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">especie:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.species, {'attr' : {'class' : 'form-control', 'placeholder' : 'seleccione la especie' } })}}
+			</div>
+		</div><br><!-- div close row form -->
+		
+		<div class="row">
+			<div class="textjusti col-xs-3 col-md-2">
+				<label class="marginlabel" for="Edad del adoptante">¿está vacunada?:</label>
+			</div>
+			<div class="col-xs-9 col-md-4">
+				{{form_widget(form.isVacunated, {'attr' : {'class' : 'check checkbox'} })}}
+				<br>
+			</div>
+			<div class="textjusti col-xs-3 col-md-2">
+				<label for="Nombre del adoptante">¿está esterilizada?: </label>
+			</div>
+			<div class="col-xs-9 col-md-4">
+				{{form_widget(form.isSterilized, {'attr' : {'class' : 'check checkbox'} })}}
+				<br>
+			</div>
+		</div>
+		<!--
+		<div class="row">
+			<div class="textjusti col-xs-3 col-md-2">
+				<label class="marginlabel" for="Edad del adoptante">¿necesita cirugía?:</label>
+			</div>
+			<div class="col-xs-9 col-md-4">
+				<input type="checkbox"  class="check checkbox" value="1">
+				<br>
+			</div>
+			<div class="textjusti col-xs-3 col-md-2">
+				<label for="Nombre del adoptante">¿es callejera?: </label>
+			</div>
+			<div class="col-xs-9 col-md-4">
+				<input type="checkbox"  class="check checkbox" value="1">
+				<br>
+			</div>
+		</div>
+		-->
+	
+	</div><br><!--div sectionsitile-->
+		
+
+	<div class="titcred"> datos del solicitante</div>
+	<div class="sectionstile3">
+		<div class="row">
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Nombre:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.userName, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombres del solicitante' } })}}
+			</div>
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Apellido:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.lastName, {'attr' : {'class' : 'form-control', 'placeholder' : 'apellidos' } })}}
+			</div>
+		</div><br>
+		
+		<div class="row">
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Edad:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.userAge, {'attr' : {'class' : 'form-control', 'placeholder' : 'edad' } })}}
+			</div>
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Cédula:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.identificationNumber, {'attr' : {'class' : 'form-control', 'placeholder' : 'cédula' } })}}
+			</div>
+		</div><br><!-- div close row form -->
+		
+		<div class="row">
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Dirección:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.address, {'attr' : {'class' : 'form-control', 'placeholder' : 'dirección' } })}}
+			</div>
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Teléfono:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.phone_number, {'attr' : {'class' : 'form-control', 'placeholder' : 'teléfono' } })}}
+			</div>
+		</div><br><!-- div close row form -->	
+		
+		<div class="row">
+			<div class="textjusti col-md-1">
+				<label class="marginlabel">Correo:</label>
+			</div>	
+			<div class="col-md-5">
+				{{form_widget(form.email, {'attr' : {'class' : 'form-control', 'placeholder' : 'correo electrónico' } })}}
+			</div>
+		</div><!-- div close row form -->	
+	</div>
+</div>
+{{ form_widget(form.save, {'label' : 'Continuar', 'attr' : {'class' : 'btn btn-success'} }) }}
+{{ form_end(form) }}
+{% endblock %}

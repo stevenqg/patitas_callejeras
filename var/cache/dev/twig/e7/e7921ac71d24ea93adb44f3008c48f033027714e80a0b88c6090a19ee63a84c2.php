@@ -21,54 +21,72 @@ class __TwigTemplate_cfc821d8f98312c066035711315690b5f931efc82d8f7b6e151d75a2e5f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_54b032bf57c52320861f4fcc4a7e02421a2e6a7f834c8c7ff17266a70274279e = $this->env->getExtension("native_profiler");
-        $__internal_54b032bf57c52320861f4fcc4a7e02421a2e6a7f834c8c7ff17266a70274279e->enter($__internal_54b032bf57c52320861f4fcc4a7e02421a2e6a7f834c8c7ff17266a70274279e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:jornada_esteriliza.html.twig"));
+        $__internal_c49fa15e6992dfcb756d6992e45e4ba0e6bc3ff464f3d3bf39175b81a0353f55 = $this->env->getExtension("native_profiler");
+        $__internal_c49fa15e6992dfcb756d6992e45e4ba0e6bc3ff464f3d3bf39175b81a0353f55->enter($__internal_c49fa15e6992dfcb756d6992e45e4ba0e6bc3ff464f3d3bf39175b81a0353f55_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:jornada_esteriliza.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_54b032bf57c52320861f4fcc4a7e02421a2e6a7f834c8c7ff17266a70274279e->leave($__internal_54b032bf57c52320861f4fcc4a7e02421a2e6a7f834c8c7ff17266a70274279e_prof);
+        $__internal_c49fa15e6992dfcb756d6992e45e4ba0e6bc3ff464f3d3bf39175b81a0353f55->leave($__internal_c49fa15e6992dfcb756d6992e45e4ba0e6bc3ff464f3d3bf39175b81a0353f55_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_3305f9110650ef3f1727d09deda4358c48bf9fa9484c3511ee4552e79a05d6f0 = $this->env->getExtension("native_profiler");
-        $__internal_3305f9110650ef3f1727d09deda4358c48bf9fa9484c3511ee4552e79a05d6f0->enter($__internal_3305f9110650ef3f1727d09deda4358c48bf9fa9484c3511ee4552e79a05d6f0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_6fb1506d76c982f618bdfb01beea344eaae805c0d0038c9ec02053b86d32eb97 = $this->env->getExtension("native_profiler");
+        $__internal_6fb1506d76c982f618bdfb01beea344eaae805c0d0038c9ec02053b86d32eb97->enter($__internal_6fb1506d76c982f618bdfb01beea344eaae805c0d0038c9ec02053b86d32eb97_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "
 \t<h1 class=\"coloralert\"> jornadas esterilizaciones</h1><hr>
 
 \t\t\t<div class=\"sectionstile\">
-             <br>
-           <table class=\"table table-hover\">
+              <table class=\"table table-hover\">
               <thead>
-                <tr>
-                  <th>#</th>
+                <tr class=\"podingtitle1\">
                   <th>Zona</th>
-                  <th>FEcha de realización</th>
-                  <th>\$ costo total</th>
+                  <th>Fecha de realización</th>
+                  <th>Costo total</th>
                   <th class=\"tdxs\">mas</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>comuna 2 distrito</td>
-                  <td>09/09/2012</td>
-                  <td>\$ 450.000</td>
+                ";
+        // line 17
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["meetings"]) ? $context["meetings"] : $this->getContext($context, "meetings")));
+        foreach ($context['_seq'] as $context["_key"] => $context["meeting"]) {
+            // line 18
+            echo "                <tr>
+                  <td>";
+            // line 19
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["meeting"], "meeting", array()), "address", array()), "html", null, true);
+            echo "</td>
+                  <td>";
+            // line 20
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["meeting"], "control_at", array()), "m/d/Y"), "html", null, true);
+            echo "</td>
+                  <td>\$";
+            // line 21
+            echo twig_escape_filter($this->env, $this->getAttribute($context["meeting"], "totalAmount", array()), "html", null, true);
+            echo "</td>
                   <td><a href=\"";
-        // line 24
-        echo $this->env->getExtension('routing')->getPath("pc_admin_esterilizacion");
-        echo "\" class=\"btn btn-default\"><span class=\"coloralert  glyphicon glyphicon-share\" aria-hidden=\"true\"></a></td>
+            // line 22
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_admin_esterilizacion", array("meetingId" => $this->getAttribute($this->getAttribute($context["meeting"], "meeting", array()), "id", array()), "controlAt" => twig_date_format_filter($this->env, $this->getAttribute($context["meeting"], "control_at", array()), "m-d-Y"), "amount" => $this->getAttribute($context["meeting"], "totalAmount", array()))), "html", null, true);
+            echo "\" class=\"btn btn-default\"><span class=\"coloralert  glyphicon glyphicon-share\" aria-hidden=\"true\"></a></td>
                 </tr>
-               </tbody>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['meeting'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 25
+        echo "               </tbody>
             </table>
           </div>
 ";
         
-        $__internal_3305f9110650ef3f1727d09deda4358c48bf9fa9484c3511ee4552e79a05d6f0->leave($__internal_3305f9110650ef3f1727d09deda4358c48bf9fa9484c3511ee4552e79a05d6f0_prof);
+        $__internal_6fb1506d76c982f618bdfb01beea344eaae805c0d0038c9ec02053b86d32eb97->leave($__internal_6fb1506d76c982f618bdfb01beea344eaae805c0d0038c9ec02053b86d32eb97_prof);
 
     }
 
@@ -84,7 +102,7 @@ class __TwigTemplate_cfc821d8f98312c066035711315690b5f931efc82d8f7b6e151d75a2e5f
 
     public function getDebugInfo()
     {
-        return array (  63 => 24,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  84 => 25,  75 => 22,  71 => 21,  67 => 20,  63 => 19,  60 => 18,  56 => 17,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
@@ -93,25 +111,24 @@ class __TwigTemplate_cfc821d8f98312c066035711315690b5f931efc82d8f7b6e151d75a2e5f
 /* 	<h1 class="coloralert"> jornadas esterilizaciones</h1><hr>*/
 /* */
 /* 			<div class="sectionstile">*/
-/*              <br>*/
-/*            <table class="table table-hover">*/
+/*               <table class="table table-hover">*/
 /*               <thead>*/
-/*                 <tr>*/
-/*                   <th>#</th>*/
+/*                 <tr class="podingtitle1">*/
 /*                   <th>Zona</th>*/
-/*                   <th>FEcha de realización</th>*/
-/*                   <th>$ costo total</th>*/
+/*                   <th>Fecha de realización</th>*/
+/*                   <th>Costo total</th>*/
 /*                   <th class="tdxs">mas</th>*/
 /*                 </tr>*/
 /*               </thead>*/
 /*               <tbody>*/
+/*                 {% for meeting in meetings %}*/
 /*                 <tr>*/
-/*                   <td>1</td>*/
-/*                   <td>comuna 2 distrito</td>*/
-/*                   <td>09/09/2012</td>*/
-/*                   <td>$ 450.000</td>*/
-/*                   <td><a href="{{ path('pc_admin_esterilizacion')}}" class="btn btn-default"><span class="coloralert  glyphicon glyphicon-share" aria-hidden="true"></a></td>*/
+/*                   <td>{{ meeting.meeting.address }}</td>*/
+/*                   <td>{{ meeting.control_at | date("m/d/Y") }}</td>*/
+/*                   <td>${{ meeting.totalAmount }}</td>*/
+/*                   <td><a href="{{ path('pc_admin_esterilizacion', {'meetingId' : meeting.meeting.id, 'controlAt' : meeting.control_at | date ("m-d-Y"), 'amount' : meeting.totalAmount} )}}" class="btn btn-default"><span class="coloralert  glyphicon glyphicon-share" aria-hidden="true"></a></td>*/
 /*                 </tr>*/
+/*                 {% endfor %}*/
 /*                </tbody>*/
 /*             </table>*/
 /*           </div>*/

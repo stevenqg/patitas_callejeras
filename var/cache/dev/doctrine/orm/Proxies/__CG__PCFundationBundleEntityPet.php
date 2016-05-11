@@ -64,10 +64,10 @@ class Pet extends \PC\FundationBundle\Entity\Pet implements \Doctrine\ORM\Proxy\
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', 'photos', 'credits', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'species', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'race', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'colour', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'gender', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isVacunated', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isSterilized', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'status'];
+            return ['__isInitialized__', 'adoptions', 'photos', 'credits', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'species', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'race', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'colour', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'gender', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isVacunated', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isSterilized', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'status'];
         }
 
-        return ['__isInitialized__', 'photos', 'credits', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'species', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'race', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'colour', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'gender', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isVacunated', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isSterilized', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'status'];
+        return ['__isInitialized__', 'adoptions', 'photos', 'credits', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'species', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'race', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'colour', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'gender', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isVacunated', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'isSterilized', '' . "\0" . 'PC\\FundationBundle\\Entity\\Pet' . "\0" . 'status'];
     }
 
     /**
@@ -450,6 +450,39 @@ class Pet extends \PC\FundationBundle\Entity\Pet implements \Doctrine\ORM\Proxy\
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getStatus', []);
 
         return parent::getStatus();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addAdoption(\PC\FundationBundle\Entity\Adoption $adoption)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addAdoption', [$adoption]);
+
+        return parent::addAdoption($adoption);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeAdoption(\PC\FundationBundle\Entity\Adoption $adoption)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeAdoption', [$adoption]);
+
+        return parent::removeAdoption($adoption);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAdoptions()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAdoptions', []);
+
+        return parent::getAdoptions();
     }
 
 }

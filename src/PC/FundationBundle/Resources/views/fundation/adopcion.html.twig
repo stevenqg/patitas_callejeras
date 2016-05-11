@@ -13,13 +13,13 @@
   <div class="col-md-10">
       <div class="wor">
         <div class="col-md-6">
-         <h3 class="titulosection"><img src="{{ asset('public/img/mn.png')}}" alt=""><b>&nbsp;PROCESO DE ADOPCIÓN&nbsp;</b><img src="{{ asset('public/img/m.png')}}" alt=""></h3><hr class="margnone">
+         <h3 class="titulosection"><img class="ve" src="{{ asset('public/img/mn.png')}}" alt=""><b>&nbsp;PROCESO DE ADOPCIÓN&nbsp;</b><img class="ve" src="{{ asset('public/img/m.png')}}" alt=""></h3><hr class="margnone">
         <p class="h1estle textjusti">La fundación patitas callejeras en función de asegurar la integridad de los animales y el compromiso de las personas que quieren adoptar, establece una serie de actividades para definir si el adoptante cumplen con las condiciones estipuladas por la institución. </p>
         <p class="h1estle">Debe tener en cuenta los cuatro puntos que se muestran a continuación.</p>
        <div class="continer">
         <div class="textjusti alert alert-info">Es muy importante que leas los requisitos de adopción</div>
 
-	<button class="butglass glass butposadop" data-toggle="modal" data-target="#miVentana">Ver requisitos</button>
+	<button class="s butglass glass butposadop" data-toggle="modal" data-target="#miVentana">Ver requisitos</button>
 
 	<div class="modal fade" id="miVentana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="col-md-6">
-      <img  src="{{ asset('public/img/adopt.png')}}"class="img-responsive"></img>
+      <img class="ve" src="{{ asset('public/img/adopt.png')}}"class="img-responsive"></img>
     </div>
       
      </div>    
@@ -92,9 +92,8 @@
 					<h4>4.  Seguimiento de adopcion</h4>
 					</div>
           <p class="textjusti">La fundación programara con el adoptante visitas para verificar la adaptación de la mascota en su nuevo hogar. </p>
-          <hr>
-          </div>
-
+          </div><hr>
+        
         
       </div>
       <div class="col-md-1"></div>
@@ -119,7 +118,7 @@
       <div class="row">
            {% for pet in pets %}
            
-           {% if pet.species == 'CANINE' and pet.status != 'ADOPTED' %}
+           {% if pet.species == 'CANINE' and pet.status != 'ADOPTED' and pet.status != 'EXTERNAL'%}
           <div class="col-md-4">
             <div class="conteneter">
               <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptardog{{pet.id}}" href=""> 
@@ -195,7 +194,7 @@
 			  		  </div>
 				      </div>
 				  <div class="modal-footer">
-				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta',{'petId' : pet.id }) }}" target="_blank" role="button">Adoptar mascota</a></p>
+				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta',{'petId' : pet.id }) }}" onclick="window.open(this.href, this.target,'width=600,height=700'); return false" role="button">Adoptar mascota</a></p>
 			  	</div>
 		  	</div>
 	  	</div>
@@ -215,7 +214,7 @@
           <div class="row">
             
             {% for pet in pets %}
-           {% if pet.species == 'FELINE' and pet.status != 'ADOPTED'  %}
+           {% if pet.species == 'FELINE' and pet.status != 'ADOPTED' and pet.status != 'EXTERNAL' %}
           <div class="col-md-4">
             <div class="conteneter">
               <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptarcat{{pet.id}}" href=""> 
@@ -291,7 +290,7 @@
 			  		  </div>
 				      </div>
 				  <div class="modal-footer">
-				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta', {'petId' : pet.id }) }}" target="_blank" role="button">Adoptar mascota</a></p>
+				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta', {'petId' : pet.id }) }}" onclick="window.open(this.href, this.target,'width=600,height=700'); return false" role="button">Adoptar mascota</a></p>
 			  	</div>
 		  	</div>
 	  	</div>

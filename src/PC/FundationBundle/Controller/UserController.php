@@ -25,21 +25,26 @@ class UserController extends Controller
     
     public function addAction($petId)
     {
+        /*
         $adoption = $this->getDoctrine()->getRepository('PCFundationBundle:Adoption')->findBy(array('pet'=> $petId));
         
         if ($adoption)
         {
             echo '<script language="javascript"> alert("la mascota ya ha sido solicitada en adopción. ") </script>';
+            die("la mascota ya tiene solicitud de adopción");
             return $this->redirectToRoute('pc_fundation_adoptar');
         }
         else
         {
+        */
             $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->find($petId);
             
             $user = new User();
             $form = $this->createCreateform($user, $petId);
             return $this->render('PCFundationBundle:fundation:encuestaUsuario.html.twig', array('form' => $form->createview())); 
+        /*
         }
+        */
         
         
     }
@@ -51,7 +56,7 @@ class UserController extends Controller
         return $form;
     }
     
-    public function createAction($petId, request $request)
+    public function createAction($petId, Request $request)
     {
         $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->find($petId);
        

@@ -20,10 +20,11 @@ class Adoption
     private $user;
     
     /**
-     * @ORM\OneToOne(targetEntity="Pet")
-     * @ORM\JoinColumn(name="pet_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Pet", inversedBy="adoptions")
+     * @ORM\JoinColumn(name="pet_id", referencedColumnName="id", onDelete="CASCADE")
      */
-    private $pet;
+    protected $pet; 
+    
     
     /**
      * @var int
@@ -99,6 +100,8 @@ class Adoption
     {
         return $this->user;
     }
+
+
 
     /**
      * Set pet

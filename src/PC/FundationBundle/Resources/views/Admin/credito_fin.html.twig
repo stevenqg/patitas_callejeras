@@ -1,0 +1,38 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+
+    <h1 class="titulosection">Creditos Cancelados </h1>
+	<div class="sectionstile">
+    <table class="tabl table-striped">
+         	
+         <thead>
+         		
+         		<tr class="podingtitle1 text-center">
+         			<th>Nombre</th>
+         			<th>Dirección</th>
+         			<th>teléfono</th>
+         			<th>mascota</th>
+         			<th>Responsable</th>
+         			<th>referencia</th>
+         			<th>Monto</th>
+         		
+         			
+         		</tr>
+         	</thead>
+         	<tbody>
+         	    {% for credit in credits %}
+         		<tr>
+         		    <td>{{ credit.user.name }}</td>
+         			<td>{{ credit.user.address }}</td>
+         			<td>{{ credit.user.phoneNumber }}</td>
+         			<td>{{ credit.pet.name  }}</td>
+         			<td>{{ credit.responsible }}</td>
+         			<td>{{ credit.reference }}</td>
+         			<td>${{ credit.amount  }}</td>
+         		</tr>
+         		{% endfor %}
+         	</tbody>
+         </table>
+         </div>
+         
+{% endblock %}

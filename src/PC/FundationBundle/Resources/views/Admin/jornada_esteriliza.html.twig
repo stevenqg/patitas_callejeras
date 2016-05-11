@@ -4,25 +4,24 @@
 	<h1 class="coloralert"> jornadas esterilizaciones</h1><hr>
 
 			<div class="sectionstile">
-             <br>
-           <table class="table table-hover">
+              <table class="table table-hover">
               <thead>
-                <tr>
-                  <th>#</th>
+                <tr class="podingtitle1">
                   <th>Zona</th>
-                  <th>FEcha de realización</th>
-                  <th>$ costo total</th>
+                  <th>Fecha de realización</th>
+                  <th>Costo total</th>
                   <th class="tdxs">mas</th>
                 </tr>
               </thead>
               <tbody>
+                {% for meeting in meetings %}
                 <tr>
-                  <td>1</td>
-                  <td>comuna 2 distrito</td>
-                  <td>09/09/2012</td>
-                  <td>$ 450.000</td>
-                  <td><a href="{{ path('pc_admin_esterilizacion')}}" class="btn btn-default"><span class="coloralert  glyphicon glyphicon-share" aria-hidden="true"></a></td>
+                  <td>{{ meeting.meeting.address }}</td>
+                  <td>{{ meeting.control_at | date("m/d/Y") }}</td>
+                  <td>${{ meeting.totalAmount }}</td>
+                  <td><a href="{{ path('pc_admin_esterilizacion', {'meetingId' : meeting.meeting.id, 'controlAt' : meeting.control_at | date ("m-d-Y"), 'amount' : meeting.totalAmount} )}}" class="btn btn-default"><span class="coloralert  glyphicon glyphicon-share" aria-hidden="true"></a></td>
                 </tr>
+                {% endfor %}
                </tbody>
             </table>
           </div>

@@ -13,16 +13,16 @@ use Doctrine\ORM\Mapping as ORM;
 class Census_collaborator
 {
     /**
-     * @ORM\OneToOne(targetEntity="Collaborator")
-     * @ORM\JoinColumn(name="collaborator_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Collaborator", inversedBy="censusCollaborator")
+     * @ORM\JoinColumn(name="collaborator_id", referencedColumnName="id", onDelete="CASCADE")
      */
-    private $collaborator;
+    protected $collaborator;
     
     /**
-     * @ORM\OneToOne(targetEntity="Census")
-     * @ORM\JoinColumn(name="census_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Meeting", inversedBy="censusCollaborator")
+     * @ORM\JoinColumn(name="meeting_id", referencedColumnName="id", onDelete="CASCADE")
      */
-    private $census;
+    protected $meeting;
     
     /**
      * @var int
@@ -43,5 +43,52 @@ class Census_collaborator
     {
         return $this->id;
     }
-}
 
+    /**
+     * Set collaborator
+     *
+     * @param \PC\FundationBundle\Entity\Collaborator $collaborator
+     *
+     * @return Census_collaborator
+     */
+    public function setCollaborator(\PC\FundationBundle\Entity\Collaborator $collaborator = null)
+    {
+        $this->collaborator = $collaborator;
+
+        return $this;
+    }
+
+    /**
+     * Get collaborator
+     *
+     * @return \PC\FundationBundle\Entity\Collaborator
+     */
+    public function getCollaborator()
+    {
+        return $this->collaborator;
+    }
+
+    /**
+     * Set meeting
+     *
+     * @param \PC\FundationBundle\Entity\Meeting $meeting
+     *
+     * @return Census_collaborator
+     */
+    public function setMeeting(\PC\FundationBundle\Entity\Meeting $meeting = null)
+    {
+        $this->meeting = $meeting;
+
+        return $this;
+    }
+
+    /**
+     * Get meeting
+     *
+     * @return \PC\FundationBundle\Entity\Meeting
+     */
+    public function getMeeting()
+    {
+        return $this->meeting;
+    }
+}

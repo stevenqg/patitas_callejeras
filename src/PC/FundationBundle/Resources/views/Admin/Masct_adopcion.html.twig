@@ -3,53 +3,8 @@
 	<div>
 		
 			<h1 class="coloralert">Mascotas para adopción</h1>
-			<div class="sectionstile">
-				<div class="row">
-					<div class="col-md-3">
-					<div><img class="mion img-responsive img-thumbnail" alt="" name="imgmascota"></div>
-					</div>
-					<div class="col-md-9">
-						<div class="row">
-			<div class="textjusti col-md-1"><label class="marginlabel">Nombre:</label></div>	
-			<div class="col-md-5"><input type="text" class="form-control" name="Nomascota" disabled></div>
-			<div class="textjusti col-md-1"><label class="marginlabel">Edad:</label></div>	
-			<div class="col-md-5"><input type="text" class="form-control" name="EDmascota" disabled></div>
-			</div><br><!-- div close row form -->
-			<div class="row">
-			<div class="textjusti col-md-1"><label class="marginlabel">Color:</label></div>	
-			<div class="col-md-5"><input type="text" class="form-control" name="Colmascota" disabled></div>
-			<div class="textjusti col-md-2"><label class="marginlabel">Sexo:</label></div>	
-			<div class="col-md-4"><select class="form-control" disabled>
-						  <option>Macho</option>
-						  <option>hembra</option>
-						</select>
-					</div>
-			</div><br><!-- div close row form -->	
-			<div class="row">
-			<div class="textjusti col-md-1"><label class="marginlabel">Rasgo:</label></div>	
-			<div class="col-md-5"><input type="text" name="Colmascota" class="form-control" disabled></div>
-			<div class="textjusti col-md-2"><label class="marginlabel">Vacunado:</label></div>	
-			<div class="col-md-4"><select class="form-control" disabled>
-						  <option>Si</option>
-						  <option>No</option>
-						</select>
-					</div>
-			</div><br><!-- div close row form -->	
-			<div class="row">
-			<div class="textjusti col-md-2"><label class="marginlabel">Esterilizado:</label></div>	
-			<div class="col-md-4"><select class="form-control" disabled>
-						  <option>Si</option>
-						  <option>No</option>
-						</select>
-					</div>
-					<div class="col-md-2"></div>
-					<div class="col-md-4"><button type="button" class="btn btn-success">Editar datos &nbsp;<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></div>
-			</div><br>
-					</div>
-				</div>
-			
-		</div><!--div sectionsitile-->
-		<br>
+
+		<hr><br>
 		<div class="sectionsile">
 			     
 			<div>
@@ -82,7 +37,7 @@
               </thead>
               <tbody>
                 {% for pet in pets %}
-                      {% if pet.species == 'CANINE' %}
+                      {% if pet.species == 'CANINE' and pet.status !='ADOPTED' and pet.status != 'EXTERNAL' %}
                       <tr>
                           <td>{{ pet.name }}</td>
                           <td>{{ pet.age }}</td>
@@ -121,7 +76,7 @@
                               
                             {%endif%}
                           </td>
-                          <td><a href="" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                          <td><a href="{{path('pc_admin_adopt_pet_info')}}" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
                       </tr>        
                       {%endif%}
                 {% endfor %}
@@ -146,7 +101,7 @@
               </thead>
               <tbody>
                 {% for pet in pets %}
-                      {% if pet.species == 'FELINE'%}
+                      {% if pet.species == 'FELINE' and pet.status !='ADOPTED' and pet.status != 'EXTERNAL' %}
                       <tr>
                           <td>{{ pet.name }}</td>
                           <td>{{ pet.age }}</td>
@@ -185,7 +140,7 @@
                               
                             {%endif%}
                           </td>
-                          <td><a href="" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                          <td><a href="{{path('pc_admin_adopt_pet_info')}}" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
                       </tr>        
                       {%endif%}
                       

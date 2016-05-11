@@ -14,6 +14,11 @@ class Pet
 {
     
     /**
+     * @ORM\OneToMany(targetEntity="Adoption", mappedBy="pet")
+     */ 
+    protected $adoptions;
+    
+    /**
      * @ORM\OneToMany(targetEntity="Photo", mappedBy="pet")
      */ 
     protected $photos;
@@ -87,18 +92,20 @@ class Pet
      * @ORM\Column(name="is_sterilized", type="boolean")
      */
     private $isSterilized;
-
+    
     /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="birthdate", type="datetime")
+     * @var string
+     * 
+     * @ORM\Column(name="status", type="string", columnDefinition="ENUM('UNADOPTED', 'PENDING', 'ADOPTED', 'EXTERNAL')", length=50)
      */
-    private $birthdate;
+    private $status;
+
 
     public function __construct()
     {
         $this->photos = new ArrayCollection();
         $this->credits = new ArrayCollection();
+        $this->adoptions = new ArrayCollection();
     }
 
     /**
@@ -303,29 +310,6 @@ class Pet
         return $this->isSterilized;
     }
 
-    /**
-     * Set birthdate
-     *
-     * @param \DateTime $birthdate
-     *
-     * @return Pet
-     */
-    public function setBirthdate($birthdate)
-    {
-        $this->birthdate = $birthdate;
-
-        return $this;
-    }
-
-    /**
-     * Get birthdate
-     *
-     * @return \DateTime
-     */
-    public function getBirthdate()
-    {
-        return $this->birthdate;
-    }
 
     /**
      * Add photo
@@ -393,5 +377,63 @@ class Pet
     public function getCredits()
     {
         return $this->credits;
+    }
+    
+    /**
+     * Set status
+     *
+     * @param string $status
+     *
+     * @return Pet
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Add adoption
+     *
+     * @param \PC\FundationBundle\Entity\Adoption $adoption
+     *
+     * @return Pet
+     */
+    public function addAdoption(\PC\FundationBundle\Entity\Adoption $adoption)
+    {
+        $this->adoptions[] = $adoption;
+
+        return $this;
+    }
+
+    /**
+     * Remove adoption
+     *
+     * @param \PC\FundationBundle\Entity\Adoption $adoption
+     */
+    public function removeAdoption(\PC\FundationBundle\Entity\Adoption $adoption)
+    {
+        $this->adoptions->removeElement($adoption);
+    }
+
+    /**
+     * Get adoptions
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAdoptions()
+    {
+        return $this->adoptions;
     }
 }

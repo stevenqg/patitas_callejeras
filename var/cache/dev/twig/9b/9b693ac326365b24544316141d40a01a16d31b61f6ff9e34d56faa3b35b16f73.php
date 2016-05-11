@@ -22,84 +22,104 @@ class __TwigTemplate_7b3b592b301768410bcd838f8bd0a57c0a93277311dd761597b969d15ec
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_94c7824b0db67e7978d2fd044da92a3094129883a1eaac8aeb6e5de7f93de2eb = $this->env->getExtension("native_profiler");
-        $__internal_94c7824b0db67e7978d2fd044da92a3094129883a1eaac8aeb6e5de7f93de2eb->enter($__internal_94c7824b0db67e7978d2fd044da92a3094129883a1eaac8aeb6e5de7f93de2eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:esteriliza_add.html.twig"));
+        $__internal_101622076906ee6fb3b1e7900822c6c2de4c6126d0e0970c056799e94aaf3879 = $this->env->getExtension("native_profiler");
+        $__internal_101622076906ee6fb3b1e7900822c6c2de4c6126d0e0970c056799e94aaf3879->enter($__internal_101622076906ee6fb3b1e7900822c6c2de4c6126d0e0970c056799e94aaf3879_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:esteriliza_add.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_94c7824b0db67e7978d2fd044da92a3094129883a1eaac8aeb6e5de7f93de2eb->leave($__internal_94c7824b0db67e7978d2fd044da92a3094129883a1eaac8aeb6e5de7f93de2eb_prof);
+        $__internal_101622076906ee6fb3b1e7900822c6c2de4c6126d0e0970c056799e94aaf3879->leave($__internal_101622076906ee6fb3b1e7900822c6c2de4c6126d0e0970c056799e94aaf3879_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_5ffbdde4226527280d9b7e98a70bfaa6d3bcfa01b5bcad51e3fee06feb539120 = $this->env->getExtension("native_profiler");
-        $__internal_5ffbdde4226527280d9b7e98a70bfaa6d3bcfa01b5bcad51e3fee06feb539120->enter($__internal_5ffbdde4226527280d9b7e98a70bfaa6d3bcfa01b5bcad51e3fee06feb539120_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_1f94958e67b5cf6496888480e1607363cae5b57e817fb593b2111741a38db5ab = $this->env->getExtension("native_profiler");
+        $__internal_1f94958e67b5cf6496888480e1607363cae5b57e817fb593b2111741a38db5ab->enter($__internal_1f94958e67b5cf6496888480e1607363cae5b57e817fb593b2111741a38db5ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "jornada esterilizacion add";
         
-        $__internal_5ffbdde4226527280d9b7e98a70bfaa6d3bcfa01b5bcad51e3fee06feb539120->leave($__internal_5ffbdde4226527280d9b7e98a70bfaa6d3bcfa01b5bcad51e3fee06feb539120_prof);
+        $__internal_1f94958e67b5cf6496888480e1607363cae5b57e817fb593b2111741a38db5ab->leave($__internal_1f94958e67b5cf6496888480e1607363cae5b57e817fb593b2111741a38db5ab_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_8ff6945df1b2dcc234f75f4eef94445426fb639b3c2fa22b8b4e29d17b0dd8af = $this->env->getExtension("native_profiler");
-        $__internal_8ff6945df1b2dcc234f75f4eef94445426fb639b3c2fa22b8b4e29d17b0dd8af->enter($__internal_8ff6945df1b2dcc234f75f4eef94445426fb639b3c2fa22b8b4e29d17b0dd8af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_25d8587cb863548e1050c0d2aac792b4e5b8ac5f9f2882461762d00756d2599e = $this->env->getExtension("native_profiler");
+        $__internal_25d8587cb863548e1050c0d2aac792b4e5b8ac5f9f2882461762d00756d2599e->enter($__internal_25d8587cb863548e1050c0d2aac792b4e5b8ac5f9f2882461762d00756d2599e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
 \t<div class=\"liner\"></div>
-\t<br>
+
 \t<div class=\"container\">
-\t<div class=\"row\">
-\t\t<div class=\"col-xs-1 col-md-1\"></div>\t
-\t\t<div class=\"col-xs-10 col-md-10\">
-\t\t\t<div class=\"pestile pest\" >
-\t\t\t<h5 class=\"margnone\">Nueva jornada de esterilización <span class=\"btn-lg glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></h5>
+\t\t<h2 class=\"titulosection\">Nueva jornada de esterilización <span class=\"btn-lg glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></h2>
+\t\t<hr>
+\t\t<br>
+\t\t<div class=\"form-group\">
+\t\t\t
+\t\t\t";
+        // line 13
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("role" => "form")));
+        echo "
+\t\t\t<div class=\"row\">
+\t\t\t\t<div class=\"textjusti col-xs-3 col-md-2\">
+\t\t\t\t\t<label class=\"marginlabel textjusti\" for=\"Zona\">Zona:</label>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-xs-9 col-md-4\">
+\t\t\t\t\t";
+        // line 19
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "address", array()), 'widget', array("attr" => array("class" => "form-control", "value" => $this->getAttribute((isset($context["meeting"]) ? $context["meeting"] : $this->getContext($context, "meeting")), "address", array()), "disabled" => "disabled")));
+        echo "
+\t\t\t\t</div>
 \t\t\t</div>
-\t\t\t<div class=\"conteform\">
+\t\t\t<div class=\"row\" style=\"display: none;\">
+\t\t\t\t<div class=\"col-xs-9 col-md-4\" style=\"display: none;\">
+\t\t\t\t\t";
+        // line 24
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "meetingId", array()), 'widget', array("attr" => array("class" => "form-control", "value" => $this->getAttribute((isset($context["meeting"]) ? $context["meeting"] : $this->getContext($context, "meeting")), "id", array()))));
+        echo "
+\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t<div class=\"row\">
 \t\t\t\t<br>
-\t\t\t\t<div class=\"form-group\">
-\t\t\t\t\t<div class=\"row\">
-\t\t\t\t\t<div class=\"textjusti col-xs-3 col-md-2\">
-\t\t\t\t\t<label class=\"marginlabel textjusti\" for=\"Zona\">Zona:</label></div>
-\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
-\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"zona\"disabled>
-\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-
-\t\t\t\t\t<div class=\"row\">
+\t\t\t\t<div class=\"col-xs-3 col-md-2 textjusti\">
+\t\t\t\t\t<label class=\"marginlabel\"  for=\"Fecha jornda\">Fecha: </label>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-xs-9 col-md-4\">
+\t\t\t\t\t";
+        // line 34
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "control_at", array()), 'widget');
+        echo "
+\t\t\t\t</div>
+\t\t\t\t<div class=\"textjusti col-xs-3 col-md-2\">
+\t\t\t\t\t<label class=\"marginlabel\"  for=\"Costo jornada\">Costo estimado por mascota:</label>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-xs-9 col-md-4\">
+\t\t\t\t\t";
+        // line 40
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "amount", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "costo promedio estimado por mascota")));
+        echo "
 \t\t\t\t\t<br>
-\t\t\t\t\t<div class=\"col-xs-3 col-md-2 textjusti\">
-\t\t\t\t\t<label class=\"marginlabel\"  for=\"Fecha jornda\">fecha: </label></div>
-\t\t\t\t\t<div class=\"col-xs-9 col-md-4\"><input type=\"text\" class=\"form-control\" placeholder=\"dd-mm-aaaa\" id=\"fecha1\"><br>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"textjusti col-xs-3 col-md-2\">
-\t\t\t\t\t<label class=\"marginlabel\"  for=\"Costo jornada\">costo:</label></div>
-\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
-\t\t\t\t\t\t<input  type=\"text\" class=\"form-control\" id=\"ident_car\"placeholder=\"Nombre del responsable\">
-\t\t\t\t\t<br>
-\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t\t<hr>
-\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t<button class=\"buttonborder btn btn-primary\">Crear jornada</button>
-\t\t\t</div>\t<!-- div conten-form-->
-\t\t</div>\t<!-- div col-->
-\t\t<div class=\"col-xs-1 col-md-1\"></div>\t
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<hr>
+\t\t\t";
+        // line 45
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("label" => "Continuar", "attr" => array("class" => "btn btn-success")));
+        echo "
+\t\t\t
+\t\t\t";
+        // line 47
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
+        echo "
+\t\t</div>
 \t</div>
-\t</div>
-
-\t <script src=\"https://code.jquery.com/jquery-latest.js\" type=\"text/javascript\"></script>
-\t<script src=\"js/bootstrap.min.js\"  type=\"text/javascript\"></script>
-\t<script src=\"js/calendario.js\"type=\"text/javascript\"></script>
-\t\t <script src=\"js/functJquery.js\"></script>
 ";
         
-        $__internal_8ff6945df1b2dcc234f75f4eef94445426fb639b3c2fa22b8b4e29d17b0dd8af->leave($__internal_8ff6945df1b2dcc234f75f4eef94445426fb639b3c2fa22b8b4e29d17b0dd8af_prof);
+        $__internal_25d8587cb863548e1050c0d2aac792b4e5b8ac5f9f2882461762d00756d2599e->leave($__internal_25d8587cb863548e1050c0d2aac792b4e5b8ac5f9f2882461762d00756d2599e_prof);
 
     }
 
@@ -115,7 +135,7 @@ class __TwigTemplate_7b3b592b301768410bcd838f8bd0a57c0a93277311dd761597b969d15ec
 
     public function getDebugInfo()
     {
-        return array (  53 => 4,  47 => 3,  35 => 2,  11 => 1,);
+        return array (  116 => 47,  111 => 45,  103 => 40,  94 => 34,  81 => 24,  73 => 19,  64 => 13,  53 => 4,  47 => 3,  35 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
@@ -123,49 +143,48 @@ class __TwigTemplate_7b3b592b301768410bcd838f8bd0a57c0a93277311dd761597b969d15ec
 /* {% block body %}*/
 /* */
 /* 	<div class="liner"></div>*/
-/* 	<br>*/
+/* */
 /* 	<div class="container">*/
-/* 	<div class="row">*/
-/* 		<div class="col-xs-1 col-md-1"></div>	*/
-/* 		<div class="col-xs-10 col-md-10">*/
-/* 			<div class="pestile pest" >*/
-/* 			<h5 class="margnone">Nueva jornada de esterilización <span class="btn-lg glyphicon glyphicon-edit" aria-hidden="true"></span></h5>*/
+/* 		<h2 class="titulosection">Nueva jornada de esterilización <span class="btn-lg glyphicon glyphicon-edit" aria-hidden="true"></span></h2>*/
+/* 		<hr>*/
+/* 		<br>*/
+/* 		<div class="form-group">*/
+/* 			*/
+/* 			{{ form_start(form, {'attr' : {'role' : 'form'} }) }}*/
+/* 			<div class="row">*/
+/* 				<div class="textjusti col-xs-3 col-md-2">*/
+/* 					<label class="marginlabel textjusti" for="Zona">Zona:</label>*/
+/* 				</div>*/
+/* 				<div class="col-xs-9 col-md-4">*/
+/* 					{{form_widget(form.address, {'attr' : {'class' : 'form-control', 'value' : meeting.address, 'disabled' : 'disabled' } })}}*/
+/* 				</div>*/
 /* 			</div>*/
-/* 			<div class="conteform">*/
+/* 			<div class="row" style="display: none;">*/
+/* 				<div class="col-xs-9 col-md-4" style="display: none;">*/
+/* 					{{form_widget(form.meetingId, {'attr' : {'class' : 'form-control', 'value' : meeting.id } })}}*/
+/* 				</div>*/
+/* 			</div>*/
+/* */
+/* 			<div class="row">*/
 /* 				<br>*/
-/* 				<div class="form-group">*/
-/* 					<div class="row">*/
-/* 					<div class="textjusti col-xs-3 col-md-2">*/
-/* 					<label class="marginlabel textjusti" for="Zona">Zona:</label></div>*/
-/* 					<div class="col-xs-9 col-md-4">*/
-/* 						<input type="text" class="form-control" id="zona"disabled>*/
-/* 					</div>*/
-/* 					</div>*/
-/* */
-/* 					<div class="row">*/
+/* 				<div class="col-xs-3 col-md-2 textjusti">*/
+/* 					<label class="marginlabel"  for="Fecha jornda">Fecha: </label>*/
+/* 				</div>*/
+/* 				<div class="col-xs-9 col-md-4">*/
+/* 					{{form_widget(form.control_at)}}*/
+/* 				</div>*/
+/* 				<div class="textjusti col-xs-3 col-md-2">*/
+/* 					<label class="marginlabel"  for="Costo jornada">Costo estimado por mascota:</label>*/
+/* 				</div>*/
+/* 				<div class="col-xs-9 col-md-4">*/
+/* 					{{form_widget(form.amount, {'attr' : {'class' : 'form-control', 'placeholder' : 'costo promedio estimado por mascota' } })}}*/
 /* 					<br>*/
-/* 					<div class="col-xs-3 col-md-2 textjusti">*/
-/* 					<label class="marginlabel"  for="Fecha jornda">fecha: </label></div>*/
-/* 					<div class="col-xs-9 col-md-4"><input type="text" class="form-control" placeholder="dd-mm-aaaa" id="fecha1"><br>*/
-/* 					</div>*/
-/* 					<div class="textjusti col-xs-3 col-md-2">*/
-/* 					<label class="marginlabel"  for="Costo jornada">costo:</label></div>*/
-/* 					<div class="col-xs-9 col-md-4">*/
-/* 						<input  type="text" class="form-control" id="ident_car"placeholder="Nombre del responsable">*/
-/* 					<br>*/
-/* 					</div>*/
-/* 					</div>*/
-/* 					<hr>*/
-/* 											*/
-/* 				<button class="buttonborder btn btn-primary">Crear jornada</button>*/
-/* 			</div>	<!-- div conten-form-->*/
-/* 		</div>	<!-- div col-->*/
-/* 		<div class="col-xs-1 col-md-1"></div>	*/
+/* 				</div>*/
+/* 			</div>*/
+/* 			<hr>*/
+/* 			{{ form_widget(form.save, {'label' : 'Continuar', 'attr' : {'class' : 'btn btn-success'} }) }}*/
+/* 			*/
+/* 			{{ form_end(form) }}*/
+/* 		</div>*/
 /* 	</div>*/
-/* 	</div>*/
-/* */
-/* 	 <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>*/
-/* 	<script src="js/bootstrap.min.js"  type="text/javascript"></script>*/
-/* 	<script src="js/calendario.js"type="text/javascript"></script>*/
-/* 		 <script src="js/functJquery.js"></script>*/
 /* {% endblock %}*/

@@ -213,11 +213,11 @@ class Meeting
     /**
      * Add sterilization
      *
-     * @param \PC\FundationBundle\Entity\Sterlization $sterilization
+     * @param \PC\FundationBundle\Entity\Sterilization $sterilization
      *
      * @return Meeting
      */
-    public function addSterilization(\PC\FundationBundle\Entity\Sterlization $sterilization)
+    public function addSterilization(\PC\FundationBundle\Entity\Sterilization $sterilization)
     {
         $this->sterilizations[] = $sterilization;
 
@@ -227,9 +227,9 @@ class Meeting
     /**
      * Remove sterilization
      *
-     * @param \PC\FundationBundle\Entity\Sterlization $sterilization
+     * @param \PC\FundationBundle\Entity\Sterilization $sterilization
      */
-    public function removeSterilization(\PC\FundationBundle\Entity\Sterlization $sterilization)
+    public function removeSterilization(\PC\FundationBundle\Entity\Sterilization $sterilization)
     {
         $this->sterilizations->removeElement($sterilization);
     }

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/**$(document).ready(function() {
     
     $('#jornadacenso').click(function(event) {
         event.preventDefault();

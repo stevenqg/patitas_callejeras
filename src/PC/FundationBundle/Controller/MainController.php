@@ -39,9 +39,11 @@ class MainController extends Controller
     {
         return $this->render('PCFundationBundle:fundation:nosotros.html.twig');
     }
+    
     public function eventosAction()
-    {
-        return $this->render('PCFundationBundle:fundation:eventos.html.twig');
+    {   
+        $events = $this->getDoctrine()->getRepository('PCFundationBundle:Event')->findAll();
+        return $this->render('PCFundationBundle:fundation:eventos.html.twig', array('events' => $events));
     }
     
     public function encuestaAction()

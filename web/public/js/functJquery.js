@@ -9,6 +9,7 @@ $ (document).ready(function() {
 	 var vent2 = $('#ventemerg2').click(nuevaventana2);
 	 var vent3 = $('#ventemerg3').click(nuevaventana2);
 	 var jcenso =$('#boton').click(jornadacenso);
+	 var vencol =$('#ventcolaborator').click(addcolaborator);
 	
 });
 function validatelogin () {
@@ -101,6 +102,10 @@ function nuevaventana1 () {
 function nuevaventana2 () {
 
 	window.open(this.href, this.target,'width=1000,height=700'); return false;
+};
+function addcolaborator () {
+
+	window.open(this.href, this.target,'width=400,height=500'); return false;
 };
 function jornadacenso () {
 	 

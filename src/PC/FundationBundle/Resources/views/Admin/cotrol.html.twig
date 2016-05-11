@@ -1,0 +1,110 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+
+	<h1 class="titulosection">Control Pos_ Operatorio</h1>
+	<div class="sectionstile">
+  	<table class="podingtitle1 table table-hover">
+      <thead>
+        <tr>
+          <th class="text-center">Zona</th>
+          <th class="text-center">FEcha de realización</th>
+          <th class="text-center"> $ costo total</th>
+          <th class="text-center">mas</th>
+        </tr>
+      </thead>
+  	</table>
+  	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      {% for meeting in meetings %}
+      <div class="margnone panel panel-default">
+        <div class="paddinnot panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#controlOne{{meeting.meeting.id}}" aria-expanded="false" aria-controls="collapseOne">
+               <table class=" margnone table table-hover">
+                  <tbody>
+                    <tr>
+                      <td>{{ meeting.meeting.address }}</td>
+                      <td>{{ meeting.control_at| date("m/d/Y")}}</td>
+                      <td>${{ meeting.totalAmount }}</td>
+                      <td><a href="censo.html">&nbsp;<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></a></td>
+                    </tr>
+                   </tbody>
+                </table>
+            </a>
+          </h4>
+        </div>
+        <div id="controlOne{{meeting.meeting.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            <table class="tabl table-striped">
+             	<caption>Administrador: </caption>
+             	<thead>
+             		<tr><td class="pestree text-center" colspan="3">datos del Animal</td>
+                      <td  class="pestree text-center" colspan="3">datos responsable</td>
+                      <td  class="pestree text-center" colspan="3">control</td>
+                    </tr>
+             		<tr>
+             			<th>nombre</th>
+             			<th>specie</th>
+             			<th>genero</th>
+             			<th>nombre</th>
+             			<th>teléfono</th>
+             			<th>dirección</th>
+             			<th>estado</th>
+             			<th>comentario</th>
+             			<th></th>
+             		</tr>
+             	</thead>
+             	<tbody>
+             	  {% for sterilization in sterilizations %}
+             		{% if sterilization.meeting.id == meeting.meeting.id and sterilization.pet.isSterilized == 1 %}
+             		<tr>
+             			<td>{{ sterilization.pet.name }}</td>
+             			<td>
+             			  {% if sterilization.pet.species == 'CANINE' %}
+                                    
+                    <strong>canino</strong>
+                          
+                    {% elseif sterilization.pet.species == 'FELINE' %}
+                          
+                    <strong>felino</strong>
+                  
+                    {%endif%}
+             			</td>
+             			<td>
+             			  {% if sterilization.pet.gender == 'MALE' %}
+                                    
+                    <strong>macho</strong>
+                          
+                    {% elseif sterilization.pet.gender == 'FEMALE' %}
+                          
+                    <strong>hembra</strong>
+                  
+                    {%endif%}
+             			</td>
+             			<td>{{ sterilization.user.name }}</td>
+             			<td>{{ sterilization.user.phoneNumber }}</td>
+             			<td>{{ sterilization.user.address }}</td>
+             			{% for control in controls %}
+               			{% if control.sterilization.id == sterilization.id %}
+                 			  {% if control.isSatisfactory == 0 %}
+                          <td> insatisfactorio </td>
+                        {% elseif control.isSatisfactory == 1%} 
+                          <td> satisfactorio </td>
+                 			  {% endif %}
+                 			<td>{{ control.comment }}</td>
+               			{% endif %}
+             			{% endfor %}
+
+             			<td class="tdxs"><a href="{{path('pc_administrator_control_add', {'sterilizationId' : sterilization.id })}}" onclick="window.open(this.href, this.target,'width=360,height=500'); return false" class="btn btn-default "><span class="coloralert   glyphicon glyphicon-plus-sign" data-toggle="tooltip" data-placement="top" title="" aria-hidden="true" data-original-title="agregar control"></span></a></td>
+             		</tr>
+             		{% endif %}
+             		{% endfor %}
+             	</tbody>
+             </table> 
+    
+            </div><!--panel-body close-->
+          </div>
+        </div>
+      {% endfor %}
+   </div>
+	</div>	
+{% endblock %}

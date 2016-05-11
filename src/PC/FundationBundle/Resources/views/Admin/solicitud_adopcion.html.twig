@@ -1,8 +1,7 @@
 {% extends "PCFundationBundle:Admin:admin.html.twig"%}
 {% block capa %}
-	<div>
 		<div class="row">
-			<h1 class="coloralert">Solicitud de Adopción &nbsp; <a href="{{path('pc_admin_pet_solicitudes')}}" type="button" class=" buttonborder pull-right btn btn-primary"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a></h1>
+			<h1 class="coloralert"><a href="{{path('pc_admin_pet_solicitudes')}}" type="button" class=" buttonborder pull-left btn btn-default"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a> &nbsp;Solicitud de Adopción</h1>
 			<hr>
 			<div class="col-md-6">
 				<div class="titinfo">Mascota</div>
@@ -22,10 +21,8 @@
 					<div class="row">
 					<div class="textjusti col-md-3"><label class="marginlabel">Género:</label></div>	
 					<div class="col-md-9"><input type="text" class="form-control" name="genmascota" value="
-					{% if pet.gender == 'MALE' %}
-	                    macho
-	                {% elseif pet.gender == 'FEMALE' %}
-	                    hembra
+					{% if pet.gender == 'MALE' %}macho
+	                {% elseif pet.gender == 'FEMALE' %} hembra
 	                {%endif%}
 	                " disabled></div>
 					</div><br><!-- div close row form -->
@@ -36,24 +33,19 @@
 					<div class="row">
 					<div class="textjusti col-md-3"><label class="marginlabel">Vacunada:</label></div>	
 					<div class="col-md-9"><input type="text" name="razamascota" class="form-control" value="
-					{% if pet.isVacunated == 1 %}
-	                    si
-	                {% elseif pet.isVacunated == 0 %}
-	                    no
+					{% if pet.isVacunated == 1 %}si
+	                {% elseif pet.isVacunated == 0 %}no
 	                {%endif%}
 					" disabled></div>
 					</div><br><!-- div close row form -->
 					<div class="row">
 					<div class="textjusti col-md-3"><label class="marginlabel">Esterilizada:</label></div>	
 					<div class="col-md-9"><input type="text" name="razamascota" class="form-control" value="
-					{% if pet.isSterilized == 1 %}
-			            si
-			        {% elseif pet.isSterilized == 0 %}
-			            no
+					{% if pet.isSterilized == 1 %}si
+			        {% elseif pet.isSterilized == 0 %}no
 			        {%endif%}
 					" disabled></div>
 					</div><br><!-- div close row form -->
-				</div>
 			</div><!--div sectionsitile-->
 		</div><!-- div close col-md-6 mascota info-->
 			<div class="col-md-6">
@@ -86,9 +78,9 @@
 				<div class="row">
 				<div class="textjusti col-md-3"><label class="marginlabel">Correo:</label></div>	
 				<div class="col-md-9"><input type="text" class="form-control" name="Colmascota" value="{{ user.email }}" disabled></div>
-				</div><!-- div close row form -->	
+				</div><br><!-- div close row form -->	
 				<div class="row">
-				<div class="textjusti col-md-3"><label class="marginlabel">id de adopción:</label></div>	
+				<div class="text-left col-md-3"><label class="marginlabel">id adopción:</label></div>	
 				<div class="col-md-9"><input type="text" class="form-control" name="Colmascota" value="{{ adoption.id }}" disabled></div>
 				</div><!-- div close row form -->
 			</div>
@@ -97,6 +89,5 @@
 			<a type="button" href="{{ path('pc_admin_aceptar_solicitud', {'solicitudId' : adoption.id})}}" class="btn btn-primary" id="aceptar">Aprobar </a>
 			<a type="button" href="{{ path('pc_admin_pendiente_solicitud', {'solicitudId' : adoption.id})}}" class="btn btn-info" id="aceptar">Pendiente</a>
 			<a type="button" href="{{ path('pc_admin_rechazar_solicitud', {'solicitudId' : adoption.id})}}" class="btn btn-default" id="aceptar">Denegar</a>
-	</div>
 
 {% endblock %}

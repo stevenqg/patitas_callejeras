@@ -21,20 +21,20 @@ class __TwigTemplate_f8133f562bb31e20f522c24d57401c3e640eead4bea4d0f5b7be39e1b44
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_60e943757dd6b83c03a856af1f1467d39df1ec4d82d6faf7b854c889aff33e00 = $this->env->getExtension("native_profiler");
-        $__internal_60e943757dd6b83c03a856af1f1467d39df1ec4d82d6faf7b854c889aff33e00->enter($__internal_60e943757dd6b83c03a856af1f1467d39df1ec4d82d6faf7b854c889aff33e00_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:masc_adoptada.html.twig"));
+        $__internal_9c176c0382d63738b7175d075492518f6f7874821e5e5c0c42cf6890472624d0 = $this->env->getExtension("native_profiler");
+        $__internal_9c176c0382d63738b7175d075492518f6f7874821e5e5c0c42cf6890472624d0->enter($__internal_9c176c0382d63738b7175d075492518f6f7874821e5e5c0c42cf6890472624d0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:masc_adoptada.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_60e943757dd6b83c03a856af1f1467d39df1ec4d82d6faf7b854c889aff33e00->leave($__internal_60e943757dd6b83c03a856af1f1467d39df1ec4d82d6faf7b854c889aff33e00_prof);
+        $__internal_9c176c0382d63738b7175d075492518f6f7874821e5e5c0c42cf6890472624d0->leave($__internal_9c176c0382d63738b7175d075492518f6f7874821e5e5c0c42cf6890472624d0_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_d5a835c6e2eb45eaaacb45a5bfe9e8fdf3424ab31a139bb33853f4915c5d5208 = $this->env->getExtension("native_profiler");
-        $__internal_d5a835c6e2eb45eaaacb45a5bfe9e8fdf3424ab31a139bb33853f4915c5d5208->enter($__internal_d5a835c6e2eb45eaaacb45a5bfe9e8fdf3424ab31a139bb33853f4915c5d5208_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_39fa8b958a1434c6a4cce921c72d1a31f640ebb9288846b8b0455773ba84fe42 = $this->env->getExtension("native_profiler");
+        $__internal_39fa8b958a1434c6a4cce921c72d1a31f640ebb9288846b8b0455773ba84fe42->enter($__internal_39fa8b958a1434c6a4cce921c72d1a31f640ebb9288846b8b0455773ba84fe42_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "\t\t
@@ -56,7 +56,7 @@ class __TwigTemplate_f8133f562bb31e20f522c24d57401c3e640eead4bea4d0f5b7be39e1b44
                   <th class=\"bdleft\">Mascota</th>
                   <th>Edad mascota</th>
                   <th>Estado solicitud</th>
-                  <th class=\"tdxs\">visita</th>
+                  <th class=\"tdxs\">ver</th>
                 </tr>
               </thead>
               <tbody class=\"tdb\">
@@ -104,14 +104,65 @@ class __TwigTemplate_f8133f562bb31e20f522c24d57401c3e640eead4bea4d0f5b7be39e1b44
             echo twig_escape_filter($this->env, $this->getAttribute($context["adoption"], "status", array()), "html", null, true);
             echo "</td>
                   
-                  <td><a href=\"\" id=\"vermas\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"ver datos\"><span class=\"glyphicon glyphicon-eye-open\" aria-hidden=\"true\"></span></a></td>
+                  <td><a href=\"\"  data-toggle=\"modal\" data-target=\"#myModaladopt\"><span class=\"glyphicon glyphicon-eye-open\" aria-hidden=\"true\"></span></a>
+                  
+                  <div class=\"modal fade bs-example-modal-sm\" id=\"myModaladopt\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\">
+                    <div class=\"modal-dialog modal-sm\">
+                      <div class=\"modal-content\">
+                  
+                        <div class=\"timod modal-header\">
+                          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"></button>
+                          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Información de la mascota </h5>
+                        </div>
+
+                        <div class=\"modal-body\">
+                          <form>
+                            <div class=\"form-group\">
+                              <label for=\"recipient-name\" class=\"textjusti control-label\">Nombre:</label>
+                              <input type=\"text\" class=\"form-control\" id=\"recipient-name\" disabled>
+                            </div>
+    
+                            <div class=\"form-group\">
+                              <label for=\"recipient-name\" class=\"textjusti control-label\">Edad:</label>
+                              <input type=\"text\" class=\"form-control\" id=\"recipient-name\" disabled>
+                            </div>
+                            
+                            <div class=\"form-group\">
+                              <label for=\"recipient-name\" class=\"textjusti control-label\">especie:</label>
+                              <input type=\"text\" class=\"form-control\" id=\"recipient-name\" disabled>
+                            </div>
+                            
+                            <div class=\"form-group\">
+                              <label for=\"recipient-name\" class=\"textjusti control-label\">genero:</label>
+                              <input type=\"text\" class=\"form-control\" id=\"recipient-name\" disabled>
+                            </div>
+    
+                            <div class=\"form-group\">
+                              <label for=\"recipient-name\" class=\"textjusti control-label\">raza:</label>
+                              <input type=\"text\" class=\"form-control\" id=\"recipient-name\" disabled>
+                            </div>
+                            
+                            <div class=\"form-group\">
+                              <label for=\"recipient-name\" class=\"textjusti control-label\">color:</label>
+                              <input type=\"text\" class=\"form-control\" id=\"recipient-name\" disabled>
+                            </div>
+                          </form>
+                        </div>
+                        
+                        <div class=\"modal-footer\">
+                          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cerrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </td>
                 </tr>
                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['adoption'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
+        // line 92
         echo "              </tbody>
             </table>
 
@@ -120,7 +171,7 @@ class __TwigTemplate_f8133f562bb31e20f522c24d57401c3e640eead4bea4d0f5b7be39e1b44
 \t</div>
 \t";
         
-        $__internal_d5a835c6e2eb45eaaacb45a5bfe9e8fdf3424ab31a139bb33853f4915c5d5208->leave($__internal_d5a835c6e2eb45eaaacb45a5bfe9e8fdf3424ab31a139bb33853f4915c5d5208_prof);
+        $__internal_39fa8b958a1434c6a4cce921c72d1a31f640ebb9288846b8b0455773ba84fe42->leave($__internal_39fa8b958a1434c6a4cce921c72d1a31f640ebb9288846b8b0455773ba84fe42_prof);
 
     }
 
@@ -136,7 +187,7 @@ class __TwigTemplate_f8133f562bb31e20f522c24d57401c3e640eead4bea4d0f5b7be39e1b44
 
     public function getDebugInfo()
     {
-        return array (  115 => 41,  104 => 36,  100 => 35,  96 => 34,  92 => 33,  88 => 32,  84 => 31,  80 => 30,  76 => 29,  72 => 28,  69 => 27,  65 => 26,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  166 => 92,  104 => 36,  100 => 35,  96 => 34,  92 => 33,  88 => 32,  84 => 31,  80 => 30,  76 => 29,  72 => 28,  69 => 27,  65 => 26,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
@@ -160,7 +211,7 @@ class __TwigTemplate_f8133f562bb31e20f522c24d57401c3e640eead4bea4d0f5b7be39e1b44
 /*                   <th class="bdleft">Mascota</th>*/
 /*                   <th>Edad mascota</th>*/
 /*                   <th>Estado solicitud</th>*/
-/*                   <th class="tdxs">visita</th>*/
+/*                   <th class="tdxs">ver</th>*/
 /*                 </tr>*/
 /*               </thead>*/
 /*               <tbody class="tdb">*/
@@ -176,7 +227,58 @@ class __TwigTemplate_f8133f562bb31e20f522c24d57401c3e640eead4bea4d0f5b7be39e1b44
 /*                   <td class="tdxs">{{ adoption.pet.age }}</td>*/
 /*                   <td>{{ adoption.status }}</td>*/
 /*                   */
-/*                   <td><a href="" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>*/
+/*                   <td><a href=""  data-toggle="modal" data-target="#myModaladopt"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>*/
+/*                   */
+/*                   <div class="modal fade bs-example-modal-sm" id="myModaladopt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">*/
+/*                     <div class="modal-dialog modal-sm">*/
+/*                       <div class="modal-content">*/
+/*                   */
+/*                         <div class="timod modal-header">*/
+/*                           <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>*/
+/*                           <h5 class="modal-title" id="exampleModalLabel">Información de la mascota </h5>*/
+/*                         </div>*/
+/* */
+/*                         <div class="modal-body">*/
+/*                           <form>*/
+/*                             <div class="form-group">*/
+/*                               <label for="recipient-name" class="textjusti control-label">Nombre:</label>*/
+/*                               <input type="text" class="form-control" id="recipient-name" disabled>*/
+/*                             </div>*/
+/*     */
+/*                             <div class="form-group">*/
+/*                               <label for="recipient-name" class="textjusti control-label">Edad:</label>*/
+/*                               <input type="text" class="form-control" id="recipient-name" disabled>*/
+/*                             </div>*/
+/*                             */
+/*                             <div class="form-group">*/
+/*                               <label for="recipient-name" class="textjusti control-label">especie:</label>*/
+/*                               <input type="text" class="form-control" id="recipient-name" disabled>*/
+/*                             </div>*/
+/*                             */
+/*                             <div class="form-group">*/
+/*                               <label for="recipient-name" class="textjusti control-label">genero:</label>*/
+/*                               <input type="text" class="form-control" id="recipient-name" disabled>*/
+/*                             </div>*/
+/*     */
+/*                             <div class="form-group">*/
+/*                               <label for="recipient-name" class="textjusti control-label">raza:</label>*/
+/*                               <input type="text" class="form-control" id="recipient-name" disabled>*/
+/*                             </div>*/
+/*                             */
+/*                             <div class="form-group">*/
+/*                               <label for="recipient-name" class="textjusti control-label">color:</label>*/
+/*                               <input type="text" class="form-control" id="recipient-name" disabled>*/
+/*                             </div>*/
+/*                           </form>*/
+/*                         </div>*/
+/*                         */
+/*                         <div class="modal-footer">*/
+/*                           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>*/
+/*                         </div>*/
+/*                       </div>*/
+/*                     </div>*/
+/*                   </div>*/
+/*                   </td>*/
 /*                 </tr>*/
 /*                 {% endfor%}*/
 /*               </tbody>*/

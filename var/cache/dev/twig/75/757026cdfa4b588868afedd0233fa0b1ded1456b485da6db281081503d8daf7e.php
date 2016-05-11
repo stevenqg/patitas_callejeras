@@ -21,32 +21,28 @@ class __TwigTemplate_62a583aac28431ea16ed94e53324bb78e67c05a602d8cfa601bf96dd59c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8f2e5237302427fcb19e2f7c937d87cd4e6c4a9bb0b5d5fffe97a564b67f4c25 = $this->env->getExtension("native_profiler");
-        $__internal_8f2e5237302427fcb19e2f7c937d87cd4e6c4a9bb0b5d5fffe97a564b67f4c25->enter($__internal_8f2e5237302427fcb19e2f7c937d87cd4e6c4a9bb0b5d5fffe97a564b67f4c25_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:evento_edit.html.twig"));
+        $__internal_f7e7eef27ee77103aaa07956f021b42d07aa514b923f55a0bf885576f1f2c6cb = $this->env->getExtension("native_profiler");
+        $__internal_f7e7eef27ee77103aaa07956f021b42d07aa514b923f55a0bf885576f1f2c6cb->enter($__internal_f7e7eef27ee77103aaa07956f021b42d07aa514b923f55a0bf885576f1f2c6cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:evento_edit.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_8f2e5237302427fcb19e2f7c937d87cd4e6c4a9bb0b5d5fffe97a564b67f4c25->leave($__internal_8f2e5237302427fcb19e2f7c937d87cd4e6c4a9bb0b5d5fffe97a564b67f4c25_prof);
+        $__internal_f7e7eef27ee77103aaa07956f021b42d07aa514b923f55a0bf885576f1f2c6cb->leave($__internal_f7e7eef27ee77103aaa07956f021b42d07aa514b923f55a0bf885576f1f2c6cb_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_ec1cc1acdbd67853ea8923af378fe70b8a5c9ce0cf198bf4e932b744d5c627a4 = $this->env->getExtension("native_profiler");
-        $__internal_ec1cc1acdbd67853ea8923af378fe70b8a5c9ce0cf198bf4e932b744d5c627a4->enter($__internal_ec1cc1acdbd67853ea8923af378fe70b8a5c9ce0cf198bf4e932b744d5c627a4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d056f1c0c343dfb90ea212bbbfdc21bcd41652fdadfbbbefc9197431c3cc8347 = $this->env->getExtension("native_profiler");
+        $__internal_d056f1c0c343dfb90ea212bbbfdc21bcd41652fdadfbbbefc9197431c3cc8347->enter($__internal_d056f1c0c343dfb90ea212bbbfdc21bcd41652fdadfbbbefc9197431c3cc8347_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "\t<div class=\"liner\"></div>
 \t<br>
 \t<div class=\"container\">
-\t<div class=\"row\">
-\t\t<div class=\"col-xs-1 col-md-1\"></div>\t
-\t\t<div class=\"col-xs-10 col-md-10\">
-\t\t\t<div class=\"timod pestile\" >
-\t\t\t<h4 class=\"margnone\">Editar Evento <span class=\"btn-lg glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></h4>
-\t\t\t</div>
-\t\t\t<div class=\"conteform\">
+
+\t\t\t<h2 class=\"titulosection margnone\">Editar Evento <span class=\"btn-lg glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></h2>
+\t\t\t<hr>
 \t\t\t\t\t<div class=\"form-group\">
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t<br>
@@ -91,16 +87,13 @@ class __TwigTemplate_62a583aac28431ea16ed94e53324bb78e67c05a602d8cfa601bf96dd59c
 \t\t\t\t\t\t    
 \t\t\t\t\t\t  </div>
 \t\t\t\t\t\t</div>
-
+\t\t\t\t\t
 \t\t\t\t<button class=\"btn btn-default\" onclick=\"window.close();\">cancelar</button>
-\t\t\t</div>\t<!-- div conten-form-->
-\t\t</div>\t<!-- div col-->
-\t\t<div class=\"col-xs-1 col-md-1\"></div>\t
-\t</div>
+\t
 \t</div>
 ";
         
-        $__internal_ec1cc1acdbd67853ea8923af378fe70b8a5c9ce0cf198bf4e932b744d5c627a4->leave($__internal_ec1cc1acdbd67853ea8923af378fe70b8a5c9ce0cf198bf4e932b744d5c627a4_prof);
+        $__internal_d056f1c0c343dfb90ea212bbbfdc21bcd41652fdadfbbbefc9197431c3cc8347->leave($__internal_d056f1c0c343dfb90ea212bbbfdc21bcd41652fdadfbbbefc9197431c3cc8347_prof);
 
     }
 
@@ -124,13 +117,9 @@ class __TwigTemplate_62a583aac28431ea16ed94e53324bb78e67c05a602d8cfa601bf96dd59c
 /* 	<div class="liner"></div>*/
 /* 	<br>*/
 /* 	<div class="container">*/
-/* 	<div class="row">*/
-/* 		<div class="col-xs-1 col-md-1"></div>	*/
-/* 		<div class="col-xs-10 col-md-10">*/
-/* 			<div class="timod pestile" >*/
-/* 			<h4 class="margnone">Editar Evento <span class="btn-lg glyphicon glyphicon-edit" aria-hidden="true"></span></h4>*/
-/* 			</div>*/
-/* 			<div class="conteform">*/
+/* */
+/* 			<h2 class="titulosection margnone">Editar Evento <span class="btn-lg glyphicon glyphicon-edit" aria-hidden="true"></span></h2>*/
+/* 			<hr>*/
 /* 					<div class="form-group">*/
 /* 					<div class="row">*/
 /* 					<br>*/
@@ -175,11 +164,8 @@ class __TwigTemplate_62a583aac28431ea16ed94e53324bb78e67c05a602d8cfa601bf96dd59c
 /* 						    */
 /* 						  </div>*/
 /* 						</div>*/
-/* */
+/* 					*/
 /* 				<button class="btn btn-default" onclick="window.close();">cancelar</button>*/
-/* 			</div>	<!-- div conten-form-->*/
-/* 		</div>	<!-- div col-->*/
-/* 		<div class="col-xs-1 col-md-1"></div>	*/
-/* 	</div>*/
+/* 	*/
 /* 	</div>*/
 /* {% endblock %}*/

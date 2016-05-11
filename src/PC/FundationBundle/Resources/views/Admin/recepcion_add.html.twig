@@ -1,0 +1,54 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block body %}
+
+	<div class="liner"></div>
+	<br>
+	<div class="container">
+		
+	
+			<h2 class="titulosection margnone">recepción<span class="btn-lg glyphicon glyphicon-edit" aria-hidden="true"></span></h2>
+		<hr>
+			
+				<br>
+				{{ form_start(form, {'attr' : {'role' : 'form'} }) }}
+				<div class="form-group">
+					<div class="row">
+						<div class="col-xs-3 col-md-2 textjusti">
+							<label class="marginlabel"  for="Nombre del adoptante">Titulo: </label>
+						</div>
+						<div class="col-xs-9 col-md-4">
+							{{form_widget(form.name, {'attr' : {'class' : 'form-control', 'value' : 'recepción de donativos', 'disabled' : 'disabled' } })}}
+							<div  class="logaler alert-danger" id="age-error"></div><br>
+						</div>
+					</div>
+					
+					<div class="row">
+					<div class="textjusti col-xs-3 col-md-2">
+					<label class="marginlabel textjusti"  for="Apellidos del adoptante">Lugar:</label></div>
+					<div class="col-xs-9 col-md-4">
+						{{form_widget(form.address, {'attr' : {'class' : 'form-control', 'placeholder' : 'dirección' } })}}
+						<div  class="logaler alert-danger" id="last_name-error"></div>
+					</div>
+					</div>
+
+					<div class="row">
+					<br>
+					<div class="col-xs-3 col-md-2 textjusti">
+					<label class="marginlabel"  for="Nombre del adoptante">Fecha: </label></div>
+					<div class="col-xs-9 col-md-4">{{form_widget(form.dateAt)}}
+					<div  class="logaler alert-danger" id="age-error"></div><br>
+					</div>
+					<div class="textjusti col-xs-3 col-md-2">
+					<label class="marginlabel"  for="Edad del adoptante">Descripcion:</label></div>
+					<div class="col-xs-9 col-md-4">
+						{{form_widget(form.description, {'attr' : {'class' : 'form-control', 'placeholder' : 'breve descripción del evento y la hora del mismo.' } })}}
+					</div>
+					</div>
+					<hr>
+				</div>
+					{{ form_widget(form.save, {'label' : 'Continuar', 'attr' : {'class' : 'btn btn-success'} }) }}
+				{{ form_end(form) }}
+		
+
+	</div>
+{% endblock %}

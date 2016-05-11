@@ -80,20 +80,21 @@ pc_administrator_update:
     path:     /admin/update/{id}
     defaults: { _controller: PCFundationBundle:Admin:update }   
 
-pc_administrator_eventos:
-    path:     /admin/eventos
-    defaults: { _controller: PCFundationBundle:Admin:eventos }
+pc_administrator_control:
+    path:   /admin/control
+    defaults: {_controller: PCFundationBundle:Admin:control }
 
-pc_administrator_eventos_add:
-    path:     /admin/eventos/add
-    defaults: { _controller: PCFundationBundle:Admin:eventosadd }
-
-pc_administrator_evento_edit:
-    path:   /admin/eventos/edit
-    defaults: {_controller: PCFundationBundle:Admin:eventoedit }
+pc_administrator_control_add:
+    path:   /admin/control/add/{sterilizationId}
+    defaults: {_controller: PCFundationBundle:Admin:controladd }  
     
+pc_admininstrator_control_create:
+    path:   /admin/control/create/{sterilizationId}
+    defaults: {_controller: PCFundationBundle:Admin:createControl }
+    methods: POST
+
 #--------------------------------------------------------------
-#--- rutas del administrador para censo -----------------------
+#---- rutas del administrador para censo y esterilización -----
 #--------------------------------------------------------------
 
 pc_admin_jornada_censo:
@@ -103,6 +104,19 @@ pc_admin_jornada_censo:
 pc_admin_jornada_censo_mas:
     path:     /admin/jornadacenso/mas/{meetingId}
     defaults: { _controller: PCFundationBundle:Admin:jornadacensomas }
+
+
+
+pc_admin_jornada_censo_addcollaborator:
+    path:     /admin/jornadacenso/addcollaborator/{meetingId}
+    defaults: { _controller: PCFundationBundle:Admin:addcollaborator }
+
+pc_admin_jornada_censo_createcollaborator:
+    path:     /admin/jornadacenso/createcollaborator/{meetingId}
+    defaults: { _controller: PCFundationBundle:Admin:createcollaborator }
+    methods:  POST
+
+
 
 pc_admin_jornada_censo_edit:
     path:     /admin/jornadacenso/edit
@@ -131,12 +145,21 @@ pc_admin_jornada_esterilizacion:
     defaults: { _controller: PCFundationBundle:Admin:jornadaesteriliza } 
     
 pc_admin_esterilizacion:
-    path:     /admin/esteriliza/mas
+    path:     /admin/esteriliza/mas/{meetingId}/{controlAt}/{amount}
     defaults: { _controller: PCFundationBundle:Admin:esterilizacion } 
     
 pc_admin_esterilizacion_add:
-    path:   /admin/esterilizacion/add
+    path:   /admin/esterilizacion/add/{meetingId}
     defaults: {_controller: PCFundationBundle:Admin:esterilizacionAdd }
+
+pc_admin_esterilizacion_update_list:
+    path:   /admin/esterilizacion/update/{petId}/{meetingId}/{controlAt}/{amount}
+    defaults: {_controller: PCFundationBundle:Admin:esterilizacionUpdate }
+
+pc_admin_esterilizacion_create:
+    path:   /admin/esterilizacion/create
+    defaults: {_controller: PCFundationBundle:Admin:createesterilizacion }
+    methods: POST
 
 #--------------------------------------------------------------
 #--- rutas del administrador para mascotas --------------------
@@ -145,6 +168,14 @@ pc_admin_esterilizacion_add:
 pc_admin_adopt_pet:
     path:     /admin/adopcion/
     defaults: { _controller: PCFundationBundle:Admin:adopcionview }
+
+pc_admin_adopt_pet_info:
+    path:     /admin/adopcion/info
+    defaults: { _controller: PCFundationBundle:Admin:adopcioninfo }
+    
+pc_admin_adopt_pet_edit:
+    path:     /admin/adopcion/edit
+    defaults: { _controller: PCFundationBundle:Admin:adopcionedit }
 
 pc_administrator_pet_add:
     path:     /admin/pet/add
@@ -182,3 +213,76 @@ pc_admin_pet_solicitudes_date:
 pc_admin_adoptada_pet:
     path: /admin/adoptada/pet
     defaults: { _controller: PCFundationBundle:Admin:mascotadoptada}
+
+#--------------------------------------------------------------
+#--- rutas del administrador para Donativos -------------------
+#--------------------------------------------------------------
+
+pc_admin_donativ_recepcion:
+    path: /admin/recepcion
+    defaults: { _controller: PCFundationBundle:Admin:recepcion }
+
+pc_admin_donativ_recepcion_add:
+    path: /admin/recepcion/add
+    defaults: { _controller: PCFundationBundle:Admin:recepcionadd }
+    
+pc_admin_donativ_add:
+    path: /admin/donativ/add
+    defaults: { _controller: PCFundationBundle:Admin:donativoadd }
+
+pc_admin_donativ_create:
+    path: /admin/donativ/create
+    defaults: { _controller: PCFundationBundle:Admin:createDonative }
+    methods: POST
+    
+pc_admin_donativ:
+    path: /admin/donativ
+    defaults: { _controller: PCFundationBundle:Admin:donativos }
+    
+#--------------------------------------------------------------
+#--- rutas del administrador para eventos ---------------------
+#--------------------------------------------------------------    
+    
+pc_administrator_eventos:
+    path:     /admin/eventos
+    defaults: { _controller: PCFundationBundle:Admin:eventos }
+
+pc_administrator_eventos_add:
+    path:     /admin/eventos/add
+    defaults: { _controller: PCFundationBundle:Admin:eventosadd }
+
+pc_administrator_eventos_create:
+    path:     /admin/eventos/create
+    defaults: { _controller: PCFundationBundle:Admin:eventocreate }
+    methods:  POST
+
+
+pc_administrator_evento_edit:
+    path:   /admin/eventos/edit
+    defaults: {_controller: PCFundationBundle:Admin:eventoedit }
+
+
+#--------------------------------------------------------------
+#--- rutas del administrador para creditos ---------------------
+#--------------------------------------------------------------    
+    
+pc_administrator_credito_add:
+    path:     /admin/creditoadd
+    defaults: { _controller: PCFundationBundle:Admin:creditoadd }
+
+pc_administrator_credito_create:
+    path:     /admin/credito/create
+    defaults: { _controller: PCFundationBundle:Admin:registrarCredito }
+    methods: POST
+
+pc_administrator_creditos:
+    path:   /admin/creditos
+    defaults: {_controller: PCFundationBundle:Admin:creditoinfo }
+
+pc_administrator_creditos_cancelar:
+    path:   /admin/creditos/cancel/{creditId}
+    defaults: {_controller: PCFundationBundle:Admin:cancelarCredito }
+
+pc_administrator_credito_fin:
+    path:   /admin/creditofin
+    defaults: {_controller: PCFundationBundle:Admin:creditofin }

@@ -19,7 +19,7 @@
                   <th class="bdleft">Mascota</th>
                   <th>Edad mascota</th>
                   <th>Estado solicitud</th>
-                  <th class="tdxs">visita</th>
+                  <th class="tdxs">ver</th>
                 </tr>
               </thead>
               <tbody class="tdb">
@@ -35,7 +35,58 @@
                   <td class="tdxs">{{ adoption.pet.age }}</td>
                   <td>{{ adoption.status }}</td>
                   
-                  <td><a href="" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+                  <td><a href=""  data-toggle="modal" data-target="#myModaladopt"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+                  
+                  <div class="modal fade bs-example-modal-sm" id="myModaladopt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                  
+                        <div class="timod modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                          <h5 class="modal-title" id="exampleModalLabel">Información de la mascota </h5>
+                        </div>
+
+                        <div class="modal-body">
+                          <form>
+                            <div class="form-group">
+                              <label for="recipient-name" class="textjusti control-label">Nombre:</label>
+                              <input type="text" class="form-control" id="recipient-name" disabled>
+                            </div>
+    
+                            <div class="form-group">
+                              <label for="recipient-name" class="textjusti control-label">Edad:</label>
+                              <input type="text" class="form-control" id="recipient-name" disabled>
+                            </div>
+                            
+                            <div class="form-group">
+                              <label for="recipient-name" class="textjusti control-label">especie:</label>
+                              <input type="text" class="form-control" id="recipient-name" disabled>
+                            </div>
+                            
+                            <div class="form-group">
+                              <label for="recipient-name" class="textjusti control-label">genero:</label>
+                              <input type="text" class="form-control" id="recipient-name" disabled>
+                            </div>
+    
+                            <div class="form-group">
+                              <label for="recipient-name" class="textjusti control-label">raza:</label>
+                              <input type="text" class="form-control" id="recipient-name" disabled>
+                            </div>
+                            
+                            <div class="form-group">
+                              <label for="recipient-name" class="textjusti control-label">color:</label>
+                              <input type="text" class="form-control" id="recipient-name" disabled>
+                            </div>
+                          </form>
+                        </div>
+                        
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </td>
                 </tr>
                 {% endfor%}
               </tbody>

@@ -17,7 +17,7 @@
 <body>
 {% block navsup %} 
 <header>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="colnav navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -26,7 +26,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-           <a><img class="img-responsive dimen"src="{{ asset('public/img/nombre.png') }}"></a> 
+           <a href="{{path('pc_administrator_index')}}"><img class="img-responsive dimen"src="{{ asset('public/img/nombre.png') }}"></a> 
           
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -63,7 +63,7 @@
         {% block navlat %}   
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="textjusti active"><a href="#">Control pos-Op &nbsp;<span class="pull-right contarnum badge">42</span><span class="sr-only">(current)</span></a></li>
+            <li class="textjusti active"><a href="{{path('pc_administrator_control')}}">Control pos-Op</a></li>
             <hr class="margnone">
             <li>
               <div class="butstil margnone spanel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -125,8 +125,7 @@
           <ul class="nav nav-sidebar">
             <hr class="margnone">
             <li>
-              <li class="textjusti"><a href="#">Visitas de adopcion<span class="pull-right contarnum badge">08</span></a></li>
-            <hr class="margnone">
+              
             <li>
                  <div class="butstil margnone spanel-group" id="accordion" role="tablist" aria-multiselectable="true">
               <div class="margnone boderno panel panel-default">
@@ -144,11 +143,11 @@
                       </div> 
                       <hr class="margnone">
                        <div class="contlat">
-                        <a href="#"><p class="padp">Sitio de recepción</p></a>
+                        <a href="{{path('pc_admin_donativ_recepcion')}}"><p class="padp">Sitio de recepción</p></a>
                       </div>
                       <hr class="margnone">
                        <div class="contlat">
-                        <a href="#"><p class="padp">registro de donativo</p></a>
+                        <a href="{{path('pc_admin_donativ')}}"><p class="padp">registro de donativo</p></a>
                       </div>
 
                     </div>
@@ -159,7 +158,34 @@
             </li>
             <li class="textjusti"><a href="{{path('pc_administrator_eventos')}}">Eventos</a></li>
             <hr class="margnone">
-            <li class="textjusti"><a href="">credito de Emergencia</a></li>
+                     <li>
+              <div class="butstil margnone spanel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="margnone boderno panel panel-default">
+                <div class="boderno paddinnot panel-heading" role="tab" id="headingOne">
+                  <h4 class="textjusti contlat panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#creditos" aria-expanded="false" aria-controls="collapseOne">
+                     <h5 class="padp">&nbsp;Creditos de emergencia<span class="pull pull-right caret"></span></h5>
+                    </a>
+                  </h4>
+                </div>
+                <div id="creditos" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="padinone panel-body">
+                     <div class="contlat">
+                        <a href="{{ path('pc_administrator_credito_add') }}"><p class="padp">Registrar credito</p></a>
+                      </div> 
+                      <hr class="margnone">
+                       <div class="contlat">
+                        <a href="{{path('pc_administrator_creditos')}}"><p class="padp">Historial de creditos</p></a>
+                      </div>
+                      <hr class="margnone">
+                       <div class="contlat">
+                        <a href="{{ path('pc_administrator_credito_fin')}}"><p class="padp">Creditos cancelados</p></a>
+                      </div>
+                    </div>
+                </div>      
+               </div>
+             </div>
+            </li>
             <hr class="margnone">
           </ul>
         </div>
@@ -168,7 +194,21 @@
         <!-- sección de trabajo -->
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="capa">
           {% block capa%}
-            
+           <div class="row">
+             <div class="col-md-3">
+               <img class="img-responsive margindistan nove"src="{{ asset('public/img/adm.png') }}">
+             </div>
+             <div class="col-md-6">
+             <div class="msj">
+               <h3>Plataforma de Administrador</h3><hr>
+               <p>Bienvenido a la plataforma de administración de la <b>fundación Patitas Callejeras</b>.</p>
+               <p >{{ app.session.get('name') }}</p>
+             </div>
+             </div>
+             <div class="col-md-3">
+               <img class="img-responsive exafon nove"src="{{ asset('public/img/ad1.png') }}">
+             </div>
+           </div> 
           {% endblock %}
          </div> <!--div sección de trabajo-->
         </div> <!--div row del body-->

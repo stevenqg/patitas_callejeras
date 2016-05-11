@@ -4,29 +4,29 @@
               <div class="sectionstile">
               <div class="row">
               <div class="textjusti col-xs-4 col-md-8 col-lg-8">
-                <a  type="button" class="btn btn-primary buttonborder" href="{{path('pc_administrator_eventos_add')}}" id="ventevento">Crear nuevo evento</a>
+                <a  type="button" class="btn btn-primary buttonborder" href="{{path('pc_administrator_eventos_add')}}" onclick="window.open(this.href, this.target,'width=360,height=500'); return false">Crear nuevo evento</a>
               </div>
               <div class="col-xs-8 col-md-4 col-lg-4"></div> <!-- div div responsive -->
             </div> <!-- div row-->
             <br>
            <table class="table table-hover">
               <thead>
-                <tr>
-                  <th>Nombre del Evento</th>
-                  <th>Fecha de realización</th>
-                  <th>Lugar de realización</th>
-                  <th>Descripción</th>
+                <tr class="podingtitle1">
+                  <th class="tdd">Nombre del Evento</th>
+                  <th class="tdd">Fecha de realización</th>
+                  <th class="tdd">Lugar de realización</th>
                   <th class="tdxs">Editar</th>
                   <th class="tdxs">Remover</th>
                 </tr>
-              </thead>
+              </the ad>
               <tbody>
+                {% for event in events %}
                 <tr>
-                  <td>Concienciatizacion animal</td>
-                  <td>09/09/2012</td>
-                  <td>Universiad del Quindio</td>
-                  <td>...</td>
-                  <td><a href="{{path('pc_administrator_evento_edit')}}" id="ventevento1" class="btn btn-default "><span class="colordanger  glyphicon glyphicon-minus-sign"data-toggle="tooltip" data-placement="right" title="editar" aria-hidden="true"></a></td>
+                  <td>{{ event.name }}</td>
+                  <td>{{ event.dateAt | date("m/d/Y") }}</td>
+                  <td>{{ event.address  }}</td>
+                  
+                  <td ><a href="{{path('pc_administrator_evento_edit')}}" onclick="window.open(this.href, this.target,'width=360,height=500'); return false" class="btn btn-default "><span class="colordanger  glyphicon glyphicon-minus-sign"data-toggle="tooltip" data-placement="right" title="editar" aria-hidden="true"></a></td>
                   <td><a href=""class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-sm"><span class="colorer  glyphicon glyphicon-remove-sign"data-toggle="tooltip" data-placement="right" title="Eliminar evento" aria-hidden="true"></a>
                   
                   	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
@@ -42,8 +42,8 @@
 						    			  </div>
           						</div>
                   </td>
-                  
                 </tr>
+                {% endfor %}
               </tbody>
             </table>
           </div><!--div close sectionstile-->

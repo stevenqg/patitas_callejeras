@@ -3,6 +3,7 @@
 namespace PC\FundationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Census
@@ -12,12 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Census
 {
-    /**
-     * @ORM\OneToMany(targetEntity="Census_collaborator", mappedBy="census")
-     */ 
-    protected $censusCollaborator;
-    
-    
+
     /**
      * @ORM\OneToOne(targetEntity="User")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
@@ -193,4 +189,5 @@ class Census
     {
         return $this->pet;
     }
+
 }

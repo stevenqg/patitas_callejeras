@@ -278,4 +278,38 @@ class Administrator
     {
         return $this->meetings;
     }
+
+    /**
+     * Add event
+     *
+     * @param \PC\FundationBundle\Entity\Event $event
+     *
+     * @return Administrator
+     */
+    public function addEvent(\PC\FundationBundle\Entity\Event $event)
+    {
+        $this->events[] = $event;
+
+        return $this;
+    }
+
+    /**
+     * Remove event
+     *
+     * @param \PC\FundationBundle\Entity\Event $event
+     */
+    public function removeEvent(\PC\FundationBundle\Entity\Event $event)
+    {
+        $this->events->removeElement($event);
+    }
+
+    /**
+     * Get events
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEvents()
+    {
+        return $this->events;
+    }
 }

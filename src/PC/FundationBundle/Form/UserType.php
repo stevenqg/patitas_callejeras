@@ -26,7 +26,6 @@ class UserType extends AbstractType
             ->add('address', textType::class)
             ->add('phone_number', textType::class)
             ->add('email', textType::class)
-           /** ->add('petid', textType::class, array('mapped' => false)) */
             ->add('save', SubmitType::class, array('label' => 'save user'))
         ;
     }

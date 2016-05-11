@@ -4,19 +4,20 @@
 
 
 	
-			<h2 class="coloralert">Datos jornada censo<span class="btn-lg glyphicon glyphicon-check" aria-hidden="true"></span></h2>
-			<div class="sectionstile">
+			<h2 class="coloralert"><a href="{{ path('pc_admin_jornada_censo')}}" type="button" class="pull-left buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a> &nbsp;Datos jornada censo<span class="btn-lg glyphicon glyphicon-check" aria-hidden="true"></span></h2>
+			
 				
-				{{ form_start(form) }}
+				
 					
-				<h4 class="textjusti titulosection">datos del responsable</h4>
-				
+				<h4 class="podingtitle1">datos del responsable</h4>
+				<div class="sectionstile notborad">
+				{{ form_start(form) }}
 				<hr class=margnone>
 				<br>
 				<div class="form-group">
 					<div class="row">
 						<div class="textjusti col-xs-3 col-md-2">
-							<label class="marginlabel textjusti" for="Nombres del adoptante">Nombre del acudiente:</label>
+							<label class="marginlabel text-left" for="Nombres del adoptante">Nombre del acudiente:</label>
 						</div>
 						<div class="col-xs-9 col-md-4">
 							{{form_widget(form.userName, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombres del acudiente' } })}}
@@ -48,7 +49,7 @@
 					</div>
 					<div class="row">
 						<div class="textjusti col-xs-3 col-md-2">
-							<label class="marginlabel" for="Edad del adoptante">dirección:</label>
+							<label class="marginlabel" for="Edad del adoptante">Dirección:</label>
 						</div>
 						<div class="col-xs-9 col-md-4">
 							{{form_widget(form.address, {'attr' : {'class' : 'form-control', 'placeholder' : 'dirección' } })}}
@@ -71,9 +72,12 @@
 							<br>
 						</div>
 					</div>
-					<hr>
-					<h4 class="text-center coloralert">datos de la mascota</h4>
-					<hr>
+					</div>
+					</div>
+					<h4 class="podingtitle1">datos de la mascota</h4>
+					<div class="sectionstile notborad">
+					
+					<div class="form-group">
 					<div class="row">
 						<div class="textjusti col-xs-3 col-md-2">
 							<label class="marginlabel" for="Edad del adoptante">Nombre:</label>
@@ -115,7 +119,7 @@
 							<br>
 						</div>
 						<div class="textjusti col-xs-3 col-md-2">
-							<label for="Nombre del adoptante">género: </label>
+							<label for="Nombre del adoptante">Género: </label>
 						</div>
 						<div class="col-xs-9 col-md-4">
 							{{form_widget(form.gender, {'attr' : {'class' : 'form-control', 'placeholder' : 'seleccione el género' } })}}
@@ -165,9 +169,10 @@
 					</div>
 					
 				</div>
+				
+				</div>
 				{{ form_widget(form.save, {'label' : 'Continuar', 'attr' : {'class' : 'btn btn-success'} }) }}
 					
 				{{ form_end(form) }}
-			
-		</div>	
+				
 {% endblock%}

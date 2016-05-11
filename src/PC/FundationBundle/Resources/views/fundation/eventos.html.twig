@@ -10,7 +10,7 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
-				<img src="{{asset('public/img/pr.jpg')}}"  class="imafont img-responsive" alt="">
+				<div class="imafont"></div>
 				<img src="{{asset('public/img/logo.png')}}" class="logofloat img-responsive" alt="">
 				<div class=" titlestile  cementery">
 					<h3> Ayuda a quienes mas lo necesitan</h3>
@@ -24,55 +24,25 @@
 	<div class="container">
 		<h1 class="titulosection">Proximos eventos</h1>
 		<hr>
+		
 		<div class="row">
-		<div class="col-md-4">
-		<div class="evenconten">
-			<div class="eventname">
-				<h3 class="titlestile">evento...</h3>
-			</div>
-		 <dl class=" textjusti dl-horizontal">
-  		<dt class="colsector">Lugar:</dt>
-  		<dd>Universidad del Quindio</dd>
-  		<dt class="colsector" >Fecha:</dt>
-  		<dd>19/02/2016 3:40 P.M</dd>
-  		<dt class="colsector">Descripción:</dt>
-  		<dd> .......... .......... .....</dd>
-		</dl>
-		</div>	
-		</div>
-
-		<div class="col-md-4">
-			<div class="evenconten">
-			<div class="eventname">
-				<h3 class="titlestile">evento...</h3>
-			</div>
-		 <dl class=" textjusti dl-horizontal">
-  		<dt class="colsector">Lugar:</dt>
-  		<dd>Universidad del Quindio</dd>
-  		<dt class="colsector" >Fecha:</dt>
-  		<dd>19/02/2016 3:40 P.M</dd>
-  		<dt class="colsector">Descripción:</dt>
-  		<dd> .......... .......... .....</dd>
-		</dl>
-		</div>
-		</div>
-
-		<div class="col-md-4">
+			{% for event in events%}
+			<div class="col-md-4">
 				<div class="evenconten">
-			<div class="eventname">
-				<h3 class="titlestile">evento...</h3>
+					<div class="eventname">
+						<h3 class="titlestile">{{ event.name }}</h3>
+					</div>
+					<dl class=" text-left dl-horizontal">
+			  		<dt class=" marginlabel colsector">Lugar:</dt>
+			  		<dd class="marginlabel">{{ event.address }}</dd>
+			  		<dt class=" marginlabel colsector" >Fecha:</dt>
+			  		<dd class="marginlabel">{{ event.dateAt | date("m/d/Y")}}</dd>
+			  		<dt class=" marginlabel colsector">Descripción:</dt>
+			  		<dd class=" marginlabel displaycol">{{ event.description }}</dd>
+					</dl>
+				</div>	
 			</div>
-		 <dl class=" textjusti dl-horizontal">
-  		<dt class="colsector">Lugar:</dt>
-  		<dd>Universidad del Quindio</dd>
-  		<dt class="colsector" >Fecha:</dt>
-  		<dd>19/02/2016 3:40 P.M</dd>
-  		<dt class="colsector">Descripción:</dt>
-  		<dd> .......... .......... .....</dd>
-		</dl>
-		</div>
-		</div>
-
+			{% endfor %}
 		</div>
 	</div>
 	

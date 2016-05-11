@@ -3,6 +3,7 @@
 namespace PC\FundationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Collaborator
@@ -134,5 +135,38 @@ class Collaborator
     {
         return $this->address;
     }
-}
 
+    /**
+     * Add censusCollaborator
+     *
+     * @param \PC\FundationBundle\Entity\Census_collaborator $censusCollaborator
+     *
+     * @return Collaborator
+     */
+    public function addCensusCollaborator(\PC\FundationBundle\Entity\Census_collaborator $censusCollaborator)
+    {
+        $this->censusCollaborator[] = $censusCollaborator;
+
+        return $this;
+    }
+
+    /**
+     * Remove censusCollaborator
+     *
+     * @param \PC\FundationBundle\Entity\Census_collaborator $censusCollaborator
+     */
+    public function removeCensusCollaborator(\PC\FundationBundle\Entity\Census_collaborator $censusCollaborator)
+    {
+        $this->censusCollaborator->removeElement($censusCollaborator);
+    }
+
+    /**
+     * Get censusCollaborator
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCensusCollaborator()
+    {
+        return $this->censusCollaborator;
+    }
+}

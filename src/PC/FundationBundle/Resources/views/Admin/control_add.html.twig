@@ -1,0 +1,34 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block body %}
+	<div class="liner"></div>
+	<br>
+	<div class="container">
+		
+		<h3 class="titulosection margnone">Control de:</h3>
+		<hr>
+		{{ form_start(form, {'attr' : {'role' : 'form'} }) }}
+		<div class="form-group">
+			
+			<div class="row">
+				<br>
+				<div class="col-xs-3 col-md-2 textjusti">
+					<label class="marginlabel"  for="EStado de la cirugia">¿se realizó el control a satisfacción? </label>
+				</div>
+				<div class="col-xs-9 col-md-4">
+					{{form_widget(form.isSatisfactory, {'attr' : {'class' : 'check checkbox'} })}}<br>
+				</div>
+				<br>
+				<div class="textjusti col-xs-3 col-md-2">
+					<label class="marginlabel"  for="Edad del adoptante">comentario:</label>
+				</div>
+				<div class="col-xs-9 col-md-4">
+					{{form_widget(form.comment, {'attr' : {'class' : 'form-control', 'placeholder' : 'comentarios relacionados al control.' } })}}
+				</div>
+			</div>
+			<hr>
+ 		</div>
+ 		{{ form_widget(form.save, {'label' : 'Guardar', 'attr' : {'class' : 'glyphicon glyphicon-saved', 'aria-hidden' : 'true' } }) }}
+		{{ form_end(form) }}	
+	
+	</div>
+{% endblock %}

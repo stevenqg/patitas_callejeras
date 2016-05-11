@@ -1,0 +1,37 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+
+    <h1 class="titulosection">Creditos de emergencia </h1>
+	<div class="sectionstile">
+    <table class="tabl table-striped">
+         	
+         <thead>
+         		
+         		<tr class="podingtitle1 text-center">
+         			<th>Nombre</th>
+         			<th>Dirección</th>
+         			<th>telefono</th>
+         			<th>Responsable</th>
+         			<th>referencia</th>
+         			<th>Monto</th>
+         			<th>cancelar</th>
+         			
+         		</tr>
+         	</thead>
+         	<tbody>
+         		{% for credit in credits %}
+         		<tr>
+         			<td>{{ credit.user.name }}</td>
+         			<td>{{ credit.user.address }}</td>
+         			<td>{{ credit.user.phoneNumber }}</td>
+         			<td>{{ credit.responsible  }}</td>
+         			<td>{{ credit.reference }}</td>
+         			<td>{{ credit.amount  }}</td>
+         			<td class="tdxs"><a href="{{ path('pc_administrator_creditos_cancelar', {'creditId' : credit.id}) }}" onclick="window.open(this.href, this.target,'width=360,height=500'); return false" class="btn btn-default "><span class="coloralert   glyphicon glyphicon-usd" data-toggle="tooltip" data-placement="top" title="" aria-hidden="true" data-original-title="pagar credito"></span></a></td>
+         		</tr>
+         		{% endfor %}
+         	</tbody>
+         </table>
+         </div>
+         
+{% endblock %}

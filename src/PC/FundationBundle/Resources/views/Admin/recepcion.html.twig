@@ -1,0 +1,85 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+
+	<h1 class="titulosection">Recepción de donativos &nbsp;<a  type="button" class="pull-right btn btn-primary buttonborder" href="{{path('pc_admin_donativ_recepcion_add')}}" onclick="window.open(this.href, this.target,'width=360,height=500'); return false">nuevo sitios de recepción</a></h1>
+	<hr>
+	 <br>
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="margnone panel panel-default">
+    <div class="paddinnot panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#controlOne" aria-expanded="false" aria-controls="collapseOne">
+           <table class=" margnone table table-hover">
+              <tbody>
+                {% for donativeMeeting in donativeMeetings %}
+                <tr>
+                  <td><b class="titulosection">Lugar:&nbsp;</b>{{ donativeMeeting.address}}</td>
+                  <td><b class="titulosection">Fecha de realización: &nbsp;</b>{{ donativeMeeting.dateAt | date('m-d-Y')}}</td>
+                   
+                  <td class="tdxs"><a href="{{path('pc_admin_donativ_recepcion_add')}} " onclick="window.open(this.href, this.target,'width=360,height=500'); return false" ><span class="colordanger  glyphicon glyphicon-minus-sign"data-toggle="tooltip" data-placement="right" title="editar" aria-hidden="true"></a></td>
+                  <td td="tdxs"><a href="" data-toggle="modal" data-target=".bs-example-modal-sm"><span class="colorer  glyphicon glyphicon-remove-sign"data-toggle="tooltip" data-placement="right" title="Eliminar evento" aria-hidden="true"></a>
+                  
+                  	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        						  <div class="modal-dialog modal-sm">
+        						    <div class="modal-content">
+        						    	<div class="modal-body">
+        						    		<p ><span class="coloralert btn-lg glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp; Esta seguro de eliminar este evento </p>
+        						    	</div>
+        						    	<div class="modal-footer">
+                           <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.close();">Aceptar</button>
+                          </div>
+        						    </div>
+						    			  </div>
+          						</div>
+                  </td>
+                </tr>
+                {% endfor %}
+                
+               </tbody>
+            </table>
+        </a>
+      </h4>
+    </div>
+    <div id="controlOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-3">
+            <h4 class="textjusti"> Descripción: </h4>
+          </div>
+          <div class="col-md-9">
+            <table class="tabdescr"><tr><td></td></tr></table>
+          </div>
+        </div><br>
+        <div class="row">
+          <div class="col-md-3">
+            <h4 class="textjusti">Colaboradores &nbsp;<a href=" " onclick="window.open(this.href, this.target,'width=360,height=500'); return false" class=" btn btn-default "><span class="coloralert   glyphicon glyphicon-plus-sign" data-toggle="tooltip" data-placement="top" title="" aria-hidden="true" data-original-title="agregar colaborador"></span></a>  </h4>
+          </div>
+          
+          <div class="col-md-9">
+            <table class="table-bordered tabl table-striped">
+         	<thead>
+         			<th>Nombre</th>
+         			<th>telefono</th>
+         			<th>dirección</th>
+         			
+         		</tr>
+         	</thead>
+         	<tbody>
+         		<tr>
+         			<td>data</td>
+         			<td>data</td>
+         			<td>data</td>
+         			</tr>
+         	</tbody>
+         </table> 
+         
+          </div>
+        </div>
+      </div><!--panel-body close-->
+      </div>
+    </div>
+<!------------------------------------------------------------------------>
+
+ </div>
+	
+{% endblock %}

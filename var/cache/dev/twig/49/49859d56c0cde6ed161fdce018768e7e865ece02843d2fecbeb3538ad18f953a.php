@@ -10,7 +10,7 @@ class __TwigTemplate_c0b01ead418d05f74af2768f9afc97ac2c77e928acf5fe5f4d60e13d207
         // line 1
         $this->parent = $this->loadTemplate("PCFundationBundle:Admin:admin.html.twig", "PCFundationBundle:Admin:nuevocenso.html.twig", 1);
         $this->blocks = array(
-            'capa' => array($this, 'block_capa'),
+            'body' => array($this, 'block_body'),
         );
     }
 
@@ -21,79 +21,82 @@ class __TwigTemplate_c0b01ead418d05f74af2768f9afc97ac2c77e928acf5fe5f4d60e13d207
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_82cf0ee90782fcb4054109f2223135a8efa79378fa50a65f0b8395e981248d23 = $this->env->getExtension("native_profiler");
-        $__internal_82cf0ee90782fcb4054109f2223135a8efa79378fa50a65f0b8395e981248d23->enter($__internal_82cf0ee90782fcb4054109f2223135a8efa79378fa50a65f0b8395e981248d23_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:nuevocenso.html.twig"));
+        $__internal_8ecdab1b19ed67809b83d827a7100ee9f1cdc450a83fac99251b6804da4d5640 = $this->env->getExtension("native_profiler");
+        $__internal_8ecdab1b19ed67809b83d827a7100ee9f1cdc450a83fac99251b6804da4d5640->enter($__internal_8ecdab1b19ed67809b83d827a7100ee9f1cdc450a83fac99251b6804da4d5640_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:nuevocenso.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_82cf0ee90782fcb4054109f2223135a8efa79378fa50a65f0b8395e981248d23->leave($__internal_82cf0ee90782fcb4054109f2223135a8efa79378fa50a65f0b8395e981248d23_prof);
+        $__internal_8ecdab1b19ed67809b83d827a7100ee9f1cdc450a83fac99251b6804da4d5640->leave($__internal_8ecdab1b19ed67809b83d827a7100ee9f1cdc450a83fac99251b6804da4d5640_prof);
 
     }
 
     // line 2
-    public function block_capa($context, array $blocks = array())
+    public function block_body($context, array $blocks = array())
     {
-        $__internal_b92b9f32fd488cbfc3693405bab1987da6779ecbfa631c922f45e1d2be3fee4f = $this->env->getExtension("native_profiler");
-        $__internal_b92b9f32fd488cbfc3693405bab1987da6779ecbfa631c922f45e1d2be3fee4f->enter($__internal_b92b9f32fd488cbfc3693405bab1987da6779ecbfa631c922f45e1d2be3fee4f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_381cd86787bd9c059c4f8a2e74172bdb7ef3b718635737d31ee821c260ffd44d = $this->env->getExtension("native_profiler");
+        $__internal_381cd86787bd9c059c4f8a2e74172bdb7ef3b718635737d31ee821c260ffd44d->enter($__internal_381cd86787bd9c059c4f8a2e74172bdb7ef3b718635737d31ee821c260ffd44d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
-        echo "<div>
+        echo "
+\t<div class=\"liner\"></div>
+\t<br>
+\t<div class=\"container\">
 \t\t
-\t\t
-\t\t<h1 class=\"coloralert\"><a href=\"";
-        // line 6
-        echo $this->env->getExtension('routing')->getPath("pc_admin_jornada_censo");
-        echo "\" type=\"button\" class=\" buttonborder btn btn-default\"> <span class=\"glyphicon glyphicon-hand-left\" aria-hidden=\"true\"></span>&nbsp;regresar</a>&nbsp; Crear nuevo censo </h1>
-\t\t<div class=\"sectionstile\"><br>
+\t\t<h1 class=\"coloralert\">&nbsp; Crear nuevo censo </h1>
+\t\t<hr>
 \t\t";
-        // line 8
+        // line 10
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("role" => "form")));
         echo "
 \t\t\t<div class=\"row\">
 \t\t\t
-\t\t\t\t<div class=\"col-md-1\">
-\t\t\t\t\t<label ><h5>Zona:</h5></label>
+\t\t\t\t<div class=\"col-xs-3 col-md-2 textjusti\">
+\t\t\t\t\t<label class=\"textjusti\"><h5>Zona:</h5></label>
 \t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-5\">
+\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t";
-        // line 15
+        // line 17
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "address", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "dirección o lugar de la jornada")));
         echo "
 \t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-1\">
-\t\t\t\t\t<label for=\"Fecha\"><h5>Fecha:</h5></label>
+\t\t\t\t<div class=\"textjusti col-xs-3 col-md-2\">
+\t\t\t\t\t<label class=\"textjusti\" for=\"Fecha\"><h5>Fecha:</h5></label>
 \t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-5\">
+\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t ";
-        // line 21
+        // line 23
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "createdAt", array()), 'widget', array("attr" => array("id" => "fecha1")));
         echo "
 \t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-1\">
+\t\t\t</div>
+\t\t\t<div class=\"row\">
+\t\t\t\t<div class=\"col-xs-3 col-md-2 textjusti\">
 \t\t\t\t\t<label for=\"Fecha\"><h5>tipo de jornada:</h5></label>
 \t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-5\">
+\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t ";
-        // line 27
+        // line 31
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "meetingType", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "tipo de jornada")));
         echo "
-\t\t\t\t</div> <br>
+\t\t\t\t</div>
+\t\t\t\t</div><hr>
 \t\t\t\t
 \t\t\t</div><br> <!-- div close row-->
 \t\t\t";
-        // line 31
+        // line 36
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("label" => "registrar", "attr" => array("class" => "btn btn-success")));
         echo "
 \t\t\t";
-        // line 32
+        // line 37
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
-\t\t</div><!-- div close section estile-->
+\t\t
 \t\t
 \t</div>
+\t
 ";
         
-        $__internal_b92b9f32fd488cbfc3693405bab1987da6779ecbfa631c922f45e1d2be3fee4f->leave($__internal_b92b9f32fd488cbfc3693405bab1987da6779ecbfa631c922f45e1d2be3fee4f_prof);
+        $__internal_381cd86787bd9c059c4f8a2e74172bdb7ef3b718635737d31ee821c260ffd44d->leave($__internal_381cd86787bd9c059c4f8a2e74172bdb7ef3b718635737d31ee821c260ffd44d_prof);
 
     }
 
@@ -109,43 +112,49 @@ class __TwigTemplate_c0b01ead418d05f74af2768f9afc97ac2c77e928acf5fe5f4d60e13d207
 
     public function getDebugInfo()
     {
-        return array (  89 => 32,  85 => 31,  78 => 27,  69 => 21,  60 => 15,  50 => 8,  45 => 6,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  91 => 37,  87 => 36,  79 => 31,  68 => 23,  59 => 17,  49 => 10,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
-/* {% block capa %}*/
-/* <div>*/
+/* {% block body %}*/
+/* */
+/* 	<div class="liner"></div>*/
+/* 	<br>*/
+/* 	<div class="container">*/
 /* 		*/
-/* 		*/
-/* 		<h1 class="coloralert"><a href="{{ path('pc_admin_jornada_censo')}}" type="button" class=" buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a>&nbsp; Crear nuevo censo </h1>*/
-/* 		<div class="sectionstile"><br>*/
+/* 		<h1 class="coloralert">&nbsp; Crear nuevo censo </h1>*/
+/* 		<hr>*/
 /* 		{{ form_start(form, {'attr' : {'role' : 'form'} }) }}*/
 /* 			<div class="row">*/
 /* 			*/
-/* 				<div class="col-md-1">*/
-/* 					<label ><h5>Zona:</h5></label>*/
+/* 				<div class="col-xs-3 col-md-2 textjusti">*/
+/* 					<label class="textjusti"><h5>Zona:</h5></label>*/
 /* 				</div>*/
-/* 				<div class="col-md-5">*/
+/* 				<div class="col-xs-9 col-md-4">*/
 /* 					{{form_widget(form.address, {'attr' : {'class' : 'form-control', 'placeholder' : 'dirección o lugar de la jornada' } })}}*/
 /* 				</div>*/
-/* 				<div class="col-md-1">*/
-/* 					<label for="Fecha"><h5>Fecha:</h5></label>*/
+/* 				<div class="textjusti col-xs-3 col-md-2">*/
+/* 					<label class="textjusti" for="Fecha"><h5>Fecha:</h5></label>*/
 /* 				</div>*/
-/* 				<div class="col-md-5">*/
-/* 				 {{form_widget(form.createdAt, {'attr' : {'id': 'fecha1' } })}}*/
+/* 				<div class="col-xs-9 col-md-4">*/
+/* 				 {{form_widget(form.createdAt, {'attr': {'id': 'fecha1' } })}}*/
 /* 				</div>*/
-/* 				<div class="col-md-1">*/
+/* 			</div>*/
+/* 			<div class="row">*/
+/* 				<div class="col-xs-3 col-md-2 textjusti">*/
 /* 					<label for="Fecha"><h5>tipo de jornada:</h5></label>*/
 /* 				</div>*/
-/* 				<div class="col-md-5">*/
+/* 				<div class="col-xs-9 col-md-4">*/
 /* 				 {{form_widget(form.meetingType, {'attr' : {'class' : 'form-control', 'placeholder' : 'tipo de jornada' } })}}*/
-/* 				</div> <br>*/
+/* 				</div>*/
+/* 				</div><hr>*/
 /* 				*/
 /* 			</div><br> <!-- div close row-->*/
 /* 			{{ form_widget(form.save, {'label' : 'registrar', 'attr' : {'class' : 'btn btn-success'} }) }}*/
 /* 			{{ form_end(form) }}*/
-/* 		</div><!-- div close section estile-->*/
+/* 		*/
 /* 		*/
 /* 	</div>*/
+/* 	*/
 /* {% endblock %}*/
 /* */

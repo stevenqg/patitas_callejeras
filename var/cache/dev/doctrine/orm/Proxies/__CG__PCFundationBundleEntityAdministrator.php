@@ -364,4 +364,37 @@ class Administrator extends \PC\FundationBundle\Entity\Administrator implements 
         return parent::getMeetings();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function addEvent(\PC\FundationBundle\Entity\Event $event)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addEvent', [$event]);
+
+        return parent::addEvent($event);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeEvent(\PC\FundationBundle\Entity\Event $event)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeEvent', [$event]);
+
+        return parent::removeEvent($event);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getEvents()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEvents', []);
+
+        return parent::getEvents();
+    }
+
 }

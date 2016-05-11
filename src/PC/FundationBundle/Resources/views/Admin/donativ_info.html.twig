@@ -1,0 +1,98 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+
+	<h2 class="coloralert"> &nbsp;informacion de donaciones<a href="{{path('pc_admin_donativ_add')}}" type="button" class="pull-right buttonborder btn btn-primary"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;nueva donación</a></h2>
+	<h4 class="podingtitle1">Donaciones monetareas</h4>
+	<div class="sectionstile notborad">
+	<table class="tabl table-striped">
+              <thead>
+                <tr>
+                  <th>cuantia</th>
+                  <th>donante</th>
+                  <th>recibído en</th>
+                  <th class="tdxs">descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for donative in donatives %}
+                {% if donative.type == 'MONETARY' %}
+                <tr>
+                  <td>${{ donative.quantity }}</td>
+                  <td>{{ donative.donor }}</td>
+                  <td>{{ donative.receivedAt | date ('m-d-Y')}}</td>
+                  <td><a data-toggle="modal" data-target="#myModal{{ donative.id }}" >&nbsp;<span class="glyphicon glyphicon-share" aria-hidden="true"></a>
+
+                  <div class="modal fade" id="myModal{{ donative.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="timod  modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Descripcion del donativo</h4>
+                      </div>
+                      <div class="modal-body">
+                        {{ donative.description }}
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                  </td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+               </tbody>
+            </table>
+	</div>
+	
+	<h4 class="podingtitle1">Donaciones de productos</h4>
+	<div class="sectionstile notborad">
+	<table class="tabl table-striped">
+              <thead>
+                <tr>
+                  <th>tipo</th>
+                  <th>cantidad</th>
+                  <th>donante</th>
+                  <th>recibído en</th>
+                  <th class="tdxs">descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for donative in donatives %}
+                {% if donative.type != 'MONETARY' %}
+                <tr>
+                  <td>
+                    {% if donative.type == 'FOOD' %}
+                    <strong>alimento</strong>
+                    {% elseif donative.type == 'OTHERS' %}
+                    <strong>otros</strong>
+                    {% endif %}
+                  </td>
+                  <td>{{ donative.quantity }} &nbsp; unidades</td>
+                  <td>{{ donative.donor }}</td>
+                  <td>{{ donative.receivedAt | date ('m-d-Y')}}</td>
+                  <td><a data-toggle="modal" data-target="#myModal{{ donative.id }}" >&nbsp;<span class="glyphicon glyphicon-share" aria-hidden="true"></a>
+
+                  <div class="modal fade" id="myModal{{ donative.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="timod  modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Descripcion del donativo</h4>
+                      </div>
+                      <div class="modal-body">
+                        {{ donative.description }}
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                  </td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+               </tbody>
+            </table>
+	</div>
+{% endblock %}

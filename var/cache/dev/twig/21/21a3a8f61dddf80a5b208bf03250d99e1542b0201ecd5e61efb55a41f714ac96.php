@@ -23,31 +23,31 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d7b99495fd8224bf7cfd56b89cb3ddb402342509bbeaf9b2a6e0558f228655dc = $this->env->getExtension("native_profiler");
-        $__internal_d7b99495fd8224bf7cfd56b89cb3ddb402342509bbeaf9b2a6e0558f228655dc->enter($__internal_d7b99495fd8224bf7cfd56b89cb3ddb402342509bbeaf9b2a6e0558f228655dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
+        $__internal_b3b8b2187cf8581aa6503da24addff5f1210d61db54e6c085150e1269da684e8 = $this->env->getExtension("native_profiler");
+        $__internal_b3b8b2187cf8581aa6503da24addff5f1210d61db54e6c085150e1269da684e8->enter($__internal_b3b8b2187cf8581aa6503da24addff5f1210d61db54e6c085150e1269da684e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:adopcion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d7b99495fd8224bf7cfd56b89cb3ddb402342509bbeaf9b2a6e0558f228655dc->leave($__internal_d7b99495fd8224bf7cfd56b89cb3ddb402342509bbeaf9b2a6e0558f228655dc_prof);
+        $__internal_b3b8b2187cf8581aa6503da24addff5f1210d61db54e6c085150e1269da684e8->leave($__internal_b3b8b2187cf8581aa6503da24addff5f1210d61db54e6c085150e1269da684e8_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_7f52490ecd6699098a5c2c8bfe540dc854a11aadbeb20ee89cb37f4dee44e611 = $this->env->getExtension("native_profiler");
-        $__internal_7f52490ecd6699098a5c2c8bfe540dc854a11aadbeb20ee89cb37f4dee44e611->enter($__internal_7f52490ecd6699098a5c2c8bfe540dc854a11aadbeb20ee89cb37f4dee44e611_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_eb17f5b5235632c1990309366494108b60dd52a0198a5863f7f4b917e76ca13e = $this->env->getExtension("native_profiler");
+        $__internal_eb17f5b5235632c1990309366494108b60dd52a0198a5863f7f4b917e76ca13e->enter($__internal_eb17f5b5235632c1990309366494108b60dd52a0198a5863f7f4b917e76ca13e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_7f52490ecd6699098a5c2c8bfe540dc854a11aadbeb20ee89cb37f4dee44e611->leave($__internal_7f52490ecd6699098a5c2c8bfe540dc854a11aadbeb20ee89cb37f4dee44e611_prof);
+        $__internal_eb17f5b5235632c1990309366494108b60dd52a0198a5863f7f4b917e76ca13e->leave($__internal_eb17f5b5235632c1990309366494108b60dd52a0198a5863f7f4b917e76ca13e_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_52bec878c3ad166f5ebde6ed50fbe6c1b25ef3abc834219cdac215f0d2c306f6 = $this->env->getExtension("native_profiler");
-        $__internal_52bec878c3ad166f5ebde6ed50fbe6c1b25ef3abc834219cdac215f0d2c306f6->enter($__internal_52bec878c3ad166f5ebde6ed50fbe6c1b25ef3abc834219cdac215f0d2c306f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c884ba7deba63f561f0c02081b93433799509fa215a11182cf1b8d3e4ec26e3d = $this->env->getExtension("native_profiler");
+        $__internal_c884ba7deba63f561f0c02081b93433799509fa215a11182cf1b8d3e4ec26e3d->enter($__internal_c884ba7deba63f561f0c02081b93433799509fa215a11182cf1b8d3e4ec26e3d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         $this->displayParentBlock("body", $context, $blocks);
@@ -61,10 +61,10 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
   <div class=\"col-md-10\">
       <div class=\"wor\">
         <div class=\"col-md-6\">
-         <h3 class=\"titulosection\"><img src=\"";
+         <h3 class=\"titulosection\"><img class=\"ve\" src=\"";
         // line 16
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/mn.png"), "html", null, true);
-        echo "\" alt=\"\"><b>&nbsp;PROCESO DE ADOPCIÓN&nbsp;</b><img src=\"";
+        echo "\" alt=\"\"><b>&nbsp;PROCESO DE ADOPCIÓN&nbsp;</b><img class=\"ve\" src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/m.png"), "html", null, true);
         echo "\" alt=\"\"></h3><hr class=\"margnone\">
         <p class=\"h1estle textjusti\">La fundación patitas callejeras en función de asegurar la integridad de los animales y el compromiso de las personas que quieren adoptar, establece una serie de actividades para definir si el adoptante cumplen con las condiciones estipuladas por la institución. </p>
@@ -72,7 +72,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
        <div class=\"continer\">
         <div class=\"textjusti alert alert-info\">Es muy importante que leas los requisitos de adopción</div>
 
-\t<button class=\"butglass glass butposadop\" data-toggle=\"modal\" data-target=\"#miVentana\">Ver requisitos</button>
+\t<button class=\"s butglass glass butposadop\" data-toggle=\"modal\" data-target=\"#miVentana\">Ver requisitos</button>
 
 \t<div class=\"modal fade\" id=\"miVentana\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
 \t\t<div class=\"modal-dialog\">
@@ -98,7 +98,7 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
       </div>
     </div>
     <div class=\"col-md-6\">
-      <img  src=\"";
+      <img class=\"ve\" src=\"";
         // line 48
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/adopt.png"), "html", null, true);
         echo "\"class=\"img-responsive\"></img>
@@ -160,9 +160,8 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
 \t\t\t\t\t<h4>4.  Seguimiento de adopcion</h4>
 \t\t\t\t\t</div>
           <p class=\"textjusti\">La fundación programara con el adoptante visitas para verificar la adaptación de la mascota en su nuevo hogar. </p>
-          <hr>
-          </div>
-
+          </div><hr>
+        
         
       </div>
       <div class=\"col-md-1\"></div>
@@ -186,31 +185,31 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
           
       <div class=\"row\">
            ";
-        // line 120
+        // line 119
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pets"]) ? $context["pets"] : $this->getContext($context, "pets")));
         foreach ($context['_seq'] as $context["_key"] => $context["pet"]) {
-            // line 121
+            // line 120
             echo "           
            ";
-            // line 122
-            if ((($this->getAttribute($context["pet"], "species", array()) == "CANINE") && ($this->getAttribute($context["pet"], "status", array()) != "ADOPTED"))) {
-                // line 123
+            // line 121
+            if (((($this->getAttribute($context["pet"], "species", array()) == "CANINE") && ($this->getAttribute($context["pet"], "status", array()) != "ADOPTED")) && ($this->getAttribute($context["pet"], "status", array()) != "EXTERNAL"))) {
+                // line 122
                 echo "          <div class=\"col-md-4\">
             <div class=\"conteneter\">
               <a  class=\"links2\"  data-toggle=\"modal\" data-target=\"#ventanaadoptardog";
-                // line 125
+                // line 124
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "id", array()), "html", null, true);
                 echo "\" href=\"\"> 
               <div class=\"banername back1\">
                       
                   <img src=\"";
-                // line 128
+                // line 127
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
                 echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
                   <h3 class=\"namemasct\"><b>";
-                // line 130
+                // line 129
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "name", array()), "html", null, true);
                 echo "</b></h3>
                 
@@ -219,34 +218,34 @@ class __TwigTemplate_22c214655212373e64823206b90ae906763853a1c9dc84a16dd5d32e764
             <ul>
               <li><label>Edad:</label>
               <span>";
-                // line 136
+                // line 135
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "age", array()), "html", null, true);
                 echo "&nbsp;años.</span></li>
 
               <li><label>Sexo:</label>
               ";
-                // line 139
+                // line 138
                 if (($this->getAttribute($context["pet"], "gender", array()) == "MALE")) {
-                    // line 140
+                    // line 139
                     echo "                              
               <span>macho</span></li>
               
               ";
-                } elseif (($this->getAttribute(                // line 143
+                } elseif (($this->getAttribute(                // line 142
 $context["pet"], "gender", array()) == "FEMALE")) {
-                    // line 144
+                    // line 143
                     echo "              
               <span>hembra</span></li>
                               
               ";
                 }
-                // line 148
+                // line 147
                 echo "              
             </ul>
           </div></a>
           
           \t<div class=\"modal fade\" id=\"ventanaadoptardog";
-                // line 152
+                // line 151
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "id", array()), "html", null, true);
                 echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
           \t\t<div class=\"modal-dialog\">
@@ -259,7 +258,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 \t\t\t    \t \t  <div class=\"row\">
 \t\t\t  \t\t    <div class=\"col-md-6\">
 \t\t\t  \t\t      <img src=\"";
-                // line 162
+                // line 161
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/pnot.png"), "html", null, true);
                 echo "\" class=\"img-responsive\" alt=\"\">
 \t\t\t  \t\t    </div>
@@ -269,28 +268,28 @@ $context["pet"], "gender", array()) == "FEMALE")) {
                     <tr>
                       <th class=\"tdd\">Nombre:</th>
                       <td>";
-                // line 169
+                // line 168
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "name", array()), "html", null, true);
                 echo "</td>
                     </tr>
                     <tr>
                       <th>raza:</th>
                       <td>";
-                // line 173
+                // line 172
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "race", array()), "html", null, true);
                 echo "</td>
                     </tr>
                     <tr>
                       <th>Edad:</th>
                       <td>";
-                // line 177
+                // line 176
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "age", array()), "html", null, true);
                 echo "&nbsp;años.</td>
                     </tr>
                     <tr>
                       <th>Color:</th>
                       <td>";
-                // line 181
+                // line 180
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "colour", array()), "html", null, true);
                 echo "</td>
                     </tr>
@@ -298,18 +297,18 @@ $context["pet"], "gender", array()) == "FEMALE")) {
                       <th>sexo:</th>
                       <td>
                         ";
-                // line 186
+                // line 185
                 if (($this->getAttribute($context["pet"], "gender", array()) == "MALE")) {
-                    // line 187
+                    // line 186
                     echo "                       macho
                      ";
-                } elseif (($this->getAttribute(                // line 188
+                } elseif (($this->getAttribute(                // line 187
 $context["pet"], "gender", array()) == "FEMALE")) {
-                    // line 189
+                    // line 188
                     echo "                       hembra
                      ";
                 }
-                // line 191
+                // line 190
                 echo "                     </td>
                     </tr>
                   </table>
@@ -318,9 +317,9 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 \t\t\t\t      </div>
 \t\t\t\t  <div class=\"modal-footer\">
 \t\t\t\t <p><a class=\"buttonborder  btn btn-primary\" href=\"";
-                // line 198
+                // line 197
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_user_encuesta", array("petId" => $this->getAttribute($context["pet"], "id", array()))), "html", null, true);
-                echo "\" target=\"_blank\" role=\"button\">Adoptar mascota</a></p>
+                echo "\" onclick=\"window.open(this.href, this.target,'width=600,height=700'); return false\" role=\"button\">Adoptar mascota</a></p>
 \t\t\t  \t</div>
 \t\t  \t</div>
 \t  \t</div>
@@ -329,13 +328,13 @@ $context["pet"], "gender", array()) == "FEMALE")) {
       </div>
       ";
             }
-            // line 206
+            // line 205
             echo "      ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pet'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 207
+        // line 206
         echo "  </div>
         </div>
 
@@ -347,29 +346,29 @@ $context["pet"], "gender", array()) == "FEMALE")) {
           <div class=\"row\">
             
             ";
-        // line 217
+        // line 216
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pets"]) ? $context["pets"] : $this->getContext($context, "pets")));
         foreach ($context['_seq'] as $context["_key"] => $context["pet"]) {
-            // line 218
+            // line 217
             echo "           ";
-            if ((($this->getAttribute($context["pet"], "species", array()) == "FELINE") && ($this->getAttribute($context["pet"], "status", array()) != "ADOPTED"))) {
-                // line 219
+            if (((($this->getAttribute($context["pet"], "species", array()) == "FELINE") && ($this->getAttribute($context["pet"], "status", array()) != "ADOPTED")) && ($this->getAttribute($context["pet"], "status", array()) != "EXTERNAL"))) {
+                // line 218
                 echo "          <div class=\"col-md-4\">
             <div class=\"conteneter\">
               <a  class=\"links2\"  data-toggle=\"modal\" data-target=\"#ventanaadoptarcat";
-                // line 221
+                // line 220
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "id", array()), "html", null, true);
                 echo "\" href=\"\"> 
               <div class=\"banername back1\">
                       
                   <img src=\"";
-                // line 224
+                // line 223
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
                 echo "\" class=\"imgadop img-circle\" alt=\"\">
                               
                   <h3 class=\"namemasct\"><b>";
-                // line 226
+                // line 225
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "name", array()), "html", null, true);
                 echo "</b></h3>
                 
@@ -378,34 +377,34 @@ $context["pet"], "gender", array()) == "FEMALE")) {
             <ul>
               <li><label>Edad:</label>
               <span>";
-                // line 232
+                // line 231
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "age", array()), "html", null, true);
                 echo "&nbsp;años.</span></li>
 
               <li><label>Sexo:</label>
               ";
-                // line 235
+                // line 234
                 if (($this->getAttribute($context["pet"], "gender", array()) == "MALE")) {
-                    // line 236
+                    // line 235
                     echo "                              
               <span>macho</span></li>
               
               ";
-                } elseif (($this->getAttribute(                // line 239
+                } elseif (($this->getAttribute(                // line 238
 $context["pet"], "gender", array()) == "FEMALE")) {
-                    // line 240
+                    // line 239
                     echo "              
               <span>hembra</span></li>
                               
               ";
                 }
-                // line 244
+                // line 243
                 echo "              
             </ul>
           </div></a>
           
           \t \t<div class=\"modal fade\" id=\"ventanaadoptarcat";
-                // line 248
+                // line 247
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "id", array()), "html", null, true);
                 echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
           \t\t<div class=\"modal-dialog\">
@@ -418,7 +417,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 \t\t\t    \t \t  <div class=\"row\">
 \t\t\t  \t\t    <div class=\"col-md-6\">
 \t\t\t  \t\t      <img src=\"";
-                // line 258
+                // line 257
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/gnot.png"), "html", null, true);
                 echo "\" class=\"img-responsive\" alt=\"\">
 \t\t\t  \t\t    </div>
@@ -428,28 +427,28 @@ $context["pet"], "gender", array()) == "FEMALE")) {
                     <tr>
                       <th class=\"tdd\">Nombre:</th>
                       <td>";
-                // line 265
+                // line 264
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "name", array()), "html", null, true);
                 echo "</td>
                     </tr>
                     <tr>
                       <th>raza:</th>
                       <td>";
-                // line 269
+                // line 268
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "race", array()), "html", null, true);
                 echo "</td>
                     </tr>
                     <tr>
                       <th>Edad:</th>
                       <td>";
-                // line 273
+                // line 272
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "age", array()), "html", null, true);
                 echo "&nbsp;años.</td>
                     </tr>
                     <tr>
                       <th>Color:</th>
                       <td>";
-                // line 277
+                // line 276
                 echo twig_escape_filter($this->env, $this->getAttribute($context["pet"], "colour", array()), "html", null, true);
                 echo "</td>
                     </tr>
@@ -457,18 +456,18 @@ $context["pet"], "gender", array()) == "FEMALE")) {
                       <th>sexo:</th>
                       <td>
                         ";
-                // line 282
+                // line 281
                 if (($this->getAttribute($context["pet"], "gender", array()) == "MALE")) {
-                    // line 283
+                    // line 282
                     echo "                       macho
                      ";
-                } elseif (($this->getAttribute(                // line 284
+                } elseif (($this->getAttribute(                // line 283
 $context["pet"], "gender", array()) == "FEMALE")) {
-                    // line 285
+                    // line 284
                     echo "                       hembra
                      ";
                 }
-                // line 287
+                // line 286
                 echo "                     </td>
                     </tr>
                   </table>
@@ -477,9 +476,9 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 \t\t\t\t      </div>
 \t\t\t\t  <div class=\"modal-footer\">
 \t\t\t\t <p><a class=\"buttonborder  btn btn-primary\" href=\"";
-                // line 294
+                // line 293
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_user_encuesta", array("petId" => $this->getAttribute($context["pet"], "id", array()))), "html", null, true);
-                echo "\" target=\"_blank\" role=\"button\">Adoptar mascota</a></p>
+                echo "\" onclick=\"window.open(this.href, this.target,'width=600,height=700'); return false\" role=\"button\">Adoptar mascota</a></p>
 \t\t\t  \t</div>
 \t\t  \t</div>
 \t  \t</div>
@@ -488,13 +487,13 @@ $context["pet"], "gender", array()) == "FEMALE")) {
       </div>
       ";
             }
-            // line 302
+            // line 301
             echo "      ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pet'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 303
+        // line 302
         echo "          
   </div>
  
@@ -512,27 +511,27 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 </section>
 ";
         
-        $__internal_52bec878c3ad166f5ebde6ed50fbe6c1b25ef3abc834219cdac215f0d2c306f6->leave($__internal_52bec878c3ad166f5ebde6ed50fbe6c1b25ef3abc834219cdac215f0d2c306f6_prof);
+        $__internal_c884ba7deba63f561f0c02081b93433799509fa215a11182cf1b8d3e4ec26e3d->leave($__internal_c884ba7deba63f561f0c02081b93433799509fa215a11182cf1b8d3e4ec26e3d_prof);
 
     }
 
-    // line 319
+    // line 318
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_8a3a6239e4907216af7949ba8104badf4abc3d76ced0db024a455bc7d72c8f7d = $this->env->getExtension("native_profiler");
-        $__internal_8a3a6239e4907216af7949ba8104badf4abc3d76ced0db024a455bc7d72c8f7d->enter($__internal_8a3a6239e4907216af7949ba8104badf4abc3d76ced0db024a455bc7d72c8f7d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_1cc48a86f0dfeb73ec8a39cff90a04a71d3f1fa70749a6570f8f911798fd5433 = $this->env->getExtension("native_profiler");
+        $__internal_1cc48a86f0dfeb73ec8a39cff90a04a71d3f1fa70749a6570f8f911798fd5433->enter($__internal_1cc48a86f0dfeb73ec8a39cff90a04a71d3f1fa70749a6570f8f911798fd5433_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 320
+        // line 319
         echo " ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
  <script src=\"";
-        // line 321
+        // line 320
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("https://code.jquery.com/jquery-latest.js"), "html", null, true);
         echo "\"></script>
  ";
         
-        $__internal_8a3a6239e4907216af7949ba8104badf4abc3d76ced0db024a455bc7d72c8f7d->leave($__internal_8a3a6239e4907216af7949ba8104badf4abc3d76ced0db024a455bc7d72c8f7d_prof);
+        $__internal_1cc48a86f0dfeb73ec8a39cff90a04a71d3f1fa70749a6570f8f911798fd5433->leave($__internal_1cc48a86f0dfeb73ec8a39cff90a04a71d3f1fa70749a6570f8f911798fd5433_prof);
 
     }
 
@@ -548,7 +547,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 
     public function getDebugInfo()
     {
-        return array (  531 => 321,  526 => 320,  520 => 319,  498 => 303,  492 => 302,  481 => 294,  472 => 287,  468 => 285,  466 => 284,  463 => 283,  461 => 282,  453 => 277,  446 => 273,  439 => 269,  432 => 265,  422 => 258,  409 => 248,  403 => 244,  397 => 240,  395 => 239,  390 => 236,  388 => 235,  382 => 232,  373 => 226,  368 => 224,  362 => 221,  358 => 219,  355 => 218,  351 => 217,  339 => 207,  333 => 206,  322 => 198,  313 => 191,  309 => 189,  307 => 188,  304 => 187,  302 => 186,  294 => 181,  287 => 177,  280 => 173,  273 => 169,  263 => 162,  250 => 152,  244 => 148,  238 => 144,  236 => 143,  231 => 140,  229 => 139,  223 => 136,  214 => 130,  209 => 128,  203 => 125,  199 => 123,  197 => 122,  194 => 121,  190 => 120,  157 => 90,  145 => 81,  134 => 73,  123 => 65,  103 => 48,  66 => 16,  53 => 6,  47 => 5,  36 => 2,  11 => 1,);
+        return array (  530 => 320,  525 => 319,  519 => 318,  497 => 302,  491 => 301,  480 => 293,  471 => 286,  467 => 284,  465 => 283,  462 => 282,  460 => 281,  452 => 276,  445 => 272,  438 => 268,  431 => 264,  421 => 257,  408 => 247,  402 => 243,  396 => 239,  394 => 238,  389 => 235,  387 => 234,  381 => 231,  372 => 225,  367 => 223,  361 => 220,  357 => 218,  354 => 217,  350 => 216,  338 => 206,  332 => 205,  321 => 197,  312 => 190,  308 => 188,  306 => 187,  303 => 186,  301 => 185,  293 => 180,  286 => 176,  279 => 172,  272 => 168,  262 => 161,  249 => 151,  243 => 147,  237 => 143,  235 => 142,  230 => 139,  228 => 138,  222 => 135,  213 => 129,  208 => 127,  202 => 124,  198 => 122,  196 => 121,  193 => 120,  189 => 119,  157 => 90,  145 => 81,  134 => 73,  123 => 65,  103 => 48,  66 => 16,  53 => 6,  47 => 5,  36 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
@@ -566,13 +565,13 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /*   <div class="col-md-10">*/
 /*       <div class="wor">*/
 /*         <div class="col-md-6">*/
-/*          <h3 class="titulosection"><img src="{{ asset('public/img/mn.png')}}" alt=""><b>&nbsp;PROCESO DE ADOPCIÓN&nbsp;</b><img src="{{ asset('public/img/m.png')}}" alt=""></h3><hr class="margnone">*/
+/*          <h3 class="titulosection"><img class="ve" src="{{ asset('public/img/mn.png')}}" alt=""><b>&nbsp;PROCESO DE ADOPCIÓN&nbsp;</b><img class="ve" src="{{ asset('public/img/m.png')}}" alt=""></h3><hr class="margnone">*/
 /*         <p class="h1estle textjusti">La fundación patitas callejeras en función de asegurar la integridad de los animales y el compromiso de las personas que quieren adoptar, establece una serie de actividades para definir si el adoptante cumplen con las condiciones estipuladas por la institución. </p>*/
 /*         <p class="h1estle">Debe tener en cuenta los cuatro puntos que se muestran a continuación.</p>*/
 /*        <div class="continer">*/
 /*         <div class="textjusti alert alert-info">Es muy importante que leas los requisitos de adopción</div>*/
 /* */
-/* 	<button class="butglass glass butposadop" data-toggle="modal" data-target="#miVentana">Ver requisitos</button>*/
+/* 	<button class="s butglass glass butposadop" data-toggle="modal" data-target="#miVentana">Ver requisitos</button>*/
 /* */
 /* 	<div class="modal fade" id="miVentana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">*/
 /* 		<div class="modal-dialog">*/
@@ -598,7 +597,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /*       </div>*/
 /*     </div>*/
 /*     <div class="col-md-6">*/
-/*       <img  src="{{ asset('public/img/adopt.png')}}"class="img-responsive"></img>*/
+/*       <img class="ve" src="{{ asset('public/img/adopt.png')}}"class="img-responsive"></img>*/
 /*     </div>*/
 /*       */
 /*      </div>    */
@@ -645,9 +644,8 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /* 					<h4>4.  Seguimiento de adopcion</h4>*/
 /* 					</div>*/
 /*           <p class="textjusti">La fundación programara con el adoptante visitas para verificar la adaptación de la mascota en su nuevo hogar. </p>*/
-/*           <hr>*/
-/*           </div>*/
-/* */
+/*           </div><hr>*/
+/*         */
 /*         */
 /*       </div>*/
 /*       <div class="col-md-1"></div>*/
@@ -672,7 +670,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /*       <div class="row">*/
 /*            {% for pet in pets %}*/
 /*            */
-/*            {% if pet.species == 'CANINE' and pet.status != 'ADOPTED' %}*/
+/*            {% if pet.species == 'CANINE' and pet.status != 'ADOPTED' and pet.status != 'EXTERNAL'%}*/
 /*           <div class="col-md-4">*/
 /*             <div class="conteneter">*/
 /*               <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptardog{{pet.id}}" href=""> */
@@ -748,7 +746,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /* 			  		  </div>*/
 /* 				      </div>*/
 /* 				  <div class="modal-footer">*/
-/* 				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta',{'petId' : pet.id }) }}" target="_blank" role="button">Adoptar mascota</a></p>*/
+/* 				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta',{'petId' : pet.id }) }}" onclick="window.open(this.href, this.target,'width=600,height=700'); return false" role="button">Adoptar mascota</a></p>*/
 /* 			  	</div>*/
 /* 		  	</div>*/
 /* 	  	</div>*/
@@ -768,7 +766,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /*           <div class="row">*/
 /*             */
 /*             {% for pet in pets %}*/
-/*            {% if pet.species == 'FELINE' and pet.status != 'ADOPTED'  %}*/
+/*            {% if pet.species == 'FELINE' and pet.status != 'ADOPTED' and pet.status != 'EXTERNAL' %}*/
 /*           <div class="col-md-4">*/
 /*             <div class="conteneter">*/
 /*               <a  class="links2"  data-toggle="modal" data-target="#ventanaadoptarcat{{pet.id}}" href=""> */
@@ -844,7 +842,7 @@ $context["pet"], "gender", array()) == "FEMALE")) {
 /* 			  		  </div>*/
 /* 				      </div>*/
 /* 				  <div class="modal-footer">*/
-/* 				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta', {'petId' : pet.id }) }}" target="_blank" role="button">Adoptar mascota</a></p>*/
+/* 				 <p><a class="buttonborder  btn btn-primary" href="{{ path('pc_user_encuesta', {'petId' : pet.id }) }}" onclick="window.open(this.href, this.target,'width=600,height=700'); return false" role="button">Adoptar mascota</a></p>*/
 /* 			  	</div>*/
 /* 		  	</div>*/
 /* 	  	</div>*/
