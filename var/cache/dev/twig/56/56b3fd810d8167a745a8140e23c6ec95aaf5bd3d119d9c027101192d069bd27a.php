@@ -22,32 +22,32 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_763877fd89de658e68bbee5c7d20188b99543ac2422cc34db4539542d2faa46f = $this->env->getExtension("native_profiler");
-        $__internal_763877fd89de658e68bbee5c7d20188b99543ac2422cc34db4539542d2faa46f->enter($__internal_763877fd89de658e68bbee5c7d20188b99543ac2422cc34db4539542d2faa46f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:agregardatos.html.twig"));
+        $__internal_12d54984747a54d4a38efea113482205eee64d43ca5082415693413679125ccb = $this->env->getExtension("native_profiler");
+        $__internal_12d54984747a54d4a38efea113482205eee64d43ca5082415693413679125ccb->enter($__internal_12d54984747a54d4a38efea113482205eee64d43ca5082415693413679125ccb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:agregardatos.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_763877fd89de658e68bbee5c7d20188b99543ac2422cc34db4539542d2faa46f->leave($__internal_763877fd89de658e68bbee5c7d20188b99543ac2422cc34db4539542d2faa46f_prof);
+        $__internal_12d54984747a54d4a38efea113482205eee64d43ca5082415693413679125ccb->leave($__internal_12d54984747a54d4a38efea113482205eee64d43ca5082415693413679125ccb_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_0b2ecebdcfcace63131e5310724148f6bf8ed9f99cf63ede535e16bbc4e7d9ea = $this->env->getExtension("native_profiler");
-        $__internal_0b2ecebdcfcace63131e5310724148f6bf8ed9f99cf63ede535e16bbc4e7d9ea->enter($__internal_0b2ecebdcfcace63131e5310724148f6bf8ed9f99cf63ede535e16bbc4e7d9ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_28e0a4a39fd46add8e381e16c97b83aa827ac9513d8a4ac84608b59536abb7e5 = $this->env->getExtension("native_profiler");
+        $__internal_28e0a4a39fd46add8e381e16c97b83aa827ac9513d8a4ac84608b59536abb7e5->enter($__internal_28e0a4a39fd46add8e381e16c97b83aa827ac9513d8a4ac84608b59536abb7e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "agregar datos jornada de censo";
         
-        $__internal_0b2ecebdcfcace63131e5310724148f6bf8ed9f99cf63ede535e16bbc4e7d9ea->leave($__internal_0b2ecebdcfcace63131e5310724148f6bf8ed9f99cf63ede535e16bbc4e7d9ea_prof);
+        $__internal_28e0a4a39fd46add8e381e16c97b83aa827ac9513d8a4ac84608b59536abb7e5->leave($__internal_28e0a4a39fd46add8e381e16c97b83aa827ac9513d8a4ac84608b59536abb7e5_prof);
 
     }
 
     // line 3
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_57322136bbd7e4d899dc01c24df82de152a031088a0097f1ecf1645562de754f = $this->env->getExtension("native_profiler");
-        $__internal_57322136bbd7e4d899dc01c24df82de152a031088a0097f1ecf1645562de754f->enter($__internal_57322136bbd7e4d899dc01c24df82de152a031088a0097f1ecf1645562de754f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_51bbf4a660a4f3d69da40ab8cbe142224a4d525a147d44d051a9b15bfb05923d = $this->env->getExtension("native_profiler");
+        $__internal_51bbf4a660a4f3d69da40ab8cbe142224a4d525a147d44d051a9b15bfb05923d->enter($__internal_51bbf4a660a4f3d69da40ab8cbe142224a4d525a147d44d051a9b15bfb05923d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 4
         echo "
@@ -116,7 +116,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div class=\"textjusti col-xs-3 col-md-2\">
-\t\t\t\t\t\t\t<label class=\"marginlabel\" for=\"Edad del adoptante\">dirección:</label>
+\t\t\t\t\t\t\t<label class=\"marginlabel\" for=\"Edad del adoptante\">Dirección:</label>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
@@ -210,7 +210,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t\t\t\t<br>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"textjusti col-xs-3 col-md-2\">
-\t\t\t\t\t\t\t<label for=\"Nombre del adoptante\">género: </label>
+\t\t\t\t\t\t\t<label for=\"Nombre del adoptante\">Género: </label>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t\t\t";
@@ -292,7 +292,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 \t\t\t\t
 ";
         
-        $__internal_57322136bbd7e4d899dc01c24df82de152a031088a0097f1ecf1645562de754f->leave($__internal_57322136bbd7e4d899dc01c24df82de152a031088a0097f1ecf1645562de754f_prof);
+        $__internal_51bbf4a660a4f3d69da40ab8cbe142224a4d525a147d44d051a9b15bfb05923d->leave($__internal_51bbf4a660a4f3d69da40ab8cbe142224a4d525a147d44d051a9b15bfb05923d_prof);
 
     }
 
@@ -362,7 +362,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 /* 					</div>*/
 /* 					<div class="row">*/
 /* 						<div class="textjusti col-xs-3 col-md-2">*/
-/* 							<label class="marginlabel" for="Edad del adoptante">dirección:</label>*/
+/* 							<label class="marginlabel" for="Edad del adoptante">Dirección:</label>*/
 /* 						</div>*/
 /* 						<div class="col-xs-9 col-md-4">*/
 /* 							{{form_widget(form.address, {'attr' : {'class' : 'form-control', 'placeholder' : 'dirección' } })}}*/
@@ -432,7 +432,7 @@ class __TwigTemplate_475f2ebb5b27651a1b544cd0aedfdfa13cb5cf424e1a659fbb022288e67
 /* 							<br>*/
 /* 						</div>*/
 /* 						<div class="textjusti col-xs-3 col-md-2">*/
-/* 							<label for="Nombre del adoptante">género: </label>*/
+/* 							<label for="Nombre del adoptante">Género: </label>*/
 /* 						</div>*/
 /* 						<div class="col-xs-9 col-md-4">*/
 /* 							{{form_widget(form.gender, {'attr' : {'class' : 'form-control', 'placeholder' : 'seleccione el género' } })}}*/

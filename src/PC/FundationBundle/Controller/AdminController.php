@@ -64,6 +64,12 @@ class AdminController extends Controller
     */
     public function loginAction(Request $request)
     {
+        $session = $request->getSession();
+        if($session->has("id") && $session->has("name"))
+        {
+            return $this->redirectToRoute('pc_administrator_index');
+        }
+        
         if($request->getMethod()=="POST")
         {
             $email = $request->get("email");
@@ -87,6 +93,17 @@ class AdminController extends Controller
         
         return $this->render('PCFundationBundle:Admin:login.html.twig');
     }
+    
+    /**
+     * permite recuperar el password
+     */ 
+    private function passwordRecovery($email)
+    {
+        $admin = $this->getDoctrine()->getRepository('PCFundationBundle:Administrator')->findByEmail($email);
+        return $admin->getPassword(); 
+        
+    }
+    
     
     /**
     * permite cerrar la sesion actual y redireccionar a la ventana de inicio publica   
@@ -129,7 +146,16 @@ class AdminController extends Controller
         
         if($form->isValid())
         {
+            /*
+            $password = $form->get('password')->getdata();
+            $encoder = $this->container->get('security.password_encoder');
+            $encoded = $encoder->encodePassword($admin, $password);
+            
+            $admin->setPassword($encoded);
+            */
+            
             $em=$this->getDoctrine()->getManager();
+    
             $em->persist($admin);
             $em->flush();
             
@@ -141,11 +167,45 @@ class AdminController extends Controller
     /**
     * muestra el formulario para editar el adminsitrador ---aún en construcción---
     */
-    public function editAction()
+    public function editAction($id)
     {
-       return $this->render('PCFundationBundle:Admin:edit_admin.html.twig');
+       $admin = $this->getDoctrine()->getRepository('PCFundationBundle:Administrator')->find($id);
+       $form = $this->createAdminEditForm($admin);
+       
+       return $this->render('PCFundationBundle:Admin:edit_admin.html.twig', array('form' => $form->createview()));
     }
     
+    /**
+    * crea el formulario para registro de admin
+    */
+    private function createAdminEditForm(Administrator $admin)
+    {
+        $form = $this->createForm(AdministratorType::class, $admin, array('action' => $this->generateUrl('pc_administrator_update', array('id' => $admin->getId())), 'method' => 'PUT'));
+        return $form;
+    }
+    
+    
+    public function updateAction(Request $request, $id)
+    {
+        $admin = $this->getDoctrine()->getRepository('PCFundationBundle:Administrator')->find($id);
+        $form = $this->createAdminEditForm($admin);
+        $form->handlerequest($request);
+        if($form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->flush();
+            
+            $session = $request->getSession();
+            
+            $session->remove('name');
+            $session->set("name", $admin->getName());
+            
+            return $this->redirectToRoute("pc_administrator_index");
+        }
+        
+        return $this->render('PCFundationBundle:Admin:edit_admin.html.twig', array('form' => $form->createview()));
+        
+    }
     
     
     /**
@@ -394,10 +454,16 @@ class AdminController extends Controller
         }
         
         $pet = $adoption->getPet();
+        $userId = $adoption->getUser()->getid();
         
-        $adoption->setStatus('DISAPPROVED');
-        $em->persist($adoption);
+        $em->remove($adoption);
         $em->flush();
+        
+        
+        $user = $this->getDoctrine()->getRepository('PCFundationBundle:User')->find($userId);
+        $em->remove($user);
+        $em->flush();
+        
         
         $pet->setStatus('UNADOPTED');
         $em->persist($pet);
@@ -592,12 +658,55 @@ class AdminController extends Controller
     /**
      * permite editar un evento en específico
      */ 
-     public function eventoeditAction()
+     public function eventoeditAction($eventId)
     {
-        return $this->render('PCFundationBundle:Admin:evento_edit.html.twig');
+        $event = $this->getDoctrine()->getRepository('PCFundationBundle:Event')->find($eventId);
+        $form = $this->eventEditForm($event);
+        return $this->render('PCFundationBundle:Admin:evento_edit.html.twig', array('form' => $form->createview()));
+    }
+    
+    /**
+     * crea el formulario que se muestra para la edición de eventos 
+     */ 
+    private function eventEditForm(Event $entity)
+    {
+        $form = $this->createForm(EventType::class, $entity, array( 'action' => $this->generateUrl('pc_administrator_evento_update', array('eventId' => $entity->getId())), 'method'=>'PUT'));
+        return $form;
     }
     
     
+    public function eventUpdateAction(Request $request, $eventId)
+    {
+        $event = $this->getDoctrine()->getRepository('PCFundationBundle:Event')->find($eventId);
+        $form = $this->eventEditForm($event);
+        $form->handlerequest($request);
+        
+        if($form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->flush();
+            
+            return $this->redirectToRoute('pc_administrator_eventos');
+        }
+        
+        return $this->render('PCFundationBundle:Admin:evento_edit.html.twig', array('form' => $form->createview()));
+    }
+    
+    
+    /**
+     * permite eliminar un evento que ya se realizó
+     */ 
+     public function eventoDeleteAction($eventId)
+     {
+         $em = $this->getDoctrine()->getManager();
+         $event = $this->getDoctrine()->getrepository('PCFundationBundle:Event')->find($eventId);
+         
+         $em->remove($event);
+         $em->flush();
+         
+         return $this->redirectToRoute('pc_administrator_eventos');
+         
+     }
     
 
     /**
@@ -642,23 +751,22 @@ class AdminController extends Controller
      */ 
     private function collaboratorForm(Collaborator $entity, $meetingId)
     {
-        $form= $this->createForm(CollaboratorType::class, $entity, array( 'action' => $this->generateUrl('pc_admin_jornada_censo_createcollaborator', array('meetingId' => $meetingId) ), 'method'=>'POST'));
+        $form = $this->createForm(CollaboratorType::class, $entity, array( 'action' => $this->generateUrl('pc_admin_jornada_censo_create_collaborator', array('meetingId' => $meetingId)), 'method'=>'POST'));
         return $form;
     }
     
     /**
      * procesa el formulario para registrar el colaborador en la base de datos
      */ 
-    public function createcollaboratorAction($meetingId, Request $request)
+    public function createCollabAction(Request $request, $meetingId)
     {
+        die("entró al createcollaboratorAction");
         $meeting = $this->getDoctrine()->getRepository('PCFundationBundle:Meeting')->find($meetingId);
         $collaborator = new Collaborator();
-        $form = $this->collaboratorForm($collaborator, $meeting->getId());
+        $form = $this->collaboratorForm($collaborator, $meetingId);
+        $form->handleRequest($request);
         
-        die("".$meetingId);
-        $form->handlerequest($request);
-        
-        if($form->isvalid())
+        if($form->isValid())
         {   
             
             $em = $this->getDoctrine()->getManager();
@@ -1014,6 +1122,8 @@ class AdminController extends Controller
     
     public function creditoaddAction()
     {
+        $fondos = $this->revisarFondos();
+        echo '<script language="javascript">alert("actualmente la fundación cuenta con $'.$fondos.' disponibles, tengalo presente a la hora de realizar creditos o cualquier otra gestión que requiera el uso de estos.");</script>'; 
         $defaultData = array('message' => 'Type your message here');
         $form = $this->crearFormularioCredito($defaultData);
         return $this->render('PCFundationBundle:Admin:credito_add.html.twig', array('form'=>$form->createview()));
@@ -1065,6 +1175,14 @@ class AdminController extends Controller
         $form->handlerequest($request);
         if($form->isvalid())
         {   
+            
+            $fondos = $this->revisarFondos(); 
+            if ($fondos >= $form->get('amount')->getdata()) 
+            {
+                echo '<script language="javascript">alert("no se cuentan con fondos suficientes para realizar el crédito.");</script>'; 
+                return $this->render('PCFundationBundle:Admin:credito_add.html.twig', array('form'=>$form->createview()));
+            }
+            
             $em = $this->getDoctrine()->getManager();
             
             
@@ -1119,7 +1237,36 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:credito_add.html.twig', array('form'=>$form->createview()));
     }
     
-    
+    /**
+     * devuelve los fondos con los que cuneta la fundación. es usado a al hora de validar un credito de emergencia.
+     */ 
+    private function revisarFondos()
+    {
+        $em = $this->getDoctrine()->getManager();
+        
+        $first_query = $em->createQuery("SELECT SUM(d.quantity) AS s FROM PCFundationBundle:Donative d WHERE d.type = 'MONETARY'");
+        $fondosRecibidos = $first_query->getResult();
+
+        $second_query = $em->createQuery("SELECT SUM(c.amount) AS s FROM PCFundationBundle:Credit c WHERE c.status = 'APPROVED'");
+        $fondosGastados = $second_query->getResult();
+        
+        $fr = 0;
+        $fg = 0;
+        
+        foreach ($fondosRecibidos as $fondRec) 
+        {
+            $fr= $fr+intval($fondRec['s']);
+        }
+        
+        foreach ($fondosGastados as $fondGast)
+        {
+            $fg = $fg+intval($fondGast['s']);
+        }
+        
+        $totalDisponible = $fr - $fg;
+        
+        return $totalDisponible;
+    }
     
     
     public function creditoinfoAction()

@@ -206,14 +206,20 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             not_pc_administrator_create:
 
             // pc_administrator_edit
-            if ($pathinfo === '/admin/edit') {
-                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::editAction',  '_route' => 'pc_administrator_edit',);
+            if (0 === strpos($pathinfo, '/admin/edit') && preg_match('#^/admin/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_administrator_edit')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::editAction',));
             }
 
             // pc_administrator_update
             if (0 === strpos($pathinfo, '/admin/update') && preg_match('#^/admin/update/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_pc_administrator_update;
+                }
+
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_administrator_update')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::updateAction',));
             }
+            not_pc_administrator_update:
 
             if (0 === strpos($pathinfo, '/admin/control')) {
                 // pc_administrator_control
@@ -255,16 +261,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_jornada_censo_addcollaborator')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::addcollaboratorAction',));
                 }
 
-                // pc_admin_jornada_censo_createcollaborator
+                // pc_admin_jornada_censo_create_collaborator
                 if (0 === strpos($pathinfo, '/admin/jornadacenso/createcollaborator') && preg_match('#^/admin/jornadacenso/createcollaborator/(?P<meetingId>[^/]++)$#s', $pathinfo, $matches)) {
                     if ($this->context->getMethod() != 'POST') {
                         $allow[] = 'POST';
-                        goto not_pc_admin_jornada_censo_createcollaborator;
+                        goto not_pc_admin_jornada_censo_create_collaborator;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_jornada_censo_createcollaborator')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::createcollaboratorAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_jornada_censo_create_collaborator')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::createCollabAction',));
                 }
-                not_pc_admin_jornada_censo_createcollaborator:
+                not_pc_admin_jornada_censo_create_collaborator:
 
                 // pc_admin_jornada_censo_edit
                 if ($pathinfo === '/admin/jornadacenso/edit') {
@@ -484,8 +490,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 not_pc_administrator_eventos_create:
 
                 // pc_administrator_evento_edit
-                if ($pathinfo === '/admin/eventos/edit') {
-                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::eventoeditAction',  '_route' => 'pc_administrator_evento_edit',);
+                if (0 === strpos($pathinfo, '/admin/eventos/edit') && preg_match('#^/admin/eventos/edit/(?P<eventId>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_administrator_evento_edit')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::eventoeditAction',));
+                }
+
+                // pc_administrator_evento_update
+                if (0 === strpos($pathinfo, '/admin/eventos/update') && preg_match('#^/admin/eventos/update/(?P<eventId>[^/]++)$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_pc_administrator_evento_update;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_administrator_evento_update')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::eventUpdateAction',));
+                }
+                not_pc_administrator_evento_update:
+
+                // pc_administrator_evento_delete
+                if (0 === strpos($pathinfo, '/admin/eventos/delete') && preg_match('#^/admin/eventos/delete/(?P<eventId>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_administrator_evento_delete')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::eventoDeleteAction',));
                 }
 
             }

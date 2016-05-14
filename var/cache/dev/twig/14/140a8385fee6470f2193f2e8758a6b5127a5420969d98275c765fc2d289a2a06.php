@@ -21,20 +21,20 @@ class __TwigTemplate_bb0b06b3267f6f485c522babbc22209d935b5c4f7a2debd1acdfddf7be1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_97aeb7ed29cf1c19c1a46081e206c7339aaac3bdbf8509b85ef123f9079a19a1 = $this->env->getExtension("native_profiler");
-        $__internal_97aeb7ed29cf1c19c1a46081e206c7339aaac3bdbf8509b85ef123f9079a19a1->enter($__internal_97aeb7ed29cf1c19c1a46081e206c7339aaac3bdbf8509b85ef123f9079a19a1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:eventos.html.twig"));
+        $__internal_2f6ace9c4cc3551202c5f0dd97b1778e68037774f1179f1d4ada4ed9449141db = $this->env->getExtension("native_profiler");
+        $__internal_2f6ace9c4cc3551202c5f0dd97b1778e68037774f1179f1d4ada4ed9449141db->enter($__internal_2f6ace9c4cc3551202c5f0dd97b1778e68037774f1179f1d4ada4ed9449141db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:eventos.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_97aeb7ed29cf1c19c1a46081e206c7339aaac3bdbf8509b85ef123f9079a19a1->leave($__internal_97aeb7ed29cf1c19c1a46081e206c7339aaac3bdbf8509b85ef123f9079a19a1_prof);
+        $__internal_2f6ace9c4cc3551202c5f0dd97b1778e68037774f1179f1d4ada4ed9449141db->leave($__internal_2f6ace9c4cc3551202c5f0dd97b1778e68037774f1179f1d4ada4ed9449141db_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_da7b57a5e70c4e1674df2b23dd3b2e6e66702d64d951971e10dc6475f8fa621b = $this->env->getExtension("native_profiler");
-        $__internal_da7b57a5e70c4e1674df2b23dd3b2e6e66702d64d951971e10dc6475f8fa621b->enter($__internal_da7b57a5e70c4e1674df2b23dd3b2e6e66702d64d951971e10dc6475f8fa621b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_744cc63036d9d85f9ae3590540b2f0bb7e984a9027b72c391171f317beb759c8 = $this->env->getExtension("native_profiler");
+        $__internal_744cc63036d9d85f9ae3590540b2f0bb7e984a9027b72c391171f317beb759c8->enter($__internal_744cc63036d9d85f9ae3590540b2f0bb7e984a9027b72c391171f317beb759c8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "\t<h1 class=\"coloralert\">Eventos</h1>
@@ -82,18 +82,31 @@ class __TwigTemplate_bb0b06b3267f6f485c522babbc22209d935b5c4f7a2debd1acdfddf7be1
                   
                   <td ><a href=\"";
             // line 29
-            echo $this->env->getExtension('routing')->getPath("pc_administrator_evento_edit");
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_administrator_evento_edit", array("eventId" => $this->getAttribute($context["event"], "id", array()))), "html", null, true);
             echo "\" onclick=\"window.open(this.href, this.target,'width=360,height=500'); return false\" class=\"btn btn-default \"><span class=\"colordanger  glyphicon glyphicon-minus-sign\"data-toggle=\"tooltip\" data-placement=\"right\" title=\"editar\" aria-hidden=\"true\"></a></td>
-                  <td><a href=\"\"class=\"btn btn-default\" data-toggle=\"modal\" data-target=\".bs-example-modal-sm\"><span class=\"colorer  glyphicon glyphicon-remove-sign\"data-toggle=\"tooltip\" data-placement=\"right\" title=\"Eliminar evento\" aria-hidden=\"true\"></a>
+                  <td><a href=\"\" class=\"btn btn-default\" data-toggle=\"modal\"  data-target=\".bs-example-modal-sm";
+            // line 30
+            echo twig_escape_filter($this->env, $this->getAttribute($context["event"], "id", array()), "html", null, true);
+            echo "\"><span class=\"colorer  glyphicon glyphicon-remove-sign\"data-toggle=\"tooltip\" data-placement=\"right\" title=\"Eliminar evento\" aria-hidden=\"true\"></a>
                   
-                  \t<div class=\"modal fade bs-example-modal-sm\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\">
+                  \t<div class=\"modal fade bs-example-modal-sm";
+            // line 32
+            echo twig_escape_filter($this->env, $this->getAttribute($context["event"], "id", array()), "html", null, true);
+            echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\">
         \t\t\t\t\t\t  <div class=\"modal-dialog modal-sm\">
         \t\t\t\t\t\t    <div class=\"modal-content\">
         \t\t\t\t\t\t    \t<div class=\"modal-body\">
-        \t\t\t\t\t\t    \t\t<p ><span class=\"coloralert btn-lg glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>&nbsp; Esta seguro de efectuar cambios </p>
+        \t\t\t\t\t\t    \t\t<p ><span class=\"coloralert btn-lg glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>&nbsp; ¿Esta seguro de eliminar el evento <strong style=\"color: blue;\">";
+            // line 36
+            echo twig_escape_filter($this->env, $this->getAttribute($context["event"], "name", array()), "html", null, true);
+            echo "</strong>?</p>
         \t\t\t\t\t\t    \t</div>
         \t\t\t\t\t\t    \t<div class=\"modal-footer\">
-                           <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\" onclick=\"window.close();\">Aceptar</button>
+                           <a type=\"button\" class=\"btn btn-danger\" href=\"";
+            // line 39
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_administrator_evento_delete", array("eventId" => $this->getAttribute($context["event"], "id", array()))), "html", null, true);
+            echo "\">Aceptar</a>
+                           <button type=\"button\" class=\"btn btn-success\" data-dismiss=\"modal\" onclick=\"window.close();\">cancelar</button>
                           </div>
         \t\t\t\t\t\t    </div>
 \t\t\t\t\t\t    \t\t\t  </div>
@@ -105,13 +118,13 @@ class __TwigTemplate_bb0b06b3267f6f485c522babbc22209d935b5c4f7a2debd1acdfddf7be1
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['event'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 48
         echo "              </tbody>
             </table>
           </div><!--div close sectionstile-->
 ";
         
-        $__internal_da7b57a5e70c4e1674df2b23dd3b2e6e66702d64d951971e10dc6475f8fa621b->leave($__internal_da7b57a5e70c4e1674df2b23dd3b2e6e66702d64d951971e10dc6475f8fa621b_prof);
+        $__internal_744cc63036d9d85f9ae3590540b2f0bb7e984a9027b72c391171f317beb759c8->leave($__internal_744cc63036d9d85f9ae3590540b2f0bb7e984a9027b72c391171f317beb759c8_prof);
 
     }
 
@@ -127,7 +140,7 @@ class __TwigTemplate_bb0b06b3267f6f485c522babbc22209d935b5c4f7a2debd1acdfddf7be1
 
     public function getDebugInfo()
     {
-        return array (  109 => 47,  85 => 29,  80 => 27,  76 => 26,  72 => 25,  69 => 24,  65 => 23,  46 => 7,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  122 => 48,  107 => 39,  101 => 36,  94 => 32,  89 => 30,  85 => 29,  80 => 27,  76 => 26,  72 => 25,  69 => 24,  65 => 23,  46 => 7,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
@@ -158,17 +171,18 @@ class __TwigTemplate_bb0b06b3267f6f485c522babbc22209d935b5c4f7a2debd1acdfddf7be1
 /*                   <td>{{ event.dateAt | date("m/d/Y") }}</td>*/
 /*                   <td>{{ event.address  }}</td>*/
 /*                   */
-/*                   <td ><a href="{{path('pc_administrator_evento_edit')}}" onclick="window.open(this.href, this.target,'width=360,height=500'); return false" class="btn btn-default "><span class="colordanger  glyphicon glyphicon-minus-sign"data-toggle="tooltip" data-placement="right" title="editar" aria-hidden="true"></a></td>*/
-/*                   <td><a href=""class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-sm"><span class="colorer  glyphicon glyphicon-remove-sign"data-toggle="tooltip" data-placement="right" title="Eliminar evento" aria-hidden="true"></a>*/
+/*                   <td ><a href="{{path('pc_administrator_evento_edit', {'eventId' : event.id })}}" onclick="window.open(this.href, this.target,'width=360,height=500'); return false" class="btn btn-default "><span class="colordanger  glyphicon glyphicon-minus-sign"data-toggle="tooltip" data-placement="right" title="editar" aria-hidden="true"></a></td>*/
+/*                   <td><a href="" class="btn btn-default" data-toggle="modal"  data-target=".bs-example-modal-sm{{event.id}}"><span class="colorer  glyphicon glyphicon-remove-sign"data-toggle="tooltip" data-placement="right" title="Eliminar evento" aria-hidden="true"></a>*/
 /*                   */
-/*                   	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">*/
+/*                   	<div class="modal fade bs-example-modal-sm{{event.id}}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">*/
 /*         						  <div class="modal-dialog modal-sm">*/
 /*         						    <div class="modal-content">*/
 /*         						    	<div class="modal-body">*/
-/*         						    		<p ><span class="coloralert btn-lg glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp; Esta seguro de efectuar cambios </p>*/
+/*         						    		<p ><span class="coloralert btn-lg glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp; ¿Esta seguro de eliminar el evento <strong style="color: blue;">{{event.name}}</strong>?</p>*/
 /*         						    	</div>*/
 /*         						    	<div class="modal-footer">*/
-/*                            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.close();">Aceptar</button>*/
+/*                            <a type="button" class="btn btn-danger" href="{{path('pc_administrator_evento_delete', {'eventId' : event.id})}}">Aceptar</a>*/
+/*                            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="window.close();">cancelar</button>*/
 /*                           </div>*/
 /*         						    </div>*/
 /* 						    			  </div>*/

@@ -21,20 +21,20 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5ff82f132a7696c0537b792ea6c17e6c2c4876828f1005f10e0ff29a7cbc1ae6 = $this->env->getExtension("native_profiler");
-        $__internal_5ff82f132a7696c0537b792ea6c17e6c2c4876828f1005f10e0ff29a7cbc1ae6->enter($__internal_5ff82f132a7696c0537b792ea6c17e6c2c4876828f1005f10e0ff29a7cbc1ae6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:censo.html.twig"));
+        $__internal_544fafd8c9084d7e93604fcca03afbfe1b75a62ece1ec232558c39f161abbf8e = $this->env->getExtension("native_profiler");
+        $__internal_544fafd8c9084d7e93604fcca03afbfe1b75a62ece1ec232558c39f161abbf8e->enter($__internal_544fafd8c9084d7e93604fcca03afbfe1b75a62ece1ec232558c39f161abbf8e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:censo.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_5ff82f132a7696c0537b792ea6c17e6c2c4876828f1005f10e0ff29a7cbc1ae6->leave($__internal_5ff82f132a7696c0537b792ea6c17e6c2c4876828f1005f10e0ff29a7cbc1ae6_prof);
+        $__internal_544fafd8c9084d7e93604fcca03afbfe1b75a62ece1ec232558c39f161abbf8e->leave($__internal_544fafd8c9084d7e93604fcca03afbfe1b75a62ece1ec232558c39f161abbf8e_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_28264f394112522aeb7dfc8ab8459be0a9bae3fc908ffbb7d8f87988f33d4bf2 = $this->env->getExtension("native_profiler");
-        $__internal_28264f394112522aeb7dfc8ab8459be0a9bae3fc908ffbb7d8f87988f33d4bf2->enter($__internal_28264f394112522aeb7dfc8ab8459be0a9bae3fc908ffbb7d8f87988f33d4bf2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_dcce1af8ced88ddbcb41f0190de991e829d6731c83fc61f52b1f745e6681ab6d = $this->env->getExtension("native_profiler");
+        $__internal_dcce1af8ced88ddbcb41f0190de991e829d6731c83fc61f52b1f745e6681ab6d->enter($__internal_dcce1af8ced88ddbcb41f0190de991e829d6731c83fc61f52b1f745e6681ab6d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "
@@ -224,7 +224,7 @@ $context["census"], "isNeedSurgery", array()) == "1")) {
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["census"], "user", array()), "id", array()), "html", null, true);
             echo "\">&nbsp;<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></a>
 
-                  <div class=\"modal fade bs-example-modal-sm\"id=\"censuuser";
+                  <div class=\"modal fade bs-example-modal-sm\" id=\"censuuser";
             // line 109
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["census"], "user", array()), "id", array()), "html", null, true);
             echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\">
@@ -296,7 +296,7 @@ $context["census"], "isNeedSurgery", array()) == "1")) {
         </div>
 ";
         
-        $__internal_28264f394112522aeb7dfc8ab8459be0a9bae3fc908ffbb7d8f87988f33d4bf2->leave($__internal_28264f394112522aeb7dfc8ab8459be0a9bae3fc908ffbb7d8f87988f33d4bf2_prof);
+        $__internal_dcce1af8ced88ddbcb41f0190de991e829d6731c83fc61f52b1f745e6681ab6d->leave($__internal_dcce1af8ced88ddbcb41f0190de991e829d6731c83fc61f52b1f745e6681ab6d_prof);
 
     }
 
@@ -423,7 +423,7 @@ $context["census"], "isNeedSurgery", array()) == "1")) {
 /*                   <td>{{ census.user.phone_number }}</td>*/
 /*                   <td><a href="" data-toggle="modal" data-target="#censuuser{{census.user.id}}">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a>*/
 /* */
-/*                   <div class="modal fade bs-example-modal-sm"id="censuuser{{census.user.id}}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">*/
+/*                   <div class="modal fade bs-example-modal-sm" id="censuuser{{census.user.id}}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">*/
 /*                     <div class="modal-dialog modal-sm">*/
 /*                       <div class="modal-content">*/
 /*                   */

@@ -4,6 +4,7 @@ namespace PC\FundationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Security\Core\User\UserInterface;  
 
 /**
  * Administrator
@@ -11,8 +12,8 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Table(name="administrators")
  * @ORM\Entity(repositoryClass="PC\FundationBundle\Repository\AdministratorRepository")
  */
-class Administrator
-{
+class Administrator implements UserInterface
+{ 
     
     /**
      * @ORM\OneToMany(targetEntity="Donative", mappedBy="administrator")
@@ -312,4 +313,31 @@ class Administrator
     {
         return $this->events;
     }
+    
+    
+    /**
+     * metodos del userinterface
+     */ 
+    
+    public function getRoles()
+    {
+        
+    }
+    
+    public function getSalt()
+    {
+        
+    }
+    
+    public function getUsername()
+    {
+        
+    }
+    
+    public function eraseCredentials()
+    {
+        
+    }
+    
 }
+

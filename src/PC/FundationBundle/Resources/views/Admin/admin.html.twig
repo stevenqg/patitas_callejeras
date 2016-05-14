@@ -36,7 +36,7 @@
                 <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="caret"></span></a>
                   <ul class="drop dropdown-menu" role="menu">
                   <li><a href="{{ path('pc_administrator_add') }}" id="ventemerg" ><p class="ctext">Nuevo administrador</p></a></li>
-                  <li><a href="{{ path('pc_administrator_edit') }}" id="ventemerg1"><p class="ctext">Editar Información</p></a></li>
+                  <li><a href="{{ path('pc_administrator_edit', {'id' : app.session.get('id')}) }}" id="ventemerg1"><p class="ctext">Editar Información</p></a></li>
                 </ul>
           </li>
             <li class="link3"><a href="{{ path('pc_administrator_logout')}}">Salir <span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>

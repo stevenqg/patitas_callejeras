@@ -73,12 +73,13 @@ pc_administrator_create:
     methods:  POST
     
 pc_administrator_edit:
-    path:     /admin/edit
+    path:     /admin/edit/{id}
     defaults: { _controller: PCFundationBundle:Admin:edit }
     
 pc_administrator_update:
     path:     /admin/update/{id}
     defaults: { _controller: PCFundationBundle:Admin:update }   
+    methods:  [POST, PUT]
 
 pc_administrator_control:
     path:   /admin/control
@@ -105,15 +106,13 @@ pc_admin_jornada_censo_mas:
     path:     /admin/jornadacenso/mas/{meetingId}
     defaults: { _controller: PCFundationBundle:Admin:jornadacensomas }
 
-
-
 pc_admin_jornada_censo_addcollaborator:
     path:     /admin/jornadacenso/addcollaborator/{meetingId}
     defaults: { _controller: PCFundationBundle:Admin:addcollaborator }
 
-pc_admin_jornada_censo_createcollaborator:
+pc_admin_jornada_censo_create_collaborator:
     path:     /admin/jornadacenso/createcollaborator/{meetingId}
-    defaults: { _controller: PCFundationBundle:Admin:createcollaborator }
+    defaults: { _controller: PCFundationBundle:Admin:createCollab }
     methods:  POST
 
 
@@ -256,10 +255,19 @@ pc_administrator_eventos_create:
     defaults: { _controller: PCFundationBundle:Admin:eventocreate }
     methods:  POST
 
-
 pc_administrator_evento_edit:
-    path:   /admin/eventos/edit
+    path:     /admin/eventos/edit/{eventId}
     defaults: {_controller: PCFundationBundle:Admin:eventoedit }
+
+pc_administrator_evento_update:
+    path:     /admin/eventos/update/{eventId}
+    defaults: {_controller: PCFundationBundle:Admin:eventUpdate }
+    methods:  [POST, PUT]
+
+
+pc_administrator_evento_delete:
+    path:   /admin/eventos/delete/{eventId}
+    defaults: {_controller: PCFundationBundle:Admin:eventoDelete }
 
 
 #--------------------------------------------------------------

@@ -26,17 +26,18 @@
                   <td>{{ event.dateAt | date("m/d/Y") }}</td>
                   <td>{{ event.address  }}</td>
                   
-                  <td ><a href="{{path('pc_administrator_evento_edit')}}" onclick="window.open(this.href, this.target,'width=360,height=500'); return false" class="btn btn-default "><span class="colordanger  glyphicon glyphicon-minus-sign"data-toggle="tooltip" data-placement="right" title="editar" aria-hidden="true"></a></td>
-                  <td><a href=""class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-sm"><span class="colorer  glyphicon glyphicon-remove-sign"data-toggle="tooltip" data-placement="right" title="Eliminar evento" aria-hidden="true"></a>
+                  <td ><a href="{{path('pc_administrator_evento_edit', {'eventId' : event.id })}}" onclick="window.open(this.href, this.target,'width=360,height=500'); return false" class="btn btn-default "><span class="colordanger  glyphicon glyphicon-minus-sign"data-toggle="tooltip" data-placement="right" title="editar" aria-hidden="true"></a></td>
+                  <td><a href="" class="btn btn-default" data-toggle="modal"  data-target=".bs-example-modal-sm{{event.id}}"><span class="colorer  glyphicon glyphicon-remove-sign"data-toggle="tooltip" data-placement="right" title="Eliminar evento" aria-hidden="true"></a>
                   
-                  	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                  	<div class="modal fade bs-example-modal-sm{{event.id}}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
         						  <div class="modal-dialog modal-sm">
         						    <div class="modal-content">
         						    	<div class="modal-body">
-        						    		<p ><span class="coloralert btn-lg glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp; Esta seguro de efectuar cambios </p>
+        						    		<p ><span class="coloralert btn-lg glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp; ¿Esta seguro de eliminar el evento <strong style="color: blue;">{{event.name}}</strong>?</p>
         						    	</div>
         						    	<div class="modal-footer">
-                           <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.close();">Aceptar</button>
+                           <a type="button" class="btn btn-danger" href="{{path('pc_administrator_evento_delete', {'eventId' : event.id})}}">Aceptar</a>
+                           <button type="button" class="btn btn-success" data-dismiss="modal" onclick="window.close();">cancelar</button>
                           </div>
         						    </div>
 						    			  </div>
