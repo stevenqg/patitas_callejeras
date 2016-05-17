@@ -3,8 +3,7 @@
 	<div class="liner"></div>
 	<br>
 	<div class="container">
-  	<form>
-      {{ form_start(form, {'attr' : {'role' : 'form'} }) }}
+  	{{ form_start(form, {'attr' : {'role' : 'form'} }) }}
       <div class="form-group">
         <label for="recipient-name" class="textjusti control-label"><h5>Nombre:</h5></label>
         {{form_widget(form.name, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombre(s) y apellido(s)' } })}}
@@ -17,10 +16,9 @@
         <label for="recipient-name" class="textjusti control-label"><h5>Teléfono:</h5></label>
         {{form_widget(form.phone, {'attr' : {'class' : 'form-control', 'placeholder' : 'número telefónico' } })}}
       </div>
-      <div class="form-grou">
+      <div class="form-group">
         {{ form_widget(form.save, {'label' : 'registrar', 'attr' : {'class' : 'btn btn-primary'} }) }}
       </div>
     {{ form_end(form) }}
-    </form>
 	</div>
 {% endblock %}

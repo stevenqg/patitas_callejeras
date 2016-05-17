@@ -21,20 +21,20 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_544fafd8c9084d7e93604fcca03afbfe1b75a62ece1ec232558c39f161abbf8e = $this->env->getExtension("native_profiler");
-        $__internal_544fafd8c9084d7e93604fcca03afbfe1b75a62ece1ec232558c39f161abbf8e->enter($__internal_544fafd8c9084d7e93604fcca03afbfe1b75a62ece1ec232558c39f161abbf8e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:censo.html.twig"));
+        $__internal_ddb75954a6a1d951cd516b18f7c01afbd03b825cded0925bb08e1f20f97d0646 = $this->env->getExtension("native_profiler");
+        $__internal_ddb75954a6a1d951cd516b18f7c01afbd03b825cded0925bb08e1f20f97d0646->enter($__internal_ddb75954a6a1d951cd516b18f7c01afbd03b825cded0925bb08e1f20f97d0646_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:censo.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_544fafd8c9084d7e93604fcca03afbfe1b75a62ece1ec232558c39f161abbf8e->leave($__internal_544fafd8c9084d7e93604fcca03afbfe1b75a62ece1ec232558c39f161abbf8e_prof);
+        $__internal_ddb75954a6a1d951cd516b18f7c01afbd03b825cded0925bb08e1f20f97d0646->leave($__internal_ddb75954a6a1d951cd516b18f7c01afbd03b825cded0925bb08e1f20f97d0646_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_dcce1af8ced88ddbcb41f0190de991e829d6731c83fc61f52b1f745e6681ab6d = $this->env->getExtension("native_profiler");
-        $__internal_dcce1af8ced88ddbcb41f0190de991e829d6731c83fc61f52b1f745e6681ab6d->enter($__internal_dcce1af8ced88ddbcb41f0190de991e829d6731c83fc61f52b1f745e6681ab6d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_0809ef422b03f59689c75b0dcc2bbe9a0ff83a0341ea65af7765e1fa475600ec = $this->env->getExtension("native_profiler");
+        $__internal_0809ef422b03f59689c75b0dcc2bbe9a0ff83a0341ea65af7765e1fa475600ec->enter($__internal_0809ef422b03f59689c75b0dcc2bbe9a0ff83a0341ea65af7765e1fa475600ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "
@@ -94,7 +94,7 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
                      <tr>
                       <th>Nombre</th>
                       <th>Dirección</th>
-                      <th>Telefono</th>
+                      <th>Teléfono</th>
                      </tr>
                     
                     ";
@@ -135,18 +135,18 @@ class __TwigTemplate_286862f56247ab3edfd89bc10c6382fd54e6c5185d2da0a3c5424339e26
               <thead>
                 <tr><td class=\"pest\" colspan=\"3\">información del Animal</td>
                   <td colspan=\"3\"></td>
-                  <td  class=\"pest\" colspan=\"3\">informacion responsable</td>
+                  <td  class=\"pest\" colspan=\"3\">información del responsable</td>
                 </tr>
                 <tr class=\"tdb\">
                   <th class=\"tdmd\">Clasificación</th>
-                  <th class=\"tdd\">Rasgo</th>
+                  <th class=\"tdd\">Raza</th>
                   <th class=\"tdd\">Color</th>
                   <th class=\"tdmd\">edad</th>
-                  <th class=\"tdxs\">¿cirugia?</th>
+                  <th class=\"tdxs\">¿cirugía?</th>
                   <th class=\"tdxs\">Edit</th>
                   <th class=\"tdd bord\">Nombre</th>
-                  <th class=\"tdd\">Telefono</th>
-                  <th class=\"tdxs\">Mas</th>
+                  <th class=\"tdd\">Teléfono</th>
+                  <th class=\"tdxs\">Más</th>
                 </tr>
               </thead>
               <tbody class=\"tdb\">
@@ -233,7 +233,7 @@ $context["census"], "isNeedSurgery", array()) == "1")) {
                   
                         <div class=\"timod modal-header\">
                           <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"></button>
-                          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Información de responsable<span class=\"btn-lg glyphicon glyphicon-user\" aria-hidden=\"true\"></span></h5>
+                          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Información del responsable<span class=\"btn-lg glyphicon glyphicon-user\" aria-hidden=\"true\"></span></h5>
                         </div>
 
                         <div class=\"modal-body\">
@@ -266,7 +266,7 @@ $context["census"], "isNeedSurgery", array()) == "1")) {
                             </div>
     
                             <div class=\"form-group\">
-                              <label for=\"recipient-name\" class=\"textjusti control-label\">Telefono:</label>
+                              <label for=\"recipient-name\" class=\"textjusti control-label\">Teléfono:</label>
                               <input type=\"text\" class=\"form-control\" id=\"recipient-name\"
                               value=\"";
             // line 141
@@ -296,7 +296,7 @@ $context["census"], "isNeedSurgery", array()) == "1")) {
         </div>
 ";
         
-        $__internal_dcce1af8ced88ddbcb41f0190de991e829d6731c83fc61f52b1f745e6681ab6d->leave($__internal_dcce1af8ced88ddbcb41f0190de991e829d6731c83fc61f52b1f745e6681ab6d_prof);
+        $__internal_0809ef422b03f59689c75b0dcc2bbe9a0ff83a0341ea65af7765e1fa475600ec->leave($__internal_0809ef422b03f59689c75b0dcc2bbe9a0ff83a0341ea65af7765e1fa475600ec_prof);
 
     }
 
@@ -354,7 +354,7 @@ $context["census"], "isNeedSurgery", array()) == "1")) {
 /*                      <tr>*/
 /*                       <th>Nombre</th>*/
 /*                       <th>Dirección</th>*/
-/*                       <th>Telefono</th>*/
+/*                       <th>Teléfono</th>*/
 /*                      </tr>*/
 /*                     */
 /*                     {% for census_collaborator in census_collaborators %}*/
@@ -376,18 +376,18 @@ $context["census"], "isNeedSurgery", array()) == "1")) {
 /*               <thead>*/
 /*                 <tr><td class="pest" colspan="3">información del Animal</td>*/
 /*                   <td colspan="3"></td>*/
-/*                   <td  class="pest" colspan="3">informacion responsable</td>*/
+/*                   <td  class="pest" colspan="3">información del responsable</td>*/
 /*                 </tr>*/
 /*                 <tr class="tdb">*/
 /*                   <th class="tdmd">Clasificación</th>*/
-/*                   <th class="tdd">Rasgo</th>*/
+/*                   <th class="tdd">Raza</th>*/
 /*                   <th class="tdd">Color</th>*/
 /*                   <th class="tdmd">edad</th>*/
-/*                   <th class="tdxs">¿cirugia?</th>*/
+/*                   <th class="tdxs">¿cirugía?</th>*/
 /*                   <th class="tdxs">Edit</th>*/
 /*                   <th class="tdd bord">Nombre</th>*/
-/*                   <th class="tdd">Telefono</th>*/
-/*                   <th class="tdxs">Mas</th>*/
+/*                   <th class="tdd">Teléfono</th>*/
+/*                   <th class="tdxs">Más</th>*/
 /*                 </tr>*/
 /*               </thead>*/
 /*               <tbody class="tdb">*/
@@ -429,7 +429,7 @@ $context["census"], "isNeedSurgery", array()) == "1")) {
 /*                   */
 /*                         <div class="timod modal-header">*/
 /*                           <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>*/
-/*                           <h5 class="modal-title" id="exampleModalLabel">Información de responsable<span class="btn-lg glyphicon glyphicon-user" aria-hidden="true"></span></h5>*/
+/*                           <h5 class="modal-title" id="exampleModalLabel">Información del responsable<span class="btn-lg glyphicon glyphicon-user" aria-hidden="true"></span></h5>*/
 /*                         </div>*/
 /* */
 /*                         <div class="modal-body">*/
@@ -453,7 +453,7 @@ $context["census"], "isNeedSurgery", array()) == "1")) {
 /*                             </div>*/
 /*     */
 /*                             <div class="form-group">*/
-/*                               <label for="recipient-name" class="textjusti control-label">Telefono:</label>*/
+/*                               <label for="recipient-name" class="textjusti control-label">Teléfono:</label>*/
 /*                               <input type="text" class="form-control" id="recipient-name"*/
 /*                               value="{{ census.user.phone_number }}" disabled>*/
 /*                             </div>*/

@@ -652,7 +652,7 @@ class AdminController extends Controller
             }
             
         }
-        return $this->render('PCFundationBundle:Admin:evento_add.html.twig', array('form'=>$form->craeteView()));
+        return $this->render('PCFundationBundle:Admin:evento_add.html.twig', array('form'=>$form->createView()));
     }
     
     /**
@@ -743,7 +743,7 @@ class AdminController extends Controller
     {
         $collaborator = new Collaborator();
         $form = $this->collaboratorForm($collaborator, $meetingId);
-        return $this->render('PCFundationBundle:Admin:colaborador.html.twig', array('form' => $form->createview())); 
+        return $this->render('PCFundationBundle:Admin:colaborador.html.twig', array('form' => $form->createView())); 
     }
     
     /**
@@ -751,7 +751,7 @@ class AdminController extends Controller
      */ 
     private function collaboratorForm(Collaborator $entity, $meetingId)
     {
-        $form = $this->createForm(CollaboratorType::class, $entity, array( 'action' => $this->generateUrl('pc_admin_jornada_censo_create_collaborator', array('meetingId' => $meetingId)), 'method'=>'POST'));
+        $form = $this->createForm(CollaboratorType::class, $entity, array( 'action' => $this->generateUrl('pc_admin_jornada_censo_create_collaborator', array('meetingId' => $meetingId)), 'method'=>'post'));
         return $form;
     }
     
@@ -760,7 +760,6 @@ class AdminController extends Controller
      */ 
     public function createCollabAction(Request $request, $meetingId)
     {
-        die("entró al createcollaboratorAction");
         $meeting = $this->getDoctrine()->getRepository('PCFundationBundle:Meeting')->find($meetingId);
         $collaborator = new Collaborator();
         $form = $this->collaboratorForm($collaborator, $meetingId);
@@ -780,7 +779,7 @@ class AdminController extends Controller
             $em->flush();
             
             
-            return $this->redirectToRoute('pc_admin_jornada_censo_mas', array('meetingId'=>$metting->getId()));
+            return $this->redirectToRoute('pc_admin_jornada_censo_mas', array('meetingId'=>$meeting->getId()));
         }
         return $this->render('PCFundationBundle:Admin:colaborador.html.twig', array('form' => $form->createview())); 
     }
