@@ -24,31 +24,31 @@ class __TwigTemplate_06e36385fc61f53868e113d1cde23ebb79abe185a92c2a2b6d601a06525
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_dceaf0119ba266ea85b413c8a59338df5a4e3353b65be8203ce76d03f0ebae4a = $this->env->getExtension("native_profiler");
-        $__internal_dceaf0119ba266ea85b413c8a59338df5a4e3353b65be8203ce76d03f0ebae4a->enter($__internal_dceaf0119ba266ea85b413c8a59338df5a4e3353b65be8203ce76d03f0ebae4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:login.html.twig"));
+        $__internal_399bd48852011d83a6b96ceaec206781a69239511039c2e41feb90f2c0119cf8 = $this->env->getExtension("native_profiler");
+        $__internal_399bd48852011d83a6b96ceaec206781a69239511039c2e41feb90f2c0119cf8->enter($__internal_399bd48852011d83a6b96ceaec206781a69239511039c2e41feb90f2c0119cf8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:login.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_dceaf0119ba266ea85b413c8a59338df5a4e3353b65be8203ce76d03f0ebae4a->leave($__internal_dceaf0119ba266ea85b413c8a59338df5a4e3353b65be8203ce76d03f0ebae4a_prof);
+        $__internal_399bd48852011d83a6b96ceaec206781a69239511039c2e41feb90f2c0119cf8->leave($__internal_399bd48852011d83a6b96ceaec206781a69239511039c2e41feb90f2c0119cf8_prof);
 
     }
 
     // line 2
     public function block_scroll_nav($context, array $blocks = array())
     {
-        $__internal_d1c6932a58724a445f8e65e376c0f8214f34fef7121f2216d15ec6cc370b2524 = $this->env->getExtension("native_profiler");
-        $__internal_d1c6932a58724a445f8e65e376c0f8214f34fef7121f2216d15ec6cc370b2524->enter($__internal_d1c6932a58724a445f8e65e376c0f8214f34fef7121f2216d15ec6cc370b2524_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
+        $__internal_f555c01c8d0e93a3d50e1a369c0806824ed1c37067a4db102a3b399241650b55 = $this->env->getExtension("native_profiler");
+        $__internal_f555c01c8d0e93a3d50e1a369c0806824ed1c37067a4db102a3b399241650b55->enter($__internal_f555c01c8d0e93a3d50e1a369c0806824ed1c37067a4db102a3b399241650b55_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "scroll_nav"));
 
         
-        $__internal_d1c6932a58724a445f8e65e376c0f8214f34fef7121f2216d15ec6cc370b2524->leave($__internal_d1c6932a58724a445f8e65e376c0f8214f34fef7121f2216d15ec6cc370b2524_prof);
+        $__internal_f555c01c8d0e93a3d50e1a369c0806824ed1c37067a4db102a3b399241650b55->leave($__internal_f555c01c8d0e93a3d50e1a369c0806824ed1c37067a4db102a3b399241650b55_prof);
 
     }
 
     // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_879757e6aa4c8ffe70f478a84880c4d57fcd40e71cc92a4a3bb219140d89277d = $this->env->getExtension("native_profiler");
-        $__internal_879757e6aa4c8ffe70f478a84880c4d57fcd40e71cc92a4a3bb219140d89277d->enter($__internal_879757e6aa4c8ffe70f478a84880c4d57fcd40e71cc92a4a3bb219140d89277d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_f017c202bdc8f0227b541e0f79217a220326b5aea060901de5d93c842fb21f76 = $this->env->getExtension("native_profiler");
+        $__internal_f017c202bdc8f0227b541e0f79217a220326b5aea060901de5d93c842fb21f76->enter($__internal_f017c202bdc8f0227b541e0f79217a220326b5aea060901de5d93c842fb21f76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
         echo "<body class=\"fondlogin\">
@@ -70,7 +70,7 @@ class __TwigTemplate_06e36385fc61f53868e113d1cde23ebb79abe185a92c2a2b6d601a06525
         echo $this->env->getExtension('routing')->getPath("pc_administrator_login");
         echo "\" style:\"display: block;\">
 \t\t\t\t\t<div class=\"input-group\"> 
-\t\t\t\t\t\t<span class=\"botpd input-group-addon grupglass\" id=\"basic-addon1\"><span class=\"glyphicon glyphicon-user ntb-lg\" aria-hidden=\"true\"></span></span>
+\t\t\t\t\t\t<span class=\"botpd input-group-addon grupglass\" id=\"basic-addon1\"><span class=\"glyphicon glyphicon-user ntb-lg\" aria-hidden=\"true\" ></span></span>
 \t\t\t\t\t\t<input id=\"email\" name=\"email\" type=\"text\" class=\"imputglass form-control\" placeholder=\"email\" />
 \t\t\t\t\t</div>
 \t\t\t\t\t <div  class=\"logaler alert-danger\" id=\"username-error\"></div>
@@ -89,41 +89,45 @@ class __TwigTemplate_06e36385fc61f53868e113d1cde23ebb79abe185a92c2a2b6d601a06525
 \t</div>
 ";
         
-        $__internal_879757e6aa4c8ffe70f478a84880c4d57fcd40e71cc92a4a3bb219140d89277d->leave($__internal_879757e6aa4c8ffe70f478a84880c4d57fcd40e71cc92a4a3bb219140d89277d_prof);
+        $__internal_f017c202bdc8f0227b541e0f79217a220326b5aea060901de5d93c842fb21f76->leave($__internal_f017c202bdc8f0227b541e0f79217a220326b5aea060901de5d93c842fb21f76_prof);
 
     }
 
     // line 34
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_b25d07e423bb4e6e482c9b5c1ee035d3dd434d6b2f66f6e48cbeaeeebc3aee00 = $this->env->getExtension("native_profiler");
-        $__internal_b25d07e423bb4e6e482c9b5c1ee035d3dd434d6b2f66f6e48cbeaeeebc3aee00->enter($__internal_b25d07e423bb4e6e482c9b5c1ee035d3dd434d6b2f66f6e48cbeaeeebc3aee00_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_4008dff92bdcac236f2b8a4cd9dc0b9e4e6c78c3ff3f9e446651a77cb6a31b37 = $this->env->getExtension("native_profiler");
+        $__internal_4008dff92bdcac236f2b8a4cd9dc0b9e4e6c78c3ff3f9e446651a77cb6a31b37->enter($__internal_4008dff92bdcac236f2b8a4cd9dc0b9e4e6c78c3ff3f9e446651a77cb6a31b37_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 35
-        $this->displayParentBlock("javascripts", $context, $blocks);
-        echo "
-\t<script src=\"";
+        echo "\t\t\t<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script>
+\t\t\t<script src=\"";
         // line 36
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/js/bootstrap.min.js"), "html", null, true);
+        echo "\" ></script>
+\t\t\t<script src=\"";
+        // line 37
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("https://code.jquery.com/jquery-latest.js"), "html", null, true);
+        echo "\"></script>
+\t\t\t<script src=\"";
+        // line 38
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("http://code.jquery.com/jquery.js"), "html", null, true);
         echo "\"></script>
-\t<script src=\"";
-        // line 37
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/js/functJquery.js"), "html", null, true);
-        echo "\" ></script>
+\t
 ";
         
-        $__internal_b25d07e423bb4e6e482c9b5c1ee035d3dd434d6b2f66f6e48cbeaeeebc3aee00->leave($__internal_b25d07e423bb4e6e482c9b5c1ee035d3dd434d6b2f66f6e48cbeaeeebc3aee00_prof);
+        $__internal_4008dff92bdcac236f2b8a4cd9dc0b9e4e6c78c3ff3f9e446651a77cb6a31b37->leave($__internal_4008dff92bdcac236f2b8a4cd9dc0b9e4e6c78c3ff3f9e446651a77cb6a31b37_prof);
 
     }
 
-    // line 40
+    // line 42
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_29004bc4fff40006787c8463057649f7da7778293ff06cf3b7be9d75fb12aecb = $this->env->getExtension("native_profiler");
-        $__internal_29004bc4fff40006787c8463057649f7da7778293ff06cf3b7be9d75fb12aecb->enter($__internal_29004bc4fff40006787c8463057649f7da7778293ff06cf3b7be9d75fb12aecb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_7ef0eabe03334aecaa754db3f750c0f16a46c2e130f4688c96d3edbd35119a76 = $this->env->getExtension("native_profiler");
+        $__internal_7ef0eabe03334aecaa754db3f750c0f16a46c2e130f4688c96d3edbd35119a76->enter($__internal_7ef0eabe03334aecaa754db3f750c0f16a46c2e130f4688c96d3edbd35119a76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
         
-        $__internal_29004bc4fff40006787c8463057649f7da7778293ff06cf3b7be9d75fb12aecb->leave($__internal_29004bc4fff40006787c8463057649f7da7778293ff06cf3b7be9d75fb12aecb_prof);
+        $__internal_7ef0eabe03334aecaa754db3f750c0f16a46c2e130f4688c96d3edbd35119a76->leave($__internal_7ef0eabe03334aecaa754db3f750c0f16a46c2e130f4688c96d3edbd35119a76_prof);
 
     }
 
@@ -139,7 +143,7 @@ class __TwigTemplate_06e36385fc61f53868e113d1cde23ebb79abe185a92c2a2b6d601a06525
 
     public function getDebugInfo()
     {
-        return array (  120 => 40,  111 => 37,  107 => 36,  103 => 35,  97 => 34,  70 => 13,  65 => 11,  61 => 10,  54 => 5,  48 => 4,  37 => 2,  11 => 1,);
+        return array (  124 => 42,  114 => 38,  110 => 37,  106 => 36,  103 => 35,  97 => 34,  70 => 13,  65 => 11,  61 => 10,  54 => 5,  48 => 4,  37 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
@@ -156,7 +160,7 @@ class __TwigTemplate_06e36385fc61f53868e113d1cde23ebb79abe185a92c2a2b6d601a06525
 /* 				<h2><b>INICIAR SESIÓN</b></h2><br>*/
 /* 				<form class="form-horizontal" role="form" method="post" action="{{ path('pc_administrator_login') }}" style:"display: block;">*/
 /* 					<div class="input-group"> */
-/* 						<span class="botpd input-group-addon grupglass" id="basic-addon1"><span class="glyphicon glyphicon-user ntb-lg" aria-hidden="true"></span></span>*/
+/* 						<span class="botpd input-group-addon grupglass" id="basic-addon1"><span class="glyphicon glyphicon-user ntb-lg" aria-hidden="true" ></span></span>*/
 /* 						<input id="email" name="email" type="text" class="imputglass form-control" placeholder="email" />*/
 /* 					</div>*/
 /* 					 <div  class="logaler alert-danger" id="username-error"></div>*/
@@ -176,9 +180,11 @@ class __TwigTemplate_06e36385fc61f53868e113d1cde23ebb79abe185a92c2a2b6d601a06525
 /* {% endblock %}*/
 /* */
 /* {% block javascripts %}*/
-/* {{ parent() }}*/
-/* 	<script src="{{ asset('http://code.jquery.com/jquery.js') }}"></script>*/
-/* 	<script src="{{ asset('public/js/functJquery.js') }}" ></script>*/
+/* 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>*/
+/* 			<script src="{{ asset('public/js/bootstrap.min.js') }}" ></script>*/
+/* 			<script src="{{ asset('https://code.jquery.com/jquery-latest.js') }}"></script>*/
+/* 			<script src="{{ asset('http://code.jquery.com/jquery.js') }}"></script>*/
+/* 	*/
 /* {% endblock %}*/
 /* */
 /* {% block footer %}*/

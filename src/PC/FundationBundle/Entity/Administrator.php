@@ -4,7 +4,8 @@ namespace PC\FundationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
-use Symfony\Component\Security\Core\User\UserInterface;  
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Administrator
@@ -340,4 +341,3 @@ class Administrator implements UserInterface
     }
     
 }
-

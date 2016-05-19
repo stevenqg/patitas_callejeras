@@ -100,6 +100,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/service')) {
+            // pc_fundation_webservice
+            if (preg_match('#^/service/(?P<data>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::serviceAction',));
+            }
+
+            // pc_fundation_webservice_2
+            if (preg_match('#^/service/(?P<nomUs>[^/]++)/(?P<apllUs>[^/]++)/(?P<dirUs>[^/]++)/(?P<telUs>[^/]++)/(?P<emailUs>[^/]++)/(?P<passUs>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice_2')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::registerAction',));
+            }
+
+            // pc_fundation_webservice_3
+            if (preg_match('#^/service/(?P<nomM>[^/]++)/(?P<espM>[^/]++)/(?P<genM>[^/]++)/(?P<razM>[^/]++)/(?P<edaM>[^/]++)/(?P<colM>[^/]++)/(?P<code>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice_3')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::registerPetAction',));
+            }
+
+        }
+
         // pc_fundation_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
@@ -168,11 +186,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         if (0 === strpos($pathinfo, '/admin')) {
             // pc_administrator_index
-            if (rtrim($pathinfo, '/') === '/admin') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'pc_administrator_index');
-                }
-
+            if ($pathinfo === '/admin') {
                 return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::indexAction',  '_route' => 'pc_administrator_index',);
             }
 

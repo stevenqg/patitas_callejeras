@@ -1,4 +1,20 @@
 #--------------------------------------------------------------
+#--- web service    -------------------------------------------
+#--------------------------------------------------------------
+
+pc_fundation_webservice:
+    path:     /service/{data}
+    defaults: { _controller: PCFundationBundle:Service:service }
+    
+pc_fundation_webservice_2:
+    path:     /service/{nomUs}/{apllUs}/{dirUs}/{telUs}/{emailUs}/{passUs}
+    defaults: { _controller: PCFundationBundle:Service:register }
+    
+pc_fundation_webservice_3:
+    path:     /service/{nomM}/{espM}/{genM}/{razM}/{edaM}/{colM}/{code}
+    defaults: { _controller: PCFundationBundle:Service:registerPet }
+
+#--------------------------------------------------------------
 #--- rutas de navegación     ----------------------------------
 #--------------------------------------------------------------
 
@@ -52,7 +68,7 @@ pc_user_create:
 #--------------------------------------------------------------
 
 pc_administrator_index:
-    path:     /admin/
+    path:     /admin
     defaults: { _controller: PCFundationBundle:Admin:index }
 
 pc_administrator_login:
@@ -114,8 +130,6 @@ pc_admin_jornada_censo_create_collaborator:
     path:     /admin/jornadacenso/createcollaborator/{meetingId}
     defaults: { _controller: PCFundationBundle:Admin:createCollab }
     methods:  POST
-
-
 
 pc_admin_jornada_censo_edit:
     path:     /admin/jornadacenso/edit

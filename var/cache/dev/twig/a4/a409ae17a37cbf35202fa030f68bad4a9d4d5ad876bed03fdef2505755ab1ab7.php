@@ -21,20 +21,20 @@ class __TwigTemplate_102d5f9931d2aa8bce547a679fb421cf55bafd7af9f75b7300c9a660fdb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_66a2dd56f95880d44c74a65467b2cbb2a227b7b289b772f22704c8f355d93495 = $this->env->getExtension("native_profiler");
-        $__internal_66a2dd56f95880d44c74a65467b2cbb2a227b7b289b772f22704c8f355d93495->enter($__internal_66a2dd56f95880d44c74a65467b2cbb2a227b7b289b772f22704c8f355d93495_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:evento_add.html.twig"));
+        $__internal_bc2fd81be32374c1c8b6a3a12f20144bc42a7e9e10913358086495b5a6b89b8d = $this->env->getExtension("native_profiler");
+        $__internal_bc2fd81be32374c1c8b6a3a12f20144bc42a7e9e10913358086495b5a6b89b8d->enter($__internal_bc2fd81be32374c1c8b6a3a12f20144bc42a7e9e10913358086495b5a6b89b8d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:evento_add.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_66a2dd56f95880d44c74a65467b2cbb2a227b7b289b772f22704c8f355d93495->leave($__internal_66a2dd56f95880d44c74a65467b2cbb2a227b7b289b772f22704c8f355d93495_prof);
+        $__internal_bc2fd81be32374c1c8b6a3a12f20144bc42a7e9e10913358086495b5a6b89b8d->leave($__internal_bc2fd81be32374c1c8b6a3a12f20144bc42a7e9e10913358086495b5a6b89b8d_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_cfb9b295548af344d2f1225d31a67ce47f1553ca71bfa0b7e8e3d5614bab78f1 = $this->env->getExtension("native_profiler");
-        $__internal_cfb9b295548af344d2f1225d31a67ce47f1553ca71bfa0b7e8e3d5614bab78f1->enter($__internal_cfb9b295548af344d2f1225d31a67ce47f1553ca71bfa0b7e8e3d5614bab78f1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_35d84289c6da77e1e25d95f5b41ff9808523e1728c47d4d624b330a88973ed35 = $this->env->getExtension("native_profiler");
+        $__internal_35d84289c6da77e1e25d95f5b41ff9808523e1728c47d4d624b330a88973ed35->enter($__internal_35d84289c6da77e1e25d95f5b41ff9808523e1728c47d4d624b330a88973ed35_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "
@@ -100,16 +100,17 @@ class __TwigTemplate_102d5f9931d2aa8bce547a679fb421cf55bafd7af9f75b7300c9a660fdb
         // line 47
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("label" => "Continuar", "attr" => array("class" => "btn btn-success")));
         echo "
+\t\t\t<button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\" onclick=\"window.close();\">cancelar</button>
 \t\t</div>
 \t\t";
-        // line 49
+        // line 50
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
 \t</div>
 ";
         
-        $__internal_cfb9b295548af344d2f1225d31a67ce47f1553ca71bfa0b7e8e3d5614bab78f1->leave($__internal_cfb9b295548af344d2f1225d31a67ce47f1553ca71bfa0b7e8e3d5614bab78f1_prof);
+        $__internal_35d84289c6da77e1e25d95f5b41ff9808523e1728c47d4d624b330a88973ed35->leave($__internal_35d84289c6da77e1e25d95f5b41ff9808523e1728c47d4d624b330a88973ed35_prof);
 
     }
 
@@ -125,7 +126,7 @@ class __TwigTemplate_102d5f9931d2aa8bce547a679fb421cf55bafd7af9f75b7300c9a660fdb
 
     public function getDebugInfo()
     {
-        return array (  106 => 49,  101 => 47,  94 => 43,  84 => 36,  70 => 25,  59 => 17,  49 => 10,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  107 => 50,  101 => 47,  94 => 43,  84 => 36,  70 => 25,  59 => 17,  49 => 10,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
@@ -175,6 +176,7 @@ class __TwigTemplate_102d5f9931d2aa8bce547a679fb421cf55bafd7af9f75b7300c9a660fdb
 /* 			</div>*/
 /* 			<hr>*/
 /* 			{{ form_widget(form.save, {'label' : 'Continuar', 'attr' : {'class' : 'btn btn-success'} }) }}*/
+/* 			<button type="button" class="btn btn-danger" data-dismiss="modal" onclick="window.close();">cancelar</button>*/
 /* 		</div>*/
 /* 		{{ form_end(form) }}*/
 /* */
