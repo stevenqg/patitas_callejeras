@@ -3,7 +3,7 @@
 #--------------------------------------------------------------
 
 pc_fundation_webservice:
-    path:     /service/{data}
+    path:     /service/events/{data}
     defaults: { _controller: PCFundationBundle:Service:service }
     
 pc_fundation_webservice_2:
@@ -13,6 +13,14 @@ pc_fundation_webservice_2:
 pc_fundation_webservice_3:
     path:     /service/{nomM}/{espM}/{genM}/{razM}/{edaM}/{colM}/{code}
     defaults: { _controller: PCFundationBundle:Service:registerPet }
+    
+pc_fundation_webservice_4:
+    path:     /service/login/{emailUs}/{passUs}
+    defaults: { _controller: PCFundationBundle:Service:login }
+
+pc_fundation_webservice_5:
+    path:     /service/report/add/{lat}/{lon}
+    defaults: { _controller: PCFundationBundle:Service:addReport }
 
 #--------------------------------------------------------------
 #--- rutas de navegación     ----------------------------------

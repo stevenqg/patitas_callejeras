@@ -82,13 +82,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 .contmasc{ padding-left: 40%;}
 
-.conmargin{border-left-style: double;
+.conmargin{
+border-left-style: double;
 border-right-style: double;
 border-bottom-style: double;
 margin-bottom: 15px;
 line-height: 1.42857143;
 background-color: #fff;
 border: 1px solid #ddd;
+}
+.overflofanimal{
+    width: 100%;
+    height: 410px;
+    overflow-x: hidden;
 }
 
 .notfloat{float: none;}

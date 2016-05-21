@@ -12,11 +12,13 @@
 			<div class="row">
 				<br>
 				<div class="col-xs-3 col-md-2 textjusti">
-					<label class="marginlabel"  for="EStado de la cirugia">¿se realizó el control a satisfacción? </label>
+					<label class="marginlabel"  for="EStado de la cirugia">¿satisforio? </label>
 				</div>
 				<div class="col-xs-9 col-md-4">
 					{{form_widget(form.isSatisfactory, {'attr' : {'class' : 'check checkbox'} })}}<br>
 				</div>
+			</div>
+			<div class="row">
 				<br>
 				<div class="textjusti col-xs-3 col-md-2">
 					<label class="marginlabel"  for="Edad del adoptante">comentario:</label>
@@ -27,7 +29,7 @@
 			</div>
 			<hr>
  		</div>
- 		{{ form_widget(form.save, {'label' : 'Guardar', 'attr' : {'class' : 'glyphicon glyphicon-saved', 'aria-hidden' : 'true' } }) }}
+ 		{{ form_widget(form.save, {'label' : 'Guardar', 'attr' : {'class' : 'glyphicon glyphicon-saved btn btn-primary', 'aria-hidden' : 'true' } }) }}
 		{{ form_end(form) }}	
 	
 	</div>

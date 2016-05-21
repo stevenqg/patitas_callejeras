@@ -21,20 +21,20 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_85f39b2a4df8cb1554921daf9d6a7eb70a1d7e7c8ef07578d44e10319eb263d6 = $this->env->getExtension("native_profiler");
-        $__internal_85f39b2a4df8cb1554921daf9d6a7eb70a1d7e7c8ef07578d44e10319eb263d6->enter($__internal_85f39b2a4df8cb1554921daf9d6a7eb70a1d7e7c8ef07578d44e10319eb263d6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:index.html.twig"));
+        $__internal_b794958c0ae34f1cab57b07d387f0085687dd841c076df188aedd4f479c35f36 = $this->env->getExtension("native_profiler");
+        $__internal_b794958c0ae34f1cab57b07d387f0085687dd841c076df188aedd4f479c35f36->enter($__internal_b794958c0ae34f1cab57b07d387f0085687dd841c076df188aedd4f479c35f36_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:fundation:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_85f39b2a4df8cb1554921daf9d6a7eb70a1d7e7c8ef07578d44e10319eb263d6->leave($__internal_85f39b2a4df8cb1554921daf9d6a7eb70a1d7e7c8ef07578d44e10319eb263d6_prof);
+        $__internal_b794958c0ae34f1cab57b07d387f0085687dd841c076df188aedd4f479c35f36->leave($__internal_b794958c0ae34f1cab57b07d387f0085687dd841c076df188aedd4f479c35f36_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_be6fef445f8ee69aa87742251348f0745593cee8f2ce5ba5774d63e970754823 = $this->env->getExtension("native_profiler");
-        $__internal_be6fef445f8ee69aa87742251348f0745593cee8f2ce5ba5774d63e970754823->enter($__internal_be6fef445f8ee69aa87742251348f0745593cee8f2ce5ba5774d63e970754823_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_3cdfd05f8b5bdf07c014db3873a1d506ec677a5eb53b2532a05ae997a82bd029 = $this->env->getExtension("native_profiler");
+        $__internal_3cdfd05f8b5bdf07c014db3873a1d506ec677a5eb53b2532a05ae997a82bd029->enter($__internal_3cdfd05f8b5bdf07c014db3873a1d506ec677a5eb53b2532a05ae997a82bd029_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         $this->displayParentBlock("body", $context, $blocks);
@@ -141,16 +141,17 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 \t\t\t<h3 class=\"titulosection\"><img class=\"ve\" src=\"";
         // line 67
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/mn.png"), "html", null, true);
-        echo "\" alt=\"\">&nbsp;<b> Normas de proteción animal </b>&nbsp;</b><img class=\"ve\" src=\"";
+        echo "\" alt=\"\">&nbsp;<b> Ley en contra del maltrato animal </b>&nbsp;</b><img class=\"ve\" src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/m.png"), "html", null, true);
         echo "\" alt=\"\"></h3>
-\t\t\t<p class=\"textjusti\">El hecho de reconocer que los animales ya no sean considerados cosas dentro del código civil  en su artículo 655 donde los declaran como bienes muebles y  que sean reconocidos como seres sintientes abre las puertas para que los derechos de los animales sean tenidos en cuenta  en nuestro país, que los casos de maltrato animal no se quede en la impunidad y sean ejecutadas multas económicas que van desde 5 a 50 salarios mínimos mensuales legales vigentes y penas que van de 12 a 36 meses de cárcel, con agravantes punitivos</p>
-\t\t\t
-\t\t\t<p class=\"text-justify\">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magnaDonec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna</p> <br>
+\t\t\t<p class=\"textjusti\">EL 18 de mayo de 2016 el Congreso de la república de Colombia sanciono la ley en contra del maltrato animal, lo que significa que a partir de ahora los agresores de los animales serán castigados con multas y hasta prisión.</p>
+\t\t\t<p class=\"textjusti\">Ley modifica el artículo 655 del Código Civil y de esta forma los animales recibirán especial protección contra el sufrimiento y el dolor, en especial, el causado directa o indirectamente por los humanos.</p>
+ \t\t <p class=\"text-justify\">A partir de hoy, habrá multas que van de 5 a 50 salarios mínimos legales vigentes mensuales para quienes incurran en actos dañinos y de crueldad en contra de los animales.</p>
+ \t\t <p class=\"text-justify\">De igual forma, se establece una pena de 12 a 36 meses de prisión e  inhabilidad especial de uno a tres años, y multa de 5 a 60 Salarios mínimos legales vigentes, para quien cause la muerte o lesione gravemente la salud o integridad física de los animales silvestres, domésticos y amansados.</p><br>
 \t\t\t</div>
 \t\t\t<div class=\"col-md-5\">
 \t\t<img  src= \"";
-        // line 73
+        // line 74
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/norma.png"), "html", null, true);
         echo "\"  alt= \"...\"  class= \"tdlg img-responsive\" > </div>
 
@@ -163,22 +164,22 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
         <div class=\"col-md-1\"></div>
         <div class=\"col-md-5\">
 \t\t<img  src= \"";
-        // line 83
+        // line 84
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/app.png"), "html", null, true);
         echo "\"  alt= \"...\"  class= \" img-responsive img-thumbnail\" > </div>
         <div class=\"col-md-5\">
 \t\t\t<h3 class=\"titulosection\"><img class=\"ve\" src=\"";
-        // line 85
+        // line 86
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/mn.png"), "html", null, true);
         echo "\" alt=\"\">&nbsp;<b> Aplicaion Movil </b>&nbsp;</b><img class=\"ve\" src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/m.png"), "html", null, true);
         echo "\" alt=\"\"></h3>
 \t\t\t<p class=\"textjusti\">La fundación patitas callejera ahora cuenta con una aplicación móvil para facilitar el acceso a todos nuestros colaboradores.</p>
-\t\t\t<p class=\"textjusti\">El auge de la portabilidad y la importancia que ha tomado  las aplicaciones móviles durante los últimos años. Nos ha motivado a mejorar nuestro servicio y que su acceso sea mucho más fácil  y rápido. En nuestra aplicación usted podrá estar informado de los próximos eventos a realizar, ver al catálogo de mascotas en adopción y además una gran novedad que traemos para usted es el reporte de pérdida y localización de mascotas extraviadas.  </p>
+\t\t\t<p class=\"textjusti\">El auge de la portabilidad y la importancia que ha tomado  las aplicaciones móviles durante los últimos años. Nos ha motivado a mejorar nuestro servicio y que su acceso sea mucho más fácil  y rápido. En nuestra aplicación usted podrá estar informado de los próximos eventos a realizar y además una gran novedad que traemos para usted es el reporte de pérdida y localización de mascotas extraviadas.  </p>
 \t\t\t<p class=\"textjusti\">Si usted tiene un smartphone u otro tipo de dispositivo móvil, puede adquirir total mente gratis nuestra aplicación </p>
 \t\t\t<br>
 \t\t\t<button type=\"button\" class=\"playstile btn btn-primary btn-lg btn-block\"> <img class=\"simg\" src=\"";
-        // line 90
+        // line 91
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/img/play1.png"), "html", null, true);
         echo "\" alt=\"\"> Google Play</button>
 \t\t\t<br>
@@ -191,7 +192,7 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 
 ";
         
-        $__internal_be6fef445f8ee69aa87742251348f0745593cee8f2ce5ba5774d63e970754823->leave($__internal_be6fef445f8ee69aa87742251348f0745593cee8f2ce5ba5774d63e970754823_prof);
+        $__internal_3cdfd05f8b5bdf07c014db3873a1d506ec677a5eb53b2532a05ae997a82bd029->leave($__internal_3cdfd05f8b5bdf07c014db3873a1d506ec677a5eb53b2532a05ae997a82bd029_prof);
 
     }
 
@@ -207,7 +208,7 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 
     public function getDebugInfo()
     {
-        return array (  182 => 90,  172 => 85,  167 => 83,  154 => 73,  143 => 67,  128 => 55,  121 => 51,  113 => 46,  107 => 43,  88 => 27,  84 => 26,  77 => 22,  73 => 21,  69 => 20,  63 => 17,  59 => 16,  55 => 15,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  183 => 91,  173 => 86,  168 => 84,  155 => 74,  143 => 67,  128 => 55,  121 => 51,  113 => 46,  107 => 43,  88 => 27,  84 => 26,  77 => 22,  73 => 21,  69 => 20,  63 => 17,  59 => 16,  55 => 15,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "layout.html.twig" %}*/
@@ -276,10 +277,11 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 /* 		<div class="row margin">*/
 /*         <div class="col-md-1"></div>*/
 /* 		<div class="col-md-5">*/
-/* 			<h3 class="titulosection"><img class="ve" src="{{asset('public/img/mn.png')}}" alt="">&nbsp;<b> Normas de proteción animal </b>&nbsp;</b><img class="ve" src="{{asset('public/img/m.png')}}" alt=""></h3>*/
-/* 			<p class="textjusti">El hecho de reconocer que los animales ya no sean considerados cosas dentro del código civil  en su artículo 655 donde los declaran como bienes muebles y  que sean reconocidos como seres sintientes abre las puertas para que los derechos de los animales sean tenidos en cuenta  en nuestro país, que los casos de maltrato animal no se quede en la impunidad y sean ejecutadas multas económicas que van desde 5 a 50 salarios mínimos mensuales legales vigentes y penas que van de 12 a 36 meses de cárcel, con agravantes punitivos</p>*/
-/* 			*/
-/* 			<p class="text-justify">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magnaDonec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna</p> <br>*/
+/* 			<h3 class="titulosection"><img class="ve" src="{{asset('public/img/mn.png')}}" alt="">&nbsp;<b> Ley en contra del maltrato animal </b>&nbsp;</b><img class="ve" src="{{asset('public/img/m.png')}}" alt=""></h3>*/
+/* 			<p class="textjusti">EL 18 de mayo de 2016 el Congreso de la república de Colombia sanciono la ley en contra del maltrato animal, lo que significa que a partir de ahora los agresores de los animales serán castigados con multas y hasta prisión.</p>*/
+/* 			<p class="textjusti">Ley modifica el artículo 655 del Código Civil y de esta forma los animales recibirán especial protección contra el sufrimiento y el dolor, en especial, el causado directa o indirectamente por los humanos.</p>*/
+/*  		 <p class="text-justify">A partir de hoy, habrá multas que van de 5 a 50 salarios mínimos legales vigentes mensuales para quienes incurran en actos dañinos y de crueldad en contra de los animales.</p>*/
+/*  		 <p class="text-justify">De igual forma, se establece una pena de 12 a 36 meses de prisión e  inhabilidad especial de uno a tres años, y multa de 5 a 60 Salarios mínimos legales vigentes, para quien cause la muerte o lesione gravemente la salud o integridad física de los animales silvestres, domésticos y amansados.</p><br>*/
 /* 			</div>*/
 /* 			<div class="col-md-5">*/
 /* 		<img  src= "{{ asset('public/img/norma.png') }}"  alt= "..."  class= "tdlg img-responsive" > </div>*/
@@ -296,7 +298,7 @@ class __TwigTemplate_e714b0084acd540a5f55c753e8241081cf576cabb5303d33237a58d2d40
 /*         <div class="col-md-5">*/
 /* 			<h3 class="titulosection"><img class="ve" src="{{asset('public/img/mn.png')}}" alt="">&nbsp;<b> Aplicaion Movil </b>&nbsp;</b><img class="ve" src="{{asset('public/img/m.png')}}" alt=""></h3>*/
 /* 			<p class="textjusti">La fundación patitas callejera ahora cuenta con una aplicación móvil para facilitar el acceso a todos nuestros colaboradores.</p>*/
-/* 			<p class="textjusti">El auge de la portabilidad y la importancia que ha tomado  las aplicaciones móviles durante los últimos años. Nos ha motivado a mejorar nuestro servicio y que su acceso sea mucho más fácil  y rápido. En nuestra aplicación usted podrá estar informado de los próximos eventos a realizar, ver al catálogo de mascotas en adopción y además una gran novedad que traemos para usted es el reporte de pérdida y localización de mascotas extraviadas.  </p>*/
+/* 			<p class="textjusti">El auge de la portabilidad y la importancia que ha tomado  las aplicaciones móviles durante los últimos años. Nos ha motivado a mejorar nuestro servicio y que su acceso sea mucho más fácil  y rápido. En nuestra aplicación usted podrá estar informado de los próximos eventos a realizar y además una gran novedad que traemos para usted es el reporte de pérdida y localización de mascotas extraviadas.  </p>*/
 /* 			<p class="textjusti">Si usted tiene un smartphone u otro tipo de dispositivo móvil, puede adquirir total mente gratis nuestra aplicación </p>*/
 /* 			<br>*/
 /* 			<button type="button" class="playstile btn btn-primary btn-lg btn-block"> <img class="simg" src="{{ asset('public/img/play1.png') }}" alt=""> Google Play</button>*/

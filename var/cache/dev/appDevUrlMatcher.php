@@ -102,7 +102,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         if (0 === strpos($pathinfo, '/service')) {
             // pc_fundation_webservice
-            if (preg_match('#^/service/(?P<data>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/service/events') && preg_match('#^/service/events/(?P<data>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::serviceAction',));
             }
 
@@ -114,6 +114,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // pc_fundation_webservice_3
             if (preg_match('#^/service/(?P<nomM>[^/]++)/(?P<espM>[^/]++)/(?P<genM>[^/]++)/(?P<razM>[^/]++)/(?P<edaM>[^/]++)/(?P<colM>[^/]++)/(?P<code>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice_3')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::registerPetAction',));
+            }
+
+            // pc_fundation_webservice_4
+            if (0 === strpos($pathinfo, '/service/login') && preg_match('#^/service/login/(?P<emailUs>[^/]++)/(?P<passUs>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice_4')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::loginAction',));
+            }
+
+            // pc_fundation_webservice_5
+            if (0 === strpos($pathinfo, '/service/report/add') && preg_match('#^/service/report/add/(?P<lat>[^/]++)/(?P<lon>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice_5')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::addReportAction',));
             }
 
         }

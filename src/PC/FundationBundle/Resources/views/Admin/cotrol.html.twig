@@ -6,10 +6,10 @@
   	<table class="podingtitle1 table table-hover">
       <thead>
         <tr>
-          <th class="text-center">Zona</th>
-          <th class="text-center">FEcha de realización</th>
-          <th class="text-center"> $ costo total</th>
-          <th class="text-center">mas</th>
+          <th class="tddm text-center">Zona</th>
+          <th class="tddm text-center">FEcha de realización</th>
+          <th class="tddm text-center"> $ costo total</th>
+          <th class="tdmd text-center">mas</th>
         </tr>
       </thead>
   	</table>
@@ -22,10 +22,10 @@
                <table class=" margnone table table-hover">
                   <tbody>
                     <tr>
-                      <td>{{ meeting.meeting.address }}</td>
-                      <td>{{ meeting.control_at| date("m/d/Y")}}</td>
-                      <td>${{ meeting.totalAmount }}</td>
-                      <td><a href="censo.html">&nbsp;<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></a></td>
+                      <td class="tddm">{{ meeting.meeting.address }}</td>
+                      <td class="tddm text-center">{{ meeting.control_at| date("m/d/Y")}}</td>
+                      <td class="tddm text-center">${{ meeting.totalAmount }}</td>
+                      <td class="tdmd text-center"><a href="censo.html">&nbsp;<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></a></td>
                     </tr>
                    </tbody>
                 </table>

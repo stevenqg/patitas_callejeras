@@ -21,20 +21,20 @@ class __TwigTemplate_ab2832efb79db36721796d8eb8895e46793efa35c242be3bc58af3e20bb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7eaef2a2fddb5b446f6d021ef175e96ce2f7aaf3629fcbd1b1e017281c098282 = $this->env->getExtension("native_profiler");
-        $__internal_7eaef2a2fddb5b446f6d021ef175e96ce2f7aaf3629fcbd1b1e017281c098282->enter($__internal_7eaef2a2fddb5b446f6d021ef175e96ce2f7aaf3629fcbd1b1e017281c098282_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:cotrol.html.twig"));
+        $__internal_1a5c35293dc7403c9b664215ade88c03c49e9f1cc840f42e7da16d76dd2a21d8 = $this->env->getExtension("native_profiler");
+        $__internal_1a5c35293dc7403c9b664215ade88c03c49e9f1cc840f42e7da16d76dd2a21d8->enter($__internal_1a5c35293dc7403c9b664215ade88c03c49e9f1cc840f42e7da16d76dd2a21d8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:cotrol.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7eaef2a2fddb5b446f6d021ef175e96ce2f7aaf3629fcbd1b1e017281c098282->leave($__internal_7eaef2a2fddb5b446f6d021ef175e96ce2f7aaf3629fcbd1b1e017281c098282_prof);
+        $__internal_1a5c35293dc7403c9b664215ade88c03c49e9f1cc840f42e7da16d76dd2a21d8->leave($__internal_1a5c35293dc7403c9b664215ade88c03c49e9f1cc840f42e7da16d76dd2a21d8_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_3d631d3cb296d75ef698a0edc027c6215f8898a04edb9b06ea82becd2579e9e4 = $this->env->getExtension("native_profiler");
-        $__internal_3d631d3cb296d75ef698a0edc027c6215f8898a04edb9b06ea82becd2579e9e4->enter($__internal_3d631d3cb296d75ef698a0edc027c6215f8898a04edb9b06ea82becd2579e9e4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_939695f25f5ea52b05a6848cc93fe08a2cdd58e35e155750e57ba89ed71af7b4 = $this->env->getExtension("native_profiler");
+        $__internal_939695f25f5ea52b05a6848cc93fe08a2cdd58e35e155750e57ba89ed71af7b4->enter($__internal_939695f25f5ea52b05a6848cc93fe08a2cdd58e35e155750e57ba89ed71af7b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "
@@ -43,10 +43,10 @@ class __TwigTemplate_ab2832efb79db36721796d8eb8895e46793efa35c242be3bc58af3e20bb
   \t<table class=\"podingtitle1 table table-hover\">
       <thead>
         <tr>
-          <th class=\"text-center\">Zona</th>
-          <th class=\"text-center\">FEcha de realización</th>
-          <th class=\"text-center\"> \$ costo total</th>
-          <th class=\"text-center\">mas</th>
+          <th class=\"tddm text-center\">Zona</th>
+          <th class=\"tddm text-center\">FEcha de realización</th>
+          <th class=\"tddm text-center\"> \$ costo total</th>
+          <th class=\"tdmd text-center\">mas</th>
         </tr>
       </thead>
   \t</table>
@@ -67,19 +67,19 @@ class __TwigTemplate_ab2832efb79db36721796d8eb8895e46793efa35c242be3bc58af3e20bb
                <table class=\" margnone table table-hover\">
                   <tbody>
                     <tr>
-                      <td>";
+                      <td class=\"tddm\">";
             // line 25
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["meeting"], "meeting", array()), "address", array()), "html", null, true);
             echo "</td>
-                      <td>";
+                      <td class=\"tddm text-center\">";
             // line 26
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["meeting"], "control_at", array()), "m/d/Y"), "html", null, true);
             echo "</td>
-                      <td>\$";
+                      <td class=\"tddm text-center\">\$";
             // line 27
             echo twig_escape_filter($this->env, $this->getAttribute($context["meeting"], "totalAmount", array()), "html", null, true);
             echo "</td>
-                      <td><a href=\"censo.html\">&nbsp;<span class=\"glyphicon glyphicon-arrow-down\" aria-hidden=\"true\"></a></td>
+                      <td class=\"tdmd text-center\"><a href=\"censo.html\">&nbsp;<span class=\"glyphicon glyphicon-arrow-down\" aria-hidden=\"true\"></a></td>
                     </tr>
                    </tbody>
                 </table>
@@ -239,7 +239,7 @@ $context["control"], "isSatisfactory", array()) == 1)) {
 \t</div>\t
 ";
         
-        $__internal_3d631d3cb296d75ef698a0edc027c6215f8898a04edb9b06ea82becd2579e9e4->leave($__internal_3d631d3cb296d75ef698a0edc027c6215f8898a04edb9b06ea82becd2579e9e4_prof);
+        $__internal_939695f25f5ea52b05a6848cc93fe08a2cdd58e35e155750e57ba89ed71af7b4->leave($__internal_939695f25f5ea52b05a6848cc93fe08a2cdd58e35e155750e57ba89ed71af7b4_prof);
 
     }
 
@@ -266,10 +266,10 @@ $context["control"], "isSatisfactory", array()) == 1)) {
 /*   	<table class="podingtitle1 table table-hover">*/
 /*       <thead>*/
 /*         <tr>*/
-/*           <th class="text-center">Zona</th>*/
-/*           <th class="text-center">FEcha de realización</th>*/
-/*           <th class="text-center"> $ costo total</th>*/
-/*           <th class="text-center">mas</th>*/
+/*           <th class="tddm text-center">Zona</th>*/
+/*           <th class="tddm text-center">FEcha de realización</th>*/
+/*           <th class="tddm text-center"> $ costo total</th>*/
+/*           <th class="tdmd text-center">mas</th>*/
 /*         </tr>*/
 /*       </thead>*/
 /*   	</table>*/
@@ -282,10 +282,10 @@ $context["control"], "isSatisfactory", array()) == 1)) {
 /*                <table class=" margnone table table-hover">*/
 /*                   <tbody>*/
 /*                     <tr>*/
-/*                       <td>{{ meeting.meeting.address }}</td>*/
-/*                       <td>{{ meeting.control_at| date("m/d/Y")}}</td>*/
-/*                       <td>${{ meeting.totalAmount }}</td>*/
-/*                       <td><a href="censo.html">&nbsp;<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></a></td>*/
+/*                       <td class="tddm">{{ meeting.meeting.address }}</td>*/
+/*                       <td class="tddm text-center">{{ meeting.control_at| date("m/d/Y")}}</td>*/
+/*                       <td class="tddm text-center">${{ meeting.totalAmount }}</td>*/
+/*                       <td class="tdmd text-center"><a href="censo.html">&nbsp;<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></a></td>*/
 /*                     </tr>*/
 /*                    </tbody>*/
 /*                 </table>*/

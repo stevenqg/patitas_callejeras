@@ -21,20 +21,20 @@ class __TwigTemplate_410da71ccccb335d362f18b4577e5455d5832f115c9147666c4058495f0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_659666a888575f6577f44133ee94492eecee8ea1e0da4f1f6963ee8d693d5f53 = $this->env->getExtension("native_profiler");
-        $__internal_659666a888575f6577f44133ee94492eecee8ea1e0da4f1f6963ee8d693d5f53->enter($__internal_659666a888575f6577f44133ee94492eecee8ea1e0da4f1f6963ee8d693d5f53_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:control_add.html.twig"));
+        $__internal_cf5c8342f88dd08a5fa8acaadbfbcd2f54aa44ce866831fc581af0316307a031 = $this->env->getExtension("native_profiler");
+        $__internal_cf5c8342f88dd08a5fa8acaadbfbcd2f54aa44ce866831fc581af0316307a031->enter($__internal_cf5c8342f88dd08a5fa8acaadbfbcd2f54aa44ce866831fc581af0316307a031_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:control_add.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_659666a888575f6577f44133ee94492eecee8ea1e0da4f1f6963ee8d693d5f53->leave($__internal_659666a888575f6577f44133ee94492eecee8ea1e0da4f1f6963ee8d693d5f53_prof);
+        $__internal_cf5c8342f88dd08a5fa8acaadbfbcd2f54aa44ce866831fc581af0316307a031->leave($__internal_cf5c8342f88dd08a5fa8acaadbfbcd2f54aa44ce866831fc581af0316307a031_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_ff724d1856920cf9e0f4ec20d28662070274c85a2153af06434f260de5aef8d9 = $this->env->getExtension("native_profiler");
-        $__internal_ff724d1856920cf9e0f4ec20d28662070274c85a2153af06434f260de5aef8d9->enter($__internal_ff724d1856920cf9e0f4ec20d28662070274c85a2153af06434f260de5aef8d9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_47c00f7f880b11a12feed64c874636e6c830e68fd5f2190829e41ce7a1565349 = $this->env->getExtension("native_profiler");
+        $__internal_47c00f7f880b11a12feed64c874636e6c830e68fd5f2190829e41ce7a1565349->enter($__internal_47c00f7f880b11a12feed64c874636e6c830e68fd5f2190829e41ce7a1565349_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "\t<div class=\"liner\"></div>
@@ -52,7 +52,7 @@ class __TwigTemplate_410da71ccccb335d362f18b4577e5455d5832f115c9147666c4058495f0
 \t\t\t<div class=\"row\">
 \t\t\t\t<br>
 \t\t\t\t<div class=\"col-xs-3 col-md-2 textjusti\">
-\t\t\t\t\t<label class=\"marginlabel\"  for=\"EStado de la cirugia\">¿se realizó el control a satisfacción? </label>
+\t\t\t\t\t<label class=\"marginlabel\"  for=\"EStado de la cirugia\">¿satisforio? </label>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t";
@@ -60,13 +60,15 @@ class __TwigTemplate_410da71ccccb335d362f18b4577e5455d5832f115c9147666c4058495f0
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "isSatisfactory", array()), 'widget', array("attr" => array("class" => "check checkbox")));
         echo "<br>
 \t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"row\">
 \t\t\t\t<br>
 \t\t\t\t<div class=\"textjusti col-xs-3 col-md-2\">
 \t\t\t\t\t<label class=\"marginlabel\"  for=\"Edad del adoptante\">comentario:</label>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col-xs-9 col-md-4\">
 \t\t\t\t\t";
-        // line 25
+        // line 27
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "comment", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "comentarios relacionados al control.")));
         echo "
 \t\t\t\t</div>
@@ -74,18 +76,18 @@ class __TwigTemplate_410da71ccccb335d362f18b4577e5455d5832f115c9147666c4058495f0
 \t\t\t<hr>
  \t\t</div>
  \t\t";
-        // line 30
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("label" => "Guardar", "attr" => array("class" => "glyphicon glyphicon-saved", "aria-hidden" => "true")));
+        // line 32
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("label" => "Guardar", "attr" => array("class" => "glyphicon glyphicon-saved btn btn-primary", "aria-hidden" => "true")));
         echo "
 \t\t";
-        // line 31
+        // line 33
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "\t
 \t
 \t</div>
 ";
         
-        $__internal_ff724d1856920cf9e0f4ec20d28662070274c85a2153af06434f260de5aef8d9->leave($__internal_ff724d1856920cf9e0f4ec20d28662070274c85a2153af06434f260de5aef8d9_prof);
+        $__internal_47c00f7f880b11a12feed64c874636e6c830e68fd5f2190829e41ce7a1565349->leave($__internal_47c00f7f880b11a12feed64c874636e6c830e68fd5f2190829e41ce7a1565349_prof);
 
     }
 
@@ -101,7 +103,7 @@ class __TwigTemplate_410da71ccccb335d362f18b4577e5455d5832f115c9147666c4058495f0
 
     public function getDebugInfo()
     {
-        return array (  82 => 31,  78 => 30,  70 => 25,  60 => 18,  48 => 9,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  84 => 33,  80 => 32,  72 => 27,  60 => 18,  48 => 9,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
@@ -118,11 +120,13 @@ class __TwigTemplate_410da71ccccb335d362f18b4577e5455d5832f115c9147666c4058495f0
 /* 			<div class="row">*/
 /* 				<br>*/
 /* 				<div class="col-xs-3 col-md-2 textjusti">*/
-/* 					<label class="marginlabel"  for="EStado de la cirugia">¿se realizó el control a satisfacción? </label>*/
+/* 					<label class="marginlabel"  for="EStado de la cirugia">¿satisforio? </label>*/
 /* 				</div>*/
 /* 				<div class="col-xs-9 col-md-4">*/
 /* 					{{form_widget(form.isSatisfactory, {'attr' : {'class' : 'check checkbox'} })}}<br>*/
 /* 				</div>*/
+/* 			</div>*/
+/* 			<div class="row">*/
 /* 				<br>*/
 /* 				<div class="textjusti col-xs-3 col-md-2">*/
 /* 					<label class="marginlabel"  for="Edad del adoptante">comentario:</label>*/
@@ -133,7 +137,7 @@ class __TwigTemplate_410da71ccccb335d362f18b4577e5455d5832f115c9147666c4058495f0
 /* 			</div>*/
 /* 			<hr>*/
 /*  		</div>*/
-/*  		{{ form_widget(form.save, {'label' : 'Guardar', 'attr' : {'class' : 'glyphicon glyphicon-saved', 'aria-hidden' : 'true' } }) }}*/
+/*  		{{ form_widget(form.save, {'label' : 'Guardar', 'attr' : {'class' : 'glyphicon glyphicon-saved btn btn-primary', 'aria-hidden' : 'true' } }) }}*/
 /* 		{{ form_end(form) }}	*/
 /* 	*/
 /* 	</div>*/
