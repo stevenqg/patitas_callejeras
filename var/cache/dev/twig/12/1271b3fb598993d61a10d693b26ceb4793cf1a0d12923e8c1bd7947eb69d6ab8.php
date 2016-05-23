@@ -21,20 +21,20 @@ class __TwigTemplate_cf9315d2f56ddc17e1be860ad77c629036fff360e679cc904a065da0aa7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fd447f20517cb6262e68502d4aceedc3cc7887f7960f465f9c402688f45077bc = $this->env->getExtension("native_profiler");
-        $__internal_fd447f20517cb6262e68502d4aceedc3cc7887f7960f465f9c402688f45077bc->enter($__internal_fd447f20517cb6262e68502d4aceedc3cc7887f7960f465f9c402688f45077bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:jornadascenso.html.twig"));
+        $__internal_e63420b862e982e874c0f4d2def663ada3fde736a8ef362dc47f3f475bdfd07f = $this->env->getExtension("native_profiler");
+        $__internal_e63420b862e982e874c0f4d2def663ada3fde736a8ef362dc47f3f475bdfd07f->enter($__internal_e63420b862e982e874c0f4d2def663ada3fde736a8ef362dc47f3f475bdfd07f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:jornadascenso.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_fd447f20517cb6262e68502d4aceedc3cc7887f7960f465f9c402688f45077bc->leave($__internal_fd447f20517cb6262e68502d4aceedc3cc7887f7960f465f9c402688f45077bc_prof);
+        $__internal_e63420b862e982e874c0f4d2def663ada3fde736a8ef362dc47f3f475bdfd07f->leave($__internal_e63420b862e982e874c0f4d2def663ada3fde736a8ef362dc47f3f475bdfd07f_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_bff81aa17d79dab400e0b7a992e8ed356532c73f134ebe3f1b9cb8e3aee04526 = $this->env->getExtension("native_profiler");
-        $__internal_bff81aa17d79dab400e0b7a992e8ed356532c73f134ebe3f1b9cb8e3aee04526->enter($__internal_bff81aa17d79dab400e0b7a992e8ed356532c73f134ebe3f1b9cb8e3aee04526_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_7229150338e4b207cc9abe391e378ea8b0f81f281181bed3a1dc93ca3f8dabb9 = $this->env->getExtension("native_profiler");
+        $__internal_7229150338e4b207cc9abe391e378ea8b0f81f281181bed3a1dc93ca3f8dabb9->enter($__internal_7229150338e4b207cc9abe391e378ea8b0f81f281181bed3a1dc93ca3f8dabb9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "  <div>
@@ -56,51 +56,32 @@ class __TwigTemplate_cf9315d2f56ddc17e1be860ad77c629036fff360e679cc904a065da0aa7
                   <th>#</th>
                   <th>Zona</th>
                   <th>Fecha de realización</th>
-                  <th>Colaboradores</th>
                   <th class=\"tdxs\">ver a fondo</th>
                 </tr>
               </thead>
               <tbody>
                   ";
-        // line 24
+        // line 23
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["meetings"]) ? $context["meetings"] : $this->getContext($context, "meetings")));
         foreach ($context['_seq'] as $context["_key"] => $context["meeting"]) {
-            // line 25
+            // line 24
             echo "                      <tr>
                           <td>";
-            // line 26
+            // line 25
             echo twig_escape_filter($this->env, $this->getAttribute($context["meeting"], "id", array()), "html", null, true);
             echo "</td>
                           <td>";
-            // line 27
+            // line 26
             echo twig_escape_filter($this->env, $this->getAttribute($context["meeting"], "address", array()), "html", null, true);
             echo "</td>
                           <td>";
-            // line 28
+            // line 27
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["meeting"], "createdAt", array()), "d-m-Y h:i"), "html", null, true);
             echo "</td>
-                          <td>
-                            ";
-            // line 30
-            if (($this->getAttribute($context["meeting"], "meetingType", array()) == "CENSUS")) {
-                // line 31
-                echo "                              
-                              <strong>censo</strong>
-                              
-                              ";
-            } elseif (($this->getAttribute(            // line 34
-$context["meeting"], "meetingType", array()) == "STERILIZATION")) {
-                // line 35
-                echo "                              
-                              <strong>esterilización</strong>
-                              
-                            ";
-            }
-            // line 39
-            echo "                          </td>
+                  
                           <td><a href=\"";
-            // line 40
+            // line 29
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_admin_jornada_censo_mas", array("meetingId" => $this->getAttribute($context["meeting"], "id", array()))), "html", null, true);
             echo "\" id=\"censomas\">&nbsp;<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></a></td>
                       </tr>
@@ -109,7 +90,7 @@ $context["meeting"], "meetingType", array()) == "STERILIZATION")) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['meeting'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 31
         echo "              
               </tbody>
             </table>
@@ -117,7 +98,7 @@ $context["meeting"], "meetingType", array()) == "STERILIZATION")) {
           </div><!--div container-->
 ";
         
-        $__internal_bff81aa17d79dab400e0b7a992e8ed356532c73f134ebe3f1b9cb8e3aee04526->leave($__internal_bff81aa17d79dab400e0b7a992e8ed356532c73f134ebe3f1b9cb8e3aee04526_prof);
+        $__internal_7229150338e4b207cc9abe391e378ea8b0f81f281181bed3a1dc93ca3f8dabb9->leave($__internal_7229150338e4b207cc9abe391e378ea8b0f81f281181bed3a1dc93ca3f8dabb9_prof);
 
     }
 
@@ -133,7 +114,7 @@ $context["meeting"], "meetingType", array()) == "STERILIZATION")) {
 
     public function getDebugInfo()
     {
-        return array (  113 => 42,  104 => 40,  101 => 39,  95 => 35,  93 => 34,  88 => 31,  86 => 30,  81 => 28,  77 => 27,  73 => 26,  70 => 25,  66 => 24,  47 => 8,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  94 => 31,  85 => 29,  80 => 27,  76 => 26,  72 => 25,  69 => 24,  65 => 23,  47 => 8,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "PCFundationBundle:Admin:admin.html.twig"%}*/
@@ -154,7 +135,6 @@ $context["meeting"], "meetingType", array()) == "STERILIZATION")) {
 /*                   <th>#</th>*/
 /*                   <th>Zona</th>*/
 /*                   <th>Fecha de realización</th>*/
-/*                   <th>Colaboradores</th>*/
 /*                   <th class="tdxs">ver a fondo</th>*/
 /*                 </tr>*/
 /*               </thead>*/
@@ -164,17 +144,7 @@ $context["meeting"], "meetingType", array()) == "STERILIZATION")) {
 /*                           <td>{{ meeting.id }}</td>*/
 /*                           <td>{{ meeting.address }}</td>*/
 /*                           <td>{{ meeting.createdAt | date('d-m-Y h:i')  }}</td>*/
-/*                           <td>*/
-/*                             {% if meeting.meetingType == 'CENSUS'%}*/
-/*                               */
-/*                               <strong>censo</strong>*/
-/*                               */
-/*                               {% elseif meeting.meetingType == 'STERILIZATION'%}*/
-/*                               */
-/*                               <strong>esterilización</strong>*/
-/*                               */
-/*                             {%endif%}*/
-/*                           </td>*/
+/*                   */
 /*                           <td><a href="{{ path('pc_admin_jornada_censo_mas', {'meetingId' : meeting.id })}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>*/
 /*                       </tr>*/
 /*                   {% endfor %}              */

@@ -21,20 +21,20 @@ class __TwigTemplate_ad4b0d62f5f159a5a2be23c233de94eb976199a40a5abdfe2fa2132427d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2d41bf4872b9895ca5d94415f1121dea2cafa040732a9bee8b9565490842f8bc = $this->env->getExtension("native_profiler");
-        $__internal_2d41bf4872b9895ca5d94415f1121dea2cafa040732a9bee8b9565490842f8bc->enter($__internal_2d41bf4872b9895ca5d94415f1121dea2cafa040732a9bee8b9565490842f8bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:Masct_adopcion.html.twig"));
+        $__internal_c908659697ffc105bb255963ad1e650097487b5eeb0719cbfee9729358c38164 = $this->env->getExtension("native_profiler");
+        $__internal_c908659697ffc105bb255963ad1e650097487b5eeb0719cbfee9729358c38164->enter($__internal_c908659697ffc105bb255963ad1e650097487b5eeb0719cbfee9729358c38164_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:Masct_adopcion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2d41bf4872b9895ca5d94415f1121dea2cafa040732a9bee8b9565490842f8bc->leave($__internal_2d41bf4872b9895ca5d94415f1121dea2cafa040732a9bee8b9565490842f8bc_prof);
+        $__internal_c908659697ffc105bb255963ad1e650097487b5eeb0719cbfee9729358c38164->leave($__internal_c908659697ffc105bb255963ad1e650097487b5eeb0719cbfee9729358c38164_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_d88a43827ae899e29fe80546a3c607a92362b71799a7c74d0263fadb94c62b29 = $this->env->getExtension("native_profiler");
-        $__internal_d88a43827ae899e29fe80546a3c607a92362b71799a7c74d0263fadb94c62b29->enter($__internal_d88a43827ae899e29fe80546a3c607a92362b71799a7c74d0263fadb94c62b29_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_fcd27797a0586b33906c35f32578bfcdf97777a875fe196cd49ae4b5a5ed4386 = $this->env->getExtension("native_profiler");
+        $__internal_fcd27797a0586b33906c35f32578bfcdf97777a875fe196cd49ae4b5a5ed4386->enter($__internal_fcd27797a0586b33906c35f32578bfcdf97777a875fe196cd49ae4b5a5ed4386_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "\t<div>
@@ -161,7 +161,7 @@ $context["pet"], "isVacunated", array()) == 0)) {
                 echo "                          </td>
                           <td><a href=\"";
                 // line 79
-                echo $this->env->getExtension('routing')->getPath("pc_admin_adopt_pet_info");
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_admin_adopt_pet_info", array("petId" => $this->getAttribute($context["pet"], "id", array()))), "html", null, true);
                 echo "\" id=\"vermas\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"ver datos\"><span class=\"glyphicon glyphicon-eye-open\" aria-hidden=\"true\"></span></a></td>
                       </tr>        
                       ";
@@ -278,7 +278,7 @@ $context["pet"], "isVacunated", array()) == 0)) {
                 echo "                          </td>
                           <td><a href=\"";
                 // line 143
-                echo $this->env->getExtension('routing')->getPath("pc_admin_adopt_pet_info");
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("pc_admin_adopt_pet_info", array("petId" => $this->getAttribute($context["pet"], "id", array()))), "html", null, true);
                 echo "\" id=\"vermas\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"ver datos\"><span class=\"glyphicon glyphicon-eye-open\" aria-hidden=\"true\"></span></a></td>
                       </tr>        
                       ";
@@ -301,7 +301,7 @@ $context["pet"], "isVacunated", array()) == 0)) {
 \t</div>
 ";
         
-        $__internal_d88a43827ae899e29fe80546a3c607a92362b71799a7c74d0263fadb94c62b29->leave($__internal_d88a43827ae899e29fe80546a3c607a92362b71799a7c74d0263fadb94c62b29_prof);
+        $__internal_fcd27797a0586b33906c35f32578bfcdf97777a875fe196cd49ae4b5a5ed4386->leave($__internal_fcd27797a0586b33906c35f32578bfcdf97777a875fe196cd49ae4b5a5ed4386_prof);
 
     }
 
@@ -398,7 +398,7 @@ $context["pet"], "isVacunated", array()) == 0)) {
 /*                               */
 /*                             {%endif%}*/
 /*                           </td>*/
-/*                           <td><a href="{{path('pc_admin_adopt_pet_info')}}" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>*/
+/*                           <td><a href="{{path('pc_admin_adopt_pet_info', {'petId' : pet.id})}}" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>*/
 /*                       </tr>        */
 /*                       {%endif%}*/
 /*                 {% endfor %}*/
@@ -462,7 +462,7 @@ $context["pet"], "isVacunated", array()) == 0)) {
 /*                               */
 /*                             {%endif%}*/
 /*                           </td>*/
-/*                           <td><a href="{{path('pc_admin_adopt_pet_info')}}" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>*/
+/*                           <td><a href="{{path('pc_admin_adopt_pet_info', {"petId" : pet.id})}}" id="vermas" data-toggle="tooltip" data-placement="right" title="ver datos"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>*/
 /*                       </tr>        */
 /*                       {%endif%}*/
 /*                       */

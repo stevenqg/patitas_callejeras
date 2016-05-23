@@ -7,7 +7,9 @@
 			
 			 <table class="tabl table-striped">
               <thead>
-                <tr><td class="pest" colspan="3">Adoptante</td>
+                <tr>
+                  <td class="pest" colspan="6">Adoptante</td>
+                  <td class="pest" colspan="4">Mascota</td>
                 </tr>
                 <tr class="tdb">
                   <th>Nombre</th>
@@ -17,7 +19,7 @@
                   <th>Dirección</th>
                   <th>Correo</th>
                   <th class="bdleft">Mascota</th>
-                  <th>Edad mascota</th>
+                  <th>Edad</th>
                   <th>Estado solicitud</th>
                   <th class="tdxs">ver</th>
                 </tr>
@@ -27,17 +29,28 @@
               <tr>
                   <td>{{ adoption.user.name }}</td>
                   <td>{{ adoption.user.lastName }}</td>
-                  <td>{{ adoption.user.age }}</td>
+                  <td>{{ adoption.user.age }} años</td>
                   <td>{{ adoption.user.phone_number }}</td>
                   <td>{{ adoption.user.address }}</td>
                   <td>{{ adoption.user.email }}</td>
                   <td class="bdleft">{{ adoption.pet.name }}</td>
-                  <td class="tdxs">{{ adoption.pet.age }}</td>
-                  <td>{{ adoption.status }}</td>
+                  <td class="tdxs">{{ adoption.pet.age }} años</td>
+                  <td>
+                    {% if adoption.status == "APPROVED" %}
+                    <strong> aprobada </strong>
+                    {% elseif adoption.status == "DISAPPROVED"%}
+                    <strong> denegada </strong>
+                    {% elseif adoption.status == "PENDING"%}
+                    <strong> pendiente </strong>
+                    {% endif %}
+                  </td>
+                    
                   
-                  <td><a href=""  data-toggle="modal" data-target="#myModaladopt"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
                   
-                  <div class="modal fade bs-example-modal-sm" id="myModaladopt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                  
+                  <td><a href=""  data-toggle="modal" data-target="#myModaladopt{{adoption.pet.id}}"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+                  
+                  <div class="modal fade bs-example-modal-sm" id="myModaladopt{{adoption.pet.id}}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
                     <div class="modal-dialog modal-sm">
                       <div class="modal-content">
                   
@@ -50,32 +63,27 @@
                           <form>
                             <div class="form-group">
                               <label for="recipient-name" class="textjusti control-label">Nombre:</label>
-                              <input type="text" class="form-control" id="recipient-name" disabled>
+                              <input type="text" value="{{adoption.pet.name}}" class="form-control" id="recipient-name" disabled>
                             </div>
-    
                             <div class="form-group">
                               <label for="recipient-name" class="textjusti control-label">Edad:</label>
-                              <input type="text" class="form-control" id="recipient-name" disabled>
+                              <input type="text" value="{{adoption.pet.age}}" class="form-control" id="recipient-name" disabled>
                             </div>
-                            
                             <div class="form-group">
                               <label for="recipient-name" class="textjusti control-label">especie:</label>
-                              <input type="text" class="form-control" id="recipient-name" disabled>
+                              <input type="text" value="{% if adoption.pet.species=="CANINE" %}canino{% elseif adoption.pet.species=="FELINE" %}felino{% endif %}" class="form-control" id="recipient-name" disabled>
                             </div>
-                            
                             <div class="form-group">
                               <label for="recipient-name" class="textjusti control-label">genero:</label>
-                              <input type="text" class="form-control" id="recipient-name" disabled>
+                              <input type="text" value="{% if adoption.pet.gender=="MALE" %}macho{% elseif adoption.pet.gender=="FEMALE" %}hembra{% endif %}" class="form-control" id="recipient-name" disabled>
                             </div>
-    
                             <div class="form-group">
                               <label for="recipient-name" class="textjusti control-label">raza:</label>
-                              <input type="text" class="form-control" id="recipient-name" disabled>
+                              <input type="text" value="{{adoption.pet.race}}" class="form-control" id="recipient-name" disabled>
                             </div>
-                            
                             <div class="form-group">
                               <label for="recipient-name" class="textjusti control-label">color:</label>
-                              <input type="text" class="form-control" id="recipient-name" disabled>
+                              <input type="text" value="{{adoption.pet.colour}}" class="form-control" id="recipient-name" disabled>
                             </div>
                           </form>
                         </div>

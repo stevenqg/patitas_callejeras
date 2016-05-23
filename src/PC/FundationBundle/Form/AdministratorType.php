@@ -27,8 +27,8 @@ class AdministratorType extends AbstractType
             ->add('email', TextType::class)
             ->add('password', RepeatedType::class, array(
                     'type' => PasswordType::class,
-                    'first_options' => array('label' => ''),
-                    'second_options' => array('label' => ''),
+                    'first_options' => array('label' => 'Contraseña'),
+                    'second_options' => array('label' => 'confirmar'),
                     ))
             ->add('save', SubmitType::class, array('label' => 'save administrator'))
         ;

@@ -23,12 +23,12 @@
 				 {{form_widget(form.createdAt, {'attr': {'id': 'fecha1' } })}}
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xs-3 col-md-2 textjusti">
-					<label for="Fecha"><h5>tipo de jornada:</h5></label>
+			<div class="row" style="display: none;">
+				<div class="col-xs-3 col-md-2 textjusti" style="display: none;">
+					<label for="Fecha" style="display: none;"><h5 style="display: none;">tipo de jornada:</h5></label>
 				</div>
-				<div class="col-xs-9 col-md-4">
-				 {{form_widget(form.meetingType, {'attr' : {'class' : 'form-control', 'placeholder' : 'tipo de jornada' } })}}
+				<div class="col-xs-9 col-md-4" style="display: none;">
+				 {{form_widget(form.meetingType, {'attr' : {'class' : 'form-control', 'placeholder' : 'tipo de jornada', 'value' : 'CENSUS', "style" : "display: none;" } })}}
 				</div>
 				</div><hr>
 				

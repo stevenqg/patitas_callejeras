@@ -23,8 +23,10 @@ use PC\FundationBundle\Entity\Event;
 use PC\FundationBundle\Entity\Control;
 use PC\FundationBundle\Entity\Donative;
 use PC\FundationBundle\Entity\Credit;
+use PC\FundationBundle\Entity\Destination;
 
 use PC\FundationBundle\Form\CollaboratorType;
+use PC\FundationBundle\Form\DestinationType;
 use PC\FundationBundle\Form\AdministratorType;
 use PC\FundationBundle\Form\PetType;
 use PC\FundationBundle\Form\MeetingType;
@@ -1042,7 +1044,7 @@ class AdminController extends Controller
 
     public function creditoaddAction()
     {
-        $fondos = $this->revisarFondos();
+        $fondos = $this->revisarFondos(0);
         echo '<script language="javascript">alert("actualmente la fundación cuenta con $'.$fondos.' disponibles, tengalo presente a la hora de realizar creditos o cualquier otra gestión que requiera el uso de estos.");</script>'; 
         $defaultData = array('message' => 'Type your message here');
         $form = $this->crearFormularioCredito($defaultData);
@@ -1054,7 +1056,6 @@ class AdminController extends Controller
      */
     public function crearFormularioCredito($defaultData)
     {
-        //faltan los campos para el estado del credito y el de la mascota
         $form = $this->createFormBuilder($defaultData)
             ->setAction($this->generateUrl('pc_administrator_credito_create'))
             ->setMethod('POST')
@@ -1095,7 +1096,7 @@ class AdminController extends Controller
         if($form->isvalid())
         {   
             
-            $fondos = $this->revisarFondos(); 
+            $fondos = $this->revisarFondos(0); 
             if ($fondos >= $form->get('amount')->getdata()) 
             {
                 echo '<script language="javascript">alert("no se cuentan con fondos suficientes para realizar el crédito.");</script>'; 
@@ -1157,34 +1158,82 @@ class AdminController extends Controller
     }
     
     /**
-     * devuelve los fondos con los que cuneta la fundación. es usado a al hora de validar un credito de emergencia.
+     * devuelve los fondos con los que cuenta la fundación. es usado a la hora de validar un credito de emergencia y de
+     * registrar el destino que se le dieron a los donativos.
+     * 
+     * $data = 0 -> si se va a verificar los fondos para un crédito.
+     * $data = 1 -> si se va a verificar los fondos monetarios para registrar un destino.
+     * $data = 2 -> si se va a verificar los fondos de alimentos para registrar un destino.
      */ 
-    private function revisarFondos()
+    private function revisarFondos($data)
     {
         $em = $this->getDoctrine()->getManager();
         
-        $first_query = $em->createQuery("SELECT SUM(d.quantity) AS s FROM PCFundationBundle:Donative d WHERE d.type = 'MONETARY'");
-        $fondosRecibidos = $first_query->getResult();
-
-        $second_query = $em->createQuery("SELECT SUM(c.amount) AS s FROM PCFundationBundle:Credit c WHERE c.status = 'APPROVED'");
-        $fondosGastados = $second_query->getResult();
-        
-        $fr = 0;
-        $fg = 0;
-        
-        foreach ($fondosRecibidos as $fondRec) 
+        //
+        if($data == 0 || $data == 1)
         {
-            $fr= $fr+intval($fondRec['s']);
+            $first_query = $em->createQuery("SELECT SUM(d.quantity) AS s FROM PCFundationBundle:Donative d WHERE d.type = 'MONETARY'");
+            $fondosRecibidos = $first_query->getResult();
+            
+            
+            $second_query = $em->createQuery("SELECT SUM(c.amount) AS s FROM PCFundationBundle:Credit c WHERE c.status = 'APPROVED'");
+            $fondosGastados = $second_query->getResult(); 
+            
+            $third_query = $em->createQuery("SELECT SUM(d.amount) AS s FROM PCFundationBundle:Destination d WHERE d.type = 'MONETARY'");
+            $fondosGastados2 = $third_query->getResult(); 
+            
+            $fq = 0;
+            $sq = 0;
+            $tq = 0;
+            
+            
+            foreach ($fondosRecibidos as $fondRec) 
+            {
+                $fq= $fq+intval($fondRec['s']);
+            }
+            
+            foreach ($fondosGastados as $fondGast)
+            {
+                $sq = $sq+intval($fondGast['s']);
+            }
+            
+            foreach ($fondosGastados2 as $fondGast2)
+            {
+                $tq = $tq+intval($fondGast2['s']);
+            }
+            
+            
+            $totalDisponible = $fq - $sq - $tq;
+            //die(print_r("total disponible:".$totalDisponible."--fondos recibidos:".$fq." - fondos gastados creditos:".$sq." - fondos gastados destinos:".$tq));
+            return $totalDisponible;
+            
+        }
+        else if($data == 2)
+        {
+            $first_query = $em->createQuery("SELECT SUM(d.quantity) AS s FROM PCFundationBundle:Donative d WHERE d.type = 'FOOD'");
+            $fondosRecibidos = $first_query->getResult();
+        
+            $second_query = $em->createQuery("SELECT SUM(d.amount) AS s FROM PCFundationBundle:Destination d WHERE d.type = 'FOOD'");
+            $fondosGastados = $second_query->getResult();
+            
+            $fr = 0;
+            $fg = 0;
+            
+            foreach ($fondosRecibidos as $fondRec) 
+            {
+                $fr= $fr+intval($fondRec['s']);
+            }
+            
+            foreach ($fondosGastados as $fondGast)
+            {
+                $fg = $fg+intval($fondGast['s']);
+            }
+            
+            $totalDisponible = $fr - $fg;
+            
+            return $totalDisponible;
         }
         
-        foreach ($fondosGastados as $fondGast)
-        {
-            $fg = $fg+intval($fondGast['s']);
-        }
-        
-        $totalDisponible = $fr - $fg;
-        
-        return $totalDisponible;
     }
     
     
@@ -1200,6 +1249,9 @@ class AdminController extends Controller
         return $this->render ('PCFundationBundle:Admin:credito_fin.html.twig', array('credits' => $credits));
     }
     
+    /**
+     * permite cambiar el status de una solicitud de credito para desaprobarlo.
+     */ 
     public function cancelarCreditoAction($creditId)
     {
         $em = $this->getDoctrine()->getManager();
@@ -1211,14 +1263,128 @@ class AdminController extends Controller
         return $this->redirectToRoute('pc_administrator_creditos');
         
     }
-
-    public function adopcioninfoAction()
+    
+    /**
+     * muestra la información asociada a una mascota de la fundación
+     */ 
+    public function adopcioninfoAction($petId)
     {
-        return $this->render('PCFundationBundle:Admin:masc_adopcion_info.html.twig');
+        $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->find($petId);
+        return $this->render('PCFundationBundle:Admin:masc_adopcion_info.html.twig', array('pet' => $pet));
     }
        
-    public function adopcioneditAction()
-    {
-        return $this->render('PCFundationBundle:Admin:masc_adopcion_edit.html.twig');
+    /**
+     * muestra el formulario para editar los datos de la mascota.
+     * 
+     */ 
+    public function adopcioneditAction($petId)
+    {   
+        $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->find($petId);
+        $form = $this->createEditPetform($pet);
+        return $this->render('PCFundationBundle:Admin:masc_adopcion_edit.html.twig', array('form'=>$form->createview())); 
     }
+    
+    /**
+    * crea el formularo para ingresar los datos de la mascota a editar.
+    */
+    private function createEditPetForm(Pet $entity)
+    {
+        $form = $this->createForm(PetType::class, $entity, array( 'action' => $this->generateUrl('pc_admin_adopt_pet_update', array('petId' => $entity->getId())), 'method'=>'POST'));
+        return $form;
+    }
+    
+    /**
+     * procesa los datos enviados en el formulario de edición y persiste los datos nuevos.
+     */ 
+    public function adopcionUpdateAction(Request $request, $petId)
+    {
+        $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->find($petId);
+        $petSpecie = $pet->getSpecies();
+        $petStatus = $pet->getStatus();
+        $form = $this->createEditPetform($pet);
+        $form->handleRequest($request);
+        if($form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $pet->setSpecies($petSpecie);
+            $pet->setStatus($petStatus);
+            $em->flush();
+            
+            return $this->redirectToRoute('pc_admin_adopt_pet_info', array('petId' => $pet->getId()));
+            
+        }
+        return $this->render('PCFundationBundle:Admin:masc_adopcion_edit.html.twig', array('form'=>$form->createview())); 
+    }
+    
+    
+    /**
+     * muestra la ventana con el formulario para el registro de los destinos de donativos
+     * y a su vez la lista de registro que se lleva hasta el momento.
+     */ 
+    public function destinAction()
+    {
+        $destination = new Destination();
+        $form = $this->createDestinationForm($destination);
+        $destinations = $this->getDoctrine()->getRepository('PCFundationBundle:Destination')->findAll();
+        $monetaryFounds = $this->revisarFondos(1);
+        $foodFounds = $this->revisarFondos(2);
+        
+        return $this->render('PCFundationBundle:Admin:destino_donativo.html.twig', array('form' => $form->createView(), 'destinations' => $destinations, 'monetaryFounds' => $monetaryFounds, 'foodFounds' => $foodFounds));
+    }
+
+    /**
+     * crea el formulario para la adición de destinos de donativos.
+     */ 
+    private function createDestinationForm(Destination $entity)
+    {
+        $form = $this->createForm(DestinationType::class, $entity, array( 'action' => $this->generateUrl('pc_admin_donativ_destinate_register'), 'method'=>'POST'));
+        return $form;
+    }
+    
+    /**
+     * registra el destino de los donativos previa validación de que se disponga de ellos.
+     */ 
+    public function addDestineAction(Request $request)
+    {
+        $destination = new Destination();
+        $form = $this->createDestinationForm($destination);
+        $form->handleRequest($request);
+        
+        if($form->isValid())
+        {
+            if($form->get('type')->getData() == "MONETARY")
+            {
+                if( ($this->revisarFondos(1)-$form->get('amount')->getData())>=0 )
+                {
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($destination);
+                    $em->flush();
+                    return $this->redirectToRoute('pc_admin_donativ_destinate');
+                }
+                else
+                {
+                    echo '<script language="javascript">alert("no se cuentan con fondos monetarios suficientes para registrar el destino.");</script>'; 
+                    return $this->redirectToRoute('pc_admin_donativ_destinate');
+                }
+                
+            }
+            else if($form->get('type')->getData() == "FOOD")
+            {
+                if(($this->revisarFondos(2)-$form->get('amount')->getData())>=0)
+                {
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($destination);
+                    $em->flush();
+                    return $this->redirectToRoute('pc_admin_donativ_destinate');
+                }
+                else
+                {
+                    echo '<script language="javascript">alert("no se cuentan los alimentos suficientes para registrar el destino.");</script>'; 
+                    return $this->redirectToRoute('pc_admin_donativ_destinate');
+                }
+            }
+        }
+        return $this->redirectToRoute('pc_admin_donativ_destinate');
+    }
+    
 }

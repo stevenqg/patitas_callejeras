@@ -53,41 +53,18 @@
 							<div  class="logaler alert-danger" id="id-error"></div>
 						</div>
 					</div>
-
-					<div class="row">
-					<br>
-					
-						<div class="col-xs-3 col-md-2 textjusti">
-							<label class="marginlabel"  for="Nombre del adoptante">Contraseña: </label>
-						</div>
-						<div class="col-xs-9 col-md-4">
+						<hr>
+				
 							{{ form_row(form.password.first, {'attr' : {'class' : 'form-control'} }) }}
 							<div  class="logaler alert-danger" id="age-error"></div>
-						</div>
-					</div>
-					<div class="row">
-					<br>
-					
-						<div class="col-xs-3 col-md-2 textjusti">
-							<label class="marginlabel"  for="Nombre del adoptante">Repetir contraseña: </label>
-						</div>
-						<div class="col-xs-9 col-md-4">
+								
+								
 							{{ form_row(form.password.second, {'attr' : {'class' : 'form-control'} } ) }}
 							<div  class="logaler alert-danger" id="age-error"></div>
-						</div>
-					</div>
-					<!-- 
-					<div class="textjusti col-xs-3 col-md-2">
-							<label class="marginlabel" for="Edad del adoptante">Confirmar contraseña:</label>
-						</div>
-						<div class="col-xs-9 col-md-4">
-							<div  class="logaler alert-danger" id="id-error"></div>
-							<br>
-						</div>
-					<hr>
-					-->
+								<br>	
 					{{ form_widget(form.save, {'label' : 'registrar', 'attr' : {'class' : 'btn btn-success'} }) }}
 				</div>
+				
 				{{ form_end(form) }}
 				<button class="btn btn-danger" onclick="window.close();">regresar al menú principal <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </button>
 			</div>	

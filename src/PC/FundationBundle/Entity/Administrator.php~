@@ -31,6 +31,10 @@ class Administrator implements UserInterface
      */ 
     protected $events;
     
+    /**
+     * @ORM\OneToMany(targetEntity="Destination", mappedBy="administrator")
+     */ 
+    protected $destinations;
     
     /**
      * @var int
@@ -81,6 +85,7 @@ class Administrator implements UserInterface
         $this->donatives = new ArrayCollection();
         $this->meetings = new ArrayCollection();
         $this->events = new ArrayCollection();
+        $this->destinations = new ArrayCollection();
     }
 
     /**
@@ -340,4 +345,38 @@ class Administrator implements UserInterface
         
     }
     
+
+    /**
+     * Add destination
+     *
+     * @param \PC\FundationBundle\Entity\Destination $destination
+     *
+     * @return Administrator
+     */
+    public function addDestination(\PC\FundationBundle\Entity\Destination $destination)
+    {
+        $this->destinations[] = $destination;
+
+        return $this;
+    }
+
+    /**
+     * Remove destination
+     *
+     * @param \PC\FundationBundle\Entity\Destination $destination
+     */
+    public function removeDestination(\PC\FundationBundle\Entity\Destination $destination)
+    {
+        $this->destinations->removeElement($destination);
+    }
+
+    /**
+     * Get destinations
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDestinations()
+    {
+        return $this->destinations;
+    }
 }

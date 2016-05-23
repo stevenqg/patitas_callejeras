@@ -1,0 +1,103 @@
+{% extends "PCFundationBundle:Admin:admin.html.twig"%}
+{% block capa %}
+
+		<h1 class="titulosection">Destino de donativos</h1>
+	<div class="sectionstile">
+	   <div class="row">
+	   {{ form_start(form, {'attr' : {'role' : 'form'} }) }}
+      <div class="col-md-6">
+        <div class="row">
+          
+          <div class="col-md-3"><label>Tipo:</label></div>
+          <div class="col-md-9"> 
+            {{form_widget(form.type, {'attr' : {'class' : 'form-control', 'placeholder' : 'que tipo de donativo es?' } })}}
+          </div>
+          </div>
+          <br>
+          <div class="row">
+          <div class="col-md-3 text-left"><label>Fecha:</label></div>
+          <div class="col-md-9">
+            {{ form_widget(form.authorizedAt) }}<br>
+          </div>
+          </div><br>
+           <div class="row">
+          <div class="col-md-3"><label>Descripción:</label></div>
+          <div class="col-md-9">
+            {{form_widget(form.description, {'attr' : {'class' : 'form-control', 'placeholder' : 'descripción del destino del donativo.' } })}}
+          </div> 
+         </div>
+      </div> 
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-3"><label>Monto:</label></div>
+          <div class="col-md-9"> 
+            {{form_widget(form.amount, {'attr' : {'class' : 'form-control', 'placeholder' : 'si es dinero el monto y si es de otro tipo la cantidad recibida.' } })}}
+          </div>
+          </div>
+          <br>
+          <div class="row">
+          <div class="col-md-3"><label>Autorizado por:</label></div>
+          <div class="col-md-9">
+            {{form_widget(form.authorizedBy, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombre de quien autoriza(ó)' } })}}
+            </div> 
+          </div>
+          <br>
+      {{ form_widget(form.save, {'label' : 'Agregar destino', 'attr' : {'class' : 'btn btn-success'} }) }}
+      </div>
+    {{ form_end(form) }}
+     </div> 
+     <hr>
+     
+     <table class="tabl table-striped">
+       <caption><h3 class=" margnone titulosection">Cuantia de activos Actuales</h3></caption>
+       <thead>
+         <tr>
+           <th class="tdd cuantostyle">Monetarios:</th>
+           <th class="valorstyle">${{monetaryFounds}}.00</th>
+           <th class="tdd cuantostyle">Alimentos:</th>
+           <th class="valorstyle">{{foodFounds}}&nbsp;Kg.</th>
+         </tr>
+       </thead>
+     </table> <br>
+     <table class="tabl table-striped">
+        <thead>
+            <tr class="podingtitle1 ">
+              <th class="tdd">Tipo:</th>
+              <th class="tdd">Monto:</th>
+              <th class="tdd">Fecha:</th>
+              <th class="tdd">Autorizado por</th>
+              <th class="tdd">descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for destination in destinations %}
+            <tr>
+              <td>
+                {% if destination.type == "MONETARY" %}
+                monetario
+                {% elseif destination.type == "FOOD" %}
+                alimento
+                {% elseif destination.type == "OTHERS" %}
+                otros
+                {% endif %}
+              </td>
+              <td>
+                {% if destination.type == "MONETARY" %}
+                ${{ destination.amount }}
+                {% elseif destination.type == "FOOD" %}
+                {{ destination.amount }}&nbsp;Kg.
+                {% elseif destination.type == "OTHERS" %}
+                {{ destination.amount }}
+                {% endif %}
+              </td>
+              <td>{{ destination.authorizedAt | date('m-d-Y')  }}</td>
+              <td>{{ destination.authorizedBy }}</td>
+              <td>{{ destination.description }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+         </table> 
+		</div>	
+	
+
+{% endblock %}

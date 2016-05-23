@@ -16,7 +16,6 @@
                   <th>#</th>
                   <th>Zona</th>
                   <th>Fecha de realización</th>
-                  <th>Colaboradores</th>
                   <th class="tdxs">ver a fondo</th>
                 </tr>
               </thead>
@@ -26,17 +25,7 @@
                           <td>{{ meeting.id }}</td>
                           <td>{{ meeting.address }}</td>
                           <td>{{ meeting.createdAt | date('d-m-Y h:i')  }}</td>
-                          <td>
-                            {% if meeting.meetingType == 'CENSUS'%}
-                              
-                              <strong>censo</strong>
-                              
-                              {% elseif meeting.meetingType == 'STERILIZATION'%}
-                              
-                              <strong>esterilización</strong>
-                              
-                            {%endif%}
-                          </td>
+                  
                           <td><a href="{{ path('pc_admin_jornada_censo_mas', {'meetingId' : meeting.id })}}" id="censomas">&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></a></td>
                       </tr>
                   {% endfor %}              

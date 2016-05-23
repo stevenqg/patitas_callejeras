@@ -102,17 +102,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         if (0 === strpos($pathinfo, '/service')) {
             // pc_fundation_webservice
-            if (0 === strpos($pathinfo, '/service/events') && preg_match('#^/service/events/(?P<data>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::serviceAction',));
+            if ($pathinfo === '/service/events') {
+                return array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::serviceAction',  '_route' => 'pc_fundation_webservice',);
             }
 
             // pc_fundation_webservice_2
-            if (preg_match('#^/service/(?P<nomUs>[^/]++)/(?P<apllUs>[^/]++)/(?P<dirUs>[^/]++)/(?P<telUs>[^/]++)/(?P<emailUs>[^/]++)/(?P<passUs>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/service/user/add') && preg_match('#^/service/user/add/(?P<nomUs>[^/]++)/(?P<apllUs>[^/]++)/(?P<dirUs>[^/]++)/(?P<telUs>[^/]++)/(?P<emailUs>[^/]++)/(?P<passUs>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice_2')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::registerAction',));
             }
 
             // pc_fundation_webservice_3
-            if (preg_match('#^/service/(?P<nomM>[^/]++)/(?P<espM>[^/]++)/(?P<genM>[^/]++)/(?P<razM>[^/]++)/(?P<edaM>[^/]++)/(?P<colM>[^/]++)/(?P<code>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/service/pet/add') && preg_match('#^/service/pet/add/(?P<nomM>[^/]++)/(?P<espM>[^/]++)/(?P<genM>[^/]++)/(?P<razM>[^/]++)/(?P<edaM>[^/]++)/(?P<colM>[^/]++)/(?P<code>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice_3')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::registerPetAction',));
             }
 
@@ -122,8 +122,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             // pc_fundation_webservice_5
-            if (0 === strpos($pathinfo, '/service/report/add') && preg_match('#^/service/report/add/(?P<lat>[^/]++)/(?P<lon>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/service/report/add') && preg_match('#^/service/report/add/(?P<pet>[^/]++)/(?P<user>[^/]++)/(?P<longitude>[^/]++)/(?P<latitude>[^/]++)/(?P<status>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice_5')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::addReportAction',));
+            }
+
+            // pc_fundation_webservice_6
+            if (0 === strpos($pathinfo, '/service/viewpets') && preg_match('#^/service/viewpets/(?P<user>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice_6')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::viewPetsAction',));
             }
 
         }
@@ -389,14 +394,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 }
 
                 // pc_admin_adopt_pet_info
-                if ($pathinfo === '/admin/adopcion/info') {
-                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::adopcioninfoAction',  '_route' => 'pc_admin_adopt_pet_info',);
+                if (0 === strpos($pathinfo, '/admin/adopcion/info') && preg_match('#^/admin/adopcion/info/(?P<petId>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_adopt_pet_info')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::adopcioninfoAction',));
                 }
 
                 // pc_admin_adopt_pet_edit
-                if ($pathinfo === '/admin/adopcion/edit') {
-                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::adopcioneditAction',  '_route' => 'pc_admin_adopt_pet_edit',);
+                if (0 === strpos($pathinfo, '/admin/adopcion/edit') && preg_match('#^/admin/adopcion/edit/(?P<petId>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_adopt_pet_edit')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::adopcioneditAction',));
                 }
+
+                // pc_admin_adopt_pet_update
+                if (0 === strpos($pathinfo, '/admin/adopcion/update') && preg_match('#^/admin/adopcion/update/(?P<petId>[^/]++)$#s', $pathinfo, $matches)) {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_pc_admin_adopt_pet_update;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_admin_adopt_pet_update')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::adopcionUpdateAction',));
+                }
+                not_pc_admin_adopt_pet_update:
 
             }
 
@@ -452,6 +468,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // pc_admin_adoptada_pet
             if ($pathinfo === '/admin/adoptada/pet') {
                 return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::mascotadoptadaAction',  '_route' => 'pc_admin_adoptada_pet',);
+            }
+
+            if (0 === strpos($pathinfo, '/admin/destinate')) {
+                // pc_admin_donativ_destinate
+                if ($pathinfo === '/admin/destinate') {
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::destinAction',  '_route' => 'pc_admin_donativ_destinate',);
+                }
+
+                // pc_admin_donativ_destinate_register
+                if ($pathinfo === '/admin/destinate/register') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_pc_admin_donativ_destinate_register;
+                    }
+
+                    return array (  '_controller' => 'PC\\FundationBundle\\Controller\\AdminController::addDestineAction',  '_route' => 'pc_admin_donativ_destinate_register',);
+                }
+                not_pc_admin_donativ_destinate_register:
+
             }
 
             if (0 === strpos($pathinfo, '/admin/recepcion')) {

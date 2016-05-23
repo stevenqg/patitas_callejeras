@@ -19,6 +19,11 @@ class Appuser
     protected $apppets;
     
     /**
+     * @ORM\OneToMany(targetEntity="Report", mappedBy="appuser")
+     */ 
+    protected $reports;
+    
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -72,6 +77,7 @@ class Appuser
     public function __construct()
     {
         $this->apppets = new ArrayCollection();
+        $this->reports = new ArrayCollection();
     }
 
     /**
@@ -260,5 +266,39 @@ class Appuser
     public function getApppets()
     {
         return $this->apppets;
+    }
+
+    /**
+     * Add report
+     *
+     * @param \PC\FundationBundle\Entity\Report $report
+     *
+     * @return Appuser
+     */
+    public function addReport(\PC\FundationBundle\Entity\Report $report)
+    {
+        $this->reports[] = $report;
+
+        return $this;
+    }
+
+    /**
+     * Remove report
+     *
+     * @param \PC\FundationBundle\Entity\Report $report
+     */
+    public function removeReport(\PC\FundationBundle\Entity\Report $report)
+    {
+        $this->reports->removeElement($report);
+    }
+
+    /**
+     * Get reports
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getReports()
+    {
+        return $this->reports;
     }
 }

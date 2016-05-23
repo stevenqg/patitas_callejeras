@@ -2,25 +2,35 @@
 #--- web service    -------------------------------------------
 #--------------------------------------------------------------
 
+#--1
 pc_fundation_webservice:
-    path:     /service/events/{data}
+    path:     /service/events
     defaults: { _controller: PCFundationBundle:Service:service }
-    
+
+#--8
 pc_fundation_webservice_2:
-    path:     /service/{nomUs}/{apllUs}/{dirUs}/{telUs}/{emailUs}/{passUs}
+    path:     /service/user/add/{nomUs}/{apllUs}/{dirUs}/{telUs}/{emailUs}/{passUs}
     defaults: { _controller: PCFundationBundle:Service:register }
-    
+
+#--9    
 pc_fundation_webservice_3:
-    path:     /service/{nomM}/{espM}/{genM}/{razM}/{edaM}/{colM}/{code}
+    path:     /service/pet/add/{nomM}/{espM}/{genM}/{razM}/{edaM}/{colM}/{code}
     defaults: { _controller: PCFundationBundle:Service:registerPet }
-    
+
+#--3
 pc_fundation_webservice_4:
     path:     /service/login/{emailUs}/{passUs}
     defaults: { _controller: PCFundationBundle:Service:login }
 
+#--7
 pc_fundation_webservice_5:
-    path:     /service/report/add/{lat}/{lon}
+    path:     /service/report/add/{pet}/{user}/{longitude}/{latitude}/{status}
     defaults: { _controller: PCFundationBundle:Service:addReport }
+
+#--2
+pc_fundation_webservice_6:
+    path:     /service/viewpets/{user}
+    defaults: { _controller: PCFundationBundle:Service:viewPets }
 
 #--------------------------------------------------------------
 #--- rutas de navegación     ----------------------------------
@@ -191,13 +201,18 @@ pc_admin_adopt_pet:
     defaults: { _controller: PCFundationBundle:Admin:adopcionview }
 
 pc_admin_adopt_pet_info:
-    path:     /admin/adopcion/info
+    path:     /admin/adopcion/info/{petId}
     defaults: { _controller: PCFundationBundle:Admin:adopcioninfo }
     
 pc_admin_adopt_pet_edit:
-    path:     /admin/adopcion/edit
+    path:     /admin/adopcion/edit/{petId}
     defaults: { _controller: PCFundationBundle:Admin:adopcionedit }
-
+    
+pc_admin_adopt_pet_update:
+    path:     /admin/adopcion/update/{petId}
+    defaults: { _controller: PCFundationBundle:Admin:adopcionUpdate }
+    methods:  POST
+    
 pc_administrator_pet_add:
     path:     /admin/pet/add
     defaults: { _controller: PCFundationBundle:Admin:addpet }
@@ -238,6 +253,15 @@ pc_admin_adoptada_pet:
 #--------------------------------------------------------------
 #--- rutas del administrador para Donativos -------------------
 #--------------------------------------------------------------
+
+pc_admin_donativ_destinate:
+    path: /admin/destinate
+    defaults: { _controller: PCFundationBundle:Admin:destin }
+
+pc_admin_donativ_destinate_register:
+    path:     /admin/destinate/register
+    defaults: { _controller: PCFundationBundle:Admin:addDestine }
+    methods:  POST
 
 pc_admin_donativ_recepcion:
     path: /admin/recepcion

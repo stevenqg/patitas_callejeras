@@ -1,51 +1,76 @@
 {% extends "PCFundationBundle:Admin:admin.html.twig"%}
 {% block capa %}
 
-            <h1 class="coloralert"><a href="{{ path('pc_admin_adopt_pet')}}" type="button" class="pull-left buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a> &nbsp; editar Información </h1>
-			<div class="sectionstile">
-				<div class="row">
-					<div class="col-md-3">
-					<div><img class="mion img-responsive img-thumbnail" alt="" name="imgmascota"></div>
-					</div>
-					<div class="col-md-9">
-						<div class="row">
-			<div class="textjusti col-md-1"><label class="marginlabel">Nombre:</label></div>	
-			<div class="col-md-5"><input type="text" class="form-control" name="Nomascota" ></div>
-			<div class="textjusti col-md-1"><label class="marginlabel">Edad:</label></div>	
-			<div class="col-md-5"><input type="text" class="form-control" name="EDmascota" ></div>
+<h1 class="coloralert"><a href="{{ path('pc_admin_adopt_pet')}}" type="button" class="pull-left buttonborder btn btn-default"> <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;regresar</a> &nbsp; editar Información </h1>
+<div class="sectionstile">
+	<div class="row">
+		{{ form_start(form, {'attr' : {'role' : 'form'} }) }}
+		<div class="col-md-3">
+			<div>
+				<img class="mion img-responsive img-thumbnail" alt="" name="imgmascota">
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="row">
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Nombre:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.name, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombre de la mascota' } })}}
+				</div>
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Edad:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.age, {'attr' : {'class' : 'form-control', 'placeholder' : 'edad de la mascota' } })}}
+				</div>
 			</div><br><!-- div close row form -->
 			<div class="row">
-			<div class="textjusti col-md-1"><label class="marginlabel">Color:</label></div>	
-			<div class="col-md-5"><input type="text" class="form-control" name="Colmascota" ></div>
-			<div class="textjusti col-md-2"><label class="marginlabel">Sexo:</label></div>	
-			<div class="col-md-4"><select class="form-control" >
-						  <option>Macho</option>
-						  <option>hembra</option>
-						</select>
-					</div>
-			</div><br><!-- div close row form -->	
-			<div class="row">
-			<div class="textjusti col-md-1"><label class="marginlabel">Rasgo:</label></div>	
-			<div class="col-md-5"><input type="text" name="Colmascota" class="form-control" ></div>
-			<div class="textjusti col-md-2"><label class="marginlabel">Vacunado:</label></div>	
-			<div class="col-md-4"><select class="form-control" >
-						  <option>Si</option>
-						  <option>No</option>
-						</select>
-					</div>
-			</div><br><!-- div close row form -->	
-			<div class="row">
-			<div class="textjusti col-md-2"><label class="marginlabel">Esterilizado:</label></div>	
-			<div class="col-md-4"><select class="form-control" >
-						  <option>Si</option>
-						  <option>No</option>
-						</select>
-					</div>
-					<div class="col-md-2"></div>
-					<div class="col-md-4"><button type="button" class="buttonborder btn btn-primary">Guardar cambios &nbsp;<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></div>
-			</div><br>
-					</div>
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Color:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.colour, {'attr' : {'class' : 'form-control', 'placeholder' : 'color de la mascota' } })}}
 				</div>
-			
-		</div><!--div sectionsitile-->
+				<div class="textjusti col-md-2">
+					<label class="marginlabel">Sexo:</label>
+				</div>	
+				<div class="col-md-4">
+					{{form_widget(form.gender, {'attr' : {'class' : 'form-control', 'placeholder' : '¿macho o hembra?' } })}}
+				</div>
+			</div><br><!-- div close row form -->	
+			<div class="row">
+				<div class="textjusti col-md-1">
+					<label class="marginlabel">Raza:</label>
+				</div>	
+				<div class="col-md-5">
+					{{form_widget(form.race, {'attr' : {'class' : 'form-control', 'placeholder' : 'a que raza pertenece?' } })}}
+				</div>
+				<div class="textjusti col-md-2">
+					<label class="marginlabel">Vacunado:</label>
+				</div>	
+				<div class="col-md-4">
+					{{form_widget(form.isVacunated, {'attr' : {'class' : 'check checkbox'} })}}
+				</div>
+			</div><br><!-- div close row form -->	
+			<div class="row">
+				<div class="textjusti col-md-2">
+					<label class="marginlabel">Esterilizado:</label>
+				</div>	
+				<div class="col-md-4">
+					{{form_widget(form.isSterilized, {'attr' : {'class' : 'check checkbox'} })}}
+				</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-4">
+					<div class="col-md-5" style="display: none;">
+					{{form_widget(form.species, {'attr' : {'class' : 'form-control', 'value' : 'ACTUAL', 'disabled' : 'disabled', 'style' : 'display: none;' } })}}
+				</div>
+					{{ form_widget(form.save, {'label' : 'Continuar', 'attr' : {'class' : 'btn btn-success'} }) }}
+				</div>
+			</div><br>
+		</div>
+		
+		{{ form_end(form)}}
+	</div>
+</div><!--div sectionsitile-->
 {% endblock %}

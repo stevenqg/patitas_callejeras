@@ -64,10 +64,10 @@ class Administrator extends \PC\FundationBundle\Entity\Administrator implements 
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', 'donatives', 'meetings', 'events', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'lastName', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'email', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'password'];
+            return ['__isInitialized__', 'donatives', 'meetings', 'events', 'destinations', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'lastName', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'email', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'password'];
         }
 
-        return ['__isInitialized__', 'donatives', 'meetings', 'events', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'lastName', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'email', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'password'];
+        return ['__isInitialized__', 'donatives', 'meetings', 'events', 'destinations', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'id', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'name', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'lastName', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'age', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'email', '' . "\0" . 'PC\\FundationBundle\\Entity\\Administrator' . "\0" . 'password'];
     }
 
     /**
@@ -439,6 +439,39 @@ class Administrator extends \PC\FundationBundle\Entity\Administrator implements 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'eraseCredentials', []);
 
         return parent::eraseCredentials();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addDestination(\PC\FundationBundle\Entity\Destination $destination)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addDestination', [$destination]);
+
+        return parent::addDestination($destination);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeDestination(\PC\FundationBundle\Entity\Destination $destination)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeDestination', [$destination]);
+
+        return parent::removeDestination($destination);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getDestinations()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDestinations', []);
+
+        return parent::getDestinations();
     }
 
 }

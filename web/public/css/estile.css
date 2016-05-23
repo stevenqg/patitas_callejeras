@@ -96,6 +96,15 @@ border: 1px solid #ddd;
     height: 410px;
     overflow-x: hidden;
 }
+.cuantostyle{
+	border: 1px solid #337ab7;
+    color: #fff;
+    background: #2989d8
+}
+.valorstyle{
+border: 1px solid #2989d8;
+    color: #298;
+}
 
 .notfloat{float: none;}
 

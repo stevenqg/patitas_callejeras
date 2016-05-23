@@ -21,20 +21,20 @@ class __TwigTemplate_c0b01ead418d05f74af2768f9afc97ac2c77e928acf5fe5f4d60e13d207
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8ecdab1b19ed67809b83d827a7100ee9f1cdc450a83fac99251b6804da4d5640 = $this->env->getExtension("native_profiler");
-        $__internal_8ecdab1b19ed67809b83d827a7100ee9f1cdc450a83fac99251b6804da4d5640->enter($__internal_8ecdab1b19ed67809b83d827a7100ee9f1cdc450a83fac99251b6804da4d5640_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:nuevocenso.html.twig"));
+        $__internal_534a0327712faa6484d4e1e2e1426b91eafd1167e66cdf3cfdb2d0b30a507e8d = $this->env->getExtension("native_profiler");
+        $__internal_534a0327712faa6484d4e1e2e1426b91eafd1167e66cdf3cfdb2d0b30a507e8d->enter($__internal_534a0327712faa6484d4e1e2e1426b91eafd1167e66cdf3cfdb2d0b30a507e8d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:nuevocenso.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_8ecdab1b19ed67809b83d827a7100ee9f1cdc450a83fac99251b6804da4d5640->leave($__internal_8ecdab1b19ed67809b83d827a7100ee9f1cdc450a83fac99251b6804da4d5640_prof);
+        $__internal_534a0327712faa6484d4e1e2e1426b91eafd1167e66cdf3cfdb2d0b30a507e8d->leave($__internal_534a0327712faa6484d4e1e2e1426b91eafd1167e66cdf3cfdb2d0b30a507e8d_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_381cd86787bd9c059c4f8a2e74172bdb7ef3b718635737d31ee821c260ffd44d = $this->env->getExtension("native_profiler");
-        $__internal_381cd86787bd9c059c4f8a2e74172bdb7ef3b718635737d31ee821c260ffd44d->enter($__internal_381cd86787bd9c059c4f8a2e74172bdb7ef3b718635737d31ee821c260ffd44d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_afaf9949cd8d31b8718b60f800588da73b598f148b88305bad3d44752a025cbc = $this->env->getExtension("native_profiler");
+        $__internal_afaf9949cd8d31b8718b60f800588da73b598f148b88305bad3d44752a025cbc->enter($__internal_afaf9949cd8d31b8718b60f800588da73b598f148b88305bad3d44752a025cbc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "
@@ -69,14 +69,14 @@ class __TwigTemplate_c0b01ead418d05f74af2768f9afc97ac2c77e928acf5fe5f4d60e13d207
         echo "
 \t\t\t\t</div>
 \t\t\t</div>
-\t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"col-xs-3 col-md-2 textjusti\">
-\t\t\t\t\t<label for=\"Fecha\"><h5>tipo de jornada:</h5></label>
+\t\t\t<div class=\"row\" style=\"display: none;\">
+\t\t\t\t<div class=\"col-xs-3 col-md-2 textjusti\" style=\"display: none;\">
+\t\t\t\t\t<label for=\"Fecha\" style=\"display: none;\"><h5 style=\"display: none;\">tipo de jornada:</h5></label>
 \t\t\t\t</div>
-\t\t\t\t<div class=\"col-xs-9 col-md-4\">
+\t\t\t\t<div class=\"col-xs-9 col-md-4\" style=\"display: none;\">
 \t\t\t\t ";
         // line 31
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "meetingType", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "tipo de jornada")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "meetingType", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "tipo de jornada", "value" => "CENSUS", "style" => "display: none;")));
         echo "
 \t\t\t\t</div>
 \t\t\t\t</div><hr>
@@ -96,7 +96,7 @@ class __TwigTemplate_c0b01ead418d05f74af2768f9afc97ac2c77e928acf5fe5f4d60e13d207
 \t
 ";
         
-        $__internal_381cd86787bd9c059c4f8a2e74172bdb7ef3b718635737d31ee821c260ffd44d->leave($__internal_381cd86787bd9c059c4f8a2e74172bdb7ef3b718635737d31ee821c260ffd44d_prof);
+        $__internal_afaf9949cd8d31b8718b60f800588da73b598f148b88305bad3d44752a025cbc->leave($__internal_afaf9949cd8d31b8718b60f800588da73b598f148b88305bad3d44752a025cbc_prof);
 
     }
 
@@ -140,12 +140,12 @@ class __TwigTemplate_c0b01ead418d05f74af2768f9afc97ac2c77e928acf5fe5f4d60e13d207
 /* 				 {{form_widget(form.createdAt, {'attr': {'id': 'fecha1' } })}}*/
 /* 				</div>*/
 /* 			</div>*/
-/* 			<div class="row">*/
-/* 				<div class="col-xs-3 col-md-2 textjusti">*/
-/* 					<label for="Fecha"><h5>tipo de jornada:</h5></label>*/
+/* 			<div class="row" style="display: none;">*/
+/* 				<div class="col-xs-3 col-md-2 textjusti" style="display: none;">*/
+/* 					<label for="Fecha" style="display: none;"><h5 style="display: none;">tipo de jornada:</h5></label>*/
 /* 				</div>*/
-/* 				<div class="col-xs-9 col-md-4">*/
-/* 				 {{form_widget(form.meetingType, {'attr' : {'class' : 'form-control', 'placeholder' : 'tipo de jornada' } })}}*/
+/* 				<div class="col-xs-9 col-md-4" style="display: none;">*/
+/* 				 {{form_widget(form.meetingType, {'attr' : {'class' : 'form-control', 'placeholder' : 'tipo de jornada', 'value' : 'CENSUS', "style" : "display: none;" } })}}*/
 /* 				</div>*/
 /* 				</div><hr>*/
 /* 				*/

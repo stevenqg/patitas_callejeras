@@ -3,6 +3,7 @@
 namespace PC\FundationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Apppet
@@ -17,6 +18,11 @@ class Apppet
      * @ORM\JoinColumn(name="appuser_id", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $appuser; 
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Report", mappedBy="apppet")
+     */ 
+    protected $reports;
     
     /**
      * @var int
@@ -69,6 +75,10 @@ class Apppet
      */
     private $gender;
 
+    public function __construct()
+    {
+        $this->reports = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -222,5 +232,63 @@ class Apppet
     public function getGender()
     {
         return $this->gender;
+    }
+
+    /**
+     * Set appuser
+     *
+     * @param \PC\FundationBundle\Entity\Appuser $appuser
+     *
+     * @return Apppet
+     */
+    public function setAppuser(\PC\FundationBundle\Entity\Appuser $appuser = null)
+    {
+        $this->appuser = $appuser;
+
+        return $this;
+    }
+
+    /**
+     * Get appuser
+     *
+     * @return \PC\FundationBundle\Entity\Appuser
+     */
+    public function getAppuser()
+    {
+        return $this->appuser;
+    }
+
+    /**
+     * Add report
+     *
+     * @param \PC\FundationBundle\Entity\Report $report
+     *
+     * @return Apppet
+     */
+    public function addReport(\PC\FundationBundle\Entity\Report $report)
+    {
+        $this->reports[] = $report;
+
+        return $this;
+    }
+
+    /**
+     * Remove report
+     *
+     * @param \PC\FundationBundle\Entity\Report $report
+     */
+    public function removeReport(\PC\FundationBundle\Entity\Report $report)
+    {
+        $this->reports->removeElement($report);
+    }
+
+    /**
+     * Get reports
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getReports()
+    {
+        return $this->reports;
     }
 }
