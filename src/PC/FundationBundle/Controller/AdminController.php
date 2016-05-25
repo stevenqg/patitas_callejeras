@@ -46,7 +46,7 @@ class AdminController extends Controller
 {
     
     /**
-    * muestra los administradores registrados en la base de datos
+    * muestra la interfaz principal del adoministrador
     */
     public function indexAction(Request $request)
     {
@@ -63,7 +63,7 @@ class AdminController extends Controller
     }
     
     /**
-    *permite ver la ventana login para el adminsitrador, realizar el login y crear la sesion.
+    *permite ver la ventana login para el administrador, realizar el login y crear la sesión.
     */
     public function loginAction(Request $request)
     {
@@ -99,6 +99,7 @@ class AdminController extends Controller
     
     /**
      * permite recuperar el password
+     * (no está en uso)
      */ 
     private function passwordRecovery($email)
     {
@@ -179,7 +180,7 @@ class AdminController extends Controller
     }
     
     /**
-    * crea el formulario para registro de admin
+    * crea el formulario para editar el admin
     */
     private function createAdminEditForm(Administrator $admin)
     {
@@ -187,7 +188,9 @@ class AdminController extends Controller
         return $form;
     }
     
-    
+    /**
+     * actualiza los datos modificados del administrador
+     */ 
     public function updateAction(Request $request, $id)
     {
         $admin = $this->getDoctrine()->getRepository('PCFundationBundle:Administrator')->find($id);
@@ -233,7 +236,7 @@ class AdminController extends Controller
     /**
     * registra la mascota en la base de datos
     */
-    public function createpetAction(request $request)
+    public function createpetAction(Request $request)
     {
         $pet = new Pet();
         $form = $this->createPetForm($pet);
@@ -256,9 +259,9 @@ class AdminController extends Controller
     }
     
     /**
-    * carga la imagen de la mascota
+    * carga la imagen de la mascota en el servidor y persiste su ruta en la base de datos, asociándola a la mascota.
     */
-    public function uploadAction(request $request)
+    public function uploadAction(Request $request)
     {
         if($request->getMethod()=='POST')
         {
@@ -308,7 +311,7 @@ class AdminController extends Controller
     }
     
     /**
-    * crea el formularo para ingresar los datos de la jornada de censo
+    * crea el formulario para ingresar los datos de la jornada de censo
     */
     private function createMeetingForm(Meeting $entity)
     {
@@ -359,7 +362,7 @@ class AdminController extends Controller
     }
     
     /**
-     * muestra las solicitudes de adopción que han sido aprovadas
+     * muestra las solicitudes de adopción que han sido aprobadas
      */ 
     public function solicitudesAction()
     {
@@ -371,6 +374,9 @@ class AdminController extends Controller
     }
     
     
+    /**
+     * muestra la información detallada de la solicitud de adopción y la posibilidad de aprobarla, aplazarla o denegarla.
+     */ 
     public function solicituddateAction($userId)
     {
         $user = $this->getDoctrine()->getRepository('PCFundationBundle:User')->find($userId);
@@ -494,7 +500,7 @@ class AdminController extends Controller
     }
     
     /**
-     * permite crear el formulario para registrar tanto la mascota como el usuario realcionados en la jornada de esterilización 
+     * permite crear el formulario para registrar tanto la mascota como el usuario relacionados en la jornada de esterilización 
      */
     public function crearformularioCenso($defaultData)
     {
@@ -675,7 +681,9 @@ class AdminController extends Controller
         return $form;
     }
     
-    
+    /**
+     * persiste la información editada del evento en la base de datos.
+     */ 
     public function eventUpdateAction(Request $request, $eventId)
     {
         $event = $this->getDoctrine()->getRepository('PCFundationBundle:Event')->find($eventId);
@@ -861,9 +869,12 @@ class AdminController extends Controller
          return $this->render('PCFundationBundle:Admin:esteriliza_add.html.twig', array('form'=>$form->createview(), 'meeting' => $meeting));
     }
     
+    
+    /**
+     * muestra las jornadas de esterilización activas por cada jornada de censo.
+     */ 
     public function jornadaesterilizaAction()
     {
-        
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery('SELECT DISTINCT m FROM PCFundationBundle:Sterilization s JOIN PCFundationBundle:Meeting m WHERE s.meeting = m.id');
         $results = $query->getResult();
@@ -873,6 +884,9 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:jornada_esteriliza.html.twig', array('meetings' => $meetings));
     }
     
+    /**
+     * Devuelve un array con la jornada, el costo y la fecha
+     */ 
     private function listarEsterilizaciones($meetings)
     {
         $dataList = array();
@@ -896,6 +910,10 @@ class AdminController extends Controller
         return $dataList;
     }
     
+    /**
+     * muestra la información detallada de cada jornada de esterilización y una lista con las 
+     * esterilizaciones a realizar.
+     */ 
     public function esterilizacionAction($meetingId, $controlAt, $amount)
     {
         $meeting = $this->getDoctrine()->getRepository("PCFundationBundle:Meeting")->find($meetingId);
@@ -905,6 +923,9 @@ class AdminController extends Controller
     }
     
     
+    /**
+     * permite actualizar el estado de la esterilización, para controlar a cuales se les a realizado y a cuales no.
+     */ 
     public function esterilizacionUpdateAction($petId, $meetingId, $controlAt, $amount)
     {
         $em = $this->getDoctrine()->getManager();
@@ -924,6 +945,9 @@ class AdminController extends Controller
         }
     }
 
+    /**
+     * muestra las esterilizaciones por jornada, que fueron exitosas y que requieren control pos operatorio.
+     */ 
     public function controlAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -937,7 +961,9 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:cotrol.html.twig', array('meetings' => $meetings, 'sterilizations'=> $sterilizations, 'controls' => $controls));
     }
     
-    
+    /**
+     * muestra el formulario para la adición de un control pos operatorio.
+     */ 
     public function controladdAction($sterilizationId)
     {   
         $control = new Control();
@@ -946,14 +972,18 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:control_add.html.twig', array('form'=>$form->createview()));
     }
     
-    
+    /**
+     * crea el formulario para el control pos operatorio.
+     */ 
     private function createControlForm(Control $entity, $sterilizationId)
     {
         $form = $this->createForm(ControlType::class, $entity, array( 'action' => $this->generateUrl('pc_admininstrator_control_create', array('sterilizationId' => $sterilizationId)), 'method'=>'POST'));
         return $form;
     }
     
-    
+    /**
+     * persiste la información del nuevo control pos operatorio en la base de datos.
+     */ 
     public function createControlAction(Request $request, $sterilizationId)
     {
         $control = new Control();
@@ -974,12 +1004,18 @@ class AdminController extends Controller
         
     }
     
+    /**
+     * muestra la lista de donativos de los cuales dispone la fundación.
+     */ 
     public function donativosAction()
     {
         $donatives = $this->getDoctrine()->getRepository('PCFundationBundle:Donative')->findAll();
         return $this->render('PCFundationBundle:Admin:donativ_info.html.twig', array('donatives' => $donatives));
     }
      
+    /**
+     * muestra el formulario para la adición de donativos.
+     */ 
     public function donativoaddAction()
     {
         $donative = new Donative();
@@ -987,12 +1023,18 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:donativ_add.html.twig', array('form' => $form->createview()));
     }
     
+    /**
+     * crea el formulario para la adición de donativos.
+     */ 
     private function createDonativeForm(Donative $entity)
     {
         $form = $this->createForm(DonativeType::class, $entity, array( 'action' => $this->generateUrl('pc_admin_donativ_create'), 'method'=>'POST'));
         return $form;
     }
     
+    /**
+     * persiste la información del nuevo donativo en la base de datos.
+     */ 
     public function createDonativeAction(Request $request)
     {
         $session = $request->getSession();
@@ -1027,14 +1069,18 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:donativ_add.html.twig', array('form' => $form->createview()));
     }
     
-    
+    /**
+     * muestra los sitios de recepción actualmente creados.
+     */
     public function recepcionAction()
     {
         $donativeMeetings = $this->getDoctrine()->getRepository("PCFundationBundle:Event")->findByName('recepción de donativos'); 
         return $this->render('PCFundationBundle:Admin:recepcion.html.twig', array('donativeMeetings' => $donativeMeetings));
     }
     
-    
+    /**
+     * muestra el formulario para la adición de sitios de recepción.
+     */ 
     public function recepcionaddAction()
     {
         $event = new Event();
@@ -1042,6 +1088,9 @@ class AdminController extends Controller
         return $this->render('PCFundationBundle:Admin:recepcion_add.html.twig', array('form'=>$form->createView()));
     }
 
+    /**
+     * muestra el formulario para la adición de creditos de emergencia, previa validación de los fondos.
+     */ 
     public function creditoaddAction()
     {
         $fondos = $this->revisarFondos(0);
@@ -1097,7 +1146,7 @@ class AdminController extends Controller
         {   
             
             $fondos = $this->revisarFondos(0); 
-            if ($fondos >= $form->get('amount')->getdata()) 
+            if ($fondos <= $form->get('amount')->getdata()) 
             {
                 echo '<script language="javascript">alert("no se cuentan con fondos suficientes para realizar el crédito.");</script>'; 
                 return $this->render('PCFundationBundle:Admin:credito_add.html.twig', array('form'=>$form->createview()));
@@ -1202,9 +1251,8 @@ class AdminController extends Controller
                 $tq = $tq+intval($fondGast2['s']);
             }
             
-            
             $totalDisponible = $fq - $sq - $tq;
-            //die(print_r("total disponible:".$totalDisponible."--fondos recibidos:".$fq." - fondos gastados creditos:".$sq." - fondos gastados destinos:".$tq));
+
             return $totalDisponible;
             
         }
@@ -1236,13 +1284,18 @@ class AdminController extends Controller
         
     }
     
-    
+    /**
+     * muestra una lista con los creditos aprobados
+     */ 
     public function creditoinfoAction()
     {
         $credits = $this->getDoctrine()->getRepository('PCFundationBundle:Credit')->findByStatus('APPROVED');
         return $this->render ('PCFundationBundle:Admin:creditos.html.twig', array('credits' => $credits));
     }
     
+    /**
+     * muestra una lista con los creditos cancelados.
+     */ 
     public function creditofinAction()
     {
         $credits = $this->getDoctrine()->getRepository('PCFundationBundle:Credit')->findByStatus('DISAPPROVED');

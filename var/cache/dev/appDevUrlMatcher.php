@@ -131,6 +131,35 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice_6')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::viewPetsAction',));
             }
 
+            if (0 === strpos($pathinfo, '/service/report')) {
+                if (0 === strpos($pathinfo, '/service/reports')) {
+                    // pc_fundation_webservice_7
+                    if (rtrim($pathinfo, '/') === '/service/reports/closed') {
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($pathinfo.'/', 'pc_fundation_webservice_7');
+                        }
+
+                        return array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::viewClosedReportsAction',  '_route' => 'pc_fundation_webservice_7',);
+                    }
+
+                    // pc_fundation_webservice_8
+                    if (rtrim($pathinfo, '/') === '/service/reports/active') {
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($pathinfo.'/', 'pc_fundation_webservice_8');
+                        }
+
+                        return array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::viewActiveReportsAction',  '_route' => 'pc_fundation_webservice_8',);
+                    }
+
+                }
+
+                // pc_fundation_webservice_9
+                if (0 === strpos($pathinfo, '/service/report/close') && preg_match('#^/service/report/close/(?P<petId>[^/]++)/(?P<userId>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'pc_fundation_webservice_9')), array (  '_controller' => 'PC\\FundationBundle\\Controller\\ServiceController::closeReportAction',));
+                }
+
+            }
+
         }
 
         // pc_fundation_homepage

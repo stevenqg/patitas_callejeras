@@ -74,6 +74,13 @@ class Apppet
      * @ORM\Column(name="gender", type="string", columnDefinition="ENUM('MALE', 'FEMALE')", length=255)
      */
     private $gender;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="string", columnDefinition="ENUM('LOST', 'FOUND')", length=50)
+     */
+    private $status;
 
     public function __construct()
     {
@@ -232,6 +239,30 @@ class Apppet
     public function getGender()
     {
         return $this->gender;
+    }
+    
+    /**
+     * Set status
+     *
+     * @param string $status
+     *
+     * @return Apppet
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 
     /**

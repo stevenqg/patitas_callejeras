@@ -32,6 +32,21 @@ pc_fundation_webservice_6:
     path:     /service/viewpets/{user}
     defaults: { _controller: PCFundationBundle:Service:viewPets }
 
+#--1
+pc_fundation_webservice_7:
+    path:     /service/reports/closed/
+    defaults: { _controller: PCFundationBundle:Service:viewClosedReports }
+    
+#--1
+pc_fundation_webservice_8:
+    path:     /service/reports/active/
+    defaults: { _controller: PCFundationBundle:Service:viewActiveReports }
+
+#--1
+pc_fundation_webservice_9:
+    path:     /service/report/close/{petId}/{userId}
+    defaults: { _controller: PCFundationBundle:Service:closeReport }
+
 #--------------------------------------------------------------
 #--- rutas de navegación     ----------------------------------
 #--------------------------------------------------------------

@@ -21,20 +21,20 @@ class __TwigTemplate_bed87547c93c9610ca0c060cedb993e48766b139d05400481621239e2ab
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2098bb6eb81a07fe2f67bcd904791a0f3c7c01edf4aabd9756901e5761b8ba00 = $this->env->getExtension("native_profiler");
-        $__internal_2098bb6eb81a07fe2f67bcd904791a0f3c7c01edf4aabd9756901e5761b8ba00->enter($__internal_2098bb6eb81a07fe2f67bcd904791a0f3c7c01edf4aabd9756901e5761b8ba00_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:credito_add.html.twig"));
+        $__internal_b139ce712f38929720f1e5dff66f2a248d25868286c437fbf65bd12725fc8398 = $this->env->getExtension("native_profiler");
+        $__internal_b139ce712f38929720f1e5dff66f2a248d25868286c437fbf65bd12725fc8398->enter($__internal_b139ce712f38929720f1e5dff66f2a248d25868286c437fbf65bd12725fc8398_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PCFundationBundle:Admin:credito_add.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2098bb6eb81a07fe2f67bcd904791a0f3c7c01edf4aabd9756901e5761b8ba00->leave($__internal_2098bb6eb81a07fe2f67bcd904791a0f3c7c01edf4aabd9756901e5761b8ba00_prof);
+        $__internal_b139ce712f38929720f1e5dff66f2a248d25868286c437fbf65bd12725fc8398->leave($__internal_b139ce712f38929720f1e5dff66f2a248d25868286c437fbf65bd12725fc8398_prof);
 
     }
 
     // line 2
     public function block_capa($context, array $blocks = array())
     {
-        $__internal_f00a4bc8e5a831fdaf45320661f673de61bf1d02ad4eeaf9cdc801a09c0eccfe = $this->env->getExtension("native_profiler");
-        $__internal_f00a4bc8e5a831fdaf45320661f673de61bf1d02ad4eeaf9cdc801a09c0eccfe->enter($__internal_f00a4bc8e5a831fdaf45320661f673de61bf1d02ad4eeaf9cdc801a09c0eccfe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
+        $__internal_775e6d40fab042b19f3584f5573c261d5d7675aec722093a803272cfd36b13c9 = $this->env->getExtension("native_profiler");
+        $__internal_775e6d40fab042b19f3584f5573c261d5d7675aec722093a803272cfd36b13c9->enter($__internal_775e6d40fab042b19f3584f5573c261d5d7675aec722093a803272cfd36b13c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "capa"));
 
         // line 3
         echo "
@@ -72,7 +72,7 @@ class __TwigTemplate_bed87547c93c9610ca0c060cedb993e48766b139d05400481621239e2ab
 \t\t<div class=\"col-md-4\">
 \t\t\t";
         // line 27
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "responsible", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "responsable del crédito")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "responsible", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "nombre de quien autoriza")));
         echo "
 \t\t</div>
 \t\t<div class=\"textjusti col-md-2\">
@@ -284,7 +284,7 @@ class __TwigTemplate_bed87547c93c9610ca0c060cedb993e48766b139d05400481621239e2ab
         echo "
 ";
         
-        $__internal_f00a4bc8e5a831fdaf45320661f673de61bf1d02ad4eeaf9cdc801a09c0eccfe->leave($__internal_f00a4bc8e5a831fdaf45320661f673de61bf1d02ad4eeaf9cdc801a09c0eccfe_prof);
+        $__internal_775e6d40fab042b19f3584f5573c261d5d7675aec722093a803272cfd36b13c9->leave($__internal_775e6d40fab042b19f3584f5573c261d5d7675aec722093a803272cfd36b13c9_prof);
 
     }
 
@@ -329,7 +329,7 @@ class __TwigTemplate_bed87547c93c9610ca0c060cedb993e48766b139d05400481621239e2ab
 /* 			<label class="marginlabel">Responsable:</label>*/
 /* 		</div>	*/
 /* 		<div class="col-md-4">*/
-/* 			{{form_widget(form.responsible, {'attr' : {'class' : 'form-control', 'placeholder' : 'responsable del crédito' } })}}*/
+/* 			{{form_widget(form.responsible, {'attr' : {'class' : 'form-control', 'placeholder' : 'nombre de quien autoriza' } })}}*/
 /* 		</div>*/
 /* 		<div class="textjusti col-md-2">*/
 /* 			<label class="marginlabel">Destino:</label>*/

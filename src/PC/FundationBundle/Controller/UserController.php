@@ -18,37 +18,29 @@ use PC\FundationBundle\Form\UserType;
 class UserController extends Controller
 {
 
+    /**
+     * Muestra el formulario para la encuesta del solicitante de adopción.
+     */ 
     public function encuestaAction()
     {
         return $this->render('PCFundationBundle:fundation:encuestaUsuario.html.twig');
     }
     
+    /**
+     * Muestra el formulario de adopción. 
+     */ 
     public function addAction($petId)
     {
-        /*
-        $adoption = $this->getDoctrine()->getRepository('PCFundationBundle:Adoption')->findBy(array('pet'=> $petId));
+        $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->find($petId);
         
-        if ($adoption)
-        {
-            echo '<script language="javascript"> alert("la mascota ya ha sido solicitada en adopción. ") </script>';
-            die("la mascota ya tiene solicitud de adopción");
-            return $this->redirectToRoute('pc_fundation_adoptar');
-        }
-        else
-        {
-        */
-            $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->find($petId);
-            
-            $user = new User();
-            $form = $this->createCreateform($user, $petId);
-            return $this->render('PCFundationBundle:fundation:encuestaUsuario.html.twig', array('form' => $form->createview())); 
-        /*
-        }
-        */
-        
-        
+        $user = new User();
+        $form = $this->createCreateform($user, $petId);
+        return $this->render('PCFundationBundle:fundation:encuestaUsuario.html.twig', array('form' => $form->createview())); 
     }
     
+    /**
+     * Crea el formulario para diligenciar la solicitud de adopción.
+     */ 
     private function createCreateForm(User $entity, $petId)
     {
         
@@ -56,6 +48,9 @@ class UserController extends Controller
         return $form;
     }
     
+    /**
+     * Registra la solicitud de adopción y cambia el estado de la mascota a pendiente.
+     */ 
     public function createAction($petId, Request $request)
     {
         $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Pet')->find($petId);

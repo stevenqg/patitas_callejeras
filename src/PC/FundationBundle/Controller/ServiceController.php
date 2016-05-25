@@ -81,6 +81,7 @@ class ServiceController extends Controller
                     $pet->setAge($edaM);
                     $pet->setColour($colM);
                     $pet->setAppuser($user);
+                    $pet->setStatus("FOUND");
                 
                     $em->persist($pet);
                     $em->flush();
@@ -149,7 +150,7 @@ class ServiceController extends Controller
     }
     
     /**
-     * servicio web destinado al login de usuario en la applicación. verifica si
+     * servicio web destinado al login de usuario en la aplicación. verifica si
      * este existe en la base de datos y devuelve una respuesta dependiendo del
      * resultado.
      */
@@ -183,39 +184,36 @@ class ServiceController extends Controller
     }
     
     /**
-     * servicio web que permite ingresar las cordenadas asociadas a un reporte de pérdida.
+     * servicio web que permite ingresar las coordenadas asociadas a un reporte de pérdida.
      * 
      */ 
     public function addReportAction($pet, $user, $longitude, $latitude, $status)
     {
-        if(is_string($pet) && is_numeric($user) && ctype_digit($user) && is_numeric($longitude) && is_numeric($latitude) && is_numeric($status) && ctype_digit($status) && ($status == 1 || $status == 0))
+        if(is_numeric($pet) && ctype_digit($pet) && is_numeric($user) && ctype_digit($user) && is_numeric($longitude) && is_numeric($latitude) && is_numeric($status) && ctype_digit($status) && ($status == 1))
         {
             $user = $this->getDoctrine()->getRepository('PCFundationBundle:Appuser')->find($user);
             
             if($user)
             {
-               $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Apppet')->findOneBy(array('name' => $pet, 'appuser' => $user)); 
+               $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Apppet')->findOneBy(array('id' => $pet, 'appuser' => $user)); 
                if($pet)
                 {
+                    
+                    
                     $em = $this->getDoctrine()->getManager();
                     $report = new Report();
                     $report->setApppet($pet);
                     $report->setAppuser($user);
                     $report->setLongitude($longitude);
                     $report->setLatitude($latitude);
-            
-                    if($status == 1)
-                    {
-                        $report->setStatus("ACTIVE");
-                    }
-                    else
-                    {
-                        $report->steStatus("CLOSED");
-                    }
-                    
+                    $report->setStatus("ACTIVE");
                     $em->persist($report);
                     $em->flush();
-                
+                    
+                    $pet->setStatus("LOST");
+                    $em->flush();
+                    
+                    
                     $salida["status"]="200";
                     $salida["message"]="ok - registro correcto";
                 }
@@ -241,6 +239,108 @@ class ServiceController extends Controller
         return $this->render('PCFundationBundle:Admin:empty.html.twig');
     }
     
+    
+    /**
+     * servicio web que permite cambiar el estado de un reporte a CLOSED 
+     */
+     public function closeReportAction($petId, $userId)
+     {
+         if(is_numeric($petId) && ctype_digit($petId) && is_numeric($userId) && ctype_digit($userId))
+         {
+             $pet = $this->getDoctrine()->getRepository('PCFundationBundle:Apppet')->find($petId);
+             $user = $this->getDoctrine()->getRepository('PCFundationBundle:Appuser')->find($userId);
+             $report = $this->getDoctrine()->getRepository('PCFundationBundle:Report')->findOneBy(array('apppet' => $pet, 'appuser' => $user));
+             
+             if($report && $report->getStatus()=="ACTIVE")
+             {
+                 $em = $this->getDoctrine()->getManager();
+                 $report->setStatus("CLOSED");
+                 $em->flush();
+                 
+                $salida["status"]="200";
+                $salida["message"]="ok - se cambio correctamente el estado del reporte ".$report->getId()." a CLOSED.";
+             }
+             else
+             {
+                 $salida["status"]="404";
+                $salida["message"]="not found - no se encuentra un reporte activo asociado a esta llave de usuario-mascota.";
+             }
+         }
+         else
+        {
+            $salida["status"]="400";
+            $salida["message"]="bad request - datos incorrectos.";
+        }
+        echo($_GET["callback"]."(".json_encode($salida).")");
+        return $this->render('PCFundationBundle:Admin:empty.html.twig');
+     }
+     
+    /**
+     * Servicio web que devuelve el listado actual reportes cerrados.
+     */ 
+    public function viewClosedReportsAction()
+    {
+        $reports = $this->getDoctrine()->getRepository('PCFundationBundle:Report')->findByStatus('CLOSED');
+        
+        $arreglo[] = array();
+        
+        $i = 0;
+        foreach ($reports as $report) 
+        {
+            $arreglo[$i]['petName'] = $report->getAppPet()->getName();
+            $arreglo[$i]['petRace'] = $report->getAppPet()->getRace();
+            $arreglo[$i]['petSpecie'] = $report->getAppPet()->getSpecies();
+            $arreglo[$i]['petAge'] = $report->getAppPet()->getAge();
+            $arreglo[$i]['petColor'] = $report->getAppPet()->getColour();
+            $arreglo[$i]['userName'] = $report->getAppUser()->getName();
+            $arreglo[$i]['userTel'] = $report->getAppUser()->getPhoneNumber();
+            $arreglo[$i]['userEmail'] = $report->getAppUser()->GetEmail();
+            $arreglo[$i]['longitude'] = $report->GetLongitude();
+            $arreglo[$i]['latitude'] = $report->GetLatitude();
+            
+            $i++;
+        }
+        
+        $salida["status"]="200";
+        $salida["reports"]=$arreglo;
+        $salida["parametro"]=$i;
+        echo($_GET["callback"]."(".json_encode($salida).")");
+        return $this->render('PCFundationBundle:Admin:empty.html.twig');
+    }
+    
+    /**
+     * Servicio web que devuelve el listado actual reportes activos.
+     */ 
+    public function viewActiveReportsAction()
+    {
+        $reports = $this->getDoctrine()->getRepository('PCFundationBundle:Report')->findByStatus('ACTIVE');
+        
+        $arreglo[] = array();
+        
+        $i = 0;
+        foreach ($reports as $report) 
+        {
+            $arreglo[$i]['petName'] = $report->getAppPet()->getName();
+            $arreglo[$i]['petRace'] = $report->getAppPet()->getRace();
+            $arreglo[$i]['petSpecie'] = $report->getAppPet()->getSpecies();
+            $arreglo[$i]['petAge'] = $report->getAppPet()->getAge();
+            $arreglo[$i]['petColor'] = $report->getAppPet()->getColour();
+            $arreglo[$i]['userName'] = $report->getAppUser()->getName();
+            $arreglo[$i]['userTel'] = $report->getAppUser()->getPhoneNumber();
+            $arreglo[$i]['userEmail'] = $report->getAppUser()->GetEmail();
+            $arreglo[$i]['longitude'] = $report->GetLongitude();
+            $arreglo[$i]['latitude'] = $report->GetLatitude();
+            
+            $i++;
+        }
+        
+        $salida["status"]="200";
+        $salida["reports"]=$arreglo;
+        $salida["parametro"]=$i;
+        echo($_GET["callback"]."(".json_encode($salida).")");
+        return $this->render('PCFundationBundle:Admin:empty.html.twig');
+    }
+     
     /**
      * servicio web que permite visualizar las mascotas asociadas a un usuario dado.
      */
@@ -282,6 +382,7 @@ class ServiceController extends Controller
                     {
                         $arreglo[$i]['gender'] = "hembra";    
                     }
+                    $arreglo[$i]['status'] = $pet->getStatus();
                     
                     $i++;
                 }
@@ -305,5 +406,9 @@ class ServiceController extends Controller
         echo($_GET["callback"]."(".json_encode($salida).")");
         return $this->render('PCFundationBundle:Admin:empty.html.twig');
     }
+    
+    
+    
+    
 }
 
